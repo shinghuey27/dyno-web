@@ -3,7 +3,7 @@ import '../../index.css';
 const Button = () => {
     return (
       <div>
-        <button className="button">Click Here</button>
+        <button className="button">Next</button>
       </div>
     );
   };

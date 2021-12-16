@@ -1,15 +1,17 @@
-.button {
-    background-color: white; /* Green */
-    border: solid 1px #e7e7e7;
-    color: black;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
 
-.button:hover {background-color: #e7e7e7;}
+.button {
+  background-color: rgb(255, 221, 0);
+  border: solid 1px rgb(255, 221, 0);
+  border-radius: 8px;
+  height: 38px;
+  width: 112px;
+  font-family: "Rubik", sans-serif;
+  color: rgb(14, 27, 66);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
