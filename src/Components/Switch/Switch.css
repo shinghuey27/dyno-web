@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+.flex{
+  display: flex;
+  flex-direction : row;
+}
+
+.text{
+  font-size : 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.switchContainer{
+  position: absolute;
+  margin-left: 6rem;
+}
+
+.switchLabel{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.relative{
+  position:relative;
+}
+
+input:checked ~ .slider {
+  background-color: #01ccce;
+}
+
+
+input:checked ~ .dot {
+  transform: translateX(90%);
+  box-shadow: 0px 2px 4px 0px rgba(142, 165, 180, 0.41);
+left:-4px;
+}
+
+.button1{
+  margin-left: 11px;
+display:block;
+background-color: #d5d5dc;
+opacity:0.41;
+width : 44px;
+height:28px;
+border-radius :15.91px;
+
+}
+
+.button2{
+margin-left:11px;
+position: absolute;
+left : 4px;
+top : 21.5px;
+background: white;
+width: 22.88px;
+height: 22.75px;
+border-radius : 15.91px;
+
+}
