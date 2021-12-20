@@ -1,61 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
-.flex{
-  display: flex;
-  flex-direction : row;
-}
-
 .text{
   font-size : 16px;
   font-weight: 500;
-  color: black;
+  font-family:"Rubik",sans-serif;
+  line-height: 21px;
+  color: #0e1b42;
 }
 
-.switchContainer{
-  position: absolute;
-  margin-left: 6rem;
-}
-
-.switchLabel{
+.flex{
   display: flex;
+  flex-direction : row;
   align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+margin-left: .6rem;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-.relative{
-  position:relative;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(142, 165, 180, 0.41);
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-input:checked ~ .slider {
+input:checked + .slider {
   background-color: #01ccce;
 }
 
-
-input:checked ~ .dot {
-  transform: translateX(90%);
-  box-shadow: 0px 2px 4px 0px rgba(142, 165, 180, 0.41);
-left:-4px;
+input:focus + .slider {
+  box-shadow: 0 0 1px #01ccce;
 }
 
-.button1{
-  margin-left: 11px;
-display:block;
-background-color: #d5d5dc;
-opacity:0.41;
-width : 44px;
-height:28px;
-border-radius :15.91px;
-
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
-.button2{
-margin-left:11px;
-position: absolute;
-left : 4px;
-top : 21.5px;
-background: white;
-width: 22.88px;
-height: 22.75px;
-border-radius : 15.91px;
+/* Rounded sliders */
+.slider.round {
+  border-radius: 15.91px;
+}
 
+.slider.round:before {
+  border-radius: 50%;
 }

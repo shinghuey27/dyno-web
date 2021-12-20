@@ -61,6 +61,8 @@ const sidebutton = [
     notification: null,
   },
 ];
+
+// Due to using tailwind css last time, need redo the classname in css file
 const Sidebar = () => {
   return (
     <div className="container">
