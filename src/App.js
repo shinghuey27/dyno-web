@@ -16,18 +16,8 @@ function App() {
         <Label />
         <Text />
       </div>
-      {/* <div> */}
         <Checkbox />
-      {/* </div> */}
       <Button />
-
-      <div className="App">
-      Select your pizza topping:
-      <div className="topping">
-        <input type="checkbox" id="topping" name="topping" value="Paneer" />
-        Paneer
-      </div>
-    </div>
 
     {/* <div>
     <Fieldset />

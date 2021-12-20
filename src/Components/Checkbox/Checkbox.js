@@ -1,14 +1,11 @@
 import "./Checkbox.css";
 const Checkbox = () => {
   return (
-    <div className="ckAccount">
-      <input
-        type="checkbox"
-        id="ckAccount"
-        name="ckAccount"
-        value="account"
-      /> Checkbox
-    </div>
+    <label className="container">
+      Add to Favourites
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
   );
 };
 
