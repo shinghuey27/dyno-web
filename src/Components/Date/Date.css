@@ -28,6 +28,10 @@
 .react-datepicker__month {
   margin: 1rem;
 }
+.react-datepicker__current-month{
+  font-family: "Rubik", sans-serif;
+
+}
 .react-datepicker__day-name {
   font-size: 12px;
   font-family: "Rubik", sans-serif;
@@ -79,17 +83,26 @@
   border: 1px solid rgb(1, 204, 206);
 }
 
-
 .input-icons {
   width: 290px;
   position: relative;
-
 }
 
 .icon {
   position: absolute;
-  z-index: 1;  
+  z-index: 1;
   right: 1rem;
   top: 1.5rem;
-    color: #c7c7c7;
+  color: #c7c7c7;
+}
+
+
+.react-datepicker__day--keyboard-selected{
+  background-color: transparent;
+}
+
+.react-datepicker__year-read-view--selected-year{
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  margin-right: .5rem;
 }

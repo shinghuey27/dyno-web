@@ -18,6 +18,9 @@ const DatePick = () => {
         dateFormat="d MMMM yyyy"
         selected={startDate}
         onChange={(date) => setStartDate(date)}
+        showYearDropdown
+        yearDropdownItemNumber={10}
+        scrollableYearDropdown
       ></DatePicker>
     </div>
   );
