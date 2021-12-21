@@ -60,11 +60,11 @@
 
 /* Input cont */
 .datepick {
-    margin-top: 1rem;
+  margin-top: 1rem;
   background-color: white;
   border-radius: 15px;
   height: 38px;
-  width: 720px;
+  width: 270px;
   outline: none;
   padding-left: 1rem;
   border: 1px solid rgb(199, 199, 199);
@@ -77,4 +77,23 @@
 
 .datepick:focus {
   border: 1px solid rgb(1, 204, 206);
+}
+
+
+.input-icons i{
+  position: absolute;
+}
+
+.input-icons{
+  width: 100%;
+}
+
+.icon{
+  padding: 10px;
+  z-index: 1;
+  width: 270px;
+  text-align: right;
+  padding-left: 0.7rem;
+  padding-top: 1.5rem;
+  color: #c7c7c7;
 }
