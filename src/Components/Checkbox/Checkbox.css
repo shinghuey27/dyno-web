@@ -1,7 +1,7 @@
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
   font-size: 13px;

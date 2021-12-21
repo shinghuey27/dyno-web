@@ -3,10 +3,10 @@ import "./Switch.css";
 const Switch = () => {
   return (
     <div className="flex">
-      <h1 className="text"> Hide balance</h1>
-      <label class="switch">
+      <h1 className="h1"> Hide balance</h1>
+      <label className="switch">
         <input type="checkbox" />
-        <span class="slider round"></span>
+        <span className="slider round"></span>
       </label>
     </div>
   );

@@ -7,6 +7,7 @@ const Text = () => {
       id="accountNo"
       name="accountNo"
       placeholder="9876 5434 56"
+      className="text"
     ></input>
   );
 };

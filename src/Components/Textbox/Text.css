@@ -1,4 +1,4 @@
-input[type=text],input:focus {
+.text:focus ,.text  {
     border-radius: 15px;
     border: 1px solid #c7c7c7;
     height: 2.3rem;
