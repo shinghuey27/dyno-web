@@ -80,20 +80,16 @@
 }
 
 
-.input-icons i{
+.input-icons {
+  width: 290px;
+  position: relative;
+
+}
+
+.icon {
   position: absolute;
-}
-
-.input-icons{
-  width: 100%;
-}
-
-.icon{
-  padding: 10px;
-  z-index: 1;
-  width: 270px;
-  text-align: right;
-  padding-left: 0.7rem;
-  padding-top: 1.5rem;
-  color: #c7c7c7;
+  z-index: 1;  
+  right: 1rem;
+  top: 1.5rem;
+    color: #c7c7c7;
 }
