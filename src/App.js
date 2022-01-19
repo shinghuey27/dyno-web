@@ -1,7 +1,7 @@
 import "./App.css";
 import Button from "./Components/Button/Button";
 import Label from "./Components/Label/Label";
-// import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "./Components/Sidebar/Sidebar";
 import Text from "./Components/Textbox/Text";
 import Checkbox from "./Components/Checkbox/Checkbox";
 import Switch from "./Components/Switch/Switch";
@@ -12,7 +12,8 @@ import Progress from "./Components/ProgressBar/Progress";
 import Tooltips from "./Components/Tooltips/Tooltips";
 function App() {
   return (
-    
+    <div>
+    <Sidebar />
     <fieldset className="field" style={{ padding: "2rem" }}>
       <Switch />
       <div className="inputContainer">
@@ -27,6 +28,7 @@ function App() {
       <Progress />
       <Tooltips/>
     </fieldset>
+    </div>
   );
 }
 
