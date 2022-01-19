@@ -1,10 +1,13 @@
+import Label from "../Label/Label";
 import "./Tooltips.css";
 
 const Tooltips = () => {
   return (
     <div className="tooltip">
-      Tooltips
-      <span className="tooltiptext">Click here or <b>Previous button</b> to view your previous session</span>
+      <Label value="Tooltip" />
+      <span className="tooltiptext">
+        Click here or <b>Previous button</b> to view your previous session
+      </span>
     </div>
   );
 };

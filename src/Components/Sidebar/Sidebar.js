@@ -84,7 +84,7 @@ const Sidebar = () => {
       </div>
       <div className="listContainer">
         {sidebutton.map((side) => (
-          <div className="item">
+          <div className="item" key={side.icon}>
             <i className="material-icons text-white">{side.icon}</i>
             <div className="itemName">
               {side.name}

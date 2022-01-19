@@ -1,13 +1,13 @@
 import "./Text.css";
 
-const Text = () => {
+const Text = (props) => {
   return (
     <input
       type="text"
-      id="accountNo"
-      name="accountNo"
-      placeholder="9876 5434 56"
-      className="text"
+      id={props.id}
+      name={props.name}
+      placeholder={props.placeholder}
+      className={props.error === true ? "error" : "text"}
     ></input>
   );
 };
