@@ -10,9 +10,14 @@ import DatePick from "./Components/Date/DatePick";
 import Dropdown from "./Components/Select/Dropdown";
 import Progress from "./Components/ProgressBar/Progress";
 import Tooltips from "./Components/Tooltips/Tooltips";
-function App() {
+
+import { arrayOfStrings, options, optionsSample, topBanks } from "./SampleData/List";
+import ReactSelectLib from "./Components/Select/ReactSelectLib/ReactSelectLib";
+import DropdownSearch from "./Components/Select/DropdownSearch/DropdownSearch";
+
+function App(props) {
   return (
-    
+
     <fieldset className="field" style={{ padding: "2rem" }}>
       <Switch />
       <div className="inputContainer">
@@ -23,10 +28,15 @@ function App() {
       <Radio />
       <Button />
       <DatePick />
-      <Dropdown />
+      <Dropdown options={options} />
       <Progress />
-      <Tooltips/>
+      <Tooltips />
+
+      <DropdownSearch label={'Recepient Bank'} listOptions={topBanks} containerStyle={{ marginTop: 30 }} />
+      {/* <ReactSelectLib options={options} /> */}
+
     </fieldset>
+
   );
 }
 

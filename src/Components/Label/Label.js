@@ -1,6 +1,8 @@
 import './Label.css';
-const Label = () => {
-return <label className="label" >Account Number</label>
+const Label = (props) => {
+    const { label = 'Account Number' } = props;
+
+    return <label className="label" >{label}</label>
 }
 
 export default Label;
