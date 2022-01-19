@@ -38,7 +38,7 @@
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: ;
+  background-color: #b0bad7;
 }
 
 /* When the checkbox is checked, add a blue background */

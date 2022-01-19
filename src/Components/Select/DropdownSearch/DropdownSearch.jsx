@@ -5,7 +5,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/material/styles';
 import Label from '../../Label/Label'
-
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const Root = styled('div')(
     ({ theme }) => `
@@ -79,7 +79,7 @@ const StyledTag = styled(Tag)(
   align-items: center;
   height: 24px;
   margin: 2px;  
-  margin-left:10px;
+
   line-height: 22px;
   background-color: ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.08)' : 'transparent'
         };
@@ -141,14 +141,15 @@ const Listbox = styled('ul')(
     background-color: ${theme.palette.mode === 'dark' ? '#2b2b2b' : '#fafafa'};
     font-weight: 600;
 
-    & svg {
-      color: #1890ff;
-    }
+    // & svg {
+    //   color: #1890ff;
+    // }
   }
 
   & li[data-focus='true'] {
     background-color: ${theme.palette.mode === 'dark' ? '#003b57' : '#e6f7ff'};
     cursor: pointer;
+    
 
     & svg {
       color: currentColor;
@@ -157,7 +158,38 @@ const Listbox = styled('ul')(
 `,
 );
 
-export default function DropdownSearch({ listOptions, label }) {
+const renderItem = (dropdownType, index, option) => {
+    switch (dropdownType) {
+        case '2':
+
+            return (
+                <>
+                    <img style={{ height: 20, marginRight: 20 }} src={require(`../../../Asset/Logo/${index + 1}.png`)} />
+                    <span>{option.title}</span>
+                    <CheckIcon fontSize="small" />
+                </>)
+
+        case '3':
+            return (
+                <div style={{ display: 'flex', flexDirection: 'row', flex: 1, }}>
+                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                        <span >{option?.title}</span>
+                        <span >{option?.accNo}</span>
+                    </div>
+                    <span style={{ flex: 1, textAlign: 'end', marginRight: 0, paddingRight: 0 }}>RM {option?.balance}</span>
+                    <CheckIcon fontSize="small" />
+                </div>)
+
+        default:
+            return (
+                <>
+                    <span>{option.title}</span>
+                    <CheckIcon fontSize="small" />
+                </>)
+    }
+}
+
+export default function DropdownSearch({ listOptions, label, dropdownType, containerStyle }) {
     const {
         getRootProps,
         getInputLabelProps,
@@ -175,11 +207,12 @@ export default function DropdownSearch({ listOptions, label }) {
         multiple: true,
         options: listOptions,
         getOptionLabel: (option) => option.title,
-        label: label
+        label: label,
+        dropdownType: '1'
     });
 
     return (
-        <Root>
+        <Root style={{ ...containerStyle }}>
             <div {...getRootProps()}>
                 <Label label={label}></Label>
                 <InputWrapper ref={setAnchorEl} className={focused ? 'focused' : ''}>
@@ -188,16 +221,15 @@ export default function DropdownSearch({ listOptions, label }) {
                     ))}
 
                     <input {...getInputProps()} />
+                    <ArrowDropDownIcon style={{ marginTop: 4 }} />
                 </InputWrapper>
             </div>
             {groupedOptions.length > 0 ? (
                 <Listbox {...getListboxProps()}>
-                    {groupedOptions.map((option, index) => {                        
+                    {groupedOptions.map((option, index) => {
                         return (
                             <li {...getOptionProps({ option, index })}>
-                                <img style={{ height: 20, marginRight:20 }} src={require(`../../../Asset/Logo/${index + 1}.png`)} />
-                                <span>{option.title}</span>
-                                <CheckIcon fontSize="small" />
+                                {renderItem(dropdownType, index, option)}
                             </li>
                         )
                     })}

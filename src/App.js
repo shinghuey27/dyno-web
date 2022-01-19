@@ -11,8 +11,7 @@ import Dropdown from "./Components/Select/Dropdown";
 import Progress from "./Components/ProgressBar/Progress";
 import Tooltips from "./Components/Tooltips/Tooltips";
 
-import { arrayOfStrings, options, optionsSample, topBanks } from "./SampleData/List";
-import ReactSelectLib from "./Components/Select/ReactSelectLib/ReactSelectLib";
+import { arrayOfStrings, options, optionsSample, topAccount, topBanks } from "./SampleData/List";
 import DropdownSearch from "./Components/Select/DropdownSearch/DropdownSearch";
 
 function App(props) {
@@ -32,8 +31,14 @@ function App(props) {
       <Progress />
       <Tooltips />
 
-      <DropdownSearch label={'Recepient Bank'} listOptions={topBanks} containerStyle={{ marginTop: 30 }} />
-      {/* <ReactSelectLib options={options} /> */}
+      <DropdownSearch dropdownType='2' label={'Recepient Bank'} listOptions={topBanks} containerStyle={{ marginTop: 30 }} />
+      
+      <Button disabled style={{marginTop:30}}></Button>      
+
+      <DropdownSearch dropdownType='3' label={'Account'} listOptions={topAccount} containerStyle={{ marginTop: 40 }} />
+
+
+
 
     </fieldset>
 

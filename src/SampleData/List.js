@@ -112,7 +112,14 @@ const optionsSample = [
 const topBanks = [
     { title: 'Maybank', year: 1994 },
     { title: 'RHB', year: 1972 },
-    { title: 'CIMB', year: 1974 },
+    { title: 'CIMB', year: 1974 },    
+
+];
+
+const topAccount = [
+    { title: 'Maybank', accNo: 18000202010, balance:1000.00 },
+    { title: 'RHB', accNo: 18000202311, balance:5300.00 },
+    { title: 'CIMB', accNo: 18000209189 , balance:44000.00},
     // { title: 'The Dark Knight', year: 2008 },
     // { title: '12 Angry Men', year: 1957 },
     // { title: "Schindler's List", year: 1993 },
@@ -126,4 +133,4 @@ const topBanks = [
 
 
 
-export { options, arrayOfStrings, optionsSample, topBanks }
+export { options, arrayOfStrings, optionsSample, topBanks, topAccount }
