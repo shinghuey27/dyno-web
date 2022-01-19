@@ -22,7 +22,7 @@ import HyperLink from "./Components/Link/HyperLink";
 function App() {
   return (
     <div>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <fieldset className="field" style={{ padding: "2rem" }}>
         <Switch />
         <div className="inputContainer">
