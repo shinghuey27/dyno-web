@@ -30,12 +30,6 @@
   margin-top: 0.6rem;
 }
 
-
-.password,
-.text,
-.currency {
-  border: 1px solid #c7c7c7;
-}
 .currency:focus,
 .currency {
   border-radius: 15px;
@@ -52,7 +46,11 @@
   margin-top: 0.6rem;
   padding-left: 2.7rem;
 }
-
+.password,
+.text,
+.currency {
+  border: 1px solid #c7c7c7;
+}
 .currencyContainer {
   width: 290px;
   position: relative;
