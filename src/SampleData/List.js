@@ -120,15 +120,6 @@ const topAccount = [
     { title: 'Maybank', accNo: 18000202010, balance:1000.00 },
     { title: 'RHB', accNo: 18000202311, balance:5300.00 },
     { title: 'CIMB', accNo: 18000209189 , balance:44000.00},
-    // { title: 'The Dark Knight', year: 2008 },
-    // { title: '12 Angry Men', year: 1957 },
-    // { title: "Schindler's List", year: 1993 },
-    // { title: 'Pulp Fiction', year: 1994 },
-    // {
-    //     title: 'The Lord of the Rings: The Return of the King',
-    //     year: 2003,
-    // },
-
 ];
 
 
