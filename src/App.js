@@ -28,12 +28,16 @@ function App(props) {
       <Button />
       <DatePick />
       <Dropdown options={options} />
+
+      {/* <Tooltips label=''>
+        <Progress />
+      </Tooltips> */}
+
       <Progress />
-      <Tooltips />
 
       <DropdownSearch dropdownType='2' label={'Recepient Bank'} listOptions={topBanks} containerStyle={{ marginTop: 30 }} />
-      
-      <Button disabled style={{marginTop:30}}></Button>      
+
+      <Button disabled style={{ marginTop: 30 }}></Button>
 
       <DropdownSearch dropdownType='3' label={'Account'} listOptions={topAccount} containerStyle={{ marginTop: 40 }} />
 
