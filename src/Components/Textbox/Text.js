@@ -8,6 +8,7 @@ const Text = (props) => {
       name={props.name}
       placeholder={props.placeholder}
       className={props.error === true ? "error" : "text"}
+      {...props}
     ></input>
   );
 };

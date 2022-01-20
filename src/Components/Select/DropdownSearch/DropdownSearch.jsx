@@ -214,7 +214,7 @@ export default function DropdownSearch({ listOptions, label, dropdownType, conta
     return (
         <Root style={{ ...containerStyle }}>
             <div {...getRootProps()}>
-                <Label label={label}></Label>
+                <Label value={label} style={{color:'blue'}}></Label>
                 <InputWrapper ref={setAnchorEl} className={focused ? 'focused' : ''}>
                     {value.map((option, index) => (
                         <StyledTag label={option.title} {...getTagProps({ index })} />
