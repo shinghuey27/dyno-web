@@ -203,7 +203,7 @@ export default function DropdownSearch({ listOptions, label, dropdownType, conta
         setAnchorEl,
     } = useAutocomplete({
         id: 'customized-hook-demo',
-        // defaultValue: [listOptions[1]],
+        defaultValue: [listOptions[1]],
         multiple: true,
         options: listOptions,
         getOptionLabel: (option) => option.title,
@@ -214,7 +214,7 @@ export default function DropdownSearch({ listOptions, label, dropdownType, conta
     return (
         <Root style={{ ...containerStyle }}>
             <div {...getRootProps()}>
-                <Label value={label}></Label>
+                <Label value={label} ></Label>
                 <InputWrapper ref={setAnchorEl} className={focused ? 'focused' : ''}>
                     {value.map((option, index) => (
                         <StyledTag label={option.title} {...getTagProps({ index })} />
