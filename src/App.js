@@ -26,6 +26,7 @@ import TextboxDyno from "./Components/TextboxDyno/TextboxDyno";
 import { color } from "@mui/system";
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import { Icon } from "@mui/material";
+import TextboxDyno_0 from "./Components/TextboxDyno/TextboxDyno_0";
 
 function App() {
 
@@ -62,7 +63,7 @@ function App() {
                         <Label value="GOT error" style={{ color: 'red' }} />
                         {/* <ErrorDyno />
                         <IconDyno type=''/> */}
-                        
+
                         {/* <Icon /> */}
                         <ErrorOutlineIcon />
 
@@ -88,7 +89,12 @@ function App() {
 
             /> */}
 
-
+            <TextboxDyno_0
+              containerStyle={{ marginTop: 20 }}
+              labelText='Account No'
+              descriptionText='Your Account Number'
+              errorText='This is an error'
+            ></TextboxDyno_0>
           </> :
           <>
             <Switch />
