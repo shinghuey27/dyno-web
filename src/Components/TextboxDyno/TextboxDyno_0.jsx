@@ -1,19 +1,27 @@
 import React from 'react';
 import Label from '../Label/Label';
 import Text from '../Textbox/Text';
+import PropTypes from 'prop-types';
 
-export default function TextboxDyno_0(props) {
-    const { containerStyle,
+
+function TextboxDyno_0(props) {
+    
+    const { 
+        
         labelText,
+        descriptionText,
+        errorText,
+
         onChangeText,
+
+        containerStyle,
         titleStyle,
         inputStyle,
         descriptionStyle,
         errorStyle,
-        descriptionText,
-        errorText
-
+        
     } = props;
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', ...containerStyle }}>
 
@@ -27,3 +35,6 @@ export default function TextboxDyno_0(props) {
 
         </div>);
 }
+
+
+export default TextboxDyno_0;
