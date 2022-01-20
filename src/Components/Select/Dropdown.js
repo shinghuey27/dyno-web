@@ -1,48 +1,21 @@
-import {Form} from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import "./Dropdown.css"
-const options = [
-  {
-    value: "0",
-    label: "2 Months"
-  },
-  {
-    value: "1",
-    label: "3 Months"
-  },
-  {
-    value: "2",
-    label: "4 Months"
-  },
-  {
-    value: "3",
-    label: "5 Months"
-  },
-  {
-    value: "4",
-    label: "6 Months"
-  },
-  {
-    value: "5",
-    label: "7 Months"
-  },
-  {
-    value: "6",
-    label: "8 Months"
-  },
-  {
-    value: "7",
-    label: "9 Months"
-  },
-];
 
-const Dropdown = () => {
+
+const Dropdown = props => {
+
+  const { options, formStyle, } = props;
+
+
+
   return (
-    <Form.Select aria-label="Default select example">
+    <Form.Select aria-label="Default select example" style={{ ...formStyle }} >
       {/* <option >Open this select menu</option> */}
       {
-        options.map ((option)=>
-          <option key ={option.value} className="option" value ={option.value}>
-            {option.label}
+        options.map((option) =>
+          <option key={option?.value} className="option" value={option?.value} style={{ display: 'flex', }}>
+            {option?.label}
           </option>
         )
       }
@@ -50,5 +23,18 @@ const Dropdown = () => {
     </Form.Select>
   );
 };
+
+Dropdown.defaultProps = {
+  options: [{ label: '', value: '' }],
+  child: false,
+}
+
+Dropdown.propTypes = {
+  options: PropTypes.array.isRequired,
+  child: PropTypes.bool
+
+}
+
+
 
 export default Dropdown;

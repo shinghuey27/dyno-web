@@ -19,6 +19,10 @@ import ErrorMessage from "./Components/Label/ErrorMessage";
 import HelpOutline from "./Components/Icon/HelpOutline";
 import HyperLink from "./Components/Link/HyperLink";
 
+import { arrayOfStrings, options, optionsSample, topAccount, topBanks } from "./SampleData/List";
+import DropdownSearch from "./Components/Select/DropdownSearch/DropdownSearch";
+
+
 function App() {
   return (
     <div>
@@ -71,14 +75,24 @@ function App() {
         <div className="inputContainer">
           <Label value="Account No" />
           <Text id="accountNo1" name="accountNo1" placeholder="9876 5434 56" />
-          <div style={{marginTop:"10px"}}>
+          <div style={{ marginTop: "10px" }}>
             <HyperLink link="https://www.google.com/" value="Click Here" />
             <Description value="to find out more." />
           </div>
         </div>
+
+        <Progress />
+
+        <DropdownSearch dropdownType='2' label={'Recepient Bank'} listOptions={topBanks} containerStyle={{ marginTop: 30 }} />
+
+        <Button disabled style={{ marginTop: 30 }}></Button>
+
+        <DropdownSearch dropdownType='3' label={'Account'} listOptions={topAccount} containerStyle={{ marginTop: 40 }} />
+
+
       </fieldset>
-    </div>
-  );
+    </div>)
+
 }
 
 export default App;

@@ -1,6 +1,7 @@
 import './Label.css';
 const Label = (props) => {
-return <label className="label" >{props.value}</label>
+    const { value = 'default' } = props;
+    return <label className="label" >{value}</label>
 }
 
 export default Label;

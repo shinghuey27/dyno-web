@@ -1,14 +1,36 @@
 import Label from "../Label/Label";
 import "./Tooltips.css";
+import Tooltip from '@mui/material/Tooltip';
+import React from "react";
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
 
-const Tooltips = () => {
+const _renderChildren = (type, children) => {
+  switch (type) {
+    case 'icon':
+      return <IconButton>
+        <DeleteIcon />
+      </IconButton>
+
+    default:
+      return (
+        <>
+          {React.Children.map(children, child => (
+            <>
+              {React.cloneElement(child)}
+            </>
+          ))}
+        </>
+      )
+  }
+}
+
+const Tooltips = (props) => {
+  const { label = 'Tooltips', type } = props;
   return (
-    <div className="tooltip">
-      <Label value="Tooltip" />
-      <span className="tooltiptext">
-        Click here or <b>Previous button</b> to view your previous session
-      </span>
-    </div>
+    <Tooltip title={label}>
+      {_renderChildren(type, props.children)}
+    </Tooltip>
   );
 };
 
