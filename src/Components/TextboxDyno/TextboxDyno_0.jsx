@@ -1,13 +1,14 @@
 import React from 'react';
-import Label from '../Label/Label';
 import Text from '../Textbox/Text';
+import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
-
+import Label from "../Label/Label";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 function TextboxDyno_0(props) {
-    
-    const { 
-        
+
+    const {
+
         labelText,
         descriptionText,
         errorText,
@@ -19,13 +20,17 @@ function TextboxDyno_0(props) {
         inputStyle,
         descriptionStyle,
         errorStyle,
-        
+
     } = props;
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', ...containerStyle }}>
-
-            <Label value={labelText} style={{ ...titleStyle }} {...props} />
+            <div>
+                <Label value={labelText} style={{ ...titleStyle }} {...props} />
+                <Tooltip title="help" style={{}}>
+                    <HelpOutlineIcon fontSize="10px" style={{}} />
+                </Tooltip>
+            </div>
 
             <Text style={{ ...inputStyle }} {...props} />
 

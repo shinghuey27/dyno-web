@@ -27,6 +27,7 @@ import { color } from "@mui/system";
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import { Icon } from "@mui/material";
 import TextboxDyno_0 from "./Components/TextboxDyno/TextboxDyno_0";
+import TextboxDynoSH from "./Components/TextboxDyno/TextboxDynoSH";
 
 function App() {
 
@@ -90,11 +91,14 @@ function App() {
             /> */}
 
             <TextboxDyno_0
-              containerStyle={{ marginTop: 20 }}
+              containerStyle={{ marginTop: 20 ,marginBottom:40}}
               labelText='Account No'
               descriptionText='Your Account Number'
               errorText='This is an error'
             ></TextboxDyno_0>
+
+            <TextboxDynoSH
+            />
           </> :
           <>
             <Switch />
