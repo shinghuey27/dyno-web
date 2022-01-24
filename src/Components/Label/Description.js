@@ -1,7 +1,9 @@
 import "./Label.css";
 
 const Description = (props) => {
-  return <label className="description" {...props} >{props.value}</label>;
+  return <label {...props}>{props.value}</label>;
 };
-
+Description.defaultProps = {
+  className: "description"
+};
 export default Description;

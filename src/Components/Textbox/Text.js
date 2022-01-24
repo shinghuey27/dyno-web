@@ -11,12 +11,15 @@ const Text = (props) => {
         id={props.id}
         name={props.name}
         placeholder={props.placeholder}
-        style={{borderRadius:"15px",border:"1px solid #ff6167"}}
-        // className="error"
+        // className={props.error === "true" ? "error" : "text"}
         {...props}
       ></input>
     </span>
   );
+
 };
+Text.defaultProps = {
+  className: "text"
+}
 
 export default Text;
