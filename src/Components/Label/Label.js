@@ -16,7 +16,7 @@ const Label = (props) => {
 
         case 'desc':
 
-            labelStyle = { color: 'black' }
+            labelStyle = { color: 'blue' }
 
             break;
 
@@ -31,6 +31,9 @@ const Label = (props) => {
 
 Label.defaultProps = {
     value: 'default',
+    labelStyle:{
+        color: '#6f7faf'
+    }
 }
 
 Label.propTypes = {

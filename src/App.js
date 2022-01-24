@@ -33,7 +33,7 @@ import { color } from "@mui/system";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { Icon } from "@mui/material";
 import TextboxDyno_0 from "./Components/TextboxDyno/TextboxDyno_0";
-import TextboxDynoSH from "./Components/TextboxDyno/TextboxDynoSH";
+import Textbox from "./Components/TextboxDyno/TextboxDynoSH";
 
 function App() {
   const [demo, setDemo] = useState(true);
@@ -41,19 +41,27 @@ function App() {
 
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
-      <TextboxDynoSH
-        labelText="Name"
-        tooltipText="Here to write your biller code"
-        descText="Biller code description"
-        errorText="Invalid input"
-        // labelClassName="labelClass"
-        // descClassName="descClass"
-        // errorClassName="labelClass"
+      
+      
+      <Textbox
+
+        label={{
+          label: 'Account Number 2',
+          style: {
+            color: 'green'
+          }
+        }}
         
-        labelStyle={{color:"#1e2225",fontSize:"14px",fontFamily:"Lato" }}
-        descStyle={{ display: "inline-block", fontSize:"10px" }}
-        errorStyle={{ display: "inline-block", marginTop: 20,  }}
+        error={{
+          label: 'Error Message',
+          style: {
+            color: 'red'
+          }
+        }}
+
+
       />
+
     </fieldset>
   );
 }
