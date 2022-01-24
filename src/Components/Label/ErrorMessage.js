@@ -2,7 +2,7 @@ import "./Label.css";
 
 const ErrorMessage = (props) => {
 
-    return <div {...props}>{props.value}</div>
+    return <div {...props}>{props.text}</div>
 };
 ErrorMessage.defaultProps = {
     className: "errorMessage"

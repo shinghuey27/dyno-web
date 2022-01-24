@@ -1,7 +1,7 @@
 import React from 'react';
 import Label from '../Label/Label';
-import Currency from '../Textbox/Currency';
-import Text from '../Textbox/Text';
+import Currency from '../Text/Currency';
+import Text from '../Text/Text';
 
 
 const renderInput = (type, onChangeText, props) => {

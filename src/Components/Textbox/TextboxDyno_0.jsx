@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "../Textbox/Text";
+import Text from "../Text/Text";
 import Tooltip from "@mui/material/Tooltip";
 import PropTypes from "prop-types";
 import Label from "../Label/Label";

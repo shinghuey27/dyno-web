@@ -28,12 +28,12 @@ import {
 } from "./SampleData/List";
 import DropdownSearch from "./Components/Select/DropdownSearch/DropdownSearch";
 import { useState } from "react";
-import TextboxDyno from "./Components/TextboxDyno/TextboxDyno";
+import TextboxDyno from "./Components/Textbox/TextboxDyno";
 import { color } from "@mui/system";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { Icon } from "@mui/material";
-import TextboxDyno_0 from "./Components/TextboxDyno/TextboxDyno_0";
-import TextboxDynoSH from "./Components/TextboxDyno/TextboxDynoSH";
+import TextboxDyno_0 from "./Components/Textbox/TextboxDyno_0";
+import Textbox from "./Components/Textbox/Textbox";
 
 function App() {
   const [demo, setDemo] = useState(true);
@@ -41,39 +41,44 @@ function App() {
 
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
-      <TextboxDynoSH
-        labelText="Name"
-        tooltipText="Here to write your biller code"
-        descText="Biller code description"
-        errorText="*Name must be at least 5 characters"
-        // labelClassName="labelClass"
-        // descClassName="descClass"
-        // errorClassName="errorClass"
-
-        labelStyle={{
-          color: "#1e2225",
-          fontSize: "14px",
-          fontWeight: 400,
-          fontFamily: "Lato"
+      <Textbox
+        label={{
+          text: "ID Number",
+          style: {
+            color: "#1e2225",
+            fontSize: "14px",
+            fontWeight: 400,
+            fontFamily: "Lato"
+          },
+          className: "labelClass"
         }}
-        textStyle={{
-          border: "1px solid #ddd",
-          borderRadius: "4px",
-          height: 40,
-          width: "100%",
-          margin: 0,
-          fontSize: "14px",
-          fontWeight: 400,
-          fontFamily: "Lato"
+        tooltip={{ text: "abc" }}
+        text={{
+          style: {
+            border: "1px solid #ddd",
+            borderRadius: "4px",
+            height: 40,
+            width: "100%",
+            margin: 0,
+            fontSize: "14px",
+            fontWeight: 400,
+            fontFamily: "Lato",
+            boxSizing: "border-box"
+          }
         }}
-        // descStyle={{ display: "inline-block", fontSize:"10px" }}
-        errorStyle={{
-          textAlign: "right",
-          width: "100%",
-          color: "#c00",
-          fontSize: "14px",
-          fontWeight: 400,
-          fontFamily: "Lato"
+        description={{
+          text: "hello"
+        }}
+        error={{
+          text: "*Please enter valid passport number",
+          style: {
+            textAlign: "right",
+            width: "100%",
+            color: "#c00",
+            fontSize: "14px",
+            fontWeight: 400,
+            fontFamily: "Lato"
+          }
         }}
       />
     </fieldset>
