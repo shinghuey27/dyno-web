@@ -3,20 +3,28 @@ import PropTypes from 'prop-types';
 
 const Label = (props) => {
 
-    const { value, type } = props;
+    const { value, type, } = props;
+
+    var labelStyle = { color: '#6f7faf' }
 
     switch (type) {
         case 'error':
 
-            return <label className="label" style={{ color: 'red' }} {...props}>{value}</label>
+            labelStyle = { color: 'red' }
+
+            break;
 
         case 'desc':
 
-            return <label className="label" style={{ color: 'blue' }} {...props}>{value}</label>
-        default:
-            return <label className="label" {...props}>{value}</label>
+            labelStyle = { color: 'black' }
+
+            break;
 
     }
+
+    return (
+        <label style={labelStyle} {...props}>{value}</label>
+    )
 
 
 }

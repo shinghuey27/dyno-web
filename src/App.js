@@ -100,7 +100,9 @@ function App() {
             <TextboxDynoSH
             />
 
-            {/* <Label /> */}
+            <Label value="my error" type={'error'} />
+            <Label value="my description" type={'desc'} />
+             <label style={{marginTop:50, marginLeft:30, display:'inline-block'}}>label original</label> 
           </> :
           <>
             <Switch />
