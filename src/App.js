@@ -19,33 +19,43 @@ import ErrorMessage from "./Components/Label/ErrorMessage";
 import HelpOutline from "./Components/Icon/HelpOutline";
 import HyperLink from "./Components/Link/HyperLink";
 
-import { arrayOfStrings, options, optionsSample, topAccount, topBanks } from "./SampleData/List";
+import {
+  arrayOfStrings,
+  options,
+  optionsSample,
+  topAccount,
+  topBanks
+} from "./SampleData/List";
 import DropdownSearch from "./Components/Select/DropdownSearch/DropdownSearch";
 import { useState } from "react";
 import TextboxDyno from "./Components/TextboxDyno/TextboxDyno";
 import { color } from "@mui/system";
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { Icon } from "@mui/material";
 import TextboxDyno_0 from "./Components/TextboxDyno/TextboxDyno_0";
 import TextboxDynoSH from "./Components/TextboxDyno/TextboxDynoSH";
 
 function App() {
-
   const [demo, setDemo] = useState(true);
   const [inputError, setInputError] = useState(false);
 
   return (
-    <div>
-      {/* <Sidebar /> */}
-      <fieldset className="field" style={{ padding: "2rem" }}>
-       
-            <TextboxDynoSH
-            />
-
-         
-      </fieldset>
-    </div>)
-
+    <fieldset className="field" style={{ padding: "2rem" }}>
+      <TextboxDynoSH
+        labelText="Name"
+        tooltipText="Here to write your biller code"
+        descText="Biller code description"
+        errorText="Invalid input"
+        // labelClassName="labelClass"
+        // descClassName="descClass"
+        // errorClassName="labelClass"
+        
+        labelStyle={{color:"#1e2225",fontSize:"14px",fontFamily:"Lato" }}
+        descStyle={{ display: "inline-block", fontSize:"10px" }}
+        errorStyle={{ display: "inline-block", marginTop: 20,  }}
+      />
+    </fieldset>
+  );
 }
 
 export default App;
