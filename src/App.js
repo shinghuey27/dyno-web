@@ -42,7 +42,7 @@ function App() {
       {/* inline styling */}
       <Textbox
         label={{
-          text: "ID Number",
+          label:"ID Number",
           style: {
             color: "#1e2225",
             fontSize: "14px",
@@ -65,10 +65,10 @@ function App() {
           }
         }}
         description={{
-          text: "hello"
+          label: "hello"
         }}
         error={{
-          text: "*Please enter valid passport number",
+          label: "*Please enter valid passport number",
           style: {
             textAlign: "right",
             width: "100%",
@@ -82,18 +82,18 @@ function App() {
       {/* className styling */}
       <Textbox
         label={{
-          text: "ID Number 2",
+          label: "ID Number 2",
           className: "labelClass"
         }}
-        tooltip={{ text: "abc" }}
+        tooltip={{ label: "abc" }}
         text={{
           className: "textClass"
         }}
         description={{
-          text: "description 2"
+          label: "description 2"
         }}
         error={{
-          text: "*Please enter valid ID number",
+          label: "*Please enter valid ID number",
           className: "errorClass"
         }}
       />
