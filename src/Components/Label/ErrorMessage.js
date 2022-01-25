@@ -1,10 +1,10 @@
 import "./Label.css";
 
 const ErrorMessage = (props) => {
-
-    return <div {...props}>{props.label}</div>
+  return <div {...props}>{props.label}</div>;
 };
 ErrorMessage.defaultProps = {
-    className: "errorMessage"
-  };
+  label: "default error",
+  className: "errorMessage"
+};
 export default ErrorMessage;

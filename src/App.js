@@ -36,21 +36,22 @@ import Textbox from "./Components/Textbox/Textbox";
 function App() {
   const [demo, setDemo] = useState(true);
   const [inputError, setInputError] = useState(false);
-  // 2 methods for custom styling
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
-      {/* inline styling */}
+      {/* Default */}
+      <Textbox label text description error tooltip />
+
+      {/* Hide tooltip  */}
+      <Textbox label text description error />
+      {/* ------------------------------------------------- */}
+
+      {/* 2 Method of custom styling  */}
+
+      {/* 1. inline styling */}
       <Textbox
-        label={{
-          label:"ID Number",
-          style: {
-            color: "#1e2225",
-            fontSize: "14px",
-            fontWeight: 400,
-            fontFamily: "Lato"
-          }
-        }}
-        tooltip={{ text: "abc" }}
+      // label with default value
+        label
+        tooltip={{ label: "abc" }}
         text={{
           style: {
             border: "1px solid #ddd",
@@ -79,7 +80,8 @@ function App() {
           }
         }}
       />
-      {/* className styling */}
+
+      {/* 2. className styling */}
       <Textbox
         label={{
           label: "ID Number 2",

@@ -6,6 +6,7 @@ const Label = (props) => {
 };
 
 Label.defaultProps = {
+  label: "Default Label",
   className: "label"
 };
 
