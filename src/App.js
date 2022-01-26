@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.css";
 // import Button from "./Components/Button/Button";
 // import Label from "./Components/Label/Label";
 // import Description from "./Components/Label/Description";
@@ -36,13 +36,14 @@ import Textbox from "./Components/Textbox/Textbox";
 function App() {
   const [demo, setDemo] = useState(true);
   const [inputError, setInputError] = useState(false);
+
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
       {/* Default */}
       <Textbox label text description error tooltip />
 
       {/* Hide tooltip  */}
-      <Textbox label text description error />
+      {/* <Textbox label text description error /> */}
       {/* ------------------------------------------------- */}
 
       {/* 2 Method of custom styling  */}
@@ -62,7 +63,7 @@ function App() {
             fontSize: "14px",
             fontWeight: 400,
             fontFamily: "Lato",
-            boxSizing: "border-box"
+            boxSizing: "border-box",
           }
         }}
         description={{
@@ -89,8 +90,9 @@ function App() {
         }}
         tooltip={{ label: "abc" }}
         text={{
-          className: "textClass"
+          className: "textClass",
         }}
+
         description={{
           label: "description 2"
         }}

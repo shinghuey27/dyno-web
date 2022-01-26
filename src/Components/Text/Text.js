@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import "./Text.css";
+import sharedStyle from "./Text.css";
 
 const Text = (props) => {
   return (
@@ -8,7 +8,6 @@ const Text = (props) => {
       id={props.id}
       name={props.name}
       placeholder={props.placeholder}
-      className= "text"
       {...props}
     ></input>
   );

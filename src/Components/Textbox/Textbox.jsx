@@ -1,5 +1,5 @@
-import Label from "../Label/Label";
 import Text from "../Text/Text";
+import Label from "../Label/Label";
 import ErrorMessage from "../Label/ErrorMessage";
 import Description from "../Label/Description";
 
