@@ -40,19 +40,16 @@ function App() {
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
       {/* Default */}
-      <Textbox label text description error tooltip />
+      <Textbox />
 
-      {/* Hide tooltip  */}
-      {/* <Textbox label text description error /> */}
+      {/* Only edit for label  */}
+      <Textbox label={{ label: "Testing" }} />
       {/* ------------------------------------------------- */}
 
       {/* 2 Method of custom styling  */}
 
       {/* 1. inline styling */}
       <Textbox
-      // label with default value
-        label
-        tooltip={{ label: "abc" }}
         text={{
           style: {
             border: "1px solid #ddd",
@@ -63,14 +60,11 @@ function App() {
             fontSize: "14px",
             fontWeight: 400,
             fontFamily: "Lato",
-            boxSizing: "border-box",
+            boxSizing: "border-box"
           }
         }}
-        description={{
-          label: "hello"
-        }}
+        description={{ style: { display: "none" } }}
         error={{
-          label: "*Please enter valid passport number",
           style: {
             textAlign: "right",
             width: "100%",
@@ -90,9 +84,8 @@ function App() {
         }}
         tooltip={{ label: "abc" }}
         text={{
-          className: "textClass",
+          className: "textClass"
         }}
-
         description={{
           label: "description 2"
         }}
