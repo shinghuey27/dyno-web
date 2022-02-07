@@ -1,4 +1,4 @@
-import { padding } from '@mui/system';
+import { height, padding } from '@mui/system';
 import React from 'react';
 
 
@@ -14,7 +14,10 @@ export default function List(props) {
             borderRadius: 8,
             boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
             padding: 10,
-            top: -40
+            top: -40,
+            overflow: 'scroll',
+            height:50,
+            overflowX:'hidden'
         }} {...listBox}>
             {listItem(data, { item ,renderItem})}
         </ul>
