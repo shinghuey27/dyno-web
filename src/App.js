@@ -13,7 +13,7 @@ function App() {
       <Textbox label text description error tooltip />
 
       {/* Hide tooltip  */}
-      {/* <Textbox label text description error /> */}
+      <Textbox label text description error />
       {/* ------------------------------------------------- */}
 
       {/* 2 Method of custom styling  */}
