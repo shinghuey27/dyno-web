@@ -8,26 +8,37 @@ const dataobj = [
     {
         title: 'I am legend',
         artist: 'Will Smith'
-    }, {
+    }
+    , {
         title: 'The Dark Knight',
         artist: 'Bale'
     }, {
         title: 'Edge of Tomorrow',
         artist: 'Cruise'
-    }, {}]
+    },
+    {
 
-export default function Searchbar() {
+    }
+]
+
+export default function Searchbar(props) {
+    const { label, text, description, error, listBox, item, renderItem } = props;
     return (
-        <div style={{}}>
+        <>
             <Textbox
                 label
-                text={{ style: { width: 100, margin: 0 } }}
+                text
                 description
+                error
             />
             <div style={{ position: 'relative' }}>
-                <List data={dataobj}  />
+                <List data={dataobj} listBox item
+                    renderItem={el => {
+                        if (el.length > 0) return <div>{el?.title}</div>
+                        else return renderItem(el)
+                    }} />
             </div>
 
 
-        </div>);
+        </>);
 }

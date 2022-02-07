@@ -72,7 +72,9 @@ function App() {
           className: "errorClass"
         }}
       />
-      <Searchbar />
+      <Searchbar renderItem={e => {
+        return <div>{e.title}</div>
+      }} />
     </fieldset>
   );
 }
