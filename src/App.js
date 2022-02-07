@@ -2,6 +2,7 @@ import styles from "./App.css";
 
 import { useState } from "react";
 import Textbox from "./Components/Textbox/Textbox";
+import Searchbar from "./Components/Searchbar/Searchbar";
 
 function App() {
   const [demo, setDemo] = useState(true);
@@ -20,7 +21,7 @@ function App() {
 
       {/* 1. inline styling */}
       <Textbox
-      // label with default value
+        // label with default value
         label
         tooltip={{ label: "abc" }}
         text={{
@@ -71,6 +72,7 @@ function App() {
           className: "errorClass"
         }}
       />
+      <Searchbar />
     </fieldset>
   );
 }

@@ -6,10 +6,10 @@ import Description from "../Label/Description";
 import Tooltips from "../Tooltip/Tooltips";
 
 const Textbox = (props) => {
-  const { label, text, error, tooltip, description } = props;
+  const { label, text, error, tooltip, description, } = props;
   return (
     <>
-      <div style={{ alignItems: "center", display: "flex" }}>
+      <div style={{ alignItems: "center", display: "flex" }} >
         {label && (
           <Label
             label={label.label}
