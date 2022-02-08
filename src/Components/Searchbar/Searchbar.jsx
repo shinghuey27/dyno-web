@@ -34,7 +34,7 @@ export default function Searchbar(props) {
                     error
                 />
                 <div style={{}}>
-                    <KeyboardArrowDownIcon style={{marginTop:'150%'}}/>
+                    <KeyboardArrowDownIcon style={{marginTop:40}}/>
                 </div>
             </div>
             <div style={{ position: 'relative' }}>
