@@ -14,6 +14,7 @@ export default function List(props) {
             borderRadius: 8,
             boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
             padding: 10,
+            width:260,
             top: -40,
             overflow: 'scroll',
             height:50,

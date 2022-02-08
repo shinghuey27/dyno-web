@@ -72,9 +72,15 @@ function App() {
           className: "errorClass"
         }}
       />
-      <Searchbar renderItem={e => {
-        return <div>{e.title}</div>
-      }} />
+      
+      <Searchbar
+        label={{ label: 'search' }}
+        description={{
+          label: "description 3"
+        }}
+        renderItem={e => {
+          return <div>{e.title}</div>
+        }} />
     </fieldset>
   );
 }

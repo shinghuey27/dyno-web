@@ -26,9 +26,9 @@ export default function Searchbar(props) {
     return (
         <>
             <Textbox
-                label
-                text
-                description
+                label={label}  
+                text              
+                description={description}
                 error
             />
             <div style={{ position: 'relative' }}>
