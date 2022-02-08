@@ -42,8 +42,13 @@ function App() {
       {/* Default */}
       <Textbox />
 
+<<<<<<< HEAD
       {/* Only edit for label  */}
       <Textbox label={{ label: "Testing" }} />
+=======
+      {/* Hide tooltip  */}
+      <Textbox label text description error />
+>>>>>>> c621feb32d174258bcd1f3a3b89594a3829456bd
       {/* ------------------------------------------------- */}
 
       {/* 2 Method of custom styling  */}
