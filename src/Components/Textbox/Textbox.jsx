@@ -8,7 +8,7 @@ import Tooltips from "../Tooltip/Tooltips";
 const Textbox = (props) => {
   const { label, text, error, tooltip, description, } = props;
   return (
-    <>
+    <div>
       <div style={{ alignItems: "center", display: "flex" }} >
         {label && (
           <Label
@@ -50,7 +50,7 @@ const Textbox = (props) => {
           className={error.className}
         />
       )}
-    </>
+    </div>
   );
 };
 

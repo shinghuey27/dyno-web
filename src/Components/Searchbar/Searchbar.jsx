@@ -2,6 +2,7 @@ import React from 'react';
 import Label from '../Label/Label';
 import List from '../List/List';
 import Textbox from '../Textbox/Textbox';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const data = [1, 2, 3, 4]
 const dataobj = [
@@ -25,12 +26,17 @@ export default function Searchbar(props) {
     const { label, text, description, error, listBox, item, renderItem } = props;
     return (
         <>
-            <Textbox
-                label={label}  
-                text              
-                description={description}
-                error
-            />
+            <div style={{ display: 'flex', }}>
+                <Textbox
+                    label={label}
+                    text
+                    description={description}
+                    error
+                />
+                <div style={{}}>
+                    <KeyboardArrowDownIcon style={{marginTop:'150%'}}/>
+                </div>
+            </div>
             <div style={{ position: 'relative' }}>
                 <List data={dataobj} listBox item
                     renderItem={el => {
