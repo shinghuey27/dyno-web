@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>Radio Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard_CASA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Radio-Button">
+            <g id="Group-10" transform="translate(1.000000, 1.000000)">
+                <circle id="Oval-1153" stroke="#CFCFCF" stroke-width="2" cx="10" cy="10" r="10"></circle>
+                <circle id="Oval-1153" fill="#FFC83D" cx="10" cy="10" r="6"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

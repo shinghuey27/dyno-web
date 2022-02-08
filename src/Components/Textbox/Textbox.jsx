@@ -10,16 +10,46 @@ const Textbox = (props) => {
   return (
     <>
       <div style={{ alignItems: "center", display: "flex" }}>
-        <Label {...label} />
-        <Tooltips {...tooltip} />
+        {label && (
+          <Label
+            label={label.label}
+            style={label.style}
+            className={label.className}
+          />
+        )}
+        {tooltip && (
+          <Tooltips
+            label={tooltip.label}
+            style={tooltip.style}
+            className={tooltip.className}
+          />
+        )}
       </div>
-      <Text {...text} />
+      {text && (
+        <Text
+          placeholder={text.placeholder}
+          style={text.style}
+          className={text.className}
+        />
+      )}
 
       <div>
-        <Description {...description} />
+        {description && (
+          <Description
+            label={description.label}
+            style={description.style}
+            className={description.className}
+          />
+        )}
       </div>
 
-      <ErrorMessage {...error} />
+      {error && (
+        <ErrorMessage
+          label={error.label}
+          style={error.style}
+          className={error.className}
+        />
+      )}
     </>
   );
 };

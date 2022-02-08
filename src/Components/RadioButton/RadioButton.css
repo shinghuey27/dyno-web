@@ -1,0 +1,9 @@
+.display{
+    display: flex;
+    flex-direction: column;
+}
+.rContainer{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}

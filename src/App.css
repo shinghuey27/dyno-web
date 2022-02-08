@@ -60,3 +60,8 @@ html {
   font-weight: 400;
   font-family: "Lato";
 }
+
+
+.img{
+  background-image: url(/public/unchecked.svg);
+}

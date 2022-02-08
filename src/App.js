@@ -31,74 +31,37 @@ import styles from "./App.css";
 // import TextboxDyno_0 from "./Components/Textbox/TextboxDyno_0";
 
 import { useState } from "react";
+import Radio from "./Components/RadioButton/Radio";
+import RadioButton from "./Components/RadioButton/RadioButton";
+import { fontSize } from "@mui/system";
 import Textbox from "./Components/Textbox/Textbox";
+const data = [
+  { id: 1, label: "Instant transfer" },
+  { id: 2, label: "Duitnow transfer" },
+  { id: 3, label: "Grab Pay" }
+];
 
 function App() {
-  const [demo, setDemo] = useState(true);
-  const [inputError, setInputError] = useState(false);
-
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
-      {/* Default */}
-      <Textbox />
+        <RadioButton
+          radio
+          label={{
+            label: "Instant Transfer",
+            style: {}
+          }}
+          description={{
+            style: { color: "#7D7D7D" }
+          }}
+        />
 
-<<<<<<< HEAD
-      {/* Only edit for label  */}
-      <Textbox label={{ label: "Testing" }} />
-=======
-      {/* Hide tooltip  */}
-      <Textbox label text description error />
->>>>>>> c621feb32d174258bcd1f3a3b89594a3829456bd
-      {/* ------------------------------------------------- */}
-
-      {/* 2 Method of custom styling  */}
-
-      {/* 1. inline styling */}
-      <Textbox
-        text={{
-          style: {
-            border: "1px solid #ddd",
-            borderRadius: "4px",
-            height: 40,
-            width: "100%",
-            margin: 0,
-            fontSize: "14px",
-            fontWeight: 400,
-            fontFamily: "Lato",
-            boxSizing: "border-box"
-          }
-        }}
-        description={{ style: { display: "none" } }}
-        error={{
-          style: {
-            textAlign: "right",
-            width: "100%",
-            color: "#c00",
-            fontSize: "14px",
-            fontWeight: 400,
-            fontFamily: "Lato"
-          }
-        }}
-      />
-
-      {/* 2. className styling */}
-      <Textbox
+<Radio />
+      {/* <Textbox
         label={{
-          label: "ID Number 2",
-          className: "labelClass"
+          label: "Account"
         }}
-        tooltip={{ label: "abc" }}
-        text={{
-          className: "textClass"
-        }}
-        description={{
-          label: "description 2"
-        }}
-        error={{
-          label: "*Please enter valid ID number",
-          className: "errorClass"
-        }}
-      />
+        text
+      /> */}
     </fieldset>
   );
 }

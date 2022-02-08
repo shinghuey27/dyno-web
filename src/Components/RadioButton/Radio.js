@@ -1,20 +1,14 @@
-import styles from "./Radio.module.scss";
+import "./Radio.css";
 
-const Radio = () => {
+const Radio = (props) => {
   return (
     <div>
-      <label className={styles.container}>
-        Instant Transfer
-        <input type="radio" checked="checked" name="radio" />
-        <span className={styles.checkmark}></span>
-      </label>
-      <label className={styles.container}>
-        IBG Transfer
-        <input type="radio"  name="radio" />
-        <span className={styles.checkmark}></span>
-      </label>
+      <div {...props} className="img"></div>
     </div>
   );
+};
+Radio.defaultProps = {
+  className: "img"
 };
 
 export default Radio;
