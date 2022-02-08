@@ -3,6 +3,7 @@ import styles from "./App.css";
 import { useState } from "react";
 import Textbox from "./Components/Textbox/Textbox";
 import Searchbar from "./Components/Searchbar/Searchbar";
+import DatePicker from "./Components/DatePicker/DatePicker";
 
 function App() {
   const [demo, setDemo] = useState(true);
@@ -11,16 +12,16 @@ function App() {
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
       {/* Default */}
-      <Textbox label text description error tooltip />
+      {/* <Textbox label text description error tooltip /> */}
 
       {/* Hide tooltip  */}
-      <Textbox label text description error />
+      {/* <Textbox label text description error /> */}
       {/* ------------------------------------------------- */}
 
       {/* 2 Method of custom styling  */}
 
       {/* 1. inline styling */}
-      <Textbox
+      {/* <Textbox
         // label with default value
         label
         tooltip={{ label: "abc" }}
@@ -51,10 +52,10 @@ function App() {
             fontFamily: "Lato"
           }
         }}
-      />
+      /> */}
 
       {/* 2. className styling */}
-      <Textbox
+      {/* <Textbox
         label={{
           label: "ID Number 2",
           className: "labelClass"
@@ -71,16 +72,19 @@ function App() {
           label: "*Please enter valid ID number",
           className: "errorClass"
         }}
-      />
-      
-      <Searchbar
+      /> */}
+
+      {/* <Searchbar
         label={{ label: 'search' }}
         description={{
           label: "description 3"
         }}
         renderItem={e => {
           return <div>{e.title}</div>
-        }} />
+        }} /> */}
+
+      <DatePicker />
+
     </fieldset>
   );
 }
