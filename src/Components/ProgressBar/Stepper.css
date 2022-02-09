@@ -1,20 +1,23 @@
 .progressContainer {
   display: flex;
+  flex:1;
   flex-direction: row;
   align-items: baseline;
 }
 
 .progressBar {
   display: flex;
-  width: 91px;
+  width: 40%;
   justify-content: space-between;
 }
 .step1,
+.step3,
 .step2 {
   margin-top: 1rem;
+  flex:1;
+  margin-right: 10px;  
   background: rgb(255, 221, 0);
-  height: 6px;
-  width: 44px;
+  height: 6px;  
 }
 
 .step1 {

@@ -96,7 +96,28 @@ function App() {
       </div> */}
 
 
-      <Stepper />
+      <Stepper
+        // stepper={{
+        //   style: { display:'flex', flex:1}
+        // }}
+        // stepper_one={{
+        //   style: { backgroundColor: 'white', flex:1, fontSize:14, height:20 },
+        //   text: 'Select your goal'
+        // }}
+        // stepper_two={{
+        //   style: { backgroundColor: 'white',flex:1, fontSize:14, height:20},
+        //   text: 'Define your goal'
+        // }}
+        label={{ label: 'Step 2/3' }}
+        hr={{
+          style: {
+            border: '1px solid black',
+            flex: 1, height: 0.1,
+            marginTop:22
+
+          }
+        }}
+      />
 
 
       {/* <DatePicker /> */}
