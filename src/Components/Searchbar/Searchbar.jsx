@@ -23,7 +23,7 @@ const dataobj = [
 ]
 
 export default function Searchbar(props) {
-    const { label, text, description, error, listBox, item, renderItem } = props;
+    const { label, text, description, error, listBox, item, renderItem, icon } = props;
     return (
         <>
             <div style={{ display: 'flex', }}>
@@ -34,7 +34,7 @@ export default function Searchbar(props) {
                     error
                 />
                 <div >
-                    <KeyboardArrowDownIcon style={{ marginTop: 40 }} />
+                    <KeyboardArrowDownIcon style={{ ...props.iconStyle}} {...icon} />
                 </div>
             </div>
             <div style={{ position: 'relative' }}>
@@ -47,4 +47,8 @@ export default function Searchbar(props) {
 
 
         </>);
+}
+
+Searchbar.defaultProps={
+    iconStyle:{ marginTop:30}
 }

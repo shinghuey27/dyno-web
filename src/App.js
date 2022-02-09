@@ -113,30 +113,30 @@ function App() {
             boxSizing: "border-box",
           }
         }}
-        listBox={{
-          style: {
-            backgroundColor: '#44444F',
-            margin: 0, zIndex: 200, position: 'absolute',
-            border: '1px solid rgba(0, 0, 0, 0.05)',
-            borderRadius: 8,
-            boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
-            padding: 10,
-            width: 260,
-            top: -40,
-            overflow: 'scroll',
-            height: 50,
-            overflowX: 'hidden',
+        // listBox={{
+        //   style: {
+        //     backgroundColor: '#44444F',
+        //     margin: 0, zIndex: 200, position: 'absolute',
+        //     border: '1px solid rgba(0, 0, 0, 0.05)',
+        //     borderRadius: 8,
+        //     boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
+        //     padding: 10,
+        //     width: 260,
+        //     top: -40,
+        //     overflow: 'scroll',
+        //     height: 50,
+        //     overflowX: 'hidden',
             
 
-          },
-          className: 'listBox'
-        }}
-        item={{
-          style: {
-            backgroundColor: '#44444F',           
-          },
-          className: 'itemList'
-        }}
+        //   },
+        //   className: 'listBox'
+        // }}
+        // item={{
+        //   style: {
+        //     backgroundColor: '#44444F',           
+        //   },
+        //   className: 'itemList'
+        // }}
       />
 
       {/* <div style={{ display: 'flex', }}>
