@@ -5,6 +5,16 @@
   flex-direction: column;
   margin-top: 1rem;
 }
+.listBox::-webkit-scrollbar {
+  display: none;
+}
+
+.itemList{
+  color: white;
+}
+.itemList:hover {
+  color: rgb(255, 221, 0);  
+}
 
 .tooltipContainer {
   display: flex;

@@ -29,11 +29,7 @@ export default function Searchbar(props) {
             <div style={{ display: 'flex', }}>
                 <Textbox
                     label={label}
-                    text={{
-                        style: {
-                            // border: 0 
-                        }
-                    }}
+                    text={text}
                     description={description}
                     error
                 />
