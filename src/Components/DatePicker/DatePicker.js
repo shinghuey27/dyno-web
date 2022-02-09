@@ -7,17 +7,17 @@ import Label from "../Label/Label";
 import Calendar from "./Calendar";
 
 const DatePicker = (props) => {
-  
-  const { datePicker, endIconContainer, label, container } = props;  
-  
+
+  const { datePicker, endIconContainer, label, labelProps, container } = props;
+
   return (
     <div className="input-icons" {...container}>
 
-      <Label {...label}></Label>
+      <Label label={label} {...labelProps}></Label>
       <div className="icon" {...endIconContainer}>
         <EventIcon />
       </div>
-      <Calendar datePicker={datePicker}/>
+      <Calendar datePicker={datePicker} />
 
     </div>
   );

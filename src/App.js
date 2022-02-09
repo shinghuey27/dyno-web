@@ -184,24 +184,25 @@ function App() {
 
 
 
-      {/* <DatePicker
+      <DatePicker
         // container={{ style: {backgroundColor:'yellow'} }}
+        label={'Calendar'}
         datePicker={{
           showYearDropdown: true,
           // style: {},
           // calendarClassName: 'datepick2',
-          // calendarContainer: ({ className, children }) => renderCalendar({ className, children })
-          // onClickOutside:()=>{console.log('click outside')}
+          // calendarContainer: ({ className, children }) => renderCalendar({ className, children })          
         }}
+      />
+
+      {/* <RadioButton
+        label='radio'
       /> */}
 
-      <RadioButton
-        label='radio' />
-
-      <Checkbox
-        // checkMark={{ style: {backgroundColor:'red'} }}
-        // container={{ style: {color:'green', "&::after":{}} }}
-      />
+      {/* <Checkbox
+        checkMark={{ style: {backgroundColor:'red'} }}
+        container={{ style: {color:'green', "&::after":{}} }}
+      /> */}
 
 
 
