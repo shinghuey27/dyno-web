@@ -153,33 +153,33 @@ function App() {
       </div> */}
 
 
-      <Stepper
+      {/* <Stepper
         stepOne
         stepTwo
-        // stepThree
+        stepThree
         label
-        // stepper={{
-        //   style: { display: 'flex', flex: 1 }
-        // }}
-        // stepOne={{
-        //   style: { backgroundColor: 'white', flex: 1, fontSize: 14, height: 20 },
-        //   text: 'Select your goal'
-        // }}
-        // stepTwo={{
-        //   style: { backgroundColor: 'white', flex: 1, fontSize: 14, height: 20 },
-        //   text: 'Define your goal'
-        // }}
-        // hr
-        // label={{ label: 'Step 2/3' }}
-        // hr={{
-        //   style: {
-        //     border: '1px solid black',
-        //     flex: 1, height: 0.1,
-        //     marginTop: 22
+        stepper={{
+          style: { display: 'flex', flex: 1 }
+        }}
+        stepOne={{
+          style: { backgroundColor: 'white', flex: 1, fontSize: 14, height: 20 },
+          text: 'Select your goal'
+        }}
+        stepTwo={{
+          style: { backgroundColor: 'white', flex: 1, fontSize: 14, height: 20 },
+          text: 'Define your goal'
+        }}
+        hr
+        label={{ label: 'Step 2/3' }}
+        hr={{
+          style: {
+            border: '1px solid black',
+            flex: 1, height: 0.1,
+            marginTop: 22
 
-        //   }
-        // }}
-      />
+          }
+        }}
+      /> */}
 
 
 
@@ -195,14 +195,15 @@ function App() {
         }}
       /> */}
 
-      {/* <RadioButton /> */}
+      <RadioButton 
+      label='radio'/>
 
       {/* <Checkbox
         // checkMark={{ style: {backgroundColor:'red'} }}
         container={{ style: {color:'green', "&::after":{}} }}
       /> */}
 
-      <Text />
+      
 
     </fieldset>
   );
