@@ -78,10 +78,9 @@ function App() {
       <Searchbar
         label={{ label: 'search' }}
         description={{
-          label: "this is search bar"
+          label: "this is search bar",
+          // style:{top:200, position:'absolute'}
         }}
-        renderItem={e => <div>{e.title}</div>}
-
       />
 
       {/* <div style={{ display: 'flex', }}>
