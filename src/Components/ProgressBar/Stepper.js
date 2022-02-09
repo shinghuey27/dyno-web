@@ -19,11 +19,11 @@ const Stepper = (props) => {
 
       <div className="progressBar" {...stepper}>
 
-        <div className="step1" {...stepper_one} >{stepper_one?.text}</div>
+        {stepper_one && <div className="step1" {...stepper_one} >{stepper_one?.text}</div>}
 
         {hr && Hr(hr)}
 
-        < div className="step2" {...stepper_two} >{stepper_two?.text}</div>
+        {stepper_two && <div className="step2" {...stepper_two} >{stepper_two?.text}</div>}
 
         {hr && <hr style={{
           marginTop: 22,
@@ -32,7 +32,7 @@ const Stepper = (props) => {
           flex: 1
         }} />}
 
-        <div className="step3" {...stepper_three} >{stepper_three?.text}</div>
+        {stepper_three && <div className="step3" {...stepper_three} >{stepper_three?.text}</div>}
 
       </div>
 

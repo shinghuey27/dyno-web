@@ -108,16 +108,18 @@ function App() {
         //   style: { backgroundColor: 'white',flex:1, fontSize:14, height:20},
         //   text: 'Define your goal'
         // }}
-        label={{ label: 'Step 2/3' }}
-        hr={{
-          style: {
-            border: '1px solid black',
-            flex: 1, height: 0.1,
-            marginTop:22
+        // label={{ label: 'Step 2/3' }}
+        // hr={{
+        //   style: {
+        //     border: '1px solid black',
+        //     flex: 1, height: 0.1,
+        //     marginTop: 22
 
-          }
-        }}
+        //   }
+        // }}
       />
+
+      
 
 
       {/* <DatePicker /> */}
