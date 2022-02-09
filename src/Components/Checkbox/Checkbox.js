@@ -3,12 +3,12 @@ import "./Checkbox.css";
 
 const Checkbox = (props) => {
 
-  const { container, input, checkMark } = props;
+  const { container, input, checkMark, label } = props;
 
   return (
     <Label
       className={props.classNameContainer}
-      label="Checkbox"
+      label={typeof label === 'string' ? label : 'Default'}
       {...container}
     >
       <input type="checkbox"

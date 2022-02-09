@@ -1,15 +1,22 @@
+import Label from "../Label/Label";
 import "./Switch.css";
 
-const Switch = () => {
+const Switch = (props) => {
+  const { container, label, labelProps, slider } = props;
   return (
     <div className="flex">
-      <h1 className="h1"> Hide balance</h1>
-      <label className="switch">
+
+      {label && <Label label={typeof label === 'string' ? label : 'Default'} {...labelProps} />}
+
+      <Label className={props.classNameLabel} label="" {...container}>
         <input type="checkbox" />
-        <span className="slider round"></span>
-      </label>
+        <span className={props.classNameSlider} {...slider}></span>
+      </Label>
     </div>
   );
 };
-
+Switch.defaultProps = {
+  classNameLabel: "switch",
+  classNameSlider: "slider round"
+};
 export default Switch;

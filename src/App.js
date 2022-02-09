@@ -9,24 +9,23 @@ import Label from "./Components/Label/Label";
 import Stepper from "./Components/ProgressBar/Stepper";
 import Radio from "./Components/RadioButton/Radio";
 
-import { CalendarContainer } from 'react-datepicker'
+import { CalendarContainer } from "react-datepicker";
 import Checkbox from "./Components/Checkbox/Checkbox";
 import RadioButton from "./Components/RadioButton/RadioButton";
 import { optionsSample, sampleItem } from "./SampleData/List";
 import Text from "./Components/Text/Text";
+import Switch from "./Components/Switch/Switch";
 
 const renderCalendar = ({ className, children }) => {
   return (
     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
       <CalendarContainer className={className}>
-        <div style={{ background: "#f0f0f0" }}>
-          What is your favorite day?
-        </div>
+        <div style={{ background: "#f0f0f0" }}>What is your favorite day?</div>
         <div style={{ position: "relative" }}>{children}</div>
       </CalendarContainer>
     </div>
   );
-}
+};
 
 function App() {
   const [demo, setDemo] = useState(true);
@@ -152,7 +151,6 @@ function App() {
           
       </div> */}
 
-
       {/* <Stepper
         stepOne
         stepTwo
@@ -181,10 +179,7 @@ function App() {
         }}
       /> */}
 
-
-
-
-      <DatePicker
+      {/* <DatePicker
         // container={{ style: {backgroundColor:'yellow'} }}
         label={'Calendar'}
         datePicker={{
@@ -195,14 +190,26 @@ function App() {
         }}
       />
 
-      {/* <RadioButton
-        label='radio'
-      /> */}
+      
 
-      {/* <Checkbox
-        checkMark={{ style: {backgroundColor:'red'} }}
-        container={{ style: {color:'green', "&::after":{}} }}
-      /> */}
+      
+       */}
+
+      {/* <RadioButton
+        label='new label' /> */}
+
+      <Switch
+        label
+
+      />
+
+      <Checkbox
+        label
+      // checkMark={{ style: {backgroundColor:'red'} }}
+      // container={{ style: {color:'green', "&::after":{}} }}
+      />
+
+
 
 
 
