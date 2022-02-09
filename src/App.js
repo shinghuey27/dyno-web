@@ -11,6 +11,7 @@ import Radio from "./Components/RadioButton/Radio";
 
 import { CalendarContainer } from 'react-datepicker'
 import Checkbox from "./Components/Checkbox/Checkbox";
+import RadioButton from "./Components/RadioButton/RadioButton";
 
 const renderCalendar = ({ className, children }) => {
   return (
@@ -154,12 +155,12 @@ function App() {
         }}
       /> */}
 
-      {/* <Radio /> */}
+      <RadioButton />
 
-      <Checkbox
+      {/* <Checkbox
         // checkMark={{ style: {backgroundColor:'red'} }}
         container={{ style: {color:'green', "&::after":{}} }}
-      />
+      /> */}
 
     </fieldset>
   );
