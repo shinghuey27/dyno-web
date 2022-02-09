@@ -7,6 +7,7 @@ import DatePicker from "./Components/DatePicker/DatePicker";
 import Label from "./Components/Label/Label";
 
 import Stepper from "./Components/ProgressBar/Stepper";
+import Radio from "./Components/RadioButton/Radio";
 
 function App() {
   const [demo, setDemo] = useState(true);
@@ -123,6 +124,8 @@ function App() {
 
 
       {/* <DatePicker /> */}
+
+      <Radio />
 
     </fieldset>
   );

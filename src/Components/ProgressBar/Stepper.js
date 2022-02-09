@@ -9,6 +9,8 @@ const Hr = ({ ...hr }) => <hr style={{
   flex: 1
 }} {...hr} />
 
+// for stepper , it kinda needs few steps to work with, cannot work with just one stepper
+
 const Stepper = (props) => {
 
   const { container, stepper, stepper_one, stepper_two, stepper_three, label, hr } = props;
