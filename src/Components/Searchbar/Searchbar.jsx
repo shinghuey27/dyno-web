@@ -15,13 +15,16 @@ export default function Searchbar(props) {
                     text={text}
                     description={description}
                     error={error}
-                    // {...textBox}
+                // {...textBox}
                 />
                 <div >
                     <KeyboardArrowDownIcon style={{ ...props.iconStyle }} {...icon} />
                 </div>
             </div>
-            <div style={{ position: 'relative' }}>
+            <div style={{
+                position: 'relative',
+                top: 21  //<--- why suddenly need ? need to check why need tempered this position
+            }}>
                 {data && <List
                     data={data && data.length ? data : sampleItem}
                     listBox={listBox}

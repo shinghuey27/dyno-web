@@ -96,11 +96,13 @@ function App() {
         }}
       /> */}
 
-      {/* <Searchbar
+      <Searchbar
+        data={optionsSample}
         label={{ label: 'search' }}
         description={{
           label: "this is search bar",
         }}
+        text
         text={{
           style: {
             border: "1px solid #ddd",
@@ -114,32 +116,32 @@ function App() {
             boxSizing: "border-box",
           }
         }}
-        data={optionsSample}
-        listBox={{
-          style: {
-            backgroundColor: '#44444F',
-            margin: 0, zIndex: 200, position: 'absolute',
-            border: '1px solid rgba(0, 0, 0, 0.05)',
-            borderRadius: 8,
-            boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
-            padding: 10,
-            width: 260,
-            top: -40,
-            overflow: 'scroll',
-            height: 50,
-            overflowX: 'hidden',
-            
+      listBox={{
+        style: {
+          backgroundColor: '#44444F',
+          margin: 0, zIndex: 200, position: 'absolute',
+          border: '1px solid rgba(0, 0, 0, 0.05)',
+          borderRadius: 8,
+          boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
+          padding: 10,
+          width: 260,
+          top: -40,
+          overflow: 'scroll',
+          height: 50,
+          overflowX: 'hidden',
 
-          },
-          className: 'listBox'
-        }}
-        item={{
-          style: {
-            backgroundColor: '#44444F',           
-          },
-          className: 'itemList'
-        }}
-      /> */}
+
+        },
+        className: 'listBox'
+      }}
+      item={{
+        style: {
+          backgroundColor: '#44444F',           
+        },
+        className: 'itemList'
+      }}
+      // icon={{style:{marginTop:50}}}
+      />
 
       {/* <div style={{ display: 'flex', }}>
         
@@ -198,16 +200,16 @@ function App() {
       {/* <RadioButton
         label='new label' /> */}
 
-      <Switch
+      {/* <Switch
         label
 
-      />
+      /> */}
 
-      <Checkbox
+      {/* <Checkbox
         label
-      // checkMark={{ style: {backgroundColor:'red'} }}
-      // container={{ style: {color:'green', "&::after":{}} }}
-      />
+      checkMark={{ style: {backgroundColor:'red'} }}
+      container={{ style: {color:'green', "&::after":{}} }}
+      /> */}
 
 
 
