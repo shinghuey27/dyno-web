@@ -6,6 +6,8 @@ import Searchbar from "./Components/Searchbar/Searchbar";
 import DatePicker from "./Components/DatePicker/DatePicker";
 import Label from "./Components/Label/Label";
 
+import Stepper from "./Components/ProgressBar/Stepper";
+
 function App() {
   const [demo, setDemo] = useState(true);
   const [inputError, setInputError] = useState(false);
@@ -75,13 +77,13 @@ function App() {
         }}
       /> */}
 
-      <Searchbar
+      {/* <Searchbar
         label={{ label: 'search' }}
         description={{
           label: "this is search bar",
           // style:{top:200, position:'absolute'}
         }}
-      />
+      /> */}
 
       {/* <div style={{ display: 'flex', }}>
         
@@ -94,7 +96,7 @@ function App() {
       </div> */}
 
 
-
+      <Stepper />
 
 
       {/* <DatePicker /> */}
