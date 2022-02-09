@@ -4,6 +4,7 @@ import { useState } from "react";
 import Textbox from "./Components/Textbox/Textbox";
 import Searchbar from "./Components/Searchbar/Searchbar";
 import DatePicker from "./Components/DatePicker/DatePicker";
+import Label from "./Components/Label/Label";
 
 function App() {
   const [demo, setDemo] = useState(true);
@@ -74,16 +75,30 @@ function App() {
         }}
       /> */}
 
-      {/* <Searchbar
+      <Searchbar
         label={{ label: 'search' }}
         description={{
-          label: "description 3"
+          label: "this is search bar"
         }}
-        renderItem={e => {
-          return <div>{e.title}</div>
-        }} /> */}
+        renderItem={e => <div>{e.title}</div>}
 
-      <DatePicker />
+      />
+
+      {/* <div style={{ display: 'flex', }}>
+        
+        <Label label="Account" style={{ alignSelf: 'center', marginRight: 50,marginBottom:8 }} />
+        
+        <Textbox
+          text
+          error />
+          
+      </div> */}
+
+
+
+
+
+      {/* <DatePicker /> */}
 
     </fieldset>
   );

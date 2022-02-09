@@ -29,20 +29,21 @@ export default function Searchbar(props) {
             <div style={{ display: 'flex', }}>
                 <Textbox
                     label={label}
-                    text
+                    text={{
+                        style: {
+                            // border: 0 
+                        }
+                    }}
                     description={description}
                     error
                 />
-                <div style={{}}>
-                    <KeyboardArrowDownIcon style={{marginTop:40}}/>
+                <div >
+                    <KeyboardArrowDownIcon style={{ marginTop: 40 }} />
                 </div>
             </div>
             <div style={{ position: 'relative' }}>
                 <List data={dataobj} listBox item
-                    renderItem={el => {
-                        if (el.length > 0) return <div>{el?.title}</div>
-                        else return renderItem(el)
-                    }} />
+                    renderItem={el => renderItem(el)} />
             </div>
 
 

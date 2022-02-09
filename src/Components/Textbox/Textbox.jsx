@@ -9,7 +9,8 @@ const Textbox = (props) => {
   const { label, text, error, tooltip, description, } = props;
   return (
     <div>
-      <div style={{ alignItems: "center", display: "flex" }} >
+
+      <div>
         {label && (
           <Label
             label={label.label}
@@ -32,6 +33,7 @@ const Textbox = (props) => {
           className={text.className}
         />
       )}
+
 
       <div>
         {description && (
