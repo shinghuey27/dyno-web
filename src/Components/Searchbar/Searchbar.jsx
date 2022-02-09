@@ -3,27 +3,10 @@ import Label from '../Label/Label';
 import List from '../List/List';
 import Textbox from '../Textbox/Textbox';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
-const data = [1, 2, 3, 4]
-const dataobj = [
-    {
-        title: 'I am legend',
-        artist: 'Will Smith'
-    }
-    , {
-        title: 'The Dark Knight',
-        artist: 'Bale'
-    }, {
-        title: 'Edge of Tomorrow',
-        artist: 'Cruise'
-    },
-    {
-
-    }
-]
+import { sampleItem } from '../../SampleData/List';
 
 export default function Searchbar(props) {
-    const { label, text, description, error, listBox, item, renderItem, icon } = props;
+    const { data, label, text, description, error, listBox, item, renderItem, icon } = props;
     return (
         <>
             <div style={{ display: 'flex', }}>
@@ -34,21 +17,21 @@ export default function Searchbar(props) {
                     error
                 />
                 <div >
-                    <KeyboardArrowDownIcon style={{ ...props.iconStyle}} {...icon} />
+                    <KeyboardArrowDownIcon style={{ ...props.iconStyle }} {...icon} />
                 </div>
             </div>
             <div style={{ position: 'relative' }}>
-                <List
-                    data={dataobj}
+                {data && <List
+                    data={data && data.length ? data : sampleItem}
                     listBox={listBox}
                     item={item}
-                />
+                />}
             </div>
 
 
         </>);
 }
 
-Searchbar.defaultProps={
-    iconStyle:{ marginTop:30}
+Searchbar.defaultProps = {
+    iconStyle: { marginTop: 30 }
 }

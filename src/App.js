@@ -12,6 +12,7 @@ import Radio from "./Components/RadioButton/Radio";
 import { CalendarContainer } from 'react-datepicker'
 import Checkbox from "./Components/Checkbox/Checkbox";
 import RadioButton from "./Components/RadioButton/RadioButton";
+import { optionsSample, sampleItem } from "./SampleData/List";
 
 const renderCalendar = ({ className, children }) => {
   return (
@@ -113,6 +114,7 @@ function App() {
             boxSizing: "border-box",
           }
         }}
+        data={optionsSample}
         // listBox={{
         //   style: {
         //     backgroundColor: '#44444F',

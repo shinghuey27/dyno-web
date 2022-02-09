@@ -2,7 +2,7 @@ import { height, padding } from '@mui/system';
 import React from 'react';
 import Proptypes from 'prop-types';
 
-const listItem = (data, { item, props }) => data.map((el) => <li style={{ ...props.styleItem }} {...item}>{el.title}</li>)
+const listItem = (data, { item, props }) => data.map((el) => <li style={{ ...props.styleItem }} {...item}>{el?.label}</li>)
 
 const List = (props) => {
 
@@ -14,13 +14,13 @@ const List = (props) => {
             {...listBox}
         >
             {/* this is the children of the list , call function listItem , pass 2 argument , first one is the data , second is the style of the item */}
-            {listItem(data, { item, props })}
+            {data && listItem(data, { item, props })}
         </ul>
     );
 }
 
 List.defaultProps = {
-
+    // <-- this is the default inline styling for listbox 
     containerStyle: {
         backgroundColor: 'white', margin: 0, zIndex: 200, position: 'absolute',
         border: '1px solid rgba(0, 0, 0, 0.05)',
@@ -33,6 +33,7 @@ List.defaultProps = {
         height: 50,
         overflowX: 'hidden'
     },
+    // <-- this is default inline styling for the list item
     styleItem: { listStyleType: 'none', padding: 5, fontSize: 15, backgroundColor: 'white' }
 
 }
