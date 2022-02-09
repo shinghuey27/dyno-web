@@ -1,4 +1,3 @@
-import { TextField } from "@mui/material";
 import sharedStyle from "./Text.css";
 
 const Text = (props) => {

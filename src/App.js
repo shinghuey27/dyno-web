@@ -195,15 +195,15 @@ function App() {
         }}
       /> */}
 
-      <RadioButton 
-      label='radio'/>
+      <RadioButton
+        label='radio' />
 
-      {/* <Checkbox
+      <Checkbox
         // checkMark={{ style: {backgroundColor:'red'} }}
-        container={{ style: {color:'green', "&::after":{}} }}
-      /> */}
+        // container={{ style: {color:'green', "&::after":{}} }}
+      />
 
-      
+
 
     </fieldset>
   );
