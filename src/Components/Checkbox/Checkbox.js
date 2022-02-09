@@ -4,17 +4,26 @@ import "./Checkbox.css";
 const Checkbox = (props) => {
 
   const { container, input, checkMark } = props;
-  
+
   return (
-    <Label className="container"
+    <Label
+      className={props.classNameContainer}
+      label="Checkbox"
       {...container}
     >
       <input type="checkbox"
         {...input}
       />
-      <span className="checkmark" {...checkMark}></span>
+      <span
+        className={props.classNameCheckmark}
+        {...checkMark}></span>
     </Label>
   );
 };
+
+Checkbox.defaultProps = {
+  classNameContainer: 'container',
+  classNameCheckmark: 'checkmark'
+}
 
 export default Checkbox;

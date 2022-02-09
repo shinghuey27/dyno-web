@@ -197,6 +197,14 @@ function App() {
         // checkMark={{ style: {backgroundColor:'red'} }}
         container={{ style: {color:'green', "&::after":{}} }}
       /> */}
+
+      <Checkbox
+        // checkMark={{ style: {backgroundColor:'red'} }}
+        // container={{ style: {color:'green', "&::after":{}} }}
+      />
+
+
+
     </fieldset>
   );
 }
