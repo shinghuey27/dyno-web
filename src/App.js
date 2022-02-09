@@ -33,51 +33,12 @@ function App() {
 
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
-      {/* Default */}
-      {/* <Textbox label text description error tooltip /> */}
 
-      {/* Hide tooltip  */}
-      {/* <Textbox label text description error /> */}
-      {/* ------------------------------------------------- */}
+      {/* 7 Molecules  */}
 
-      {/* 2 Method of custom styling  */}
+      {/* 1. Textbox */}
 
-      {/* 1. inline styling */}
-      {/* <Textbox
-        // label with default value
-        label
-        tooltip={{ label: "abc" }}
-        text={{
-          style: {
-            border: "1px solid #ddd",
-            borderRadius: "4px",
-            height: 40,
-            width: "100%",
-            margin: 0,
-            fontSize: "14px",
-            fontWeight: 400,
-            fontFamily: "Lato",
-            boxSizing: "border-box",
-          }
-        }}
-        description={{
-          label: "hello"
-        }}
-        error={{
-          label: "*Please enter valid passport number",
-          style: {
-            textAlign: "right",
-            width: "100%",
-            color: "#c00",
-            fontSize: "14px",
-            fontWeight: 400,
-            fontFamily: "Lato"
-          }
-        }}
-      /> */}
-
-      {/* 2. className styling */}
-      {/* <Textbox
+      <Textbox
         label={{
           label: "ID Number 2",
           className: "labelClass"
@@ -94,7 +55,11 @@ function App() {
           label: "*Please enter valid ID number",
           className: "errorClass"
         }}
-      /> */}
+      />
+
+      {/* ------------------------------------------------- */}
+
+      {/* 2. Searchbar */}
 
       <Searchbar
         data={optionsSample}
@@ -116,47 +81,43 @@ function App() {
             boxSizing: "border-box",
           }
         }}
-      listBox={{
-        style: {
-          backgroundColor: '#44444F',
-          margin: 0, zIndex: 200, position: 'absolute',
-          border: '1px solid rgba(0, 0, 0, 0.05)',
-          borderRadius: 8,
-          boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
-          padding: 10,
-          width: 260,
-          top: -40,
-          overflow: 'scroll',
-          height: 50,
-          overflowX: 'hidden',
+        listBox={{
+          style: {
+            backgroundColor: '#44444F',
+            margin: 0, zIndex: 200, position: 'absolute',
+            border: '1px solid rgba(0, 0, 0, 0.05)',
+            borderRadius: 8,
+            boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
+            padding: 10,
+            width: 260,
+            top: -40,
+            overflow: 'scroll',
+            height: 50,
+            overflowX: 'hidden',
 
 
-        },
-        className: 'listBox'
-      }}
-      item={{
-        style: {
-          backgroundColor: '#44444F',           
-        },
-        className: 'itemList'
-      }}
+          },
+          className: 'listBox'
+        }}
+        item={{
+          style: {
+            backgroundColor: '#44444F',
+          },
+          className: 'itemList'
+        }}
       // icon={{style:{marginTop:50}}}
       />
 
-      {/* <div style={{ display: 'flex', }}>
-        
-        <Label label="Account" style={{ alignSelf: 'center', marginRight: 50,marginBottom:8 }} />
-        
-        <Textbox
-          text
-          error />
-          
-      </div> */}
+      {/* ------------------------------------------------- */}
 
-      {/* <Stepper
+      {/* 3. Stepper */}
+
+      <div style={{marginTop:60}}></div>
+        
+      <Stepper
         stepOne
         stepTwo
-        stepThree
+        // stepThree
         label
         stepper={{
           style: { display: 'flex', flex: 1 }
@@ -179,9 +140,13 @@ function App() {
 
           }
         }}
-      /> */}
+      />
 
-      {/* <DatePicker
+      {/* ------------------------------------------------- */}
+
+      {/* 4. Datepicker */}
+
+      <DatePicker
         // container={{ style: {backgroundColor:'yellow'} }}
         label={'Calendar'}
         datePicker={{
@@ -192,24 +157,33 @@ function App() {
         }}
       />
 
-      
+      {/* ------------------------------------------------- */}
 
-      
-       */}
+      {/* 5. Radiobutton */}
 
-      {/* <RadioButton
-        label='new label' /> */}
+      <RadioButton
+        label='new label' />
 
-      {/* <Switch
+      {/* ------------------------------------------------- */}
+
+      {/* 6. Switch */}
+
+      <Switch
         label
 
-      /> */}
+      />
 
-      {/* <Checkbox
+      {/* ------------------------------------------------- */}
+
+      {/* 7. Checkbox */}
+
+
+      <Checkbox
         label
       checkMark={{ style: {backgroundColor:'red'} }}
       container={{ style: {color:'green', "&::after":{}} }}
-      /> */}
+
+      />
 
 
 

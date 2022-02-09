@@ -8,7 +8,7 @@ import { sampleItem } from '../../SampleData/List';
 export default function Searchbar(props) {
     const { data, label, text, description, error, listBox, item, renderItem, icon } = props;
     return (
-        <>
+        <div >
             <div style={{ display: 'flex', }}>
                 <Textbox
                     label={label}
@@ -33,7 +33,7 @@ export default function Searchbar(props) {
             </div>
 
 
-        </>);
+        </div>);
 }
 
 Searchbar.defaultProps = {
