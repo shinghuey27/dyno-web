@@ -1,45 +1,49 @@
 import "./Stepper.css";
 import Tooltip from '@mui/material/Tooltip';
 import Label from "../Label/Label";
-
-const Hr = ({ ...hr }) => <hr style={{
-  marginTop: 22,
-  border: '1px dashed black',
-  height: 0.1,
-  flex: 1
-}} {...hr} />
+import Step from "./Step";
+import Line from "./Line";
 
 // for stepper , it kinda needs few steps to work with, cannot work with just one stepper
 
 const Stepper = (props) => {
 
-  const { container, stepper, stepper_one, stepper_two, stepper_three, label, hr } = props;
+  const { container, stepper, stepOne, stepTwo, stepThree, label, hr } = props;
 
   return (
 
     // << we are limited with only 2 or 3 stepper with this code design
 
-    <div className="progressContainer" {...container}>
+    <div className={props.containerClassName} {...container}>
 
-      <div className="progressBar" {...stepper}>
+      <div className={props.stepperClassName} {...stepper}>
 
-        {stepper_one && <div className="step1" {...stepper_one} >{stepper_one?.text}</div>}
+        {stepOne && <Step {...stepOne} />}
 
-        {hr && Hr(hr)}
+        {hr && <Line {...hr} />}
 
-        {stepper_two && <div className="step2" {...stepper_two} >{stepper_two?.text}</div>}
+        {stepTwo && <Step {...stepTwo} />}
 
-        {hr && Hr(hr)}
+        {hr && <Line {...hr} />}
 
-        {stepper_three && <div className="step3" {...stepper_three} >{stepper_three?.text}</div>}
+        {stepThree && <Step {...stepThree} />}
 
       </div>
 
-      {label && <Label label="Step 1/2" style={{ marginLeft: 15 }} {...label}></Label>}
+      {label && <Label style={{ ...props.labelStyle }} {...label}></Label>}
 
     </div >
 
   );
 };
+
+Stepper.defaultProps = {
+  labelStyle: {
+    marginLeft: 15
+  },
+  containerClassName: 'progressContainer',
+  stepperClassName: 'progressBar',
+
+}
 
 export default Stepper;

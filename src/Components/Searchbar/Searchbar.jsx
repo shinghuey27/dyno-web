@@ -14,7 +14,8 @@ export default function Searchbar(props) {
                     label={label}
                     text={text}
                     description={description}
-                    error
+                    error={error}
+                    // {...textBox}
                 />
                 <div >
                     <KeyboardArrowDownIcon style={{ ...props.iconStyle }} {...icon} />
