@@ -35,6 +35,7 @@ import Radio from "./Components/RadioButton/Radio";
 import RadioButton from "./Components/RadioButton/RadioButton";
 import { fontSize } from "@mui/system";
 import Textbox from "./Components/Textbox/Textbox";
+import Checkbox from "./Components/Checkbox/Checkbox";
 const data = [
   { id: 1, label: "Instant transfer" },
   { id: 2, label: "Duitnow transfer" },
@@ -44,24 +45,16 @@ const data = [
 function App() {
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
-        <RadioButton
-          radio
-          label={{
-            label: "Instant Transfer",
-            style: {}
-          }}
-          description={{
-            style: { color: "#7D7D7D" }
-          }}
-        />
 
-<Radio />
-      {/* <Textbox
+      <Textbox
         label={{
           label: "Account"
         }}
         text
-      /> */}
+        description
+        error
+        tooltip
+      />
     </fieldset>
   );
 }

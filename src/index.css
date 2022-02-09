@@ -4,8 +4,3 @@ html{
     background-color: #f1f1f5;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}

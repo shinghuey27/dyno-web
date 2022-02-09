@@ -1,9 +1,14 @@
 /* The container */
 .container {
-  display: inline;
+  display: block;
   position: relative;
   padding-left: 2rem;
+  margin-bottom: 12px;
   cursor: pointer;
+  font-size: 13px;
+  font-family: "rubik",sans-serif;
+  line-height: 18px;
+  color:#6f7faf;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -29,12 +34,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover .input ~ .checkmark {
+.container:hover input ~ .checkmark {
   background-color: #b0bad7;
 }
 
 /* When the radio button is checked, add a blue background */
-.container .input:checked ~ .checkmark {
+.container input:checked ~ .checkmark {
   background-color: #01ccce;
 }
 
@@ -46,7 +51,7 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container .input:checked ~ .checkmark:after {
+.container input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -58,9 +63,4 @@
   height: 6.5px;
   border-radius: 50%;
   background: white;
-}
-
-.img {
-  background-image: url(/public/unchecked.svg);
-  background-size: 2.8rem;
 }

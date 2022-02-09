@@ -3,7 +3,10 @@ import "./Radio.css";
 const Radio = (props) => {
   return (
     <div>
-      <div {...props} className="img"></div>
+      <div className="container">
+        <input type="radio" checked="checked" name="radio" />
+        <span className="checkmark"></span>
+      </div>
     </div>
   );
 };
