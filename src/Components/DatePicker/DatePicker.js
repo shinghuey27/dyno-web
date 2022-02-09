@@ -4,6 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./Date.css";
 import EventIcon from "@mui/icons-material/Event";
 import Label from "../Label/Label";
+import Calendar from "./Calendar";
 
 const DatePicker = (props) => {
   
@@ -16,18 +17,7 @@ const DatePicker = (props) => {
       <div className="icon" {...endIconContainer}>
         <EventIcon />
       </div>
-      <DatePick
-        className="datepick"
-
-        // formatWeekDay={(nameOfDay) => nameOfDay.substr(0, 1)}
-        // dateFormat="d MMMM yyyy"
-        // selected={startDate}
-        // onChange={(date) => setStartDate(date)}
-        // showYearDropdown
-        // yearDropdownItemNumber={10}
-        // scrollableYearDropdown
-        {...datePicker}
-      />
+      <Calendar datePicker={datePicker}/>
 
     </div>
   );

@@ -2,6 +2,8 @@ import { height, padding } from '@mui/system';
 import React from 'react';
 
 
+
+
 const listItem = (data, { item, }) => data.map((el) => <li style={{ listStyleType: 'none', padding: 5, fontSize: 15 }} {...item}>{el.title}</li>)
 
 export default function List(props) {
@@ -19,7 +21,10 @@ export default function List(props) {
             overflow: 'scroll',
             height: 50,
             overflowX: 'hidden'
-        }} {...listBox}>
+        }}
+            {...listBox}
+        >
+            {/* this is the children of the list , call function listItem , pass 2 argument , first one is the data , second is the style of the item */}
             {listItem(data, { item })}
         </ul>
     );

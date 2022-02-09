@@ -9,6 +9,22 @@ import Label from "./Components/Label/Label";
 import Stepper from "./Components/ProgressBar/Stepper";
 import Radio from "./Components/RadioButton/Radio";
 
+import { CalendarContainer } from 'react-datepicker'
+import Checkbox from "./Components/Checkbox/Checkbox";
+
+const renderCalendar = ({ className, children }) => {
+  return (
+    <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
+      <CalendarContainer className={className}>
+        <div style={{ background: "#f0f0f0" }}>
+          What is your favorite day?
+        </div>
+        <div style={{ position: "relative" }}>{children}</div>
+      </CalendarContainer>
+    </div>
+  );
+}
+
 function App() {
   const [demo, setDemo] = useState(true);
   const [inputError, setInputError] = useState(false);
@@ -84,6 +100,7 @@ function App() {
           label: "this is search bar",
           // style:{top:200, position:'absolute'}
         }}
+        item={{ style: { backgroundColor: 'white' } }}
       /> */}
 
       {/* <div style={{ display: 'flex', }}>
@@ -98,34 +115,51 @@ function App() {
 
 
       <Stepper
-        // stepper={{
-        //   style: { display:'flex', flex:1}
-        // }}
-        // stepper_one={{
-        //   style: { backgroundColor: 'white', flex:1, fontSize:14, height:20 },
-        //   text: 'Select your goal'
-        // }}
-        // stepper_two={{
-        //   style: { backgroundColor: 'white',flex:1, fontSize:14, height:20},
-        //   text: 'Define your goal'
-        // }}
-        // label={{ label: 'Step 2/3' }}
-        // hr={{
-        //   style: {
-        //     border: '1px solid black',
-        //     flex: 1, height: 0.1,
-        //     marginTop: 22
+      // stepper_one
+      // stepper_two
+      // label
+      // stepper={{
+      //   style: { display: 'flex', flex: 1 }
+      // }}
+      // stepper_one={{
+      //   style: { backgroundColor: 'white', flex: 1, fontSize: 14, height: 20 },
+      //   text: 'Select your goal'
+      // }}
+      // stepper_two={{
+      //   style: { backgroundColor: 'white', flex: 1, fontSize: 14, height: 20 },
+      //   text: 'Define your goal'
+      // }}
+      // label={{ label: 'Step 2/3' }}
+      // hr={{
+      //   style: {
+      //     border: '1px solid black',
+      //     flex: 1, height: 0.1,
+      //     marginTop: 22
 
-        //   }
-        // }}
+      //   }
+      // }}
       />
 
-      
 
 
-      {/* <DatePicker /> */}
 
-      <Radio />
+      {/* <DatePicker
+        // container={{ style: {backgroundColor:'yellow'} }}
+        datePicker={{
+          showYearDropdown: true,
+          // style: {},
+          // calendarClassName: 'datepick2',
+          // calendarContainer: ({ className, children }) => renderCalendar({ className, children })
+          // onClickOutside:()=>{console.log('click outside')}
+        }}
+      /> */}
+
+      {/* <Radio /> */}
+
+      <Checkbox
+        // checkMark={{ style: {backgroundColor:'red'} }}
+        container={{ style: {color:'green', "&::after":{}} }}
+      />
 
     </fieldset>
   );

@@ -17,6 +17,8 @@ const Stepper = (props) => {
 
   return (
 
+    // << we are limited with only 2 or 3 stepper with this code design
+
     <div className="progressContainer" {...container}>
 
       <div className="progressBar" {...stepper}>
@@ -27,12 +29,7 @@ const Stepper = (props) => {
 
         {stepper_two && <div className="step2" {...stepper_two} >{stepper_two?.text}</div>}
 
-        {hr && <hr style={{
-          marginTop: 22,
-          border: '1px solid black',
-          height: 0.1,
-          flex: 1
-        }} />}
+        {hr && Hr(hr)}
 
         {stepper_three && <div className="step3" {...stepper_three} >{stepper_three?.text}</div>}
 

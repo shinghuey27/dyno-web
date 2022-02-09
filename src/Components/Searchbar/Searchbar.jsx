@@ -44,8 +44,8 @@ export default function Searchbar(props) {
             <div style={{ position: 'relative' }}>
                 <List
                     data={dataobj}
-                    listBox
-                    item
+                    listBox={listBox}
+                    item={item}
                 />
             </div>
 
