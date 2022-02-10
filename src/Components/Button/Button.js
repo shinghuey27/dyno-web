@@ -4,17 +4,16 @@ import PropTypes from "prop-types";
 
 const Button = (props) => {
 
-  const { disabled, label } = props;
+  const {
+    disabled,
+    label
+  } = props;
 
-  const buttonType = () => disabled ?
-    (<button className='button-disabled' {...props}>{label}</button>) :
-    (<button className='button' {...props}>{label}</button>);
+  const className = disabled ? 'button-disabled' : 'button';
 
   return (
-    <>
-      {buttonType()}
-    </>
 
+    <button className={className} disabled={disabled} {...props}>{label}</button>
   );
 };
 
@@ -23,8 +22,11 @@ Button.defaultProps = {
   disabled: false
 }
 
+
 Button.propTypes = {
   label: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  onMouseOver: PropTypes.func,
   disabled: PropTypes.bool
 };
 

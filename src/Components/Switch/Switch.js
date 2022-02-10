@@ -15,7 +15,7 @@ const Switch = (props) => {
   return (
     <div className="flex">
 
-      {label && <Label label={typeof label === 'string' ? label : 'Default'} {...labelProps} />}
+      {label && <Label label={label} {...labelProps} />}
 
       <Label className={classNameLabel} label="" {...container}>
         <input type="checkbox" />

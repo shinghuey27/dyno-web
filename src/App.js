@@ -35,13 +35,13 @@ function App() {
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
 
-      <Button  />
+      {/* <Button  /> */}
 
       {/* 7 Molecules  */}
 
       {/* 1. Textbox */}
 
-      {/* <Textbox
+      <Textbox
         label={{
           label: "ID Number 2",
           className: "labelClass"
@@ -58,7 +58,7 @@ function App() {
           label: "*Please enter valid ID number",
           className: "errorClass"
         }}
-      /> */}
+      />
 
       {/* ------------------------------------------------- */}
 
