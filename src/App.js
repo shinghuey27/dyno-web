@@ -42,22 +42,26 @@ function App() {
       {/* 1. Textbox */}
 
       <Textbox
-        label={{
-          label: "ID Number 2",
-          className: "labelClass"
-        }}
-        tooltip={{ label: "abc" }}
-        text={{
-          className: "textClass",
-        }}
+      // label
+      // text
+      // description
+      // error
+        // label={{
+        //   label: "ID Number 2",
+        //   className: "labelClass"
+        // }}
+        // tooltip={{ label: "abc" }}
+        // text={{
+        //   className: "textClass",
+        // }}
 
-        description={{
-          label: "description 2"
-        }}
-        error={{
-          label: "*Please enter valid ID number",
-          className: "errorClass"
-        }}
+        // description={{
+        //   label: "description 2"
+        // }}
+        // error={{
+        //   label: "*Please enter valid ID number",
+        //   className: "errorClass"
+        // }}
       />
 
       {/* ------------------------------------------------- */}

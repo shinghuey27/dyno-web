@@ -1,4 +1,3 @@
-import { height, padding } from '@mui/system';
 import React from 'react';
 import Proptypes from 'prop-types';
 

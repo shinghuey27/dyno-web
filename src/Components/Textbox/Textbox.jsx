@@ -31,6 +31,7 @@ const Textbox = (props) => {
           placeholder={text.placeholder}
           style={text.style}
           className={text.className}
+          
         />
       )}
 
