@@ -11,10 +11,8 @@ const Button = (props) => {
 
   const className = disabled ? 'button-disabled' : 'button';
 
-  return (
+  return <button className={className} disabled={disabled} {...props}>{label}</button>;
 
-    <button className={className} disabled={disabled} {...props}>{label}</button>
-  );
 };
 
 Button.defaultProps = {

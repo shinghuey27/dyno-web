@@ -1,41 +1,58 @@
-import React from 'react';
-import Label from '../Label/Label';
-import List from '../List/List';
-import Textbox from '../Textbox/Textbox';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { sampleItem } from '../../SampleData/List';
+import React from "react";
+import List from "../List/List";
+import Textbox from "../Textbox/Textbox";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { sampleItem } from "../../SampleData/List";
+import Proptypes from "prop-types";
 
-export default function Searchbar(props) {
-    const { data, label, text, description, error, listBox, item, renderItem, icon } = props;
-    return (
-        <div >
-            <div style={{ display: 'flex', }}>
-                <Textbox
-                    label={label}
-                    text={text}
-                    description={description}
-                    error={error}
-                // {...textBox}
-                />
-                <div >
-                    <KeyboardArrowDownIcon style={{ ...props.iconStyle }} {...icon} />
-                </div>
-            </div>
-            <div style={{
-                position: 'relative',
-                top: 21  //<--- why suddenly need ? need to check why need tempered this position
-            }}>
-                {data && <List
-                    data={data && data.length ? data : sampleItem}
-                    listBox={listBox}
-                    item={item}
-                />}
-            </div>
+const Searchbar = (props) => {
+  const {
+    data,
+    label,
+    text,
+    description,
+    error,
+    listBox,
+    item,
+    icon,
+    iconStyle,
+    listboxStyle
+  } = props;
 
+  const defaultData = data && data.length ? data : sampleItem;
 
-        </div>);
+  return (
+    <div>
+      <div style={{ display: "flex" }}>
+        <Textbox
+          label={label}
+          text={text}
+          description={description}
+          error={error}
+        />
+        <div>
+          <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />
+        </div>
+      </div>
+      <div
+        style={{ ...listboxStyle }}
+      >
+        {data && <List data={defaultData} listBox={listBox} item={item} />}
+      </div>
+    </div>
+  );
 }
 
 Searchbar.defaultProps = {
-    iconStyle: { marginTop: 30 }
+  iconStyle: { marginTop: 30 },
+  listboxStyle: {
+    position: "relative",
+    top: 20
+  }
+};
+
+Searchbar.propTypes = {
+  data: Proptypes.array.isRequired
 }
+
+export default Searchbar;

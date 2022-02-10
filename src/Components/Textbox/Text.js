@@ -2,17 +2,15 @@ import { TextField } from "@mui/material";
 import "./Text.css";
 
 const Text = (props) => {
+  const { id, name, placeholder } = props;
   return (
-
     <input
       type="text"
-      id={props.id}
-      name={props.name}
-      placeholder={props.placeholder}
-      className="error"
+      id={id}
+      name={name}
+      placeholder={placeholder}
       {...props}
     ></input>
-
   );
 };
 

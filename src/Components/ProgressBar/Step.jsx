@@ -1,15 +1,27 @@
-import React from 'react';
+import React from "react";
 import "./Stepper.css";
+import PropTypes from "prop-types";
 
-export default function Step(props) {
+const Step = (props) => {
+  const {
+    text,
+    children } = props;
 
-    const { text, children } = props;
-
-    return <div {...props}>{text}{children}</div>;
+  return (
+    <div {...props}>
+      {text}
+      {children}
+    </div>
+  );
 }
 
 Step.defaultProps = {
-    className: 'step1'
-}
+  text: 'Step',
+  className: "step1"
+};
 
+Step.propTypes = {
+  text: PropTypes.string,
+};
 
+export default Step;

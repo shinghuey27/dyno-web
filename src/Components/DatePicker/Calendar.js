@@ -2,9 +2,7 @@ import React from 'react';
 import DatePick from "react-datepicker";
 
 export default function Calendar({ datePicker }) {
-
-    console.log('datePicker ->', datePicker)
-
+    
     return <DatePick
         className="datepick"
         // calendarContainer={({ className, children }) => renderCalendar({ className, children })}
@@ -15,7 +13,7 @@ export default function Calendar({ datePicker }) {
         // showYearDropdown
         // yearDropdownItemNumber={10}
         // scrollableYearDropdown  
-              
+
         {...datePicker}
     />;
 }

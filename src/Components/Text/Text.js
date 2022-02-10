@@ -1,12 +1,14 @@
 import React from 'react';
 import "./Text.css";
 import Proptypes from 'prop-types';
+
 const Text = (props) => {
 
   const {
     id,
     name,
-    placeholder } = props;
+    placeholder,
+  } = props;
 
   return (
     <input
@@ -20,7 +22,7 @@ const Text = (props) => {
 };
 
 Text.defaultProps = {
-  className: "text",  
+  className: "text",
 };
 
 Text.propTypes = {

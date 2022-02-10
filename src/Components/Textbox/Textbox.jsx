@@ -6,7 +6,7 @@ import Description from "../Label/Description";
 import Tooltips from "../Tooltip/Tooltips";
 
 const Textbox = (props) => {
-  const { label, text, error, tooltip, description, } = props;
+  const { label, text, error, tooltip, description } = props;
   return (
     // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
     <div>
@@ -34,7 +34,6 @@ const Textbox = (props) => {
           
         />
       )}
-
 
       <div>
         {description && (

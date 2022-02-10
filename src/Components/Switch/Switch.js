@@ -21,11 +21,13 @@ const Switch = (props) => {
         <input type="checkbox" />
         <span className={classNameSlider} {...slider}></span>
       </Label>
+
     </div>
   );
 };
 
 Switch.defaultProps = {
+  label: 'Default',
   classNameLabel: "switch",
   classNameSlider: "slider round"
 };
