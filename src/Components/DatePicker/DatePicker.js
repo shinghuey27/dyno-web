@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import DatePick from "react-datepicker";
+import React from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Date.css";
 import EventIcon from "@mui/icons-material/Event";

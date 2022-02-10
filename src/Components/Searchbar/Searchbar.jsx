@@ -1,5 +1,4 @@
 import React from "react";
-import Label from "../Label/Label";
 import List from "../List/List";
 import Textbox from "../Textbox/Textbox";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";

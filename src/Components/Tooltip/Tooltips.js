@@ -1,4 +1,3 @@
-import Label from "../Label/Label";
 import "./Tooltips.css";
 import Tooltip from "@mui/material/Tooltip";
 import React from "react";

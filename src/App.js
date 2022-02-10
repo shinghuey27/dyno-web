@@ -29,16 +29,12 @@ const renderCalendar = ({ className, children }) => {
 };
 
 function App() {
-  const [demo, setDemo] = useState(true);
-  const [inputError, setInputError] = useState(false);
-
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
       {/* <Button /> */}
       {/* 7 Molecules  */}
       {/* 1. Textbox */}
-      
-      {/* <Textbox
+      <Textbox
         label={{
           label: "ID Number 2",
           className: "labelClass"
@@ -54,8 +50,7 @@ function App() {
           label: "*Please enter valid ID number",
           className: "errorClass"
         }}
-      /> */}
-
+      />
       {/* ------------------------------------------------- */}
       {/* 2. Searchbar */}
       {/* <Searchbar
