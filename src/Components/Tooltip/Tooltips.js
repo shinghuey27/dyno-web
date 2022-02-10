@@ -5,8 +5,9 @@ import React from "react";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 const Tooltips = (props) => {
+  const { label } = props;
   return (
-    <Tooltip title={props.label}>
+    <Tooltip title={label}>
       <HelpOutlineIcon fontSize="10px" style={{ marginLeft: 5 }} />
     </Tooltip>
   );

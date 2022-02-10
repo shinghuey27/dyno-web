@@ -1,16 +1,19 @@
-import sharedStyle from "./Text.css";
+import "./Text.css";
 
 const Text = (props) => {
+  const { id, name, placeholder,container } = props;
+
   return (
     <input
-      type="text"      
-      id={props.id}
-      name={props.name}
-      placeholder={props.placeholder}
-      {...props}
+      type="text"
+      id={id}
+      name={name}
+      placeholder={placeholder}
+      {...container}
     ></input>
   );
 };
+
 Text.defaultProps = {
   className: "text"
 };

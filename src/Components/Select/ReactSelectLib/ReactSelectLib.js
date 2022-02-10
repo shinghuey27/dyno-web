@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactSelect from 'react-select'
+import React from "react";
+import ReactSelect from "react-select";
 
 // const customStyles = {
 //     menu: (provided, state) => ({
@@ -23,13 +23,12 @@ import ReactSelect from 'react-select'
 // }
 
 export default function ReactSelectLib(props) {
+  const { options } = props;
 
-    const { options } = props;
-
-    return (
-        <ReactSelect
-
-            // styles={customStyles}                        
-            options={options}
-        />);
+  return (
+    <ReactSelect
+      // styles={customStyles}
+      options={options}
+    />
+  );
 }

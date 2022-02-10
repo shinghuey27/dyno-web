@@ -1,7 +1,8 @@
 import "./Label.css";
 
 const ErrorMessage = (props) => {
-  return <div {...props}>{props.label}</div>;
+  const { label, container } = props;
+  return <div {...container}>{label}</div>;
 };
 ErrorMessage.defaultProps = {
   label: "default error",

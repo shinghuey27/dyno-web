@@ -34,13 +34,10 @@ function App() {
 
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
-
       {/* <Button /> */}
-
       {/* 7 Molecules  */}
-
       {/* 1. Textbox */}
-
+      
       {/* <Textbox
         label={{
           label: "ID Number 2",
@@ -50,7 +47,6 @@ function App() {
         text={{
           className: "textClass",
         }}
-
         description={{
           label: "description 2"
         }}
@@ -61,9 +57,7 @@ function App() {
       /> */}
 
       {/* ------------------------------------------------- */}
-
       {/* 2. Searchbar */}
-
       {/* <Searchbar
 
         label={{ label: 'search' }}
@@ -112,13 +106,9 @@ function App() {
       }}
       icon={{style:{marginTop:50}}}
       /> */}
-
       {/* ------------------------------------------------- */}
-
       {/* 3. Stepper */}
-
       <div style={{ marginTop: 60 }}></div>
-
       {/* <Stepper
         stepOne
         stepTwo
@@ -146,11 +136,8 @@ function App() {
           }
         }}
       /> */}
-
       {/* ------------------------------------------------- */}
-
       {/* 4. Datepicker */}
-
       {/* <DatePicker
         // container={{ style: {backgroundColor:'yellow'} }}
         label={'Calendar'}
@@ -161,39 +148,20 @@ function App() {
           // calendarContainer: ({ className, children }) => renderCalendar({ className, children })          
         }}
       /> */}
-
       {/* ------------------------------------------------- */}
-
       {/* 5. Radiobutton */}
-
       {/* <RadioButton
         label='new label' /> */}
-
-      {/* ------------------------------------------------- */}
-s
+      {/* ------------------------------------------------- */}s
       {/* 6. Switch */}
-
-      <Switch
-        label
-
-      />
-
+      <Switch label />
       {/* ------------------------------------------------- */}
-
       {/* 7. Checkbox */}
-
-
-      {/* <Checkbox
+      <Checkbox
         label
-        checkMark={{ style: { backgroundColor: 'red' } }}
-        container={{ style: { color: 'green', "&::after": {} } }}
-
-      /> */}
-
-
-
-
-
+        checkMark={{ style: { backgroundColor: "red" } }}
+        container={{ style: { color: "green", "&::after": {} } }}
+      />
     </fieldset>
   );
 }

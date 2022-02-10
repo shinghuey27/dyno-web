@@ -1,9 +1,10 @@
 import "./Label.css";
 
 const Description = (props) => {
+  const { label, container } = props;
   return (
     <>
-      <label {...props}>{props.label}</label>
+      <label {...container}>{label}</label>
     </>
   );
 };

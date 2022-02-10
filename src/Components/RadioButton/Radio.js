@@ -7,7 +7,7 @@ const Radio = () => {
         Instant Transfer
         <input type="radio" checked="checked" name="radio" />
         <span className={styles.checkmark}></span>
-      </label>      
+      </label>
     </>
   );
 };

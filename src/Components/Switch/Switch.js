@@ -3,20 +3,20 @@ import "./Switch.css";
 import PropTypes from "prop-types";
 
 const Switch = (props) => {
-
   const {
     container,
     label,
     labelProps,
     slider,
     classNameLabel,
-    classNameSlider } = props;
+    classNameSlider
+  } = props;
+
+  const defaultLabel = typeof label === "string" ? label : "Default";
 
   return (
     <div className="flex">
-
-      {label && <Label label={typeof label === 'string' ? label : 'Default'} {...labelProps} />}
-
+      {label && <Label label={defaultLabel} {...labelProps} />}
       <Label className={classNameLabel} label="" {...container}>
         <input type="checkbox" />
         <span className={classNameSlider} {...slider}></span>
@@ -31,8 +31,7 @@ Switch.defaultProps = {
 };
 
 Switch.propTypes = {
-  label: PropTypes.string,
-
+  label: PropTypes.string
 };
 
 export default Switch;
