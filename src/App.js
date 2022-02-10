@@ -15,6 +15,7 @@ import RadioButton from "./Components/RadioButton/RadioButton";
 import { optionsSample, sampleItem } from "./SampleData/List";
 import Text from "./Components/Text/Text";
 import Switch from "./Components/Switch/Switch";
+import Button from "./Components/Button/Button";
 
 const renderCalendar = ({ className, children }) => {
   return (
@@ -34,11 +35,13 @@ function App() {
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
 
+      {/* <Button /> */}
+
       {/* 7 Molecules  */}
 
       {/* 1. Textbox */}
 
-      <Textbox
+      {/* <Textbox
         label={{
           label: "ID Number 2",
           className: "labelClass"
@@ -55,66 +58,68 @@ function App() {
           label: "*Please enter valid ID number",
           className: "errorClass"
         }}
-      />
+      /> */}
 
       {/* ------------------------------------------------- */}
 
       {/* 2. Searchbar */}
 
-      <Searchbar
-        data={optionsSample}
+      {/* <Searchbar
+
         label={{ label: 'search' }}
         description={{
           label: "this is search bar",
         }}
         text
-        text={{
-          style: {
-            border: "1px solid #ddd",
-            borderRadius: "4px",
-            height: 40,
-            width: 278,
-            margin: 0,
-            fontSize: "14px",
-            fontWeight: 400,
-            fontFamily: "Lato",
-            boxSizing: "border-box",
-          }
-        }}
-        listBox={{
-          style: {
-            backgroundColor: '#44444F',
-            margin: 0, zIndex: 200, position: 'absolute',
-            border: '1px solid rgba(0, 0, 0, 0.05)',
-            borderRadius: 8,
-            boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
-            padding: 10,
-            width: 260,
-            top: -40,
-            overflow: 'scroll',
-            height: 50,
-            overflowX: 'hidden',
+        data
+      data={optionsSample}
+      text={{
+        style: {
+          border: "1px solid #ddd",
+          borderRadius: "4px",
+          height: 40,
+          width: 278,
+          margin: 0,
+          fontSize: "14px",
+          fontWeight: 400,
+          fontFamily: "Lato",
+          boxSizing: "border-box",
+        }
+      }}
+      listBox={{
+        style: {
+          backgroundColor: '#44444F',
+          margin: 0, zIndex: 200, position: 'absolute',
+          border: '1px solid rgba(0, 0, 0, 0.05)',
+          borderRadius: 8,
+          boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
+          padding: 10,
+          width: 260,
+          top: -40,
+          overflow: 'scroll',
+          height: 50,
+          overflowX: 'hidden',
 
 
-          },
-          className: 'listBox'
-        }}
-        item={{
-          style: {
-            backgroundColor: '#44444F',
-          },
-          className: 'itemList'
-        }}
-      // icon={{style:{marginTop:50}}}
-      />
+        },
+        className: 'listBox'
+      }}
+      item={{
+        style: {
+          backgroundColor: '#44444F',
+        },
+        className: 'itemList'
+      }}
+      icon={{style:{marginTop:50}}}
+      /> */}
 
       {/* ------------------------------------------------- */}
 
       {/* 3. Stepper */}
 
-      <div style={{marginTop:60}}></div>
-        
-      <Stepper
+      <div style={{ marginTop: 60 }}></div>
+
+      {/* <Stepper
         stepOne
         stepTwo
         // stepThree
@@ -140,13 +145,13 @@ function App() {
 
           }
         }}
-      />
+      /> */}
 
       {/* ------------------------------------------------- */}
 
       {/* 4. Datepicker */}
 
-      <DatePicker
+      {/* <DatePicker
         // container={{ style: {backgroundColor:'yellow'} }}
         label={'Calendar'}
         datePicker={{
@@ -155,14 +160,14 @@ function App() {
           // calendarClassName: 'datepick2',
           // calendarContainer: ({ className, children }) => renderCalendar({ className, children })          
         }}
-      />
+      /> */}
 
       {/* ------------------------------------------------- */}
 
       {/* 5. Radiobutton */}
 
-      <RadioButton
-        label='new label' />
+      {/* <RadioButton
+        label='new label' /> */}
 
       {/* ------------------------------------------------- */}
 
@@ -178,12 +183,12 @@ function App() {
       {/* 7. Checkbox */}
 
 
-      <Checkbox
+      {/* <Checkbox
         label
-      checkMark={{ style: {backgroundColor:'red'} }}
-      container={{ style: {color:'green', "&::after":{}} }}
+        checkMark={{ style: { backgroundColor: 'red' } }}
+        container={{ style: { color: 'green', "&::after": {} } }}
 
-      />
+      /> */}
 
 
 

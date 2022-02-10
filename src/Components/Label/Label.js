@@ -7,10 +7,20 @@ import PropTypes from "prop-types";
 // props: { label , children }
 // will fix limitation in next iteration
 
-
-
 const Label = (props) => {
-  return <label {...props} >{props.label}{props.children}</label>;
+
+  const {
+    label,
+    children
+  } = props;
+
+  return (
+    <label
+      {...props}
+    >
+      {label}
+      {children}
+    </label>);
 };
 
 
@@ -22,6 +32,7 @@ Label.defaultProps = {
 
 Label.propTypes = {
   value: PropTypes.string.isRequired
+  
 };
 
 export default Label;
