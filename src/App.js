@@ -35,7 +35,7 @@ function App() {
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
 
-      {/* <Button /> */}
+      <Button  />
 
       {/* 7 Molecules  */}
 
@@ -170,7 +170,7 @@ function App() {
         label='new label' /> */}
 
       {/* ------------------------------------------------- */}
-s
+      s
       {/* 6. Switch */}
 
       <Switch
