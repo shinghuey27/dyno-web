@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 require("./Button.css");
 
 require("../../index.css");
@@ -19,7 +21,7 @@ var Button = function Button(props) {
   var disabled = props.disabled,
       label = props.label;
   var className = disabled ? 'button-disabled' : 'button';
-  return /*#__PURE__*/React.createElement("button", _extends({
+  return /*#__PURE__*/_react.default.createElement("button", _extends({
     className: className,
     disabled: disabled
   }, props), label);
