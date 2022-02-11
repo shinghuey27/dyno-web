@@ -1,5 +1,13 @@
-import "./Sidebar.css";
-const sidebutton = [{
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+require("./Sidebar.css");
+
+var sidebutton = [{
   icon: "schedule",
   name: "Approvals",
   notification: 36
@@ -49,7 +57,7 @@ const sidebutton = [{
   notification: null
 }]; // Due to using tailwind css last time, need redo the classname in css file
 
-const Sidebar = () => {
+var Sidebar = function Sidebar() {
   return /*#__PURE__*/React.createElement("div", {
     className: "containers"
   }, /*#__PURE__*/React.createElement("div", {
@@ -70,16 +78,19 @@ const Sidebar = () => {
     className: "profileName"
   }, "Canvas Valley"))))), /*#__PURE__*/React.createElement("div", {
     className: "listContainer"
-  }, sidebutton.map(side => /*#__PURE__*/React.createElement("div", {
-    className: "item",
-    key: side.icon
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "material-icons text-white"
-  }, side.icon), /*#__PURE__*/React.createElement("div", {
-    className: "itemName"
-  }, side.name), /*#__PURE__*/React.createElement("div", {
-    className: side.notification === null ? "hidden" : "notifiation"
-  }, side.notification)))));
+  }, sidebutton.map(function (side) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "item",
+      key: side.icon
+    }, /*#__PURE__*/React.createElement("i", {
+      className: "material-icons text-white"
+    }, side.icon), /*#__PURE__*/React.createElement("div", {
+      className: "itemName"
+    }, side.name), /*#__PURE__*/React.createElement("div", {
+      className: side.notification === null ? "hidden" : "notifiation"
+    }, side.notification));
+  })));
 };
 
-export default Sidebar;
+var _default = Sidebar;
+exports.default = _default;

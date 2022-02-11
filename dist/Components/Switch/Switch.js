@@ -1,24 +1,33 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _Label = _interopRequireDefault(require("../Label/Label"));
+
+require("./Switch.css");
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import Label from "../Label/Label";
-import "./Switch.css";
-import PropTypes from "prop-types";
-
-const Switch = props => {
-  const {
-    container,
-    label,
-    labelProps,
-    slider,
-    classNameLabel,
-    classNameSlider
-  } = props;
-  const defaultLabel = typeof label === "string" ? label : "Default";
+var Switch = function Switch(props) {
+  var container = props.container,
+      label = props.label,
+      labelProps = props.labelProps,
+      slider = props.slider,
+      classNameLabel = props.classNameLabel,
+      classNameSlider = props.classNameSlider;
+  var defaultLabel = typeof label === "string" ? label : "Default";
   return /*#__PURE__*/React.createElement("div", {
     className: "flex"
-  }, label && /*#__PURE__*/React.createElement(Label, _extends({
+  }, label && /*#__PURE__*/React.createElement(_Label.default, _extends({
     label: defaultLabel
-  }, labelProps)), /*#__PURE__*/React.createElement(Label, _extends({
+  }, labelProps)), /*#__PURE__*/React.createElement(_Label.default, _extends({
     className: classNameLabel,
     label: ""
   }, container), /*#__PURE__*/React.createElement("input", {
@@ -33,6 +42,7 @@ Switch.defaultProps = {
   classNameSlider: "slider round"
 };
 Switch.propTypes = {
-  label: PropTypes.string
+  label: _propTypes.default.string
 };
-export default Switch;
+var _default = Switch;
+exports.default = _default;

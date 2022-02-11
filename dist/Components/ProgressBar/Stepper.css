@@ -1,0 +1,37 @@
+.progressContainer {
+  display: flex;
+  flex:1;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.progressBar {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+.step1,
+.step3,
+.step2 {
+  margin-top: 1rem;
+  flex:1;
+  margin-right: 10px;  
+  background: rgb(255, 221, 0);
+  height: 6px;  
+}
+
+.step1 {
+  border-radius: 5px 0px 0px 5px;
+}
+.step2 {
+  border-radius: 0px 2px 2px 0px;
+}
+
+.stepLabel {
+  color: #6f7faf;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  margin-left:0.6rem ;
+}

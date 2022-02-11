@@ -1,7 +1,16 @@
-import React from "react";
+"use strict";
 
-const Line = props => {
-  return /*#__PURE__*/React.createElement("hr", props);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Line = function Line(props) {
+  return /*#__PURE__*/_react.default.createElement("hr", props);
 };
 
 Line.defaultProps = {
@@ -12,4 +21,5 @@ Line.defaultProps = {
     flex: 1
   }
 };
-export default Line;
+var _default = Line;
+exports.default = _default;

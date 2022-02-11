@@ -34,7 +34,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "create-library":"npm run clean && npx babel src -d dist --ignore '**/*.spec.js,**/*.stories.js,**/docs/*.js' --copy-files"
   },
   "eslintConfig": {
     "extends": [

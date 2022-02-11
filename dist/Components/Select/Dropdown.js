@@ -1,24 +1,40 @@
-import { Form } from "react-bootstrap";
-import PropTypes from "prop-types";
-import "./Dropdown.css";
+"use strict";
 
-const Dropdown = props => {
-  const {
-    options,
-    formStyle
-  } = props;
-  return /*#__PURE__*/React.createElement(Form.Select, {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _reactBootstrap = require("react-bootstrap");
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+require("./Dropdown.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Dropdown = function Dropdown(props) {
+  var options = props.options,
+      formStyle = props.formStyle;
+  return /*#__PURE__*/React.createElement(_reactBootstrap.Form.Select, {
     "aria-label": "Default select example",
-    style: { ...formStyle
-    }
-  }, options.map(option => /*#__PURE__*/React.createElement("option", {
-    key: option?.value,
-    className: "option",
-    value: option?.value,
-    style: {
-      display: "flex"
-    }
-  }, option?.label)));
+    style: _objectSpread({}, formStyle)
+  }, options.map(function (option) {
+    return /*#__PURE__*/React.createElement("option", {
+      key: option === null || option === void 0 ? void 0 : option.value,
+      className: "option",
+      value: option === null || option === void 0 ? void 0 : option.value,
+      style: {
+        display: "flex"
+      }
+    }, option === null || option === void 0 ? void 0 : option.label);
+  }));
 };
 
 Dropdown.defaultProps = {
@@ -29,7 +45,8 @@ Dropdown.defaultProps = {
   child: false
 };
 Dropdown.propTypes = {
-  options: PropTypes.array.isRequired,
-  child: PropTypes.bool
+  options: _propTypes.default.array.isRequired,
+  child: _propTypes.default.bool
 };
-export default Dropdown;
+var _default = Dropdown;
+exports.default = _default;

@@ -1,4 +1,10 @@
-const options = [{
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.topBanks = exports.topAccount = exports.sampleItem = exports.optionsSample = exports.options = exports.arrayOfStrings = void 0;
+var options = [{
   value: "0",
   label: "2 Months"
 }, {
@@ -23,7 +29,8 @@ const options = [{
   value: "7",
   label: "9 Months"
 }];
-const sampleItem = [{
+exports.options = options;
+var sampleItem = [{
   value: "0",
   label: "Item 1"
 }, {
@@ -39,8 +46,10 @@ const sampleItem = [{
   value: "4",
   label: "Item 5"
 }];
-const arrayOfStrings = ['Perak', 'Selangor', 'Wilayah'];
-const optionsSample = [{
+exports.sampleItem = sampleItem;
+var arrayOfStrings = ['Perak', 'Selangor', 'Wilayah'];
+exports.arrayOfStrings = arrayOfStrings;
+var optionsSample = [{
   "id": "6ebafebc-0601-4a36-8480-0fcd1a2911cd",
   "label": "Ellen Stroman",
   "username": "Yessenia47",
@@ -107,7 +116,8 @@ const optionsSample = [{
     "bs": "robust matrix web services"
   }
 }];
-const topBanks = [{
+exports.optionsSample = optionsSample;
+var topBanks = [{
   title: 'Maybank',
   year: 1994
 }, {
@@ -117,7 +127,8 @@ const topBanks = [{
   title: 'CIMB',
   year: 1974
 }];
-const topAccount = [{
+exports.topBanks = topBanks;
+var topAccount = [{
   title: 'Maybank',
   accNo: 18000202010,
   balance: 1000.00
@@ -130,4 +141,4 @@ const topAccount = [{
   accNo: 18000209189,
   balance: 44000.00
 }];
-export { options, arrayOfStrings, optionsSample, topBanks, topAccount, sampleItem };
+exports.topAccount = topAccount;

@@ -1,6 +1,13 @@
-import "./Text.css";
+"use strict";
 
-const Password = () => {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+require("./Text.css");
+
+var Password = function Password() {
   return /*#__PURE__*/React.createElement("input", {
     type: "password",
     id: "password",
@@ -10,4 +17,5 @@ const Password = () => {
   });
 };
 
-export default Password;
+var _default = Password;
+exports.default = _default;

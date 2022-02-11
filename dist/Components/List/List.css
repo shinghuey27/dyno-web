@@ -1,0 +1,3 @@
+.containerlistbox::-webkit-scrollbar {
+    display: none;
+  }

@@ -1,5 +1,17 @@
-import React from "react";
-import ReactSelect from "react-select"; // const customStyles = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ReactSelectLib;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactSelect = _interopRequireDefault(require("react-select"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// const customStyles = {
 //     menu: (provided, state) => ({
 //         ...provided,
 //         width: 400,
@@ -16,12 +28,9 @@ import ReactSelect from "react-select"; // const customStyles = {
 //         return { ...provided, opacity, transition };
 //     }
 // }
-
-export default function ReactSelectLib(props) {
-  const {
-    options
-  } = props;
-  return /*#__PURE__*/React.createElement(ReactSelect // styles={customStyles}
+function ReactSelectLib(props) {
+  var options = props.options;
+  return /*#__PURE__*/_react.default.createElement(_reactSelect.default // styles={customStyles}
   , {
     options: options
   });

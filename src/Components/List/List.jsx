@@ -1,6 +1,7 @@
 import React from "react";
 import Proptypes from "prop-types";
 import './List.css'
+import ListItem from "./ListItem";
 
 const listItem = (data, { item, props }) =>
   data.map((el) => (
@@ -22,14 +23,14 @@ const List = (props) => {
     <ul className={classNameContainer} style={{ ...containerStyle }} {...listBox}>
       {/* this is the children of the list , call function listItem , pass 2 argument , first one is the data , second is the style of the item */}
       {/* {data && listItem(data, { item, props })} */}
-      {}
+      {data && <ListItem data={data} {...item}/>}
     </ul>
   );
 };
 
 List.defaultProps = {
   // <-- this is the default inline styling for listbox
-  classNameContainer:'containerlistbox',
+  classNameContainer: 'containerlistbox',
   containerStyle: {
     backgroundColor: "white",
     margin: 0,
@@ -44,8 +45,8 @@ List.defaultProps = {
     overflow: "scroll",
     height: 50,
     overflowX: "hidden",
-    cursor:"pointer",
-    
+    cursor: "pointer",
+
   },
   // <-- this is default inline styling for the list item
   styleItem: {

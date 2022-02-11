@@ -1,12 +1,22 @@
-import NumberFormat from "react-number-format";
-import "./Text.css";
+"use strict";
 
-const Currency = props => {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _reactNumberFormat = _interopRequireDefault(require("react-number-format"));
+
+require("./Text.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Currency = function Currency(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "currencyContainer"
   }, /*#__PURE__*/React.createElement("span", {
     className: "currencyIcon"
-  }, props.currency), /*#__PURE__*/React.createElement(NumberFormat, {
+  }, props.currency), /*#__PURE__*/React.createElement(_reactNumberFormat.default, {
     type: "text",
     id: "currency",
     name: "currency",
@@ -19,4 +29,5 @@ const Currency = props => {
   }));
 };
 
-export default Currency;
+var _default = Currency;
+exports.default = _default;

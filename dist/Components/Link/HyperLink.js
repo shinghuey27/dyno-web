@@ -1,10 +1,15 @@
-import "./Link.css";
+"use strict";
 
-const HyperLink = props => {
-  const {
-    link,
-    value
-  } = props;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+require("./Link.css");
+
+var HyperLink = function HyperLink(props) {
+  var link = props.link,
+      value = props.value;
   return /*#__PURE__*/React.createElement("a", {
     className: "link",
     href: link,
@@ -13,4 +18,5 @@ const HyperLink = props => {
   }, value);
 };
 
-export default HyperLink;
+var _default = HyperLink;
+exports.default = _default;

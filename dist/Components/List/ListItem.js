@@ -1,10 +1,17 @@
-import React from 'react';
+"use strict";
 
-const ListItem = props => {
-  const {
-    data
-  } = props;
-  return /*#__PURE__*/React.createElement(React.Fragment, null);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ListItem = function ListItem(props) {
+  var data = props.data;
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
 };
 
 ListItem.defaultProps = {
@@ -13,4 +20,5 @@ ListItem.defaultProps = {
   fontSize: 15,
   backgroundColor: "white"
 };
-export default ListItem;
+var _default = ListItem;
+exports.default = _default;

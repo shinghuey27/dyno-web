@@ -1,0 +1,64 @@
+.password,
+.text,
+.currency {
+  border-radius: 15px;
+  border: 1px solid #c7c7c7;
+  height: 2.3rem;
+  width: 16.8rem;
+  outline: none;
+  color: #0e1b42;
+  font-size: 16px;
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.11px;
+  margin-top: 0.6rem;
+  padding-left: 1rem;
+}
+.text:focus,
+.password:focus {
+  border: 1px solid #01ccce !important;
+}
+.error {
+  border-radius: 15px;
+  border: 1px solid #ff6167;
+  height: 2.3rem;
+  width: 16.8rem;
+  outline: none;
+  padding-left: 1rem;
+  color: #0e1b42;
+  font-size: 16px;
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.11px;
+  margin-top: 0.6rem;
+}
+
+.currency:focus,
+.currency {
+  border-radius: 15px;
+  border: 1px solid #01ccce;
+  height: 2.3rem;
+  width: auto;
+  outline: none;
+  padding-left: 1rem;
+  color: #0e1b42;
+  font-size: 16px;
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.11px;
+  margin-top: 0.6rem;
+  padding-left: 2.7rem;
+}
+
+.currencyContainer {
+  width: 290px;
+  position: relative;
+}
+
+.currencyIcon {
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  top: 1.3rem;
+  color: #0e1b42;
+}

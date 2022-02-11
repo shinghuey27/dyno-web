@@ -1,10 +1,18 @@
-import "./Label.css";
-import Proptypes from 'prop-types';
+"use strict";
 
-const Description = props => {
-  const {
-    label
-  } = props;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+require("./Label.css");
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Description = function Description(props) {
+  var label = props.label;
   return /*#__PURE__*/React.createElement("label", props, label);
 };
 
@@ -13,7 +21,8 @@ Description.defaultProps = {
   className: "description"
 };
 Description.propTypes = {
-  label: Proptypes.string,
-  className: Proptypes.string
+  label: _propTypes.default.string,
+  className: _propTypes.default.string
 };
-export default Description;
+var _default = Description;
+exports.default = _default;

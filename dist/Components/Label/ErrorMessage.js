@@ -1,10 +1,18 @@
-import "./Label.css";
-import PropTypes from "prop-types";
+"use strict";
 
-const ErrorMessage = props => {
-  const {
-    label
-  } = props;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+require("./Label.css");
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ErrorMessage = function ErrorMessage(props) {
+  var label = props.label;
   return /*#__PURE__*/React.createElement("div", props, label);
 };
 
@@ -13,7 +21,8 @@ ErrorMessage.defaultProps = {
   className: "errorMessage"
 };
 ErrorMessage.propTypes = {
-  label: PropTypes.string,
-  className: PropTypes.string
+  label: _propTypes.default.string,
+  className: _propTypes.default.string
 };
-export default ErrorMessage;
+var _default = ErrorMessage;
+exports.default = _default;
