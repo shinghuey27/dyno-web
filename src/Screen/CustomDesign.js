@@ -144,7 +144,6 @@ const CustomDesign = () => {
           style: {
             backgroundColor: "#44444F",
             margin: 0,
-            zIndex: 200,
             position: "absolute",
             border: "1px solid rgba(0, 0, 0, 0.05)",
             borderRadius: 8,
