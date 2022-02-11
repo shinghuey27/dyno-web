@@ -9,6 +9,7 @@ import Checkbox from "../Components/Checkbox/Checkbox";
 import RadioButton from "../Components/RadioButton/RadioButton";
 import { optionsSample, sampleItem } from "../SampleData/List";
 import Switch from "../Components/Switch/Switch";
+import { Button } from "../Components";
 
 const renderCalendar = ({ className, children }) => {
   return (
@@ -23,9 +24,7 @@ const renderCalendar = ({ className, children }) => {
 
 const CustomDesign = () => {
   return (
-    <fieldset className="field" style={{ padding: "2rem" }}>
-      {/* <Button  /> */}
-
+    <fieldset className="field" style={{ padding: "2rem" }}>     
       {/* 7 Molecules  */}
       {/* 1. Textbox */}
 
