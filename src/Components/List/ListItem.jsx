@@ -1,19 +1,23 @@
 import React from 'react'
-
+import './List.css'
 const ListItem = (props) => {
 
-    const { data, } = props;
+    const { data, styleItem } = props;
 
-    return (
-        <>
-        </>)
+    return (data.map((el) => (
+        <li style={{ ...styleItem }} {...props}>
+            {el?.label}
+        </li>)
+    ))
 }
 
 ListItem.defaultProps = {
-    listStyleType: "none",
-    padding: 5,
-    fontSize: 15,
-    backgroundColor: "white",
+    styleItem: {
+        listStyleType: "none",
+        padding: 5,
+        fontSize: 15,
+        backgroundColor: "white",
+    }
 }
 
 
