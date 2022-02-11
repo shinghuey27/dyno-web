@@ -16,10 +16,8 @@
     "bootstrap": "^5.1.3",
     "mui": "0.0.1",
     "node-sass": "^7.0.0",
-    "react": "^17.0.2",
     "react-bootstrap": "^2.0.4",
     "react-datepicker": "^4.5.0",
-    "react-dom": "^17.0.2",
     "react-number-format": "^4.9.1",
     "react-dropdown-select": "^4.8.2",
     "react-scripts": "5.0.0",
@@ -35,7 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "create-library":"npm run clean && npx babel src -d dist --ignore '**/*.spec.js,**/*.stories.js,**/docs/*.js' --copy-files"
+    "create-library": "npm run clean && npx babel src -d dist --ignore '**/*.spec.js,**/*.stories.js,**/docs/*.js' --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +52,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "peerDependencies": {
+    "react": ">= 16.10.1",
+    "react-dom": ">= 16.10.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.0",
