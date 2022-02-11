@@ -54,7 +54,7 @@ var Searchbar = function Searchbar(props) {
     text: text,
     description: description,
     error: error
-  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_KeyboardArrowDown.default, _extends({
+  }), /*#__PURE__*/_react.default.createElement("div", null, icon && /*#__PURE__*/_react.default.createElement(_KeyboardArrowDown.default, _extends({
     style: _objectSpread({}, iconStyle)
   }, icon)))), /*#__PURE__*/_react.default.createElement("div", {
     style: _objectSpread({}, listboxStyle)

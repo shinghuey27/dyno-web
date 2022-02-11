@@ -122,10 +122,6 @@ var CustomDesign = function CustomDesign() {
   }), _defineProperty(_React$createElement2, "listboxStyle", {
     position: "relative",
     top: 20
-  }), _defineProperty(_React$createElement2, "icon", {
-    style: {
-      marginTop: 30
-    }
   }), _React$createElement2)), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 60

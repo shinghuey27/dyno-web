@@ -101,7 +101,7 @@ const CustomDesign = () => {
           position: "relative",
           top:20,
         }}
-        icon={{ style: { marginTop: 30 } }}
+        // icon={{ style: { marginTop: 30 } }}
       />
       {/* ------------------------------------------------- */}
       {/* 3. Stepper */}
