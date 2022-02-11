@@ -1,6 +1,6 @@
 {
   "main": "dist/Components",
-  "name": "dyno",
+  "name": "dyno-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
