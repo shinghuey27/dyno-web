@@ -29,7 +29,6 @@ List.defaultProps = {
   containerStyle: {
     backgroundColor: "white",
     margin: 0,
-    zIndex: 200,
     position: "absolute",
     border: "1px solid rgba(0, 0, 0, 0.05)",
     borderRadius: 8,
