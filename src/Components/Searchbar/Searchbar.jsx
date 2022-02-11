@@ -16,14 +16,17 @@ const Searchbar = (props) => {
     item,
     icon,
     iconStyle,
-    listboxStyle
+    listboxStyle,    
   } = props;
 
   const defaultData = data && data.length ? data : sampleItem;
 
   return (
     <div>
-      <div style={{ display: "flex" }}>
+      <div style={{
+        display: "flex",
+        // backgroundColor: 'red'
+      }}>
         <Textbox
           label={label}
           text={text}
@@ -34,6 +37,9 @@ const Searchbar = (props) => {
           <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />
         </div>
       </div>
+      {/* <div style={{ backgroundColor: 'violet' }}>asd
+        <div style={{ position: 'absolute', backgroundColor: 'yellow' }}>fami</div>
+      </div> */}
       <div
         style={{ ...listboxStyle }}
       >
@@ -47,8 +53,10 @@ Searchbar.defaultProps = {
   iconStyle: { marginTop: 30 },
   listboxStyle: {
     position: "relative",
-    top: 20
-  }
+    top: 40
+
+  },
+  descriptiontext: { label: '' }
 };
 
 Searchbar.propTypes = {

@@ -1,4 +1,5 @@
 {
+  "main": "src/Components",
   "name": "dyno",
   "version": "0.1.0",
   "private": true,
