@@ -97,7 +97,11 @@ const CustomDesign = () => {
           },
           className: "itemList"
         }}
-        icon={{ style: { marginTop: 50 } }}
+        listboxStyle={{
+          position: "relative",
+          top:20,
+        }}
+        icon={{ style: { marginTop: 30 } }}
       />
       {/* ------------------------------------------------- */}
       {/* 3. Stepper */}

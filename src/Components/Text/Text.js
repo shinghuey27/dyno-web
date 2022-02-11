@@ -14,8 +14,8 @@ const Text = (props) => {
     <input
       type="text"
       id={id}
-      name={name}
-      placeholder={placeholder}
+      name={name}      
+      placeholder={placeholder}            
       {...props}
     ></input>
   );

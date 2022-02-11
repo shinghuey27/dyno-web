@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "../List/List";
 import Textbox from "../Textbox/Textbox";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -16,22 +16,21 @@ const Searchbar = (props) => {
     item,
     icon,
     iconStyle,
-    listboxStyle,    
+    listboxStyle,
   } = props;
 
   const defaultData = data && data.length ? data : sampleItem;
-
+  
   return (
     <div>
       <div style={{
-        display: "flex",
-        // backgroundColor: 'red'
+        display: "flex",        
       }}>
         <Textbox
           label={label}
           text={text}
           description={description}
-          error={error}
+          error={error}          
         />
         <div>
           <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />
@@ -43,7 +42,7 @@ const Searchbar = (props) => {
       <div
         style={{ ...listboxStyle }}
       >
-        {data && <List data={defaultData} listBox={listBox} item={item} />}
+        {data && list && <List data={defaultData} listBox={listBox} item={item} />}
       </div>
     </div>
   );
