@@ -16,7 +16,6 @@ const Step = (props) => {
 }
 
 Step.defaultProps = {
-  text: 'Step',
   className: "step1"
 };
 

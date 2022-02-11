@@ -39,14 +39,15 @@ List.defaultProps = {
     top: -40,
     overflow: "scroll",
     height: 50,
-    overflowX: "hidden"
+    overflowX: "hidden",
+    cursor:"pointer"
   },
   // <-- this is default inline styling for the list item
   styleItem: {
     listStyleType: "none",
     padding: 5,
     fontSize: 15,
-    backgroundColor: "white"
+    backgroundColor: "white",
   }
 };
 

@@ -11,9 +11,11 @@ const Checkbox = (props) => {
     classNameContainer,
     classNameCheckmark
   } = props;
+  
+  const defaultLabel = typeof label === "string" ? label : "Default";
 
   return (
-    <Label className={classNameContainer} label={label} {...container}>
+    <Label className={classNameContainer} label={defaultLabel} {...container}>
       <input type="checkbox" {...input} />
       <span className={classNameCheckmark} {...checkMark} />
     </Label>
@@ -21,7 +23,6 @@ const Checkbox = (props) => {
 };
 
 Checkbox.defaultProps = {
-  label: 'Default',
   classNameContainer: "container",
   classNameCheckmark: "checkmark"
 };

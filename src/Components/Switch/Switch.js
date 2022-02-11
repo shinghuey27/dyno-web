@@ -12,10 +12,12 @@ const Switch = (props) => {
     classNameLabel,
     classNameSlider } = props;
 
+    const defaultLabel = typeof label === "string" ? label : "Default";
+
   return (
     <div className="flex">
 
-      {label && <Label label={label} {...labelProps} />}
+      {label && <Label label={defaultLabel} {...labelProps} />}
 
       <Label className={classNameLabel} label="" {...container}>
         <input type="checkbox" />
@@ -27,7 +29,6 @@ const Switch = (props) => {
 };
 
 Switch.defaultProps = {
-  label: 'Default',
   classNameLabel: "switch",
   classNameSlider: "slider round"
 };
