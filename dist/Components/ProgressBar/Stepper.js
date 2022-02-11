@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 require("./Stepper.css");
 
 var _Label = _interopRequireDefault(require("../Label/Label"));
@@ -33,11 +35,11 @@ var Stepper = function Stepper(props) {
   return (
     /*#__PURE__*/
     // << we are limited with only 2 or 3 stepper with this code design
-    React.createElement("div", _extends({
+    _react.default.createElement("div", _extends({
       className: containerClassName
-    }, container), /*#__PURE__*/React.createElement("div", _extends({
+    }, container), /*#__PURE__*/_react.default.createElement("div", _extends({
       className: stepperClassName
-    }, stepper), stepOne && /*#__PURE__*/React.createElement(_Step.default, stepOne), hr && /*#__PURE__*/React.createElement(_Line.default, hr), stepTwo && /*#__PURE__*/React.createElement(_Step.default, stepTwo), hr && /*#__PURE__*/React.createElement(_Line.default, hr), stepThree && /*#__PURE__*/React.createElement(_Step.default, stepThree)), label && /*#__PURE__*/React.createElement(_Label.default, label))
+    }, stepper), stepOne && /*#__PURE__*/_react.default.createElement(_Step.default, stepOne), hr && /*#__PURE__*/_react.default.createElement(_Line.default, hr), stepTwo && /*#__PURE__*/_react.default.createElement(_Step.default, stepTwo), hr && /*#__PURE__*/_react.default.createElement(_Line.default, hr), stepThree && /*#__PURE__*/_react.default.createElement(_Step.default, stepThree)), label && /*#__PURE__*/_react.default.createElement(_Label.default, label))
   );
 };
 

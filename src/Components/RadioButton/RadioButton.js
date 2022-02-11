@@ -1,3 +1,4 @@
+import React from 'react';
 import Label from "../Label/Label";
 import styles from "./RadioButton.module.scss";
 import PropTypes from "prop-types";

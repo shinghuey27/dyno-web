@@ -1,3 +1,4 @@
+import React from 'react';
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import "./Icon.css";
 

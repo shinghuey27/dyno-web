@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _Label = _interopRequireDefault(require("../Label/Label"));
 
 var _RadioButtonModule = _interopRequireDefault(require("./RadioButton.module.scss"));
@@ -23,13 +25,13 @@ var RadioButton = function RadioButton(props) {
       classNameLabel = props.classNameLabel,
       classNameCheckMark = props.classNameCheckMark;
   var defaultLabel = typeof label === "string" ? label : "Default";
-  return /*#__PURE__*/React.createElement(_Label.default, _extends({
+  return /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     className: classNameLabel,
     label: defaultLabel
-  }, container), /*#__PURE__*/React.createElement("input", _extends({
+  }, container), /*#__PURE__*/_react.default.createElement("input", _extends({
     type: "radio",
     name: "radio"
-  }, input)), /*#__PURE__*/React.createElement("span", _extends({
+  }, input)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: classNameCheckMark
   }, checkMark)));
 };

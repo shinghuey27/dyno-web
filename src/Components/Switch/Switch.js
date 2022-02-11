@@ -1,3 +1,4 @@
+import React from 'react';
 import Label from "../Label/Label";
 import "./Switch.css";
 import PropTypes from "prop-types";

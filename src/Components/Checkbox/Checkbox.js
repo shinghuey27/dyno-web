@@ -1,3 +1,4 @@
+import React from 'react';
 import Label from "../Label/Label";
 import "./Checkbox.css";
 import PropTypes from "prop-types";

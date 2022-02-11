@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 require("./Label.css");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -13,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var ErrorMessage = function ErrorMessage(props) {
   var label = props.label;
-  return /*#__PURE__*/React.createElement("div", props, label);
+  return /*#__PURE__*/_react.default.createElement("div", props, label);
 };
 
 ErrorMessage.defaultProps = {

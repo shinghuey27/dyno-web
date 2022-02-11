@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _reactNumberFormat = _interopRequireDefault(require("react-number-format"));
 
 require("./Text.css");
@@ -12,11 +14,11 @@ require("./Text.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Currency = function Currency(props) {
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "currencyContainer"
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "currencyIcon"
-  }, props.currency), /*#__PURE__*/React.createElement(_reactNumberFormat.default, {
+  }, props.currency), /*#__PURE__*/_react.default.createElement(_reactNumberFormat.default, {
     type: "text",
     id: "currency",
     name: "currency",

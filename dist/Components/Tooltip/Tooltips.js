@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 require("./Tooltips.css");
 
 var _Tooltip = _interopRequireDefault(require("@mui/material/Tooltip"));
-
-var _react = _interopRequireDefault(require("react"));
 
 var _HelpOutline = _interopRequireDefault(require("@mui/icons-material/HelpOutline"));
 

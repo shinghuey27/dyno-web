@@ -1,6 +1,6 @@
+import React from "react";
 import "./Tooltips.css";
 import Tooltip from "@mui/material/Tooltip";
-import React from "react";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import PropTypes from "prop-types";
 

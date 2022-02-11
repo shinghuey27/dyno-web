@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _Label = _interopRequireDefault(require("../Label/Label"));
 
 require("./Switch.css");
@@ -23,16 +25,16 @@ var Switch = function Switch(props) {
       classNameLabel = props.classNameLabel,
       classNameSlider = props.classNameSlider;
   var defaultLabel = typeof label === "string" ? label : "Default";
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "flex"
-  }, label && /*#__PURE__*/React.createElement(_Label.default, _extends({
+  }, label && /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     label: defaultLabel
-  }, labelProps)), /*#__PURE__*/React.createElement(_Label.default, _extends({
+  }, labelProps)), /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     className: classNameLabel,
     label: ""
-  }, container), /*#__PURE__*/React.createElement("input", {
+  }, container), /*#__PURE__*/_react.default.createElement("input", {
     type: "checkbox"
-  }), /*#__PURE__*/React.createElement("span", _extends({
+  }), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: classNameSlider
   }, slider))));
 };

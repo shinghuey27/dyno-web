@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Stepper.css";
 import Label from "../Label/Label";
 import Step from "./Step";

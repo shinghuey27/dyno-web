@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _Label = _interopRequireDefault(require("../Label/Label"));
 
 require("./Checkbox.css");
@@ -23,12 +25,12 @@ var Checkbox = function Checkbox(props) {
       classNameContainer = props.classNameContainer,
       classNameCheckmark = props.classNameCheckmark;
   var defaultLabel = typeof label === "string" ? label : "Default";
-  return /*#__PURE__*/React.createElement(_Label.default, _extends({
+  return /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     className: classNameContainer,
     label: defaultLabel
-  }, container), /*#__PURE__*/React.createElement("input", _extends({
+  }, container), /*#__PURE__*/_react.default.createElement("input", _extends({
     type: "checkbox"
-  }, input)), /*#__PURE__*/React.createElement("span", _extends({
+  }, input)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: classNameCheckmark
   }, checkMark)));
 };
