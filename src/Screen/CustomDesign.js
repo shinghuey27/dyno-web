@@ -7,7 +7,7 @@ import Stepper from "../Components/ProgressBar/Stepper";
 import { CalendarContainer } from "react-datepicker";
 import Checkbox from "../Components/Checkbox/Checkbox";
 import RadioButton from "../Components/RadioButton/RadioButton";
-import { optionsSample, sampleItem } from "../SampleData/List";
+import { optionsSample } from "../SampleData/List";
 import Switch from "../Components/Switch/Switch";
 
 const renderCalendar = ({ className, children }) => {
@@ -32,10 +32,6 @@ const CustomDesign = () => {
       {/* 1. Textbox */}
 
       <Textbox
-        label
-        text
-        description
-        error
         label={{
           label: "ID Number 2",
           className: "labelClass"
@@ -58,8 +54,6 @@ const CustomDesign = () => {
       {/* ------------------------------------------------- */}
       {/* 2. Searchbar */}
       <Searchbar
-        label
-        text
         label={{ label: "Search" }}
         description={{
           label: "this is search bar"
@@ -107,10 +101,6 @@ const CustomDesign = () => {
       {/* 3. Stepper */}
       <div style={{ marginTop: "5rem" }}></div>
       <Stepper
-        stepOne
-        stepTwo
-        // stepThree
-        // label
         stepper={{
           style: { display: "flex", flex: 1 }
         }}

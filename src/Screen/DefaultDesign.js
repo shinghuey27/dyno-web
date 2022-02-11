@@ -19,7 +19,7 @@ const DefaultDesign = () => {
       {/* 7 Molecules  */}
       {/* 1. Textbox */}
 
-      <Textbox label text description error tooltip />
+      <Textbox labelD text description error tooltip />
 
       {/* ------------------------------------------------- */}
       {/* 2. Searchbar */}
