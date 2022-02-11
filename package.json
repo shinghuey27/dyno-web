@@ -1,5 +1,5 @@
 {
-  "main": "src/Components",
+  "main": "dist/Components",
   "name": "dyno",
   "version": "0.1.0",
   "private": true,
@@ -55,6 +55,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
     "@babel/preset-react": "^7.16.7"
   }
 }

@@ -1,0 +1,19 @@
+import "./Label.css";
+import Proptypes from 'prop-types';
+
+const Description = props => {
+  const {
+    label
+  } = props;
+  return /*#__PURE__*/React.createElement("label", props, label);
+};
+
+Description.defaultProps = {
+  label: "Default Description",
+  className: "description"
+};
+Description.propTypes = {
+  label: Proptypes.string,
+  className: Proptypes.string
+};
+export default Description;
