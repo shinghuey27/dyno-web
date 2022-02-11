@@ -25,7 +25,9 @@ const CustomDesign = () => {
   return (
     <fieldset className="field" style={{ padding: "2rem" }}>
       {/* <Button  /> */}
-
+      <h2 style={{ display: "flex", justifyContent: "center" }}>
+        Custom Design
+      </h2>
       {/* 7 Molecules  */}
       {/* 1. Textbox */}
 
@@ -50,6 +52,8 @@ const CustomDesign = () => {
           className: "errorClass"
         }}
       />
+      <br />
+      <br />
 
       {/* ------------------------------------------------- */}
       {/* 2. Searchbar */}
@@ -98,11 +102,10 @@ const CustomDesign = () => {
           },
           className: "itemList"
         }}
-        icon={{ style: { marginTop: 50 } }}
       />
       {/* ------------------------------------------------- */}
       {/* 3. Stepper */}
-      <div style={{ marginTop: 60 }}></div>
+      <div style={{ marginTop: "5rem" }}></div>
       <Stepper
         stepOne
         stepTwo
@@ -116,9 +119,17 @@ const CustomDesign = () => {
             backgroundColor: "white",
             flex: 1,
             fontSize: 14,
-            height: 20
+            textAlign: "center"
           },
           text: "Select your goal"
+        }}
+        // label={{ label: 'Step 2/3' }}
+        hr={{
+          style: {
+            border: "1px solid black",
+            flex: 1,
+            height: 0.1
+          }
         }}
         stepTwo={{
           style: {
@@ -126,21 +137,23 @@ const CustomDesign = () => {
             flex: 1,
             fontSize: 14,
             height: 20,
-            marginLeft: 20
+            textAlign: "center"
           },
           text: "Define your goal"
         }}
-        hr
-        // label={{ label: 'Step 2/3' }}
-        hr={{
+        stepThree={{
           style: {
-            border: "1px solid black",
+            backgroundColor: "white",
             flex: 1,
-            height: 0.1,
-            marginTop: 22
-          }
+            fontSize: 14,
+            height: 20,
+            textAlign: "center"
+          },
+          text: "Analyse your goal"
         }}
       />
+      <div style={{ marginTop: "2rem" }}></div>
+
       {/* ------------------------------------------------- */}
       {/* 4. Datepicker */}
       <DatePicker
@@ -154,21 +167,28 @@ const CustomDesign = () => {
             renderCalendar({ className, children })
         }}
       />
+      <br />
+
       {/* ------------------------------------------------- */}
       {/* 5. Radiobutton */}
-      <RadioButton label="new label" />
-
+      <RadioButton
+        label="Instant Tranfer"
+        checkMark={{ style: { backgroundColor: "green" } }}
+      />
+      <br />
       {/* ------------------------------------------------- */}
 
       {/* 6. Switch */}
-      <Switch label="new label" />
+      <Switch
+        label="Set Recurring"
+        slider={{ style: { backgroundColor: "green" } }}
+      />
+      <br />
+
       {/* ------------------------------------------------- */}
       {/* 7. Checkbox */}
-      <Checkbox
-        label
-        checkMark={{ style: { backgroundColor: "red" } }}
-        container={{ style: { color: "green", "&::after": {} } }}
-      />
+      <Checkbox label="Add to favorite" checkMark={{ style: { backgroundColor: "green" } }} />
+      <br />
     </fieldset>
   );
 };

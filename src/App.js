@@ -6,7 +6,7 @@ function App() {
   return (
    <div style={{display:"flex"}}>
    <DefaultDesign />
-   {/* <CustomDesign /> */}
+   <CustomDesign />
    </div>
   );
 }

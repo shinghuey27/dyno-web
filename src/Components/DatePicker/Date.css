@@ -64,7 +64,7 @@
 
 /* Input cont */
 .datepick {
-  margin-top: 1rem;
+  margin-top: .5rem;
   background-color: white;
   border-radius: 15px;
   height: 38px;
@@ -92,7 +92,7 @@
   position: absolute;
   z-index: 1;
   right: 0.8rem;
-  top: 2.9rem;
+  top: 2.5rem;
   color: #c7c7c7;
 }
 

@@ -31,17 +31,15 @@ const Searchbar = (props) => {
           error={error}
         />
         <div>
-          <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />
+          {icon && <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />}
         </div>
       </div>
-      <div
-        style={{ ...listboxStyle }}
-      >
+      <div style={{ ...listboxStyle }}>
         {data && <List data={defaultData} listBox={listBox} item={item} />}
       </div>
     </div>
   );
-}
+};
 
 Searchbar.defaultProps = {
   iconStyle: { marginTop: 30 },
@@ -53,6 +51,6 @@ Searchbar.defaultProps = {
 
 Searchbar.propTypes = {
   data: Proptypes.array.isRequired
-}
+};
 
 export default Searchbar;

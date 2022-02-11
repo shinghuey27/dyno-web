@@ -13,7 +13,6 @@
 .step1,
 .step3,
 .step2 {
-  margin-top: 1rem;
   flex:1;
   margin-right: 10px;  
   background: rgb(255, 221, 0);
