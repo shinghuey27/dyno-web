@@ -7,6 +7,7 @@ import Stepper from "../Components/ProgressBar/Stepper";
 import Checkbox from "../Components/Checkbox/Checkbox";
 import RadioButton from "../Components/RadioButton/RadioButton";
 import Switch from "../Components/Switch/Switch";
+import { sampleItem } from "../SampleData/List";
 
 const DefaultDesign = () => {
   return (
@@ -17,25 +18,50 @@ const DefaultDesign = () => {
       </h2>
 
       {/* 7 Molecules  */}
-      {/* 1. Textbox */}
-
-      <Textbox label text description error tooltip />
-
-      {/* ------------------------------------------------- */}
-      {/* 2. Searchbar */}
+      {/* 1. Stepper */}
+      <Stepper stepOne stepTwo label={{ label: "Step 2/2" }} />
       <br />
-      <Searchbar label text data listBox item />
       {/* ------------------------------------------------- */}
-      {/* 3. Stepper */}
+
+      {/* 2. Textbox */}
+
+      <Textbox
+        label={{ label: "Account Number" }}
+        text
+        description={{ label: "Account Number" }}
+        error={{ label: "*Please do not leave field blank" }}
+      />
+      <br />
+
+      <Textbox
+        label={{ label: "Transfer Amount" }}
+        text
+        description={{ label: "Amount in MYR" }}
+        error={{ label: "*Please do not leave field blank" }}
+        tooltip={{
+          label: "You can adjust your limit via settings"
+        }}
+      />
+      <br />
+      {/* ------------------------------------------------- */}
+      {/* 3. Searchbar */}
+      <br />
+      <Searchbar
+        label={{ label: "Select Recipent bank" }}
+        text
+        data={sampleItem}
+        listBox
+        item
+      />
+
       <div style={{ marginTop: "5.3rem" }}></div>
-      <Stepper stepOne stepTwo label />
       <br />
 
       {/* ------------------------------------------------- */}
       {/* 4. Datepicker */}
       <DatePicker
         // container={{ style: {backgroundColor:'yellow'} }}
-        label={"Calendar"}
+        label={"Effective Date"}
         datePicker={{
           showYearDropdown: true
         }}
@@ -44,18 +70,20 @@ const DefaultDesign = () => {
 
       {/* ------------------------------------------------- */}
       {/* 5. Radiobutton */}
-      <RadioButton label />
+      <RadioButton label="Instant Transfer" />
+      <RadioButton label="IBG Transfer" />
+
       <br />
 
       {/* ------------------------------------------------- */}
 
       {/* 6. Switch */}
-      <Switch label />
+      <Switch label="Set Recurring" />
       <br />
 
       {/* ------------------------------------------------- */}
       {/* 7. Checkbox */}
-      <Checkbox label />
+      <Checkbox label="Add to favorite" />
     </fieldset>
   );
 };

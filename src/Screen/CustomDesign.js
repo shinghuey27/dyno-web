@@ -7,7 +7,7 @@ import Stepper from "../Components/ProgressBar/Stepper";
 import { CalendarContainer } from "react-datepicker";
 import Checkbox from "../Components/Checkbox/Checkbox";
 import RadioButton from "../Components/RadioButton/RadioButton";
-import { optionsSample } from "../SampleData/List";
+import { sampleItem } from "../SampleData/List";
 import Switch from "../Components/Switch/Switch";
 
 const renderCalendar = ({ className, children }) => {
@@ -29,36 +29,101 @@ const CustomDesign = () => {
         Custom Design
       </h2>
       {/* 7 Molecules  */}
-      {/* 1. Textbox */}
 
+      {/* 1. Stepper */}
+      <Stepper
+        stepper={{
+          style: { display: "flex", flex: 1 }
+        }}
+        stepOne={{
+          style: {
+            backgroundColor: "white",
+            flex: 1,
+            fontSize: 14,
+            textAlign: "center"
+          },
+          text: "Step 1"
+        }}
+        // label={{ label: 'Step 2/3' }}
+        hr={{
+          style: {
+            border: "1px solid black",
+            flex: 1,
+            height: 0.1
+          }
+        }}
+        stepTwo={{
+          style: {
+            backgroundColor: "white",
+            flex: 1,
+            fontSize: 14,
+            height: 20,
+            textAlign: "center"
+          },
+          text: "Step 2"
+        }}
+        stepThree={{
+          style: {
+            backgroundColor: "white",
+            flex: 1,
+            fontSize: 14,
+            height: 20,
+            textAlign: "center"
+          },
+          text: "Step 3"
+        }}
+      />
+      <br />
+      {/* 2. Textbox */}
       <Textbox
         label={{
-          label: "ID Number 2",
+          label: "Account Number",
           className: "labelClass"
         }}
-        tooltip={{ label: "abc" }}
         text={{
           className: "textClass"
         }}
         description={{
-          label: "description 2"
+          label: "Account Number"
         }}
         error={{
-          label: "*Please enter valid ID number",
+          label: "*Please do not leave field blank",
           className: "errorClass"
         }}
       />
+
+      <br />
+      <Textbox
+        label={{
+          label: "Transfer Amount",
+          className: "labelClass"
+        }}
+        text={{
+          className: "textClass"
+        }}
+        description={{
+          label: "Amount in MYR"
+        }}
+        error={{
+          label: "*Please do not leave field blank",
+          className: "errorClass"
+        }}
+        tooltip={{
+          label: "You can adjust your limit via settings"
+        }}
+      />
+
       <br />
       <br />
 
       {/* ------------------------------------------------- */}
-      {/* 2. Searchbar */}
+      {/* 3. Searchbar */}
       <Searchbar
-        label={{ label: "Search" }}
+        label={{ label: "Select Recipent Bank" }}
         description={{
           label: "this is search bar"
         }}
-        data={optionsSample}
+        data={sampleItem}
         text={{
           style: {
             border: "1px solid #ddd",
@@ -98,57 +163,14 @@ const CustomDesign = () => {
         }}
       />
       {/* ------------------------------------------------- */}
-      {/* 3. Stepper */}
-      <div style={{ marginTop: "5rem" }}></div>
-      <Stepper
-        stepper={{
-          style: { display: "flex", flex: 1 }
-        }}
-        stepOne={{
-          style: {
-            backgroundColor: "white",
-            flex: 1,
-            fontSize: 14,
-            textAlign: "center"
-          },
-          text: "Select your goal"
-        }}
-        // label={{ label: 'Step 2/3' }}
-        hr={{
-          style: {
-            border: "1px solid black",
-            flex: 1,
-            height: 0.1
-          }
-        }}
-        stepTwo={{
-          style: {
-            backgroundColor: "white",
-            flex: 1,
-            fontSize: 14,
-            height: 20,
-            textAlign: "center"
-          },
-          text: "Define your goal"
-        }}
-        stepThree={{
-          style: {
-            backgroundColor: "white",
-            flex: 1,
-            fontSize: 14,
-            height: 20,
-            textAlign: "center"
-          },
-          text: "Analyse your goal"
-        }}
-      />
-      <div style={{ marginTop: "2rem" }}></div>
+
+      <div style={{ marginTop: "6rem" }}></div>
 
       {/* ------------------------------------------------- */}
       {/* 4. Datepicker */}
       <DatePicker
         // container={{ style: {backgroundColor:'yellow'} }}
-        label={"Calendar"}
+        label={"Effective Date"}
         datePicker={{
           showYearDropdown: true,
           // style: {},
@@ -165,6 +187,10 @@ const CustomDesign = () => {
         label="Instant Tranfer"
         checkMark={{ style: { backgroundColor: "green" } }}
       />
+      <RadioButton
+        label="IBG Transfer"
+        checkMark={{ style: { backgroundColor: "green" } }}
+      />
       <br />
       {/* ------------------------------------------------- */}
 
@@ -177,7 +203,10 @@ const CustomDesign = () => {
 
       {/* ------------------------------------------------- */}
       {/* 7. Checkbox */}
-      <Checkbox label="Add to favorite" checkMark={{ style: { backgroundColor: "green" } }} />
+      <Checkbox
+        label="Add to favorite"
+        checkMark={{ style: { backgroundColor: "green" } }}
+      />
       <br />
     </fieldset>
   );

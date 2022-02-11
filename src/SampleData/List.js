@@ -36,23 +36,23 @@ const options = [
 const sampleItem = [
     {
         value: "0",
-        label: "Item 1"
+        label: "Maybank"
     },
     {
         value: "1",
-        label: "Item 2"
+        label: "RHB"
     },
     {
         value: "2",
-        label: "Item 3"
+        label: "CIMB"
     },
     {
         value: "3",
-        label: "Item 4"
+        label: "Hong Leong BANK"
     },
     {
         value: "4",
-        label: "Item 5"
+        label: "AmBank"
     }    
 ];
 
@@ -83,6 +83,7 @@ const optionsSample = [
             "catchPhrase": "Assimilated non-volatile array",
             "bs": "scalable drive supply-chains"
         }
+        
     },
     {
         "id": "9afceadc-064c-4c46-b9ed-d59e2ab1e2de",
