@@ -11,7 +11,7 @@ import { sampleItem } from "../SampleData/List";
 
 const DefaultDesign = () => {
   return (
-    <fieldset className="field" style={{ padding: "2rem" }}>
+    <fieldset className="field">
       {/* <Button  /> */}
       <h2 style={{ display: "flex", justifyContent: "center" }}>
         Default Design
@@ -19,7 +19,14 @@ const DefaultDesign = () => {
 
       {/* 7 Molecules  */}
       {/* 1. Stepper */}
-      <Stepper stepOne stepTwo label={{ label: "Step 2/2" }} />
+      <Stepper
+        container={{
+          style: { justifyContent: "center" }
+        }}
+        stepOne
+        stepTwo
+        label={{ label: "Step 2/2" }}
+      />
       <br />
       {/* ------------------------------------------------- */}
 

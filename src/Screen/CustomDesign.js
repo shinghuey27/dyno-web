@@ -23,7 +23,10 @@ const renderCalendar = ({ className, children }) => {
 
 const CustomDesign = () => {
   return (
-    <fieldset className="field" style={{ padding: "2rem" }}>
+    <fieldset
+      className="field"
+
+    >
       {/* <Button  /> */}
       <h2 style={{ display: "flex", justifyContent: "center" }}>
         Custom Design
@@ -157,7 +160,9 @@ const CustomDesign = () => {
         }}
         item={{
           style: {
-            backgroundColor: "#44444F"
+            backgroundColor: "#44444F",
+            marginBottom:".5rem",
+            cursor:"pointer"
           },
           className: "itemList"
         }}

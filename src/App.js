@@ -4,7 +4,7 @@ import DefaultDesign from "./Screen/DefaultDesign";
 
 function App() {
   return (
-   <div style={{display:"flex"}}>
+   <div style={{display:"flex",flexWrap:"wrap"}}>
    <DefaultDesign />
    <CustomDesign />
    </div>
