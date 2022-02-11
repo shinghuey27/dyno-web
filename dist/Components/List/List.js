@@ -23,16 +23,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var listItem = function listItem(data, _ref) {
-  var item = _ref.item,
-      props = _ref.props;
-  return data.map(function (el) {
-    return /*#__PURE__*/_react.default.createElement("li", _extends({
-      style: _objectSpread({}, props.styleItem)
-    }, item), el === null || el === void 0 ? void 0 : el.label);
-  });
-};
-
 var List = function List(props) {
   var data = props.data,
       listBox = props.listBox,
@@ -65,13 +55,6 @@ List.defaultProps = {
     height: 50,
     overflowX: "hidden",
     cursor: "pointer"
-  },
-  // <-- this is default inline styling for the list item
-  styleItem: {
-    listStyleType: "none",
-    padding: 5,
-    fontSize: 15,
-    backgroundColor: "white"
   }
 };
 List.propTypes = {

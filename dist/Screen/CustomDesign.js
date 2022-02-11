@@ -119,9 +119,12 @@ var CustomDesign = function CustomDesign() {
       backgroundColor: "#44444F"
     },
     className: "itemList"
+  }), _defineProperty(_React$createElement2, "listboxStyle", {
+    position: "relative",
+    top: 20
   }), _defineProperty(_React$createElement2, "icon", {
     style: {
-      marginTop: 50
+      marginTop: 30
     }
   }), _React$createElement2)), /*#__PURE__*/React.createElement("div", {
     style: {

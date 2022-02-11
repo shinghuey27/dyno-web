@@ -20,17 +20,17 @@ const Searchbar = (props) => {
   } = props;
 
   const defaultData = data && data.length ? data : sampleItem;
-  
+
   return (
     <div>
       <div style={{
-        display: "flex",        
+        display: "flex",
       }}>
         <Textbox
           label={label}
           text={text}
           description={description}
-          error={error}          
+          error={error}
         />
         <div>
           <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />
@@ -42,7 +42,7 @@ const Searchbar = (props) => {
       <div
         style={{ ...listboxStyle }}
       >
-        {data && list && <List data={defaultData} listBox={listBox} item={item} />}
+        {data && <List data={defaultData} listBox={listBox} item={item} />}
       </div>
     </div>
   );
