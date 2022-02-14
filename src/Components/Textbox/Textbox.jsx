@@ -8,10 +8,14 @@ import Tooltips from "../Tooltip/Tooltips";
 const Textbox = (props) => {
 
   const {
+    name,
+    id,
+    placeholder,
     label,
     text,
     error,
     tooltip,
+    field,
     description, } = props;
 
   return (
@@ -38,6 +42,10 @@ const Textbox = (props) => {
           placeholder={text?.placeholder}
           style={text?.style}
           className={text?.className}
+          name={name}
+          id={id}
+          placeholder={placeholder}
+          {...field}
         />
       )}
 

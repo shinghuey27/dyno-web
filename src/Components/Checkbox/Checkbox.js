@@ -9,6 +9,7 @@ const Checkbox = (props) => {
     input,
     checkMark,
     label,
+    field,
     classNameContainer,
     classNameCheckmark
   } = props;
@@ -17,7 +18,7 @@ const Checkbox = (props) => {
 
   return (
     <Label className={classNameContainer} label={defaultLabel} {...container}>
-      <input type="checkbox" {...input} />
+      <input type="checkbox" {...field} />
       <span className={classNameCheckmark} {...checkMark} />
     </Label>
   );
