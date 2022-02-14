@@ -33,7 +33,7 @@ const Searchbar = (props) => {
           error={error}
         />
         <div>
-          <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />
+          {icon && <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />}
         </div>
       </div>
       {/* <div style={{ backgroundColor: 'violet' }}>asd
