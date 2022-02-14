@@ -22,6 +22,7 @@ var Checkbox = function Checkbox(props) {
       input = props.input,
       checkMark = props.checkMark,
       label = props.label,
+      field = props.field,
       classNameContainer = props.classNameContainer,
       classNameCheckmark = props.classNameCheckmark;
   var defaultLabel = typeof label === "string" ? label : "Default";
@@ -30,7 +31,7 @@ var Checkbox = function Checkbox(props) {
     label: defaultLabel
   }, container), /*#__PURE__*/_react.default.createElement("input", _extends({
     type: "checkbox"
-  }, input)), /*#__PURE__*/_react.default.createElement("span", _extends({
+  }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: classNameCheckmark
   }, checkMark)));
 };

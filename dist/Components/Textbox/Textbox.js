@@ -19,11 +19,19 @@ var _Tooltips = _interopRequireDefault(require("../Tooltip/Tooltips"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 var Textbox = function Textbox(props) {
-  var label = props.label,
+  var name = props.name,
+      id = props.id,
+      placeholder = props.placeholder,
+      label = props.label,
       text = props.text,
       error = props.error,
       tooltip = props.tooltip,
+      field = props.field,
       description = props.description;
   return (
     /*#__PURE__*/
@@ -36,11 +44,13 @@ var Textbox = function Textbox(props) {
       label: tooltip.label,
       style: tooltip.style,
       className: tooltip.className
-    })), text && /*#__PURE__*/_react.default.createElement(_Text.default, {
+    })), text && /*#__PURE__*/_react.default.createElement(_Text.default, _extends(_defineProperty({
       placeholder: text === null || text === void 0 ? void 0 : text.placeholder,
       style: text === null || text === void 0 ? void 0 : text.style,
-      className: text === null || text === void 0 ? void 0 : text.className
-    }), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, {
+      className: text === null || text === void 0 ? void 0 : text.className,
+      name: name,
+      id: id
+    }, "placeholder", placeholder), field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, {
       label: description.label,
       style: description.style,
       className: description.className
