@@ -19,7 +19,6 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var Checkbox = function Checkbox(props) {
   var container = props.container,
-      input = props.input,
       checkMark = props.checkMark,
       label = props.label,
       field = props.field,

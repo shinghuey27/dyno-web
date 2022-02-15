@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 
 const Checkbox = (props) => {
   const {
-    container,
-    input,
+    container,    
     checkMark,
     label,
     field,

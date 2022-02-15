@@ -26,12 +26,12 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var Textbox = function Textbox(props) {
   var name = props.name,
       id = props.id,
+      field = props.field,
       placeholder = props.placeholder,
       label = props.label,
       text = props.text,
       error = props.error,
       tooltip = props.tooltip,
-      field = props.field,
       description = props.description;
   return (
     /*#__PURE__*/

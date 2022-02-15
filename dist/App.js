@@ -13,14 +13,26 @@ var _DefaultDesign = _interopRequireDefault(require("./Screen/DefaultDesign"));
 
 var _Button = _interopRequireDefault(require("./Components/Button/Button"));
 
+var _Components = require("./Components");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function App() {
+function App(props) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement(_DefaultDesign.default, null), /*#__PURE__*/React.createElement(_CustomDesign.default, null));
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Textbox, {
+    text: true,
+    label: true,
+    description: true,
+    error: true
+  }), /*#__PURE__*/React.createElement(_Button.default, {
+    style: {
+      marginTop: 40
+    },
+    label: "Pay Now"
+  })));
 }
 
 var _default = App;
