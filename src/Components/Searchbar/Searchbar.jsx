@@ -35,10 +35,7 @@ const Searchbar = (props) => {
         <div>
           {icon && <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />}
         </div>
-      </div>
-      {/* <div style={{ backgroundColor: 'violet' }}>asd
-        <div style={{ position: 'absolute', backgroundColor: 'yellow' }}>fami</div>
-      </div> */}
+      </div>      
       <div
         style={{ ...listboxStyle }}
       >
