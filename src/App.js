@@ -3,6 +3,7 @@ import CustomDesign from "./Screen/CustomDesign";
 import DefaultDesign from "./Screen/DefaultDesign";
 import Button from './Components/Button/Button'
 import { Textbox } from "./Components";
+import { error } from "./SampleData/SampleErrorForm";
 
 function App(props) {  
   return (
@@ -14,9 +15,13 @@ function App(props) {
           text
           label
           description
-          error />
+          // error
+          error={{}}
+          // error={error}
+          name='ref1'
+           />
 
-        <Button style={{ marginTop: 40 }}  label='Pay Now'/>
+        <Button style={{ marginTop: 40 }}  label='Pay Now' managedCallback={()=>{console.log('button click')}}/>
         
       </div>
     </div>

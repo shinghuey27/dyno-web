@@ -14,12 +14,14 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ErrorMessage = function ErrorMessage(props) {
-  var label = props.label;
-  return /*#__PURE__*/_react.default.createElement("div", props, label);
+  var name = props.name,
+      item = props.item,
+      error = props.error;
+  var errorMsg = error && error[name] && error[name].message || "";
+  return /*#__PURE__*/_react.default.createElement("div", props, errorMsg);
 };
 
 ErrorMessage.defaultProps = {
-  label: "default error",
   className: "errorMessage"
 };
 ErrorMessage.propTypes = {

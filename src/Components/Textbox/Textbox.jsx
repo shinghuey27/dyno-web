@@ -4,6 +4,8 @@ import Label from "../Label/Label";
 import ErrorMessage from "../Label/ErrorMessage";
 import Description from "../Label/Description";
 import Tooltips from "../Tooltip/Tooltips";
+import { isEmptyObject } from '../../Utils/isEmpty';
+import { isError, renderError } from '../../Utils/isErrorForm';
 
 const Textbox = (props) => {
 
@@ -11,14 +13,14 @@ const Textbox = (props) => {
     name,
     id,
     field,
-    
+
     placeholder,
     label,
     text,
     error,
-    tooltip,    
+    tooltip,
     description, } = props;
-    
+
 
   return (
     // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
@@ -61,11 +63,14 @@ const Textbox = (props) => {
         )}
       </div>
 
-      {error && (
+      {renderError(name, error) && (
         <ErrorMessage
-          label={error.label}
-          style={error.style}
-          className={error.className}
+          // label={error?.label}
+          name={name}
+          error={error}
+          style={error?.style}
+          className={error?.className}
+          
         />
       )}
     </div>

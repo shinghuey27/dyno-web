@@ -4,16 +4,15 @@ import PropTypes from "prop-types";
 
 const ErrorMessage = (props) => {
 
-  const {
-    label
-  } = props;
+  const { name, item, error } = props;
 
-  return <div {...props}>{label}</div>;
+  const errorMsg = error && error[name] && error[name].message || ""
+
+  return <div {...props}>{errorMsg}</div>;
 
 };
 
-ErrorMessage.defaultProps = {
-  label: "default error",
+ErrorMessage.defaultProps = {  
   className: "errorMessage"
 };
 

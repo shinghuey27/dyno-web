@@ -17,6 +17,10 @@ var _Description = _interopRequireDefault(require("../Label/Description"));
 
 var _Tooltips = _interopRequireDefault(require("../Tooltip/Tooltips"));
 
+var _isEmpty = require("../../Utils/isEmpty");
+
+var _isErrorForm = require("../../Utils/isErrorForm");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -54,10 +58,12 @@ var Textbox = function Textbox(props) {
       label: description.label,
       style: description.style,
       className: description.className
-    })), error && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
-      label: error.label,
-      style: error.style,
-      className: error.className
+    })), (0, _isErrorForm.renderError)(name, error) && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default // label={error?.label}
+    , {
+      name: name,
+      error: error,
+      style: error === null || error === void 0 ? void 0 : error.style,
+      className: error === null || error === void 0 ? void 0 : error.className
     }))
   );
 };

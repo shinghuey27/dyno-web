@@ -15,6 +15,8 @@ var _Button = _interopRequireDefault(require("./Components/Button/Button"));
 
 var _Components = require("./Components");
 
+var _SampleErrorForm = require("./SampleData/SampleErrorForm");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App(props) {
@@ -25,13 +27,19 @@ function App(props) {
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Textbox, {
     text: true,
     label: true,
-    description: true,
-    error: true
+    description: true // error
+    ,
+    error: {} // error={error}
+    ,
+    name: "ref1"
   }), /*#__PURE__*/React.createElement(_Button.default, {
     style: {
       marginTop: 40
     },
-    label: "Pay Now"
+    label: "Pay Now",
+    managedCallback: function managedCallback() {
+      console.log('button click');
+    }
   })));
 }
 
