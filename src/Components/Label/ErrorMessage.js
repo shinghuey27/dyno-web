@@ -6,7 +6,7 @@ const ErrorMessage = (props) => {
 
   const { name, item, error } = props;
 
-  const errorMsg = error && error[name] && error[name].message || ""
+  const errorMsg = error && error[name] && error[name].message || "default error"
 
   return <div {...props}>{errorMsg}</div>;
 
@@ -16,8 +16,7 @@ ErrorMessage.defaultProps = {
   className: "errorMessage"
 };
 
-ErrorMessage.propTypes = {
-  label: PropTypes.string,
+ErrorMessage.propTypes = {  
   className: PropTypes.string
 };
 

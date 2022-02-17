@@ -13,7 +13,6 @@ const Textbox = (props) => {
     name,
     id,
     field,
-
     placeholder,
     label,
     text,
@@ -28,9 +27,9 @@ const Textbox = (props) => {
       <div>
         {label && (
           <Label
-            label={label.label}
-            style={label.style}
-            className={label.className}
+            label={label}
+            style={label?.style}
+            className={label?.className}
           />
         )}
         {tooltip && (
@@ -64,8 +63,7 @@ const Textbox = (props) => {
       </div>
 
       {renderError(name, error) && (
-        <ErrorMessage
-          // label={error?.label}
+        <ErrorMessage          
           name={name}
           error={error}
           style={error?.style}

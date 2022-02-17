@@ -12,7 +12,7 @@ const isBoolean = (error) => {
 }
 
 const renderError = (name, error) => {    
-    if (isBoolean(error)) return false    
+    if (isBoolean(error)) return true    
     if (isEmpty(error)) return false    
     if (isErrorForm(name, error)) return true
     return false

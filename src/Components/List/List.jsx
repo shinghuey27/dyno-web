@@ -11,11 +11,12 @@ const List = (props) => {
     listBox,
     item,
     containerStyle,
+    onChange,
     classNameContainer } = props;
 
   return (
     <ul className={classNameContainer} style={{ ...containerStyle }} {...listBox}>
-      {data && <ListItem data={data} {...item} />}
+      {data && <ListItem data={data} onChange={onChange} {...item} />}
     </ul>
   );
 };

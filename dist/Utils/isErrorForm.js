@@ -18,7 +18,7 @@ var isBoolean = function isBoolean(error) {
 };
 
 var renderError = function renderError(name, error) {
-  if (isBoolean(error)) return false;
+  if (isBoolean(error)) return true;
   if ((0, _isEmpty.isEmpty)(error)) return false;
   if (isErrorForm(name, error)) return true;
   return false;

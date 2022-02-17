@@ -7,11 +7,16 @@ import Proptypes from "prop-types";
 
 const Searchbar = (props) => {
   const {
+    id,
+    name,
+    field,
+    error,
+
     data,
     label,
     text,
     description,
-    error,
+
     listBox,
     item,
     icon,
@@ -19,6 +24,8 @@ const Searchbar = (props) => {
     listboxStyle,
   } = props;
 
+  // const { child, error, name, item, field } = props; <- props for integration
+  const {  onChange } = field || { onChange: ()=>{} };;
   const defaultData = data && data.length ? data : sampleItem;
 
   return (
@@ -42,7 +49,7 @@ const Searchbar = (props) => {
       <div
         style={{ ...listboxStyle }}
       >
-        {data && <List data={defaultData} listBox={listBox} item={item} />}
+        {data && <List data={defaultData} listBox={listBox} item={item} onChange={onChange} />}
       </div>
     </div>
   );

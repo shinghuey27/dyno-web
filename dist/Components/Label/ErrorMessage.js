@@ -17,7 +17,7 @@ var ErrorMessage = function ErrorMessage(props) {
   var name = props.name,
       item = props.item,
       error = props.error;
-  var errorMsg = error && error[name] && error[name].message || "";
+  var errorMsg = error && error[name] && error[name].message || "default error";
   return /*#__PURE__*/_react.default.createElement("div", props, errorMsg);
 };
 
@@ -25,7 +25,6 @@ ErrorMessage.defaultProps = {
   className: "errorMessage"
 };
 ErrorMessage.propTypes = {
-  label: _propTypes.default.string,
   className: _propTypes.default.string
 };
 var _default = ErrorMessage;

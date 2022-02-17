@@ -34,16 +34,26 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var Searchbar = function Searchbar(props) {
-  var data = props.data,
+  var id = props.id,
+      name = props.name,
+      field = props.field,
+      error = props.error,
+      data = props.data,
       label = props.label,
       text = props.text,
       description = props.description,
-      error = props.error,
       listBox = props.listBox,
       item = props.item,
       icon = props.icon,
       iconStyle = props.iconStyle,
-      listboxStyle = props.listboxStyle;
+      listboxStyle = props.listboxStyle; // const { child, error, name, item, field } = props; <- props for integration
+
+  var _ref = field || {
+    onChange: function onChange() {}
+  },
+      onChange = _ref.onChange;
+
+  ;
   var defaultData = data && data.length ? data : _List2.sampleItem;
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     style: {
@@ -61,7 +71,8 @@ var Searchbar = function Searchbar(props) {
   }, data && /*#__PURE__*/_react.default.createElement(_List.default, {
     data: defaultData,
     listBox: listBox,
-    item: item
+    item: item,
+    onChange: onChange
   })));
 };
 

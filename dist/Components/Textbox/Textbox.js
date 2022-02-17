@@ -41,9 +41,9 @@ var Textbox = function Textbox(props) {
     /*#__PURE__*/
     // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
     _react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, {
-      label: label.label,
-      style: label.style,
-      className: label.className
+      label: label,
+      style: label === null || label === void 0 ? void 0 : label.style,
+      className: label === null || label === void 0 ? void 0 : label.className
     }), tooltip && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
       label: tooltip.label,
       style: tooltip.style,
@@ -58,8 +58,7 @@ var Textbox = function Textbox(props) {
       label: description.label,
       style: description.style,
       className: description.className
-    })), (0, _isErrorForm.renderError)(name, error) && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default // label={error?.label}
-    , {
+    })), (0, _isErrorForm.renderError)(name, error) && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
       name: name,
       error: error,
       style: error === null || error === void 0 ? void 0 : error.style,
