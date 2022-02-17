@@ -30,7 +30,6 @@ var Textbox = function Textbox(props) {
       id = props.id,
       field = props.field,
       item = props.item,
-      label = props.label,
       text = props.text,
       error = props.error,
       tooltip = props.tooltip,
@@ -41,6 +40,7 @@ var Textbox = function Textbox(props) {
   var _ref = item || {
     placeholder: ""
   },
+      label = _ref.label,
       placeholder = _ref.placeholder;
 
   return (

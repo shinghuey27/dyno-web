@@ -14,7 +14,7 @@ function App(props) {
       <div>
 
         <Textbox
-          text
+          item={{label:'asd'}}
         />
         {/* <Searchbar
           label

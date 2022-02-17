@@ -27,7 +27,9 @@ function App(props) {
       display: "flex"
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Textbox, {
-    text: true
+    item: {
+      label: 'asd'
+    }
   }), /*#__PURE__*/React.createElement(_Button.default, {
     style: {
       marginTop: 40

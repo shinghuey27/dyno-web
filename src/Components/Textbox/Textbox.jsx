@@ -15,7 +15,6 @@ const Textbox = (props) => {
     field,
     item,
 
-    label,
     text,
     error,
     tooltip,
@@ -25,7 +24,7 @@ const Textbox = (props) => {
   // if (item === undefined) return null;
 
   //Access to all props that introduced in element.
-  const { placeholder } = item || { placeholder: "" };
+  const { label, placeholder } = item || { placeholder: "" };
   return (
     // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
     <div>
