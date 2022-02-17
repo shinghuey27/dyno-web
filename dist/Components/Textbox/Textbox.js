@@ -23,20 +23,26 @@ var _isErrorForm = require("../../Utils/isErrorForm");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var Textbox = function Textbox(props) {
   var name = props.name,
       id = props.id,
       field = props.field,
-      placeholder = props.placeholder,
+      item = props.item,
       label = props.label,
       text = props.text,
       error = props.error,
       tooltip = props.tooltip,
-      description = props.description;
+      description = props.description; //Always check to not render with error ;)
+  // if (item === undefined) return null;
+  //Access to all props that introduced in element.
+
+  var _ref = item || {
+    placeholder: ""
+  },
+      placeholder = _ref.placeholder;
+
   return (
     /*#__PURE__*/
     // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
@@ -48,13 +54,13 @@ var Textbox = function Textbox(props) {
       label: tooltip.label,
       style: tooltip.style,
       className: tooltip.className
-    })), text && /*#__PURE__*/_react.default.createElement(_Text.default, _extends(_defineProperty({
-      placeholder: text === null || text === void 0 ? void 0 : text.placeholder,
+    })), /*#__PURE__*/_react.default.createElement(_Text.default, _extends({
       style: text === null || text === void 0 ? void 0 : text.style,
       className: text === null || text === void 0 ? void 0 : text.className,
       name: name,
-      id: id
-    }, "placeholder", placeholder), field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, {
+      id: id,
+      placeholder: placeholder
+    }, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, {
       label: description.label,
       style: description.style,
       className: description.className

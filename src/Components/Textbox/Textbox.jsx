@@ -13,14 +13,19 @@ const Textbox = (props) => {
     name,
     id,
     field,
-    placeholder,
+    item,
+
     label,
     text,
     error,
     tooltip,
     description, } = props;
 
+  //Always check to not render with error ;)
+  // if (item === undefined) return null;
 
+  //Access to all props that introduced in element.
+  const { placeholder } = item || { placeholder: "" };
   return (
     // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
     <div>
@@ -40,17 +45,16 @@ const Textbox = (props) => {
           />
         )}
       </div>
-      {text && (
-        <Text
-          placeholder={text?.placeholder}
-          style={text?.style}
-          className={text?.className}
-          name={name}
-          id={id}
-          placeholder={placeholder}
-          {...field}
-        />
-      )}
+
+      <Text
+        style={text?.style}
+        className={text?.className}
+        name={name}
+        id={id}
+        placeholder={placeholder}
+        {...field}
+      />
+
 
       <div>
         {description && (
@@ -63,12 +67,12 @@ const Textbox = (props) => {
       </div>
 
       {renderError(name, error) && (
-        <ErrorMessage          
+        <ErrorMessage
           name={name}
           error={error}
           style={error?.style}
           className={error?.className}
-          
+
         />
       )}
     </div>

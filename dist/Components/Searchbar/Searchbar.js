@@ -38,20 +38,28 @@ var Searchbar = function Searchbar(props) {
       name = props.name,
       field = props.field,
       error = props.error,
-      data = props.data,
-      label = props.label,
-      text = props.text,
-      description = props.description,
-      listBox = props.listBox,
       item = props.item,
+      data = props.data,
+      text = props.text,
+      listBox = props.listBox,
+      listItem = props.listItem,
       icon = props.icon,
       iconStyle = props.iconStyle,
-      listboxStyle = props.listboxStyle; // const { child, error, name, item, field } = props; <- props for integration
+      listboxStyle = props.listboxStyle;
 
-  var _ref = field || {
+  var _ref = item || {
+    label: ""
+  },
+      label = _ref.label,
+      options = _ref.options,
+      placeholder = _ref.placeholder,
+      description = _ref.description; // const { child, error, name, item, field } = props; <- props for integration
+
+
+  var _ref2 = field || {
     onChange: function onChange() {}
   },
-      onChange = _ref.onChange;
+      onChange = _ref2.onChange;
 
   ;
   var defaultData = data && data.length ? data : _List2.sampleItem;
@@ -71,7 +79,7 @@ var Searchbar = function Searchbar(props) {
   }, data && /*#__PURE__*/_react.default.createElement(_List.default, {
     data: defaultData,
     listBox: listBox,
-    item: item,
+    item: listItem,
     onChange: onChange
   })));
 };

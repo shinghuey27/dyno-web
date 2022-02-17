@@ -12,8 +12,11 @@ function App(props) {
       {/* <DefaultDesign />     
       <CustomDesign /> */}
       <div>
-        
-        <Searchbar
+
+        <Textbox
+          text
+        />
+        {/* <Searchbar
           label
           text
           // label={{ label: "Search" }}
@@ -53,7 +56,7 @@ function App(props) {
             },
             className: "listBox"
           }}
-          item={{
+          listItem={{
             style: {
               backgroundColor: "#44444F"
             },
@@ -65,7 +68,7 @@ function App(props) {
           }}
           // icon={{ style: { marginTop: 30 } }}
           // onChange={(el)=>{console.log('check',el)}}
-        />
+        /> */}
 
         <Button style={{ marginTop: 40 }} label='Pay Now' managedCallback={() => { console.log('button click') }} />
 

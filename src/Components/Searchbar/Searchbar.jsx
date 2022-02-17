@@ -11,18 +11,19 @@ const Searchbar = (props) => {
     name,
     field,
     error,
-
-    data,
-    label,
-    text,
-    description,
-
-    listBox,
     item,
+
+    data,    
+    text,
+    
+    listBox,
+    listItem,
     icon,
     iconStyle,
     listboxStyle,
   } = props;
+
+  const { label, options, placeholder, description } = item || { label: "" };
 
   // const { child, error, name, item, field } = props; <- props for integration
   const {  onChange } = field || { onChange: ()=>{} };;
@@ -49,7 +50,7 @@ const Searchbar = (props) => {
       <div
         style={{ ...listboxStyle }}
       >
-        {data && <List data={defaultData} listBox={listBox} item={item} onChange={onChange} />}
+        {data && <List data={defaultData} listBox={listBox} item={listItem} onChange={onChange} />}
       </div>
     </div>
   );
