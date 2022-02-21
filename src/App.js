@@ -13,10 +13,10 @@ function App(props) {
       <CustomDesign /> */}
       <div>
 
-        <Textbox
+        {/* <Textbox
           item={{label:'asd'}}
-        />
-        {/* <Searchbar
+        /> */}
+        <Searchbar
           label
           text
           // label={{ label: "Search" }}
@@ -62,13 +62,13 @@ function App(props) {
             },
             className: "itemList"
           }}
-          listboxStyle={{
-            position: "relative",
-            top: 20,
-          }}
+          // listboxStyle={{
+          //   position: "relative",
+          //   top: 20,
+          // }}
           // icon={{ style: { marginTop: 30 } }}
-          // onChange={(el)=>{console.log('check',el)}}
-        /> */}
+          onChange={(el)=>{console.log('check',el)}}
+        />
 
         <Button style={{ marginTop: 40 }} label='Pay Now' managedCallback={() => { console.log('button click') }} />
 

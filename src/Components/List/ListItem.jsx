@@ -6,8 +6,8 @@ const ListItem = (props) => {
 
     const onClick = (el) => onChange(el)
 
-    return (data.map((el) => (
-        <li style={{ ...styleItem }} onClick={() => onClick(el)}{...props}>
+    return (data.map((el,i) => (
+        <li key={i} style={{ ...styleItem }} onClick={() => onClick(el)}{...props}>
             {el?.label}
         </li>)
     ))

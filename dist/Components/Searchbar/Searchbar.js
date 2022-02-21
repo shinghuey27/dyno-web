@@ -33,13 +33,24 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var Searchbar = function Searchbar(props) {
   var id = props.id,
       name = props.name,
       field = props.field,
       error = props.error,
       item = props.item,
-      data = props.data,
       text = props.text,
       listBox = props.listBox,
       listItem = props.listItem,
@@ -53,16 +64,40 @@ var Searchbar = function Searchbar(props) {
       label = _ref.label,
       options = _ref.options,
       placeholder = _ref.placeholder,
-      description = _ref.description; // const { child, error, name, item, field } = props; <- props for integration
+      description = _ref.description;
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      toggleShowList = _useState2[0],
+      setToggleShowList = _useState2[1];
+
+  var _useState3 = (0, _react.useState)({
+    value: 'Please Select..'
+  }),
+      _useState4 = _slicedToArray(_useState3, 2),
+      selected = _useState4[0],
+      setSelected = _useState4[1]; // const { child, error, name, item, field } = props; <- props for integration
 
 
   var _ref2 = field || {
     onChange: function onChange() {}
   },
+      value = _ref2.value,
       onChange = _ref2.onChange;
 
   ;
-  var defaultData = data && data.length ? data : _List2.sampleItem;
+  var defaultData = options && options.length ? options : _List2.sampleItem;
+
+  var toggle = function toggle() {
+    return setToggleShowList(!toggleShowList);
+  };
+
+  var update = function update(e) {
+    setSelected(e);
+    onChange(e);
+    toggle();
+  };
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: "flex"
@@ -71,16 +106,23 @@ var Searchbar = function Searchbar(props) {
     label: label,
     text: text,
     description: description,
-    error: error
+    error: error,
+    field: {
+      // onBlur: () => toggle(),
+      onFocus: function onFocus() {
+        return toggle();
+      },
+      value: selected['value']
+    }
   }), /*#__PURE__*/_react.default.createElement("div", null, icon && /*#__PURE__*/_react.default.createElement(_KeyboardArrowDown.default, _extends({
     style: _objectSpread({}, iconStyle)
   }, icon)))), /*#__PURE__*/_react.default.createElement("div", {
     style: _objectSpread({}, listboxStyle)
-  }, data && /*#__PURE__*/_react.default.createElement(_List.default, {
+  }, toggleShowList && /*#__PURE__*/_react.default.createElement(_List.default, {
     data: defaultData,
     listBox: listBox,
     item: listItem,
-    onChange: onChange
+    onChange: update
   })));
 };
 

@@ -13,9 +13,9 @@ const Searchbar = (props) => {
     error,
     item,
 
-    data,    
+    // data,
     text,
-    
+
     listBox,
     listItem,
     icon,
@@ -24,10 +24,20 @@ const Searchbar = (props) => {
   } = props;
 
   const { label, options, placeholder, description } = item || { label: "" };
+  const [toggleShowList, setToggleShowList] = useState(false);
+  const [selected, setSelected] = useState({value:'Please Select..'});
 
   // const { child, error, name, item, field } = props; <- props for integration
-  const {  onChange } = field || { onChange: ()=>{} };;
-  const defaultData = data && data.length ? data : sampleItem;
+  const { value, onChange } = field || { onChange: () => { } };;
+  const defaultData = options && options.length ? options : sampleItem;
+
+  const toggle = () => setToggleShowList(!toggleShowList)
+
+  const update = (e) => {
+    setSelected(e)
+    onChange(e)
+    toggle()
+  }
 
   return (
     <div>
@@ -39,18 +49,22 @@ const Searchbar = (props) => {
           text={text}
           description={description}
           error={error}
+          field={{
+            // onBlur: () => toggle(),
+            onFocus: () => toggle(),
+            value: selected['value'] 
+          }}
         />
         <div>
           {icon && <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />}
         </div>
       </div>
-      {/* <div style={{ backgroundColor: 'violet' }}>asd
-        <div style={{ position: 'absolute', backgroundColor: 'yellow' }}>fami</div>
-      </div> */}
       <div
         style={{ ...listboxStyle }}
       >
-        {data && <List data={defaultData} listBox={listBox} item={listItem} onChange={onChange} />}
+        {toggleShowList && <List data={defaultData} listBox={listBox} item={listItem}          
+          onChange={update}
+        />}
       </div>
     </div>
   );

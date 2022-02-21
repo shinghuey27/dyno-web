@@ -28,8 +28,9 @@ var ListItem = function ListItem(props) {
     return onChange(el);
   };
 
-  return data.map(function (el) {
+  return data.map(function (el, i) {
     return /*#__PURE__*/_react.default.createElement("li", _extends({
+      key: i,
       style: _objectSpread({}, styleItem),
       onClick: function onClick() {
         return _onClick(el);
