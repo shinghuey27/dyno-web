@@ -25,7 +25,7 @@ const Searchbar = (props) => {
 
   const { label, options, placeholder, description } = item || { label: "" };
   const [toggleShowList, setToggleShowList] = useState(false);
-  const [selected, setSelected] = useState({value:''});
+  const [selected, setSelected] = useState({ value: '' });
 
   // const { child, error, name, item, field } = props; <- props for integration
   const { value, onChange } = field || { onChange: () => { } };;
@@ -40,22 +40,26 @@ const Searchbar = (props) => {
   }
 
   return (
-    <div>
+    <div
+      id={id}       // <-- need to check id and name molecules interaction
+      name={name}
+    >
       <div style={{
         display: "flex",
+
       }}>
-        <Textbox                    
+        <Textbox
           text={text}
           description={description}
           error={error}
           field={{
-            // onBlur: () => toggle(), // <-- could try resolve this using redux, listen to onChange if active , then process onChange first , check in next iteration
+            // onBlur: () => toggle(), // <-- could try resolve this using redux, or hooks, listen to onChange if active , then process onChange first , check in next iteration
             onFocus: () => toggle(),
-            value: selected['value'] 
+            value: selected['value']
           }}
           item={{
-            label:label,
-            placeholder:placeholder
+            label: label,
+            placeholder: placeholder
           }} // <-- since we resuse textbox, textbox still accepts item props
         />
         <div>
@@ -65,7 +69,7 @@ const Searchbar = (props) => {
       <div
         style={{ ...listboxStyle }}
       >
-        {toggleShowList && <List data={defaultData} listBox={listBox} item={listItem}          
+        {toggleShowList && <List data={defaultData} listBox={listBox} item={listItem}
           onChange={update}
         />}
       </div>

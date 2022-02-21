@@ -13,10 +13,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function Calendar(_ref) {
-  var datePicker = _ref.datePicker;
+function Calendar(props) {
+  var selected = props.selected,
+      datePicker = props.datePicker;
   return /*#__PURE__*/_react.default.createElement(_reactDatepicker.default, _extends({
-    className: "datepick" // calendarContainer={({ className, children }) => renderCalendar({ className, children })}
+    className: "datepick",
+    selected: selected // calendarContainer={({ className, children }) => renderCalendar({ className, children })}
     // formatWeekDay={(nameOfDay) => nameOfDay.substr(0, 1)}
     // dateFormat="d MMMM yyyy"
     // selected={startDate}

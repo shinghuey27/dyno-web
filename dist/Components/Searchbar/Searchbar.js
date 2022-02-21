@@ -98,7 +98,11 @@ var Searchbar = function Searchbar(props) {
     toggle();
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    id: id // <-- need to check id and name molecules interaction
+    ,
+    name: name
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: "flex"
     }
@@ -107,7 +111,7 @@ var Searchbar = function Searchbar(props) {
     description: description,
     error: error,
     field: {
-      // onBlur: () => toggle(), // <-- could try resolve this using redux, listen to onChange if active , then process onChange first , check in next iteration
+      // onBlur: () => toggle(), // <-- could try resolve this using redux, or hooks, listen to onChange if active , then process onChange first , check in next iteration
       onFocus: function onFocus() {
         return toggle();
       },
