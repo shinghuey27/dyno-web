@@ -44,16 +44,19 @@ const Searchbar = (props) => {
       <div style={{
         display: "flex",
       }}>
-        <Textbox
-          label={label}
+        <Textbox                    
           text={text}
           description={description}
           error={error}
           field={{
-            // onBlur: () => toggle(),
+            // onBlur: () => toggle(), // <-- could try resolve this using redux, listen to onChange if active , then process onChange first , check in next iteration
             onFocus: () => toggle(),
             value: selected['value'] 
           }}
+          item={{
+            label:label,
+            placeholder:placeholder
+          }} // <-- since we resuse textbox, textbox still accepts item props
         />
         <div>
           {icon && <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />}

@@ -103,17 +103,21 @@ var Searchbar = function Searchbar(props) {
       display: "flex"
     }
   }, /*#__PURE__*/_react.default.createElement(_Textbox.default, {
-    label: label,
     text: text,
     description: description,
     error: error,
     field: {
-      // onBlur: () => toggle(),
+      // onBlur: () => toggle(), // <-- could try resolve this using redux, listen to onChange if active , then process onChange first , check in next iteration
       onFocus: function onFocus() {
         return toggle();
       },
       value: selected['value']
-    }
+    },
+    item: {
+      label: label,
+      placeholder: placeholder
+    } // <-- since we resuse textbox, textbox still accepts item props
+
   }), /*#__PURE__*/_react.default.createElement("div", null, icon && /*#__PURE__*/_react.default.createElement(_KeyboardArrowDown.default, _extends({
     style: _objectSpread({}, iconStyle)
   }, icon)))), /*#__PURE__*/_react.default.createElement("div", {
