@@ -6,7 +6,16 @@ import { DatePicker, Textbox } from "./Components";
 import { error } from "./SampleData/SampleErrorForm";
 import { sampleItem_Props_ForSelect } from "./SampleData/SamplePropsIntegration";
 import { CalendarContainer } from "react-datepicker";
-
+const renderCalendar = ({ className, children }) => {
+  return (
+    <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
+      <CalendarContainer className={className}>
+        <div style={{ background: "#f0f0f0" }}>What is your favorite day?</div>
+        <div style={{ position: "relative" }}>{children}</div>
+      </CalendarContainer>
+    </div>
+  );
+};
 
 
 function App(props) {
@@ -16,12 +25,12 @@ function App(props) {
       <CustomDesign /> */}
       <div>
 
-        <DatePicker />
+        {/* <DatePicker /> */}
         <DatePicker
           // container={{ style: {backgroundColor:'yellow'} }}
           label={"Calendar"}
           datePicker={{
-            // showYearDropdown: true,
+            showYearDropdown: true,
             // style: {},
             // calendarClassName: 'datepick2',
             // calendarContainer: ({ className, children }) =>

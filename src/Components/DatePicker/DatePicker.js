@@ -14,7 +14,7 @@ const DatePicker = (props) => {
     name,
     item,
     error,
-    field = { value: {} },
+    field = { value: undefined },
 
     datePicker,
     endIconContainer,
@@ -23,7 +23,7 @@ const DatePicker = (props) => {
     container
   } = props;
 
-  // if (item === undefined) return null;
+  if (item === undefined) return null;
 
   // const { placeholder } = item;
   const { value } = field;
@@ -35,7 +35,10 @@ const DatePicker = (props) => {
       <div className="icon" {...endIconContainer}>
         <EventIcon />
       </div>
-      <Calendar selected={value}  datePicker={datePicker} />
+      <Calendar
+        selected={value}
+        {...field}
+        {...datePicker} />
 
     </div>
   );
