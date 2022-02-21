@@ -72,7 +72,7 @@ var Searchbar = function Searchbar(props) {
       setToggleShowList = _useState2[1];
 
   var _useState3 = (0, _react.useState)({
-    value: 'Please Select..'
+    value: ''
   }),
       _useState4 = _slicedToArray(_useState3, 2),
       selected = _useState4[0],

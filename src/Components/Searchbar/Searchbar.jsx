@@ -25,7 +25,7 @@ const Searchbar = (props) => {
 
   const { label, options, placeholder, description } = item || { label: "" };
   const [toggleShowList, setToggleShowList] = useState(false);
-  const [selected, setSelected] = useState({value:'Please Select..'});
+  const [selected, setSelected] = useState({value:''});
 
   // const { child, error, name, item, field } = props; <- props for integration
   const { value, onChange } = field || { onChange: () => { } };;
