@@ -6,13 +6,14 @@ import PropTypes from "prop-types";
 const Checkbox = (props) => {
   const {
     container,    
-    checkMark,
-    label,
+    checkMark,    
+    item,
     field,
     classNameContainer,
     classNameCheckmark
   } = props;
   
+  const { label } = item || { label: "" };
   const defaultLabel = typeof label === "string" ? label : "Default";
 
   return (

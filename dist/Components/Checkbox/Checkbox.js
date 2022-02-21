@@ -20,10 +20,16 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var Checkbox = function Checkbox(props) {
   var container = props.container,
       checkMark = props.checkMark,
-      label = props.label,
+      item = props.item,
       field = props.field,
       classNameContainer = props.classNameContainer,
       classNameCheckmark = props.classNameCheckmark;
+
+  var _ref = item || {
+    label: ""
+  },
+      label = _ref.label;
+
   var defaultLabel = typeof label === "string" ? label : "Default";
   return /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     className: classNameContainer,
