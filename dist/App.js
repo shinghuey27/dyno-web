@@ -54,7 +54,7 @@ function App(props) {
   , {
     label: "Calendar",
     datePicker: {
-      showYearDropdown: true // style: {},
+      showYearDropdown: false // style: {},
       // calendarClassName: 'datepick2',
       // calendarContainer: ({ className, children }) =>
       //   renderCalendar({ className, children })

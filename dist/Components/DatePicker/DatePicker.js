@@ -31,11 +31,11 @@ var DatePicker = function DatePicker(props) {
   } : _props$field,
       datePicker = props.datePicker,
       endIconContainer = props.endIconContainer,
-      label = props.label,
       labelProps = props.labelProps,
       container = props.container;
-  if (item === undefined) return null; // const { placeholder } = item;
-
+  if (item === undefined) return null;
+  var label = item.label,
+      placeholder = item.placeholder;
   var value = field.value;
   return /*#__PURE__*/_react.default.createElement("div", _extends({
     className: "input-icons"

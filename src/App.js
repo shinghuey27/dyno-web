@@ -30,7 +30,7 @@ function App(props) {
           // container={{ style: {backgroundColor:'yellow'} }}
           label={"Calendar"}
           datePicker={{
-            showYearDropdown: true,
+            showYearDropdown: false,
             // style: {},
             // calendarClassName: 'datepick2',
             // calendarContainer: ({ className, children }) =>

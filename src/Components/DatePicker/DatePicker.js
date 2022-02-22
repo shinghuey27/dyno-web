@@ -18,14 +18,16 @@ const DatePicker = (props) => {
 
     datePicker,
     endIconContainer,
-    label,
+
+    // label,
+
     labelProps,
     container
   } = props;
 
   if (item === undefined) return null;
 
-  // const { placeholder } = item;
+  const { label , placeholder } = item;
   const { value } = field;
 
   return (
