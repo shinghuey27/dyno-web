@@ -41,14 +41,15 @@ const Searchbar = (props) => {
 
   return (
     <div
-      id={id}       // <-- need to check id and name molecules interaction
-      name={name}
+      // id={id}       // <-- need to check id and name molecules interaction
+      // name={name}
     >
       <div style={{
         display: "flex",
 
       }}>
         <Textbox
+          name={name}
           text={text}
           description={description}
           error={error}

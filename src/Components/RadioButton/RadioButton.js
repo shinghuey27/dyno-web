@@ -2,6 +2,8 @@ import React from 'react';
 import Label from "../Label/Label";
 import styles from "./RadioButton.module.scss";
 import PropTypes from "prop-types";
+import { renderError } from '../../Utils/isErrorForm';
+import ErrorMessage from "../Label/ErrorMessage";
 
 const RadioButton = (props) => {
   const {
@@ -17,15 +19,15 @@ const RadioButton = (props) => {
   const { label } = item || { label: "" };
 
   const defaultLabel = typeof label === "string" ? label : "Default";
-  
+
   return (
     <>
-    <Label className={classNameContainer} label={defaultLabel} {...container}>
-      <input type="radio" name="radio" {...field} />
-      <span className={classNameCheckMark} {...checkMark}></span>
-    </Label>
-          {renderError(name, error) && <ErrorMessage {...props} />}
-          </>
+      <Label className={classNameContainer} label={defaultLabel} {...container}>
+        <input type="radio" name="radio" {...field} />
+        <span className={classNameCheckMark} {...checkMark}></span>
+      </Label>
+      {renderError(name, error) && <ErrorMessage {...props} />}
+    </>
   );
 };
 
