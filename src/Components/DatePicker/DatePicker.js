@@ -16,8 +16,8 @@ const DatePicker = (props) => {
     item,
     error,
     field = { value: undefined },
-    endIconContainer,    
-    labelProps,
+    endIconContainer,
+    datePicker,    
     container
   } = props;
 
@@ -33,9 +33,9 @@ const DatePicker = (props) => {
       </div>
       <Calendar
         selected={value}
-        // {...field}
-        // {...datePicker} <--expose all props without destructuring in specific
-        {...props}
+        {...field}
+        {...datePicker}  
+      // {...props} // <--expose all props without destructuring in specific
       />
       <ErrorMessage {...props} />
     </div>
