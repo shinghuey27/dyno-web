@@ -1,7 +1,7 @@
 {
   "main": "dist/Components",
   "name": "dyno-web",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",

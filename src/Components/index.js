@@ -6,4 +6,5 @@ export { default as Stepper } from './ProgressBar/Stepper'
 export { default as DatePicker } from './DatePicker/DatePicker'
 export { default as RadioButton } from './RadioButton/RadioButton'
 export { default as Switch } from './Switch/Switch'
+export { default as Select } from './Select/Select'
 
