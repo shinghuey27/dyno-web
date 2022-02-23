@@ -15,8 +15,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ErrorMessage = _interopRequireDefault(require("../Label/ErrorMessage"));
 
-var _isErrorForm = require("../../Utils/isErrorForm");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -45,7 +43,7 @@ var Checkbox = function Checkbox(props) {
     name: name
   }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: classNameCheckmark
-  }, checkMark))), (0, _isErrorForm.renderError)(name, error) && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+  }, checkMark))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
 Checkbox.defaultProps = {

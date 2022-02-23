@@ -2,7 +2,6 @@ import React from 'react';
 import Label from "../Label/Label";
 import styles from "./RadioButton.module.scss";
 import PropTypes from "prop-types";
-import { renderError } from '../../Utils/isErrorForm';
 import ErrorMessage from "../Label/ErrorMessage";
 
 const RadioButton = (props) => {
@@ -26,7 +25,7 @@ const RadioButton = (props) => {
         <input type="radio" name={name} {...field} />
         <span className={classNameCheckMark} {...checkMark}></span>
       </Label>
-      {renderError(name, error) && <ErrorMessage {...props} />}
+      <ErrorMessage {...props} />
     </>
   );
 };

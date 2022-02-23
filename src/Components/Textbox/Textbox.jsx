@@ -64,15 +64,15 @@ const Textbox = (props) => {
         )}
       </div>
 
-      {renderError(name, error) && (
-        <ErrorMessage
-          name={name}
-          error={error}
-          style={error?.style}
-          className={error?.className}
 
-        />
-      )}
+      <ErrorMessage
+        // name={name}
+        // error={error}
+        style={error?.style}
+        className={error?.className}
+        {...props}
+      />
+
     </div>
   );
 };

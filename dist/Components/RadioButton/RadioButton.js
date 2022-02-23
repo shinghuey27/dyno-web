@@ -13,8 +13,6 @@ var _RadioButtonModule = _interopRequireDefault(require("./RadioButton.module.sc
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _isErrorForm = require("../../Utils/isErrorForm");
-
 var _ErrorMessage = _interopRequireDefault(require("../Label/ErrorMessage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -45,7 +43,7 @@ var RadioButton = function RadioButton(props) {
     name: name
   }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: classNameCheckMark
-  }, checkMark))), (0, _isErrorForm.renderError)(name, error) && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+  }, checkMark))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
 RadioButton.defaultProps = {

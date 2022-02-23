@@ -64,12 +64,12 @@ var Textbox = function Textbox(props) {
       label: description.label,
       style: description.style,
       className: description.className
-    })), (0, _isErrorForm.renderError)(name, error) && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
-      name: name,
-      error: error,
+    })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default // name={name}
+    // error={error}
+    , _extends({
       style: error === null || error === void 0 ? void 0 : error.style,
       className: error === null || error === void 0 ? void 0 : error.className
-    }))
+    }, props)))
   );
 };
 

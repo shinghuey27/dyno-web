@@ -3,7 +3,6 @@ import Label from "../Label/Label";
 import "./Checkbox.css";
 import PropTypes from "prop-types";
 import ErrorMessage from '../Label/ErrorMessage';
-import { renderError } from '../../Utils/isErrorForm';
 
 const Checkbox = (props) => {
   const {
@@ -26,7 +25,7 @@ const Checkbox = (props) => {
         <input type="checkbox" name={name} {...field} />
         <span className={classNameCheckmark} {...checkMark} />
       </Label>
-      {renderError(name, error) && <ErrorMessage {...props} />}
+      <ErrorMessage {...props} />
     </>
   );
 };

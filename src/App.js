@@ -42,6 +42,7 @@ function App(props) {
         <Searchbar
           name='paymentType'
           label
+          
           text
           // error={error}
           label={{ label: "Search" }}
