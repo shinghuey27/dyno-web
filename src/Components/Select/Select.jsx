@@ -46,7 +46,7 @@ const Select = (props) => {
                 {...field}
                 onChange={customOnChange}
             />
-            {/* <Error {...props} /> */}
+            <ErrorMessage {...props} />
         </>
     );
 };

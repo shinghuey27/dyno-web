@@ -42,7 +42,7 @@ var RadioButton = function RadioButton(props) {
     label: defaultLabel
   }, container), /*#__PURE__*/_react.default.createElement("input", _extends({
     type: "radio",
-    name: "radio"
+    name: name
   }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: classNameCheckMark
   }, checkMark))), (0, _isErrorForm.renderError)(name, error) && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));

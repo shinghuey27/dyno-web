@@ -23,7 +23,7 @@ const RadioButton = (props) => {
   return (
     <>
       <Label className={classNameContainer} label={defaultLabel} {...container}>
-        <input type="radio" name="radio" {...field} />
+        <input type="radio" name={name} {...field} />
         <span className={classNameCheckMark} {...checkMark}></span>
       </Label>
       {renderError(name, error) && <ErrorMessage {...props} />}

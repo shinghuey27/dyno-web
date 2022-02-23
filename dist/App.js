@@ -21,6 +21,8 @@ var _SamplePropsIntegration = require("./SampleData/SamplePropsIntegration");
 
 var _reactDatepicker = require("react-datepicker");
 
+var _Select = _interopRequireDefault(require("./Components/Select/Select"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -83,7 +85,7 @@ function App(props) {
     } // checkMark={{ style: { backgroundColor: "red" } }}
     // container={{ style: { color: "green", "&::after": {} } }}
 
-  })));
+  }), /*#__PURE__*/React.createElement(_Select.default, null)));
 }
 
 var _default = App;

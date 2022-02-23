@@ -76,7 +76,7 @@ var Select = function Select(props) {
     options: options
   }, field, {
     onChange: customOnChange
-  })));
+  })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
 var _default = Select;

@@ -6,6 +6,7 @@ import { Checkbox, DatePicker, Textbox } from "./Components";
 import { error } from "./SampleData/SampleErrorForm";
 import { sampleItem_Props_ForSelect } from "./SampleData/SamplePropsIntegration";
 import { CalendarContainer } from "react-datepicker";
+import Select from "./Components/Select/Select";
 const renderCalendar = ({ className, children }) => {
   return (
     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
@@ -126,6 +127,8 @@ function App(props) {
         // checkMark={{ style: { backgroundColor: "red" } }}
         // container={{ style: { color: "green", "&::after": {} } }}
         />
+
+        <Select />
       </div>
     </div>
   );
