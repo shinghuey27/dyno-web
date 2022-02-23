@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 const ErrorMessage = (props) => {
 
   const { name, item, error } = props;
+  
+  if (error === undefined) return null
 
   const errorMsg = error && error[name] && error[name].message || "default error"
 
@@ -12,11 +14,11 @@ const ErrorMessage = (props) => {
 
 };
 
-ErrorMessage.defaultProps = {  
+ErrorMessage.defaultProps = {
   className: "errorMessage"
 };
 
-ErrorMessage.propTypes = {  
+ErrorMessage.propTypes = {
   className: PropTypes.string
 };
 

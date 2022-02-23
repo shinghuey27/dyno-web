@@ -17,6 +17,7 @@ var ErrorMessage = function ErrorMessage(props) {
   var name = props.name,
       item = props.item,
       error = props.error;
+  if (error === undefined) return null;
   var errorMsg = error && error[name] && error[name].message || "default error";
   return /*#__PURE__*/_react.default.createElement("div", props, errorMsg);
 };

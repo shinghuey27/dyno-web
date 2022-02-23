@@ -23,6 +23,8 @@ var _reactDatepicker = require("react-datepicker");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var renderCalendar = function renderCalendar(_ref) {
   var className = _ref.className,
       children = _ref.children;
@@ -46,6 +48,8 @@ var renderCalendar = function renderCalendar(_ref) {
 };
 
 function App(props) {
+  var _React$createElement;
+
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex"
@@ -60,15 +64,25 @@ function App(props) {
       //   renderCalendar({ className, children })
 
     }
-  }), /*#__PURE__*/React.createElement(_Button.default, {
-    style: {
-      marginTop: 40
-    },
-    label: "Pay Now",
-    managedCallback: function managedCallback() {
-      console.log('button click');
-    }
-  })));
+  }), /*#__PURE__*/React.createElement(_Components.Textbox, (_React$createElement = {
+    label: true,
+    text: true,
+    name: "amount",
+    description: true,
+    error: _SampleErrorForm.error
+  }, _defineProperty(_React$createElement, "label", {
+    label: "ID Number 2",
+    className: "labelClass"
+  }), _defineProperty(_React$createElement, "tooltip", {
+    label: "abc"
+  }), _defineProperty(_React$createElement, "text", {
+    className: "textClass"
+  }), _defineProperty(_React$createElement, "description", {
+    label: "description 2"
+  }), _defineProperty(_React$createElement, "error", {
+    label: "*Please enter valid ID number",
+    className: "errorClass"
+  }), _React$createElement))));
 }
 
 var _default = App;
