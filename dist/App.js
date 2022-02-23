@@ -54,29 +54,14 @@ function App(props) {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Button.default, {
-    style: {
-      marginTop: 40
-    },
-    label: "Pay Now",
-    managedCallback: function managedCallback() {
-      console.log('button click');
-    },
-    error: _SampleErrorForm.error
-  }), /*#__PURE__*/React.createElement(_Components.Checkbox, {
-    name: "checkbox2" // error={error}
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.DatePicker, {
+    item: {
+      label: 'my calendar'
+    } // datePicker={{
+    //   showYearDropdown: true
+    // }}
     ,
-    item: {
-      label: 'my label'
-    } // checkMark={{ style: { backgroundColor: "red" } }}
-    // container={{ style: { color: "green", "&::after": {} } }}
-
-  }), /*#__PURE__*/React.createElement(_Select.default, {
-    item: {
-      options: _List.sampleItem,
-      label: 'calendar'
-    },
-    selectStyle: {}
+    showYearDropdown: true
   })));
 }
 

@@ -16,26 +16,29 @@ const DatePicker = (props) => {
     item,
     error,
     field = { value: undefined },
-    endIconContainer,
-    datePicker,    
+    endIconContainer,  
     container
   } = props;
+
+  
 
   const { label, placeholder } = item || { label: "default error" };
   const { value } = field;
 
   return (
-    <div name={name} className="input-icons" {...container}>
+    <div className="input-icons" {...container}>
 
       <Label label={label} {...props}></Label>
+      
       <div className="icon" {...endIconContainer}>
         <EventIcon />
       </div>
       <Calendar
-        selected={value}
-        {...field}
-        {...datePicker}  
-      // {...props} // <--expose all props without destructuring in specific
+        name={name}
+        selected={value}        
+        // {...field}
+        // {...datePicker}
+        {...props} // <--expose all props without destructuring in specific
       />
       <ErrorMessage {...props} />
     </div>

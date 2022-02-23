@@ -32,7 +32,6 @@ var DatePicker = function DatePicker(props) {
     value: undefined
   } : _props$field,
       endIconContainer = props.endIconContainer,
-      datePicker = props.datePicker,
       container = props.container;
 
   var _ref = item || {
@@ -43,15 +42,17 @@ var DatePicker = function DatePicker(props) {
 
   var value = field.value;
   return /*#__PURE__*/_react.default.createElement("div", _extends({
-    name: name,
     className: "input-icons"
   }, container), /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     label: label
   }, props)), /*#__PURE__*/_react.default.createElement("div", _extends({
     className: "icon"
   }, endIconContainer), /*#__PURE__*/_react.default.createElement(_Event.default, null)), /*#__PURE__*/_react.default.createElement(_Calendar.default, _extends({
-    selected: value
-  }, field, datePicker)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+    name: name,
+    selected: value // {...field}
+    // {...datePicker}
+
+  }, props)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
 var _default = DatePicker;

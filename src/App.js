@@ -8,6 +8,7 @@ import { sampleItem_Props_ForSelect } from "./SampleData/SamplePropsIntegration"
 import { CalendarContainer } from "react-datepicker";
 import Select from "./Components/Select/Select";
 import { sampleItem } from "./SampleData/List";
+
 const renderCalendar = ({ className, children }) => {
   return (
     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
@@ -27,20 +28,38 @@ function App(props) {
       <CustomDesign /> */}
       <div>
 
-        <Button style={{ marginTop: 40 }} label='Pay Now' managedCallback={() => { console.log('button click') }} error={error}/>
+        {/* <Button style={{ marginTop: 40 }} label='Pay Now' managedCallback={() => { console.log('button click') }} error={error} /> */}
 
 
-        <Checkbox
+        {/* <Checkbox
           name='checkbox2'
           // error={error}
           item={{ label: 'my label' }}
-        // checkMark={{ style: { backgroundColor: "red" } }}
-        // container={{ style: { color: "green", "&::after": {} } }}
+          checkMark={{ style: { backgroundColor: "red" } }}
+          container={{ style: { color: "green", "&::after": { color: 'yellow' } } }}
+        /> */}
+
+        <DatePicker 
+          item={{ label: 'my calendar' }}
+          // datePicker={{
+          //   showYearDropdown: true
+          // }}
+          showYearDropdown={true}
         />
 
-        <Select
+        {/* <Select
           item={{ options: sampleItem , label:'calendar'}} 
-          selectStyle={{}}/>
+          selectStyle={{}}
+          /> */}
+
+        {/* <Textbox
+          item={{ label: 'Text' }}
+          labelStyle={{
+            // style: { color: 'red', backgroundColor: 'green', }
+          }}
+          description
+
+        /> */}
       </div>
     </div>
   );

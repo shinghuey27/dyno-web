@@ -79,7 +79,7 @@ var Select = function Select(props) {
     styles: selectStyle,
     options: options,
     onChange: customOnChange
-  }, field, props)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+  }, field)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
 Select.defaultProps = {

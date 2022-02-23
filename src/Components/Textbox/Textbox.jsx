@@ -15,24 +15,21 @@ const Textbox = (props) => {
     field,
     item,
     text,
+    labelStyle,
     error,
     tooltip,
     description, } = props;
 
-  //Always check to not render with error ;)
-  // if (item === undefined) return null;
-
   //Access to all props that introduced in element.
   const { label, placeholder } = item || { placeholder: "" };
+
   return (
-    // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
     <div>
       <div>
         {label && (
           <Label
             label={label}
-            style={label?.style}
-            className={label?.className}
+            {...labelStyle}
           />
         )}
         {tooltip && (
@@ -63,9 +60,7 @@ const Textbox = (props) => {
           />
         )}
       </div>
-
-
-      <ErrorMessage        
+      <ErrorMessage
         style={error?.style}
         className={error?.className}
         {...props}
