@@ -23,9 +23,9 @@ var _reactDatepicker = require("react-datepicker");
 
 var _Select = _interopRequireDefault(require("./Components/Select/Select"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _List = require("./SampleData/List");
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var renderCalendar = function renderCalendar(_ref) {
   var className = _ref.className,
@@ -50,34 +50,20 @@ var renderCalendar = function renderCalendar(_ref) {
 };
 
 function App(props) {
-  var _React$createElement;
-
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Searchbar.default, (_React$createElement = {
-    name: "paymentType",
-    label: true,
-    text: true // error={error}
-
-  }, _defineProperty(_React$createElement, "label", {
-    label: "Search"
-  }), _defineProperty(_React$createElement, "description", {
-    label: "this is search bar"
-  }), _defineProperty(_React$createElement, "text", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Button.default, {
     style: {
-      border: "1px solid #ddd",
-      borderRadius: "4px",
-      height: 40,
-      width: 278,
-      margin: 0,
-      fontSize: "14px",
-      fontWeight: 400,
-      fontFamily: "Lato",
-      boxSizing: "border-box"
-    }
-  }), _React$createElement)), /*#__PURE__*/React.createElement(_Components.Checkbox, {
+      marginTop: 40
+    },
+    label: "Pay Now",
+    managedCallback: function managedCallback() {
+      console.log('button click');
+    },
+    error: _SampleErrorForm.error
+  }), /*#__PURE__*/React.createElement(_Components.Checkbox, {
     name: "checkbox2" // error={error}
     ,
     item: {
@@ -85,7 +71,13 @@ function App(props) {
     } // checkMark={{ style: { backgroundColor: "red" } }}
     // container={{ style: { color: "green", "&::after": {} } }}
 
-  }), /*#__PURE__*/React.createElement(_Select.default, null)));
+  }), /*#__PURE__*/React.createElement(_Select.default, {
+    item: {
+      options: _List.sampleItem,
+      label: 'calendar'
+    },
+    selectStyle: {}
+  })));
 }
 
 var _default = App;

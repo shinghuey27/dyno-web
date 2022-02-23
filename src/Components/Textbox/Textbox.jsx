@@ -65,9 +65,7 @@ const Textbox = (props) => {
       </div>
 
 
-      <ErrorMessage
-        // name={name}
-        // error={error}
+      <ErrorMessage        
         style={error?.style}
         className={error?.className}
         {...props}

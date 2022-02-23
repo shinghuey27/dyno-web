@@ -69,16 +69,17 @@ var Select = function Select(props) {
     onChange(e);
   };
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Label.default, props), /*#__PURE__*/_react.default.createElement(_reactSelect.default, _extends({
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
+    label: label
+  }, props)), /*#__PURE__*/_react.default.createElement(_reactSelect.default, _extends({
     name: name,
     key: name,
     id: name,
     placeholder: placeholder,
     styles: selectStyle,
-    options: options
-  }, field, {
+    options: options,
     onChange: customOnChange
-  })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+  }, field, props)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
 Select.defaultProps = {

@@ -24,8 +24,7 @@ var Button = function Button(props) {
   // } = props;
   var item = props.item,
       error = props.error,
-      managedCallback = props.managedCallback,
-      disabled = props.disabled;
+      managedCallback = props.managedCallback;
   var action = item.action,
       label = item.label;
 
@@ -33,6 +32,7 @@ var Button = function Button(props) {
     return managedCallback(action === null || action === void 0 ? void 0 : action.actionURL);
   };
 
+  var disabled = error && Object.keys(error).length > 0 || false;
   var className = disabled ? 'button-disabled' : 'button';
   return /*#__PURE__*/_react.default.createElement("button", _extends({
     className: className,

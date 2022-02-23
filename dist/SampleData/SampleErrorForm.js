@@ -77,6 +77,21 @@ var error = {
         "required": "Reference is required."
       }
     }
+  },
+  "calendar": {
+    "type": "required",
+    "message": "calendar is required.",
+    "ref": {
+      "type": "text",
+      "name": "calendar",
+      "label": "Refrence 2",
+      "value": "",
+      "placeholder": "phone number",
+      "visible": true,
+      "rule": {
+        "required": "Reference is required."
+      }
+    }
   }
 };
 exports.error = error;

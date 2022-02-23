@@ -4,6 +4,7 @@ import "./Date.css";
 import EventIcon from "@mui/icons-material/Event";
 import Label from "../Label/Label";
 import Calendar from "./Calendar";
+import ErrorMessage from "../Label/ErrorMessage";
 
 
 
@@ -15,33 +16,28 @@ const DatePicker = (props) => {
     item,
     error,
     field = { value: undefined },
-
-    datePicker,
-    endIconContainer,
-
-    // label,
-
+    endIconContainer,    
     labelProps,
     container
   } = props;
 
-  if (item === undefined) return null;
-
-  const { label , placeholder } = item;
+  const { label, placeholder } = item || { label: "default error" };
   const { value } = field;
 
   return (
-    <div className="input-icons" {...container}>
+    <div name={name} className="input-icons" {...container}>
 
-      <Label label={label} {...labelProps}></Label>
+      <Label label={label} {...props}></Label>
       <div className="icon" {...endIconContainer}>
         <EventIcon />
       </div>
       <Calendar
         selected={value}
-        {...field}
-        {...datePicker} />
-
+        // {...field}
+        // {...datePicker} <--expose all props without destructuring in specific
+        {...props}
+      />
+      <ErrorMessage {...props} />
     </div>
   );
 };

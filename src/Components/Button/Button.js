@@ -11,10 +11,12 @@ const Button = (props) => {
   //   label
   // } = props;
 
-  const { item, error, managedCallback, disabled } = props;
+  const { item, error, managedCallback, } = props;
   const { action, label } = item 
 
   const onClick = () => managedCallback(action?.actionURL)
+  const disabled = error && Object.keys(error).length > 0 || false;
+
 
   const className = disabled ? 'button-disabled' : 'button';
 

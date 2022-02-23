@@ -38,7 +38,7 @@ const Select = (props) => {
 
     return (
         <>
-            <Label {...props} />
+            <Label label={label} {...props} />
             <ReactSelect
                 name={name}
                 key={name}
@@ -46,8 +46,10 @@ const Select = (props) => {
                 placeholder={placeholder}
                 styles={selectStyle}
                 options={options}
-                {...field}
                 onChange={customOnChange}
+                {...field}
+                {...props}
+
             />
             <ErrorMessage {...props} />
         </>
@@ -62,7 +64,7 @@ Select.defaultProps = {
 
 
 Select.propTypes = {
-    
+
 
 };
 
