@@ -11,6 +11,8 @@ var _reactSelect = _interopRequireDefault(require("react-select"));
 
 var _Label = _interopRequireDefault(require("../Label/Label"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 require("./Select.css");
 
 var _ErrorMessage = _interopRequireDefault(require("../Label/ErrorMessage"));
@@ -25,17 +27,31 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var customStyles = {
+  control: function control(base, state) {
+    return _objectSpread(_objectSpread({}, base), {}, {
+      marginTop: 10,
+      '&:hover': {
+        borderColor: '#74e3e4'
+      },
+      border: '1px solid lightgray',
+      boxShadow: 'none',
+      borderRadius: 20
+    });
+  }
+};
+
 var Select = function Select(props) {
   var child = props.child,
       error = props.error,
       name = props.name,
       item = props.item,
+      selectStyle = props.selectStyle,
       _props$field = props.field,
       field = _props$field === void 0 ? {
     onChange: function onChange() {},
     value: ''
-  } : _props$field; // // const errorMsg = error && error[name] && error[name].message || ""
-  // if (item === undefined) return null;
+  } : _props$field;
 
   var _ref = item || {
     label: ""
@@ -50,34 +66,24 @@ var Select = function Select(props) {
       onChange = field.onChange;
 
   var customOnChange = function customOnChange(e) {
-    console.log('onchange e ->', e); // onChange(e);
+    onChange(e);
   };
 
-  var customStyles = {
-    control: function control(base, state) {
-      return _objectSpread(_objectSpread({}, base), {}, {
-        marginTop: 10,
-        '&:hover': {
-          borderColor: '#74e3e4'
-        },
-        border: '1px solid lightgray',
-        boxShadow: 'none',
-        borderRadius: 20
-      });
-    }
-  };
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Label.default, props), /*#__PURE__*/_react.default.createElement(_reactSelect.default, _extends({
     name: name,
     key: name,
     id: name,
-    placeholder: placeholder // defaultValue={value}
-    ,
-    styles: customStyles,
+    placeholder: placeholder,
+    styles: selectStyle,
     options: options
   }, field, {
     onChange: customOnChange
   })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
+Select.defaultProps = {
+  selectStyle: customStyles
+};
+Select.propTypes = {};
 var _default = Select;
 exports.default = _default;
