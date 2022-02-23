@@ -98,15 +98,12 @@ var Searchbar = function Searchbar(props) {
     toggle();
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", {
-    id: id // <-- need to check id and name molecules interaction
-    ,
-    name: name
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: "flex"
     }
   }, /*#__PURE__*/_react.default.createElement(_Textbox.default, {
+    name: name,
     text: text,
     description: description,
     error: error,

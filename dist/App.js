@@ -54,35 +54,36 @@ function App(props) {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.DatePicker // container={{ style: {backgroundColor:'yellow'} }}
-  , {
-    label: "Calendar",
-    datePicker: {
-      showYearDropdown: false // style: {},
-      // calendarClassName: 'datepick2',
-      // calendarContainer: ({ className, children }) =>
-      //   renderCalendar({ className, children })
-
-    }
-  }), /*#__PURE__*/React.createElement(_Components.Textbox, (_React$createElement = {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Searchbar.default, (_React$createElement = {
+    name: "paymentType",
     label: true,
-    text: true,
-    name: "amount",
-    description: true,
-    error: _SampleErrorForm.error
+    text: true // error={error}
+
   }, _defineProperty(_React$createElement, "label", {
-    label: "ID Number 2",
-    className: "labelClass"
-  }), _defineProperty(_React$createElement, "tooltip", {
-    label: "abc"
-  }), _defineProperty(_React$createElement, "text", {
-    className: "textClass"
+    label: "Search"
   }), _defineProperty(_React$createElement, "description", {
-    label: "description 2"
-  }), _defineProperty(_React$createElement, "error", {
-    label: "*Please enter valid ID number",
-    className: "errorClass"
-  }), _React$createElement))));
+    label: "this is search bar"
+  }), _defineProperty(_React$createElement, "text", {
+    style: {
+      border: "1px solid #ddd",
+      borderRadius: "4px",
+      height: 40,
+      width: 278,
+      margin: 0,
+      fontSize: "14px",
+      fontWeight: 400,
+      fontFamily: "Lato",
+      boxSizing: "border-box"
+    }
+  }), _React$createElement)), /*#__PURE__*/React.createElement(_Components.Checkbox, {
+    name: "checkbox2" // error={error}
+    ,
+    item: {
+      label: 'my label'
+    } // checkMark={{ style: { backgroundColor: "red" } }}
+    // container={{ style: { color: "green", "&::after": {} } }}
+
+  })));
 }
 
 var _default = App;

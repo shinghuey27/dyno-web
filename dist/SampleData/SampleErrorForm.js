@@ -63,12 +63,12 @@ var error = {
       }
     }
   },
-  "ref2": {
+  "checkbox2": {
     "type": "required",
-    "message": "Reference is required.",
+    "message": "checkbox2 is required.",
     "ref": {
       "type": "text",
-      "name": "ref2",
+      "name": "checkbox2",
       "label": "Refrence 2",
       "value": "",
       "placeholder": "phone number",
