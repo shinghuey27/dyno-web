@@ -29,8 +29,7 @@ const Textbox = (props) => {
           <Label
             label={label}
             className={labelStyle?.className}
-            style={labelStyle?.style}
-            // {...labelStyle} 
+            style={labelStyle?.style}            
           />
         )}
         {tootltipStyle && (
@@ -54,8 +53,7 @@ const Textbox = (props) => {
           <Description
             label={description}
             className={descriptionStyle?.className}
-            style={descriptionStyle?.style}
-            // {...descriptionStyle}
+            style={descriptionStyle?.style}            
           />
         )}
       </div>

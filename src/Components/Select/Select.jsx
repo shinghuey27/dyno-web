@@ -45,7 +45,7 @@ const Select = (props) => {
             <Label
                 label={label}
                 className={labelStyle?.className}
-                style={labelStyle?.className}
+                style={labelStyle?.style}
                 {...props} />
             <ReactSelect
                 name={name}
@@ -64,14 +64,14 @@ const Select = (props) => {
                     <Description
                         label={description}
                         className={descriptionStyle?.className}
-                        style={descriptionStyle?.className}
+                        style={descriptionStyle?.style}
                         {...props}
                     />
                 )}
             </div>
             <ErrorMessage
                 className={errorStyle?.className}
-                style={errorStyle?.className}
+                style={errorStyle?.style}
                 {...props} />
         </>
     );

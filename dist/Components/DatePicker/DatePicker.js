@@ -49,7 +49,7 @@ var DatePicker = function DatePicker(props) {
   }, /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     label: label,
     className: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className,
-    style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className
+    style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.style
   }, props)), /*#__PURE__*/_react.default.createElement("div", {
     className: endIconStyle === null || endIconStyle === void 0 ? void 0 : endIconStyle.className,
     style: endIconStyle === null || endIconStyle === void 0 ? void 0 : endIconStyle.style

@@ -37,7 +37,7 @@ const DatePicker = (props) => {
       <Label
         label={label}
         className={labelStyle?.className}
-        style={labelStyle?.className}
+        style={labelStyle?.style}
         {...props}></Label>
 
       <div
