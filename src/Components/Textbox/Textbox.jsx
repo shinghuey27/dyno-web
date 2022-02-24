@@ -30,7 +30,7 @@ const Textbox = (props) => {
             label={label}
             className={labelStyle?.className}
             style={labelStyle?.style}
-            {...labelStyle} //<-- check to see if overwrite , and styling change in
+            // {...labelStyle} 
           />
         )}
         {tootltipStyle && (
@@ -55,7 +55,7 @@ const Textbox = (props) => {
             label={description}
             className={descriptionStyle?.className}
             style={descriptionStyle?.style}
-            {...descriptionStyle}
+            // {...descriptionStyle}
           />
         )}
       </div>

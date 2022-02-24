@@ -42,22 +42,24 @@ var Textbox = function Textbox(props) {
       placeholder = _ref.placeholder,
       description = _ref.description;
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, {
     label: label,
     className: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className,
-    style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.style
-  }, labelStyle)), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
+    style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.style // {...labelStyle} 
+
+  }), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
     className: tootltipStyle === null || tootltipStyle === void 0 ? void 0 : tootltipStyle.className,
     style: tootltipStyle === null || tootltipStyle === void 0 ? void 0 : tootltipStyle.style
   })), /*#__PURE__*/_react.default.createElement(_Text.default, _extends({
     className: textboxStyle === null || textboxStyle === void 0 ? void 0 : textboxStyle.className,
     style: textboxStyle === null || textboxStyle === void 0 ? void 0 : textboxStyle.style,
     placeholder: placeholder
-  }, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
+  }, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, {
     label: description,
     className: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.className,
-    style: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.style
-  }, descriptionStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({
+    style: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.style // {...descriptionStyle}
+
+  })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({
     className: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.className,
     style: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.style
   }, props)));
