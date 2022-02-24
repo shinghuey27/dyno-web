@@ -7,8 +7,10 @@ import ErrorMessage from '../Label/ErrorMessage';
 const Checkbox = (props) => {
   const {
     name,
-    container,
-    checkMark,
+
+    containerStyle,
+    checkMarkStyle,
+    errorStyle,
     item,
     field,
     error,
@@ -21,19 +23,26 @@ const Checkbox = (props) => {
 
   return (
     <>
-      <Label className={classNameContainer} label={defaultLabel} {...container}>
+      <Label
+        label={defaultLabel}
+        className={'container'}
+        {...containerStyle}
+
+      >
         <input type="checkbox" name={name} {...field} />
-        <span className={classNameCheckmark} {...checkMark} />
+        <span className={'checkmark'} {...checkMarkStyle} />
       </Label>
-      <ErrorMessage {...props} />
+      <ErrorMessage
+        {...errorStyle}
+        {...props} />
     </>
   );
 };
 
-Checkbox.defaultProps = {
-  classNameContainer: "container",
-  classNameCheckmark: "checkmark"
-};
+// Checkbox.defaultProps = {
+//   container: { className: "container" },
+//   classNameCheckmark: "checkmark"
+// };
 
 
 Checkbox.propTypes = {

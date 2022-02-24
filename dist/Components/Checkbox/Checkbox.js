@@ -21,8 +21,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var Checkbox = function Checkbox(props) {
   var name = props.name,
-      container = props.container,
-      checkMark = props.checkMark,
+      containerStyle = props.containerStyle,
+      checkMarkStyle = props.checkMarkStyle,
+      errorStyle = props.errorStyle,
       item = props.item,
       field = props.field,
       error = props.error,
@@ -36,20 +37,20 @@ var Checkbox = function Checkbox(props) {
 
   var defaultLabel = typeof label === "string" ? label : "Default";
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
-    className: classNameContainer,
-    label: defaultLabel
-  }, container), /*#__PURE__*/_react.default.createElement("input", _extends({
+    label: defaultLabel,
+    className: 'container'
+  }, containerStyle), /*#__PURE__*/_react.default.createElement("input", _extends({
     type: "checkbox",
     name: name
   }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
-    className: classNameCheckmark
-  }, checkMark))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
-};
+    className: 'checkmark'
+  }, checkMarkStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
+}; // Checkbox.defaultProps = {
+//   container: { className: "container" },
+//   classNameCheckmark: "checkmark"
+// };
 
-Checkbox.defaultProps = {
-  classNameContainer: "container",
-  classNameCheckmark: "checkmark"
-};
+
 Checkbox.propTypes = {
   label: _propTypes.default.string
 };

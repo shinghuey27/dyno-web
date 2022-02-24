@@ -28,22 +28,19 @@ const Textbox = (props) => {
         {label && (
           <Label
             label={label}
-            className={labelStyle?.className}
-            style={labelStyle?.style}            
+            {...labelStyle}
           />
         )}
         {tootltipStyle && (
           <Tooltips
-            className={tootltipStyle?.className}
-            style={tootltipStyle?.style}
+            {...tootltipStyle}
           />
         )}
       </div>
 
       <Text
-        className={textboxStyle?.className}
-        style={textboxStyle?.style}
         placeholder={placeholder}
+        {...textboxStyle}
         {...field}
       />
 
@@ -52,14 +49,12 @@ const Textbox = (props) => {
         {description && (
           <Description
             label={description}
-            className={descriptionStyle?.className}
-            style={descriptionStyle?.style}            
+            {...descriptionStyle}
           />
         )}
       </div>
-      <ErrorMessage
-        className={errorStyle?.className}
-        style={errorStyle?.style}
+      <ErrorMessage        
+        {...errorStyle}
         {...props}
       />
 

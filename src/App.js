@@ -27,61 +27,12 @@ function App(props) {
       {/* <DefaultDesign />     
       <CustomDesign /> */}
       <div>
-
-
-        <Textbox
-          item={{ label: 'My Account', description: 'desc', }}
-          labelStyle={{style:{color:'black'}}}
-          textboxStyle={{
-            // className: "textClass"
-            style:{backgroundColor:'green'}
-          }}          
-          errorStyle={{ style: { color: 'blue' } }}  
-          descriptionStyle={{style:{color:'yellow'}}}      
-          error  
+        <Checkbox       
+          item={{ label: 'check box 1' }}       
+          // containerStyle={{ style: { color: "red", "&::after": {} } }}
         />
 
-        {/* <Button style={{ marginTop: 40 }} label='Pay Now' managedCallback={() => { console.log('button click') }} error={error} /> */}
-
-
-        {/* <Checkbox
-          name='checkbox2'
-          // error={error}
-          item={{ label: 'my label' }}
-          checkMark={{ style: { backgroundColor: "red" } }}
-          container={{ style: { color: "green", "&::after": { color: 'yellow' } } }}
-        /> */}
-
-        {/* <DatePicker 
-          // item={{ label: 'my calendar' }}
-          // datePicker={{
-          //   showYearDropdown: true
-          // }}
-          // showYearDropdown={true}
-        /> */}
-
-        {/* <Checkbox
-          // label
-          item={{label:'check box 1'}}
-          // checkMarkStyle={{ style: { backgroundColor: "red",} }}
-          // containerStyle={{ style: { color: "green", "&::after": {} } }}
-        /> */}
-
-        {/* <Select
-          item={{ options: sampleItem, label: 'calendar', description:'des' }}
-          selectStyle={{}}
-          descriptionStyle={{style:{color:'green'}}}
-        /> */}
-
-        {/* <Textbox
-          item={{ label: 'Text' }}
-          labelStyle={{
-            // style: { color: 'red', backgroundColor: 'green', }
-          }}
-          description
-
-        /> */}
-        <Button style={{backgroundColor:'blue'}}/>
+       
       </div>
     </div>
   );

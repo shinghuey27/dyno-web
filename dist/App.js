@@ -54,37 +54,11 @@ function App(props) {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Textbox, {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Checkbox, {
     item: {
-      label: 'My Account',
-      description: 'desc'
-    },
-    labelStyle: {
-      style: {
-        color: 'black'
-      }
-    },
-    textboxStyle: {
-      // className: "textClass"
-      style: {
-        backgroundColor: 'green'
-      }
-    },
-    errorStyle: {
-      style: {
-        color: 'blue'
-      }
-    },
-    descriptionStyle: {
-      style: {
-        color: 'yellow'
-      }
-    },
-    error: true
-  }), /*#__PURE__*/React.createElement(_Button.default, {
-    style: {
-      backgroundColor: 'blue'
-    }
+      label: 'check box 1'
+    } // containerStyle={{ style: { color: "red", "&::after": {} } }}
+
   })));
 }
 
