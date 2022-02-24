@@ -53,11 +53,11 @@ var Textbox = function Textbox(props) {
     className: textboxStyle === null || textboxStyle === void 0 ? void 0 : textboxStyle.className,
     style: textboxStyle === null || textboxStyle === void 0 ? void 0 : textboxStyle.style,
     placeholder: placeholder
-  }, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, {
+  }, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
     label: description,
     className: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.className,
     style: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.style
-  })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({
+  }, descriptionStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({
     className: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.className,
     style: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.style
   }, props)));

@@ -55,6 +55,7 @@ const Textbox = (props) => {
             label={description}
             className={descriptionStyle?.className}
             style={descriptionStyle?.style}
+            {...descriptionStyle}
           />
         )}
       </div>

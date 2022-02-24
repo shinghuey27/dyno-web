@@ -5,10 +5,12 @@ import Proptypes from 'prop-types';
 const Description = (props) => {
   const {
     label,
-    descriptionStyle
+    // descriptionStyle
   } = props;
 
-  return <label {...descriptionStyle} {...props}>{label}</label>;
+  return <label 
+  // {...descriptionStyle} 
+  {...props}>{label}</label>;
 
 };
 
