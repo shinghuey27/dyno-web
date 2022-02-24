@@ -17,39 +17,38 @@ var _Description = _interopRequireDefault(require("../Label/Description"));
 
 var _Tooltips = _interopRequireDefault(require("../Tooltip/Tooltips"));
 
+var _isEmpty = require("../../Utils/isEmpty");
+
+var _isErrorForm = require("../../Utils/isErrorForm");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 var Textbox = function Textbox(props) {
-  var label = props.label,
-      text = props.text,
-      error = props.error,
-      tooltip = props.tooltip,
-      description = props.description;
-  return (
-    /*#__PURE__*/
-    // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
-    _react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, {
-      label: label.label,
-      style: label.style,
-      className: label.className
-    }), tooltip && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
-      label: tooltip.label,
-      style: tooltip.style,
-      className: tooltip.className
-    })), text && /*#__PURE__*/_react.default.createElement(_Text.default, {
-      placeholder: text === null || text === void 0 ? void 0 : text.placeholder,
-      style: text === null || text === void 0 ? void 0 : text.style,
-      className: text === null || text === void 0 ? void 0 : text.className
-    }), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, {
-      label: description.label,
-      style: description.style,
-      className: description.className
-    })), error && /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, {
-      label: error.label,
-      style: error.style,
-      className: error.className
-    }))
-  );
+  var field = props.field,
+      item = props.item,
+      labelStyle = props.labelStyle,
+      tootltipStyle = props.tootltipStyle,
+      textboxStyle = props.textboxStyle,
+      descriptionStyle = props.descriptionStyle,
+      errorStyle = props.errorStyle; //Access to all props that introduced in element.
+
+  var _ref = item || {
+    placeholder: "",
+    description: ''
+  },
+      label = _ref.label,
+      placeholder = _ref.placeholder,
+      description = _ref.description;
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
+    label: label
+  }, labelStyle)), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, tootltipStyle)), /*#__PURE__*/_react.default.createElement(_Text.default, _extends({
+    placeholder: placeholder
+  }, textboxStyle, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
+    label: description
+  }, descriptionStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
 };
 
 var _default = Textbox;

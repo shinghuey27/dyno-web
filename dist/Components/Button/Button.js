@@ -18,24 +18,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var Button = function Button(props) {
-  var disabled = props.disabled,
-      label = props.label;
+  var name = props.name,
+      id = props.id,
+      item = props.item,
+      error = props.error,
+      managedCallback = props.managedCallback;
+
+  var _ref = item || {
+    label: 'Default'
+  },
+      action = _ref.action,
+      label = _ref.label;
+
+  var onClick = function onClick() {
+    return managedCallback(action === null || action === void 0 ? void 0 : action.actionURL);
+  };
+
+  var disabled = error && Object.keys(error).length > 0 || false;
   var className = disabled ? 'button-disabled' : 'button';
   return /*#__PURE__*/_react.default.createElement("button", _extends({
+    name: name,
+    id: id,
     className: className,
-    disabled: disabled
+    disabled: disabled,
+    onClick: onClick
   }, props), label);
 };
 
-Button.defaultProps = {
-  label: 'Next',
-  disabled: false
-};
-Button.propTypes = {
-  label: _propTypes.default.string.isRequired,
-  onClick: _propTypes.default.func,
-  onMouseOver: _propTypes.default.func,
-  disabled: _propTypes.default.bool
-};
 var _default = Button;
 exports.default = _default;

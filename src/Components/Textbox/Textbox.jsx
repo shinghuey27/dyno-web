@@ -4,60 +4,60 @@ import Label from "../Label/Label";
 import ErrorMessage from "../Label/ErrorMessage";
 import Description from "../Label/Description";
 import Tooltips from "../Tooltip/Tooltips";
+import { isEmptyObject } from '../../Utils/isEmpty';
+import { isError, renderError } from '../../Utils/isErrorForm';
 
 const Textbox = (props) => {
 
   const {
-    label,
-    text,
-    error,
-    tooltip,
-    description, } = props;
+    field,
+    item,
+    labelStyle,
+    tootltipStyle,
+    textboxStyle,
+    descriptionStyle,
+    errorStyle,
+  } = props;
+
+  //Access to all props that introduced in element.
+  const { label, placeholder, description } = item || { placeholder: "", description: '' };
 
   return (
-    // <>   <-- before is fragment , but need to wrap it with div to make it a single block, so that can be use with other molecules
     <div>
       <div>
         {label && (
           <Label
-            label={label.label}
-            style={label.style}
-            className={label.className}
+            label={label}
+            {...labelStyle}
           />
         )}
-        {tooltip && (
+        {tootltipStyle && (
           <Tooltips
-            label={tooltip.label}
-            style={tooltip.style}
-            className={tooltip.className}
+            {...tootltipStyle}
           />
         )}
       </div>
-      {text && (
-        <Text
-          placeholder={text?.placeholder}
-          style={text?.style}
-          className={text?.className}
-        />
-      )}
+
+      <Text
+        placeholder={placeholder}
+        {...textboxStyle}
+        {...field}
+      />
+
 
       <div>
         {description && (
           <Description
-            label={description.label}
-            style={description.style}
-            className={description.className}
+            label={description}
+            {...descriptionStyle}
           />
         )}
       </div>
+      <ErrorMessage        
+        {...errorStyle}
+        {...props}
+      />
 
-      {error && (
-        <ErrorMessage
-          label={error.label}
-          style={error.style}
-          className={error.className}
-        />
-      )}
     </div>
   );
 };

@@ -2,41 +2,42 @@ import React from 'react';
 import Label from "../Label/Label";
 import "./Switch.css";
 import PropTypes from "prop-types";
+import ErrorMessage from '../Label/ErrorMessage';
 
 const Switch = (props) => {
 
   const {
-    container,
-    label,
-    labelProps,
-    slider,
-    classNameLabel,
-    classNameSlider } = props;
+    name,
+    containerStyle,
+    labelStyle,
+    errorStyle,
+    item,
+    field,
+    sliderStyle
+  } = props;
 
-    const defaultLabel = typeof label === "string" ? label : "Default";
+  const { label } = item || { label: "" };
+  const defaultLabel = typeof label === "string" ? label : "Default";
 
   return (
-    <div className="flex">
+    <>
+      <div className="flex">
 
-      {label && <Label label={defaultLabel} {...labelProps} />}
+        {label && <Label label={defaultLabel} {...labelStyle} />}
 
-      <Label className={classNameLabel} label="" {...container}>
-        <input type="checkbox" />
-        <span className={classNameSlider} {...slider}></span>
-      </Label>
+        <Label className={'switch'} label="" {...containerStyle}>
+          <input type="checkbox" name={name} {...field} />
+          <span className={'slider round'} {...sliderStyle}></span>
+        </Label>
 
-    </div>
+
+      </div>
+      <ErrorMessage
+        {...errorStyle}
+        {...props} />
+
+    </>
   );
-};
-
-Switch.defaultProps = {
-  classNameLabel: "switch",
-  classNameSlider: "slider round"
-};
-
-Switch.propTypes = {
-  label: PropTypes.string,
-
 };
 
 export default Switch;

@@ -2,10 +2,12 @@ import React from 'react'
 import './List.css'
 const ListItem = (props) => {
 
-    const { data, styleItem } = props;
+    const { data, styleItem, onChange } = props;
 
-    return (data.map((el) => (
-        <li style={{ ...styleItem }} {...props}>
+    const onClick = (el) => onChange(el)
+
+    return (data.map((el,i) => (
+        <li key={i} style={{ ...styleItem }} onClick={() => onClick(el)}{...props}>
             {el?.label}
         </li>)
     ))

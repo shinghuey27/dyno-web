@@ -2,34 +2,41 @@ import React from 'react';
 import Label from "../Label/Label";
 import styles from "./RadioButton.module.scss";
 import PropTypes from "prop-types";
+import ErrorMessage from "../Label/ErrorMessage";
 
 const RadioButton = (props) => {
   const {
+    name,
     container,
-    input,
     checkMark,
-    label,
-    classNameLabel,
+    item,
+    field,
+    error,
+    classNameContainer,
     classNameCheckMark
   } = props;
+  const { label } = item || { label: "" };
 
   const defaultLabel = typeof label === "string" ? label : "Default";
-  
+
   return (
-    <Label className={classNameLabel} label={defaultLabel} {...container}>
-      <input type="radio" name="radio" {...input} />
-      <span className={classNameCheckMark} {...checkMark}></span>
-    </Label>
+    <>
+      <Label className={classNameContainer} label={defaultLabel} {...container}>
+        <input type="radio" name={name} {...field} />
+        <span className={classNameCheckMark} {...checkMark}></span>
+      </Label>
+      <ErrorMessage {...props} />
+    </>
   );
 };
 
 RadioButton.defaultProps = {
-  classNameLabel: styles.container,
+  classNameContainer: styles.container,
   classNameCheckMark: styles.checkmark
 };
 
 RadioButton.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.string,
 };
 
 export default RadioButton;

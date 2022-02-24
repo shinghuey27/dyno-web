@@ -24,9 +24,15 @@ const renderCalendar = ({ className, children }) => {
 
 const CustomDesign = () => {
   return (
-    <fieldset className="field" style={{ padding: "2rem" }}>     
+    <fieldset className="field" style={{ padding: "2rem" }}>
       {/* 7 Molecules  */}
       {/* 1. Textbox */}
+      
+      {/* <Textbox
+        label
+        text
+        description
+        error /> */}
 
       <Textbox
         label
@@ -99,7 +105,7 @@ const CustomDesign = () => {
         }}
         listboxStyle={{
           position: "relative",
-          top:20,
+          top: 20,
         }}
         // icon={{ style: { marginTop: 30 } }}
       />

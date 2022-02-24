@@ -1,24 +1,35 @@
 import React from 'react';
 import "./Label.css";
 import PropTypes from "prop-types";
+import { renderError } from '../../Utils/isErrorForm';
 
 const ErrorMessage = (props) => {
 
   const {
-    label
-  } = props;
+    name,
+    item,
+    error,
+    errorClassName,
+    errorStyle } = props;
 
-  return <div {...props}>{label}</div>;
+  if (error === undefined) return null
+
+  const errorMsg = error && error[name] && error[name].message || "default error"
+
+  return (
+
+    <div className={errorClassName} style={errorStyle} {...props}>
+      {renderError(name, error) && errorMsg}
+    </div>
+    );
 
 };
 
 ErrorMessage.defaultProps = {
-  label: "default error",
   className: "errorMessage"
 };
 
 ErrorMessage.propTypes = {
-  label: PropTypes.string,
   className: PropTypes.string
 };
 

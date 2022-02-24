@@ -7,39 +7,70 @@ import Proptypes from "prop-types";
 
 const Searchbar = (props) => {
   const {
-    data,
-    label,
-    text,
-    description,
+    id,
+    name,
+    field,
     error,
-    listBox,
     item,
+
+    // data,
+    text,
+
+    listBox,
+    listItem,
     icon,
     iconStyle,
     listboxStyle,
   } = props;
 
-  const defaultData = data && data.length ? data : sampleItem;
+  const { label, options, placeholder, description } = item || { label: "" };
+  const [toggleShowList, setToggleShowList] = useState(false);
+  const [selected, setSelected] = useState({ value: '' });
+
+  // const { child, error, name, item, field } = props; <- props for integration
+  const { value, onChange } = field || { onChange: () => { } };;
+  const defaultData = options && options.length ? options : sampleItem;
+
+  const toggle = () => setToggleShowList(!toggleShowList)
+
+  const update = (e) => {
+    setSelected(e)
+    onChange(e)
+    toggle()
+  }
 
   return (
-    <div>
+    <div      
+    >
       <div style={{
         display: "flex",
+
       }}>
         <Textbox
-          label={label}
+          name={name}
           text={text}
           description={description}
           error={error}
+          field={{
+            // onBlur: () => toggle(), // <-- could try resolve this using redux, or hooks, listen to onChange if active , then process onChange first , check in next iteration
+            onFocus: () => toggle(),
+            value: selected['value']
+          }}
+          item={{
+            label: label,
+            placeholder: placeholder
+          }} // <-- since we resuse textbox, textbox still accepts item props
         />
         <div>
           {icon && <KeyboardArrowDownIcon style={{ ...iconStyle }} {...icon} />}
         </div>
-      </div>      
+      </div>
       <div
         style={{ ...listboxStyle }}
       >
-        {data && <List data={defaultData} listBox={listBox} item={item} />}
+        {toggleShowList && <List data={defaultData} listBox={listBox} item={listItem}
+          onChange={update}
+        />}
       </div>
     </div>
   );

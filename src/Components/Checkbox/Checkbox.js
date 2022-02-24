@@ -2,36 +2,37 @@ import React from 'react';
 import Label from "../Label/Label";
 import "./Checkbox.css";
 import PropTypes from "prop-types";
+import ErrorMessage from '../Label/ErrorMessage';
 
 const Checkbox = (props) => {
   const {
-    container,
-    input,
-    checkMark,
-    label,
-    classNameContainer,
-    classNameCheckmark
+    name,
+    containerStyle,
+    checkMarkStyle,
+    errorStyle,
+    item,
+    field,    
   } = props;
-  
+
+  const { label } = item || { label: "" };
   const defaultLabel = typeof label === "string" ? label : "Default";
 
   return (
-    <Label className={classNameContainer} label={defaultLabel} {...container}>
-      <input type="checkbox" {...input} />
-      <span className={classNameCheckmark} {...checkMark} />
-    </Label>
+    <>
+      <Label
+        label={defaultLabel}
+        className={'container'}
+        {...containerStyle}
+
+      >
+        <input type="checkbox" name={name} {...field} />
+        <span className={'checkmark'} {...checkMarkStyle} />
+      </Label>
+      <ErrorMessage
+        {...errorStyle}
+        {...props} />
+    </>
   );
-};
-
-Checkbox.defaultProps = {
-  classNameContainer: "container",
-  classNameCheckmark: "checkmark"
-};
-
-
-Checkbox.propTypes = {
-  label: PropTypes.string,
-
 };
 
 export default Checkbox;

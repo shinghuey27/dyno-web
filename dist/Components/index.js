@@ -33,6 +33,12 @@ Object.defineProperty(exports, "Searchbar", {
     return _Searchbar.default;
   }
 });
+Object.defineProperty(exports, "Select", {
+  enumerable: true,
+  get: function get() {
+    return _Select.default;
+  }
+});
 Object.defineProperty(exports, "Stepper", {
   enumerable: true,
   get: function get() {
@@ -67,5 +73,7 @@ var _DatePicker = _interopRequireDefault(require("./DatePicker/DatePicker"));
 var _RadioButton = _interopRequireDefault(require("./RadioButton/RadioButton"));
 
 var _Switch = _interopRequireDefault(require("./Switch/Switch"));
+
+var _Select = _interopRequireDefault(require("./Select/Select"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

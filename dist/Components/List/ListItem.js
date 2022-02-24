@@ -21,10 +21,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var ListItem = function ListItem(props) {
   var data = props.data,
-      styleItem = props.styleItem;
-  return data.map(function (el) {
+      styleItem = props.styleItem,
+      onChange = props.onChange;
+
+  var _onClick = function onClick(el) {
+    return onChange(el);
+  };
+
+  return data.map(function (el, i) {
     return /*#__PURE__*/_react.default.createElement("li", _extends({
-      style: _objectSpread({}, styleItem)
+      key: i,
+      style: _objectSpread({}, styleItem),
+      onClick: function onClick() {
+        return _onClick(el);
+      }
     }, props), el === null || el === void 0 ? void 0 : el.label);
   });
 };

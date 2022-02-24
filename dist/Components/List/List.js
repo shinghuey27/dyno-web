@@ -28,12 +28,14 @@ var List = function List(props) {
       listBox = props.listBox,
       item = props.item,
       containerStyle = props.containerStyle,
+      onChange = props.onChange,
       classNameContainer = props.classNameContainer;
   return /*#__PURE__*/_react.default.createElement("ul", _extends({
     className: classNameContainer,
     style: _objectSpread({}, containerStyle)
   }, listBox), data && /*#__PURE__*/_react.default.createElement(_ListItem.default, _extends({
-    data: data
+    data: data,
+    onChange: onChange
   }, item)));
 };
 
