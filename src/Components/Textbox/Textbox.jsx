@@ -44,7 +44,7 @@ const Textbox = (props) => {
         className={textboxStyle?.className}
         style={textboxStyle?.style}
         placeholder={placeholder}
-        {...field}        
+        {...field}
       />
 
 
@@ -53,12 +53,13 @@ const Textbox = (props) => {
           <Description
             label={description}
             className={descriptionStyle?.className}
-            style={descriptionStyle?.style}            
+            style={descriptionStyle?.style}
           />
         )}
       </div>
       <ErrorMessage
-        {...errorStyle}
+        className={errorStyle?.className}
+        style={errorStyle?.style}
         {...props}
       />
 

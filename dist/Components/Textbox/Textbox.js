@@ -57,7 +57,10 @@ var Textbox = function Textbox(props) {
     label: description,
     className: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.className,
     style: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.style
-  })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
+  })), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({
+    className: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.className,
+    style: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.style
+  }, props)));
 };
 
 var _default = Textbox;

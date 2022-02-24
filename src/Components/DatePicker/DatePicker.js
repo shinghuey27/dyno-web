@@ -16,33 +16,53 @@ const DatePicker = (props) => {
     item,
     error,
     field = { value: undefined },
-    endIconContainer,  
-    container
+    endIconStyle,
+    containerStyle,
+    labelStyle,
+    errorStyle,
+
   } = props;
 
-  
+
 
   const { label, placeholder } = item || { label: "default error" };
   const { value } = field;
 
   return (
-    <div className="input-icons" {...container}>
+    <div
+      className={containerStyle?.className}
+      style={containerStyle?.style}
+    >
 
-      <Label label={label} {...props}></Label>
-      
-      <div className="icon" {...endIconContainer}>
+      <Label
+        label={label}
+        className={labelStyle?.className}
+        style={labelStyle?.className}
+        {...props}></Label>
+
+      <div
+        className={endIconStyle?.className}
+        style={endIconStyle?.style}
+      >
         <EventIcon />
       </div>
       <Calendar
         name={name}
         selected={value}        
-        // {...field}
-        // {...datePicker}
-        {...props} // <--expose all props without destructuring in specific
+        {...props} // <--expose all props without destructuring in specific {...field}
       />
-      <ErrorMessage {...props} />
+      <ErrorMessage
+        className={errorStyle?.className}
+        style={errorStyle?.style}
+        {...props} />
     </div>
   );
+};
+
+DatePicker.defaultProps = {
+  containerStyle: { className: "input-icons" },
+  endIconStyle: { className: "icon" }
+
 };
 
 export default DatePicker;

@@ -24,7 +24,10 @@ const Select = (props) => {
         error,
         name,
         item,
-        selectStyle,               
+        selectStyle,
+        labelStyle,
+        descriptionStyle,
+        errorStyle,
         field = { onChange: () => { }, value: '' }
     } = props;
 
@@ -39,7 +42,11 @@ const Select = (props) => {
 
     return (
         <>
-            <Label label={label} {...props} />
+            <Label
+                label={label}
+                className={labelStyle?.className}
+                style={labelStyle?.className}
+                {...props} />
             <ReactSelect
                 name={name}
                 key={name}
@@ -56,11 +63,16 @@ const Select = (props) => {
                 {description && (
                     <Description
                         label={description}
+                        className={descriptionStyle?.className}
+                        style={descriptionStyle?.className}
                         {...props}
                     />
                 )}
             </div>
-            <ErrorMessage {...props} />
+            <ErrorMessage
+                className={errorStyle?.className}
+                style={errorStyle?.className}
+                {...props} />
         </>
     );
 };
