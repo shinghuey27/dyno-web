@@ -46,7 +46,7 @@ var Textbox = function Textbox(props) {
     label: label,
     className: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className,
     style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className
-  }, props)), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
+  }, labelStyle)), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
     className: tootltipStyle === null || tootltipStyle === void 0 ? void 0 : tootltipStyle.className,
     style: tootltipStyle === null || tootltipStyle === void 0 ? void 0 : tootltipStyle.className
   })), /*#__PURE__*/_react.default.createElement(_Text.default, _extends({
