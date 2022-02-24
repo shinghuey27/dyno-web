@@ -7,6 +7,7 @@ import ErrorMessage from '../Label/ErrorMessage';
 const Switch = (props) => {
 
   const {
+    name,
     containerStyle,
     labelStyle,
     errorStyle,
@@ -25,7 +26,7 @@ const Switch = (props) => {
         {label && <Label label={defaultLabel} {...labelStyle} />}
 
         <Label className={'switch'} label="" {...containerStyle}>
-          <input type="checkbox" {...field} />
+          <input type="checkbox" name={name} {...field} />
           <span className={'slider round'} {...sliderStyle}></span>
         </Label>
 

@@ -20,7 +20,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var Switch = function Switch(props) {
-  var containerStyle = props.containerStyle,
+  var name = props.name,
+      containerStyle = props.containerStyle,
       labelStyle = props.labelStyle,
       errorStyle = props.errorStyle,
       item = props.item,
@@ -41,7 +42,8 @@ var Switch = function Switch(props) {
     className: 'switch',
     label: ""
   }, containerStyle), /*#__PURE__*/_react.default.createElement("input", _extends({
-    type: "checkbox"
+    type: "checkbox",
+    name: name
   }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: 'slider round'
   }, sliderStyle)))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
