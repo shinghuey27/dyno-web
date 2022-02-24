@@ -34,7 +34,8 @@ var DatePicker = function DatePicker(props) {
       endIconStyle = props.endIconStyle,
       containerStyle = props.containerStyle,
       labelStyle = props.labelStyle,
-      errorStyle = props.errorStyle;
+      errorStyle = props.errorStyle,
+      calendarStyle = props.calendarStyle;
 
   var _ref = item || {
     label: "default error"
@@ -43,32 +44,17 @@ var DatePicker = function DatePicker(props) {
       placeholder = _ref.placeholder;
 
   var value = field.value;
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: containerStyle === null || containerStyle === void 0 ? void 0 : containerStyle.className,
-    style: containerStyle === null || containerStyle === void 0 ? void 0 : containerStyle.style
-  }, /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
-    label: label,
-    className: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className,
-    style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.style
-  }, props)), /*#__PURE__*/_react.default.createElement("div", {
-    className: endIconStyle === null || endIconStyle === void 0 ? void 0 : endIconStyle.className,
-    style: endIconStyle === null || endIconStyle === void 0 ? void 0 : endIconStyle.style
-  }, /*#__PURE__*/_react.default.createElement(_Event.default, null)), /*#__PURE__*/_react.default.createElement(_Calendar.default, _extends({
+  return /*#__PURE__*/_react.default.createElement("div", _extends({
+    className: 'input-icons'
+  }, containerStyle), /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
+    label: label
+  }, labelStyle, props)), /*#__PURE__*/_react.default.createElement("div", _extends({
+    className: 'icon'
+  }, endIconStyle), /*#__PURE__*/_react.default.createElement(_Event.default, null)), /*#__PURE__*/_react.default.createElement(_Calendar.default, _extends({
     name: name,
     selected: value
-  }, props)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({
-    className: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.className,
-    style: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.style
-  }, props)));
+  }, field, calendarStyle)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
 };
 
-DatePicker.defaultProps = {
-  containerStyle: {
-    className: "input-icons"
-  },
-  endIconStyle: {
-    className: "icon"
-  }
-};
 var _default = DatePicker;
 exports.default = _default;

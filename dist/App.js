@@ -74,26 +74,15 @@ function App(props) {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Select.default, {
-    item: {
-      placeholder: 'Select payment now',
-      options: _List.sampleItem
-    },
-    selectStyle: {
-      styles: {
-        control: function control(base, state) {
-          return _objectSpread(_objectSpread({}, base), {}, {
-            marginTop: 10,
-            width: 300,
-            '&:hover': {
-              borderColor: '#74e3e4'
-            },
-            border: '1px solid red',
-            boxShadow: 'none',
-            borderRadius: 20
-          });
-        }
-      }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.DatePicker // containerStyle={{ style: {backgroundColor:'yellow'} }}
+  , {
+    label: "Calendar",
+    calendarStyle: {
+      showYearDropdown: true // style: {},
+      // calendarClassName: 'datepick2',
+      // calendarContainer: ({ className, children }) =>
+      // renderCalendar({ className, children })
+
     }
   })));
 }

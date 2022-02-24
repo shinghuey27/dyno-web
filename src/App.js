@@ -43,7 +43,7 @@ function App(props) {
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
 
-        <Select
+        {/* <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
           selectStyle={{
             styles: {
@@ -56,6 +56,18 @@ function App(props) {
                 borderRadius: 20,
               })
             }
+          }}
+        /> */}
+
+        <DatePicker
+          // containerStyle={{ style: {backgroundColor:'yellow'} }}
+          label={"Calendar"}
+          calendarStyle={{
+            showYearDropdown: true,
+            // style: {},
+            // calendarClassName: 'datepick2',
+            // calendarContainer: ({ className, children }) =>
+            // renderCalendar({ className, children })
           }}
         />
 
