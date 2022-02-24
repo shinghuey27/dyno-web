@@ -1,17 +1,17 @@
 const error = {
-    "paymentType": {
+    "select": {
         "type": "required",
-        "message": "please select payment type.",
+        "message": "Please select recipent bank.",
         "ref": {
             "type": "select",
-            "name": "paymentType",
+            "name": "select",
             "label": "Payment Type",
             "value": "",
             "visible": true,
             "placeholder": "Select Payment Type",
             "description": "IBFT sameday, GIRO tomorrow",
             "rule": {
-                "required": "please select payment type."
+                "required": "Please select Recipent Bank."
             },
             "options": [
                 {
@@ -27,7 +27,7 @@ const error = {
     },
     "amount": {
         "type": "required",
-        "message": "amount is required.",
+        "message": "Amount is required.",
         "ref": {
             "type": "text",
             "name": "amount",
@@ -45,26 +45,26 @@ const error = {
             }
         }
     },
-    "ref1": {
+    "account": {
         "type": "required",
-        "message": "Reference is required.",
+        "message": "Account Number is required.",
         "ref": {
             "type": "text",
-            "name": "ref1",
+            "name": "account",
             "label": "Refrence 1",
             "value": "",
             "placeholder": "999",
             "visible": true,
             "rule": {
-                "required": "Reference is required."
+                "required": "Account Number is required"
             }
         }
     },
-    "checkbox2": {
+    "instant": {
         "type": "required",
-        "message": "checkbox2 is required.",
+        "message": "instant Transfer is required.",
         "ref": {
-            "type": "text",
+            "type": "instant",
             "name": "checkbox2",
             "label": "Refrence 2",
             "value": "",
@@ -76,8 +76,8 @@ const error = {
         }
     },
     "calendar": {
-        "type": "required",
-        "message": "calendar is required.",
+        "type": "date",
+        "message": "Date is required.",
         "ref": {
             "type": "text",
             "name": "calendar",
@@ -89,7 +89,9 @@ const error = {
                 "required": "Reference is required."
             }
         }
-    }
+    },
+
+
 }
 
 export { error }
