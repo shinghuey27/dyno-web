@@ -21,7 +21,6 @@ const renderCalendar = ({ className, children }) => {
   );
 };
 
-
 const CustomDesign = () => {
   return (
     <fieldset className="field">
@@ -79,7 +78,7 @@ const CustomDesign = () => {
         }}
       />
       <br />
-      
+
       {/* 2. Textbox */}
       <Textbox
         name="account"
@@ -121,7 +120,6 @@ const CustomDesign = () => {
       <br />
       <br />
 
-
       {/* ------------------------------------------------- */}
       {/* 3. Searchbar */}
 
@@ -143,6 +141,22 @@ const CustomDesign = () => {
           ]
         }}
         error={error}
+        selectStyle={{
+          styles: {
+            control: (base, state) => ({
+              ...base,
+              "&:hover": { borderColor: "Green" },
+              boxShadow: "none",
+              borderRadius: 20,
+              backgroundColor: "grey"
+            }),
+            singleValue: (base) => ({
+              ...base,
+
+              color: 'white'
+            })
+          }
+        }}
         textboxStyle={{
           style: {
             border: "1px solid #ddd",
@@ -157,7 +171,7 @@ const CustomDesign = () => {
           }
         }}
       />
-      
+
       {/* ------------------------------------------------- */}
 
       <div style={{ marginTop: "2.5rem" }}></div>
@@ -176,7 +190,6 @@ const CustomDesign = () => {
       />
       <br />
 
-
       {/* ------------------------------------------------- */}
       {/* 5. Radiobutton */}
       <RadioButton
@@ -186,7 +199,7 @@ const CustomDesign = () => {
       <RadioButton
         item={{ label: "IBG Tranfer" }}
         checkMark={{ style: { backgroundColor: "green" } }}
-      /> 
+      />
       <br />
       {/* ------------------------------------------------- */}
 

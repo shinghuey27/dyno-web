@@ -42,7 +42,7 @@ function App(props) {
           
         /> */}
 
-        <Select
+        {/* <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
           selectStyle={{
             styles: {
@@ -56,7 +56,7 @@ function App(props) {
               })
             }
           }}
-        />
+        /> */}
 
         {/* <DatePicker
           // containerStyle={{ style: {backgroundColor:'yellow'} }}
