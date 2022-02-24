@@ -29,14 +29,14 @@ const Textbox = (props) => {
           <Label
             label={label}
             className={labelStyle?.className}
-            style={labelStyle?.className}
+            style={labelStyle?.style}
             {...labelStyle} //<-- check to see if overwrite , and styling change in
           />
         )}
         {tootltipStyle && (
           <Tooltips
             className={tootltipStyle?.className}
-            style={tootltipStyle?.className}
+            style={tootltipStyle?.style}
           />
         )}
       </div>
