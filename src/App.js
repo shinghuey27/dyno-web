@@ -43,12 +43,12 @@ function App(props) {
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
 
-        {/* <Textbox
+        <Textbox
           item={{label:'Pay Now', description:'pay before 1st March'}}
           tootltipStyle={{label:'tool'}}
           error
           
-        /> */}
+        />
 
         {/* <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
