@@ -75,30 +75,23 @@ var Select = function Select(props) {
   };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
-    label: label,
-    className: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className,
-    style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.style
-  }, props)), /*#__PURE__*/_react.default.createElement(_reactSelect.default, _extends({
+    label: label
+  }, labelStyle)), /*#__PURE__*/_react.default.createElement(_reactSelect.default, _extends({
     name: name,
     key: name,
     id: name,
     placeholder: placeholder,
-    styles: selectStyle,
+    styles: customStyles,
     options: options,
     onChange: customOnChange
-  }, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
-    label: description,
-    className: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.className,
-    style: descriptionStyle === null || descriptionStyle === void 0 ? void 0 : descriptionStyle.style
-  }, props))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({
-    className: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.className,
-    style: errorStyle === null || errorStyle === void 0 ? void 0 : errorStyle.style
-  }, props)));
-};
+  }, field, selectStyle)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
+    label: description
+  }, descriptionStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
+}; // Select.defaultProps = {
+//     selectStyle: customStyles,
+// };
 
-Select.defaultProps = {
-  selectStyle: customStyles
-};
+
 Select.propTypes = {};
 var _default = Select;
 exports.default = _default;

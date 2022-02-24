@@ -44,18 +44,18 @@ const Select = (props) => {
         <>
             <Label
                 label={label}
-                className={labelStyle?.className}
-                style={labelStyle?.style}
-                {...props} />
+                {...labelStyle}
+            />
             <ReactSelect
                 name={name}
                 key={name}
                 id={name}
                 placeholder={placeholder}
-                styles={selectStyle}
+                styles={customStyles}
                 options={options}
                 onChange={customOnChange}
                 {...field}
+                {...selectStyle}
 
 
             />
@@ -63,15 +63,12 @@ const Select = (props) => {
                 {description && (
                     <Description
                         label={description}
-                        className={descriptionStyle?.className}
-                        style={descriptionStyle?.style}
-                        {...props}
+                        {...descriptionStyle}
                     />
                 )}
             </div>
-            <ErrorMessage
-                className={errorStyle?.className}
-                style={errorStyle?.style}
+            <ErrorMessage                
+                {...errorStyle}
                 {...props} />
         </>
     );
@@ -79,9 +76,9 @@ const Select = (props) => {
 
 
 
-Select.defaultProps = {
-    selectStyle: customStyles,
-};
+// Select.defaultProps = {
+//     selectStyle: customStyles,
+// };
 
 
 Select.propTypes = {

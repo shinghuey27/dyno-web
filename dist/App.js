@@ -27,6 +27,12 @@ var _List = require("./SampleData/List");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var renderCalendar = function renderCalendar(_ref) {
   var className = _ref.className,
       children = _ref.children;
@@ -49,16 +55,46 @@ var renderCalendar = function renderCalendar(_ref) {
   }, children)));
 };
 
+var customStyles = {
+  control: function control(base, state) {
+    return _objectSpread(_objectSpread({}, base), {}, {
+      marginTop: 10,
+      '&:hover': {
+        borderColor: '#74e3e4'
+      },
+      border: '1px solid red',
+      boxShadow: 'none',
+      borderRadius: 20
+    });
+  }
+};
+
 function App(props) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Checkbox, {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Select.default, {
     item: {
-      label: 'check box 1'
-    } // containerStyle={{ style: { color: "red", "&::after": {} } }}
-
+      placeholder: 'Select payment now',
+      options: _List.sampleItem
+    },
+    selectStyle: {
+      styles: {
+        control: function control(base, state) {
+          return _objectSpread(_objectSpread({}, base), {}, {
+            marginTop: 10,
+            width: 300,
+            '&:hover': {
+              borderColor: '#74e3e4'
+            },
+            border: '1px solid red',
+            boxShadow: 'none',
+            borderRadius: 20
+          });
+        }
+      }
+    }
   })));
 }
 

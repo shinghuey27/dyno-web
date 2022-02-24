@@ -20,6 +20,17 @@ const renderCalendar = ({ className, children }) => {
   );
 };
 
+const customStyles = {
+  control: (base, state) => ({
+    ...base,
+    marginTop: 10,
+    '&:hover': { borderColor: '#74e3e4' },
+    border: '1px solid red',
+    boxShadow: 'none',
+    borderRadius: 20,
+  })
+}
+
 
 function App(props) {
   return (
@@ -27,12 +38,27 @@ function App(props) {
       {/* <DefaultDesign />     
       <CustomDesign /> */}
       <div>
-        <Checkbox       
+        {/* <Checkbox       
           item={{ label: 'check box 1' }}       
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
+        /> */}
+
+        <Select
+          item={{ placeholder: 'Select payment now', options: sampleItem }}
+          selectStyle={{
+            styles: {
+              control: (base, state) => ({
+                ...base,
+                marginTop: 10, width:300,
+                '&:hover': { borderColor: '#74e3e4' },
+                border: '1px solid red',
+                boxShadow: 'none',
+                borderRadius: 20,
+              })
+            }
+          }}
         />
 
-       
       </div>
     </div>
   );
