@@ -39,15 +39,4 @@ const Checkbox = (props) => {
   );
 };
 
-// Checkbox.defaultProps = {
-//   container: { className: "container" },
-//   classNameCheckmark: "checkmark"
-// };
-
-
-Checkbox.propTypes = {
-  label: PropTypes.string,
-
-};
-
 export default Checkbox;

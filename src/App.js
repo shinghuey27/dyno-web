@@ -2,7 +2,7 @@ import Searchbar from "./Components/Searchbar/Searchbar";
 import CustomDesign from "./Screen/CustomDesign";
 import DefaultDesign from "./Screen/DefaultDesign";
 import Button from './Components/Button/Button'
-import { Checkbox, DatePicker, Textbox } from "./Components";
+import { Checkbox, DatePicker, Textbox , Switch} from "./Components";
 import { error } from "./SampleData/SampleErrorForm";
 import { sampleItem_Props_ForSelect } from "./SampleData/SamplePropsIntegration";
 import { CalendarContainer } from "react-datepicker";
@@ -59,7 +59,7 @@ function App(props) {
           }}
         /> */}
 
-        <DatePicker
+        {/* <DatePicker
           // containerStyle={{ style: {backgroundColor:'yellow'} }}
           label={"Calendar"}
           calendarStyle={{
@@ -69,7 +69,9 @@ function App(props) {
             // calendarContainer: ({ className, children }) =>
             // renderCalendar({ className, children })
           }}
-        />
+        /> */}
+
+        <Switch item={{label:'my switch'}} />
 
       </div>
     </div>

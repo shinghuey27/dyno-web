@@ -45,14 +45,7 @@ var Checkbox = function Checkbox(props) {
   }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
     className: 'checkmark'
   }, checkMarkStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
-}; // Checkbox.defaultProps = {
-//   container: { className: "container" },
-//   classNameCheckmark: "checkmark"
-// };
-
-
-Checkbox.propTypes = {
-  label: _propTypes.default.string
 };
+
 var _default = Checkbox;
 exports.default = _default;

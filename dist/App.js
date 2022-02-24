@@ -74,15 +74,9 @@ function App(props) {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.DatePicker // containerStyle={{ style: {backgroundColor:'yellow'} }}
-  , {
-    label: "Calendar",
-    calendarStyle: {
-      showYearDropdown: true // style: {},
-      // calendarClassName: 'datepick2',
-      // calendarContainer: ({ className, children }) =>
-      // renderCalendar({ className, children })
-
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Switch, {
+    item: {
+      label: 'my switch'
     }
   })));
 }

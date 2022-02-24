@@ -6,37 +6,29 @@ import PropTypes from "prop-types";
 const Switch = (props) => {
 
   const {
-    container,
-    label,
-    labelProps,
-    slider,
-    classNameLabel,
-    classNameSlider } = props;
+    containerStyle,
+    labelStyle,
 
-    const defaultLabel = typeof label === "string" ? label : "Default";
+    item,    
+    field,
+    sliderStyle
+  } = props;
+
+  const { label } = item || { label: "" };
+  const defaultLabel = typeof label === "string" ? label : "Default";
 
   return (
     <div className="flex">
 
-      {label && <Label label={defaultLabel} {...labelProps} />}
+      {label && <Label label={defaultLabel} {...labelStyle} />}
 
-      <Label className={classNameLabel} label="" {...container}>
-        <input type="checkbox" />
-        <span className={classNameSlider} {...slider}></span>
+      <Label className={'switch'} label="" {...containerStyle}>
+        <input type="checkbox" {...field} />
+        <span className={'slider round'} {...sliderStyle}></span>
       </Label>
 
     </div>
   );
-};
-
-Switch.defaultProps = {
-  classNameLabel: "switch",
-  classNameSlider: "slider round"
-};
-
-Switch.propTypes = {
-  label: PropTypes.string,
-
 };
 
 export default Switch;

@@ -6,11 +6,6 @@ import PropTypes from "prop-types";
 
 const Button = (props) => {
 
-  // const {
-  //   disabled,
-  //   label
-  // } = props;
-
   const { item, error, managedCallback, } = props;
   const { action, label } = item 
 
