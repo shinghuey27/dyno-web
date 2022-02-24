@@ -34,21 +34,21 @@ const customStyles = {
 
 function App(props) {
   return (
-    <div style={{ display: "flex" }}>
-      {/* <DefaultDesign />     
-      <CustomDesign /> */}
+    <div style={{display:"flex",flexWrap:"wrap"}}>
+    <DefaultDesign />
+    <CustomDesign />
       <div>
         {/* <Checkbox       
           item={{ label: 'check box 1' }}       
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
-
+{/* 
         <Textbox
           item={{ label: 'Pay Now', description: 'pay before 1st March' }}
           tootltipStyle={{ label: 'tool' }}
           error
-          descriptionStyle={{ style: { textAlign: 'right', } }}
-        />
+          
+        /> */}
 
         <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
