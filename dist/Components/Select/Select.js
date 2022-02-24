@@ -54,8 +54,7 @@ var Select = function Select(props) {
       errorStyle = props.errorStyle,
       _props$field = props.field,
       field = _props$field === void 0 ? {
-    onChange: function onChange() {},
-    value: ''
+    onChange: function onChange() {}
   } : _props$field;
 
   var _ref = item || {
@@ -66,9 +65,7 @@ var Select = function Select(props) {
       placeholder = _ref.placeholder,
       description = _ref.description;
 
-  var _field$value = field.value,
-      value = _field$value === void 0 ? '' : _field$value,
-      onChange = field.onChange;
+  var onChange = field.onChange;
 
   var customOnChange = function customOnChange(e) {
     onChange(e);
@@ -79,6 +76,7 @@ var Select = function Select(props) {
   }, labelStyle)), /*#__PURE__*/_react.default.createElement(_reactSelect.default, _extends({
     name: name,
     key: name,
+    selec: true,
     id: name,
     placeholder: placeholder,
     styles: customStyles,

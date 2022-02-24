@@ -18,7 +18,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var Description = function Description(props) {
   var _props$label = props.label,
       label = _props$label === void 0 ? 'Default Description' : _props$label;
-  return /*#__PURE__*/_react.default.createElement("label", _extends({
+  return /*#__PURE__*/_react.default.createElement("div", _extends({
     className: "description"
   }, props), label);
 };

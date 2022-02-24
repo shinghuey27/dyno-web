@@ -7,9 +7,9 @@ const Description = (props) => {
     label = 'Default Description',
   } = props;
 
-  return <label
+  return <div
     className='description'
-    {...props}>{label}</label>;
+    {...props}>{label}</div>;
 
 };
 
