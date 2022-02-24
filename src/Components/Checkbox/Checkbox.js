@@ -7,15 +7,11 @@ import ErrorMessage from '../Label/ErrorMessage';
 const Checkbox = (props) => {
   const {
     name,
-
     containerStyle,
     checkMarkStyle,
     errorStyle,
     item,
-    field,
-    error,
-    classNameContainer,
-    classNameCheckmark
+    field,    
   } = props;
 
   const { label } = item || { label: "" };

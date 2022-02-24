@@ -40,9 +40,7 @@ const Searchbar = (props) => {
   }
 
   return (
-    <div
-      // id={id}       // <-- need to check id and name molecules interaction
-      // name={name}
+    <div      
     >
       <div style={{
         display: "flex",

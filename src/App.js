@@ -2,7 +2,7 @@ import Searchbar from "./Components/Searchbar/Searchbar";
 import CustomDesign from "./Screen/CustomDesign";
 import DefaultDesign from "./Screen/DefaultDesign";
 import Button from './Components/Button/Button'
-import { Checkbox, DatePicker, Textbox , Switch} from "./Components";
+import { Checkbox, DatePicker, Textbox, Switch } from "./Components";
 import { error } from "./SampleData/SampleErrorForm";
 import { sampleItem_Props_ForSelect } from "./SampleData/SamplePropsIntegration";
 import { CalendarContainer } from "react-datepicker";
@@ -43,6 +43,13 @@ function App(props) {
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
 
+        {/* <Textbox
+          item={{label:'Pay Now', description:'pay before 1st March'}}
+          tootltipStyle={{label:'tool'}}
+          error
+          
+        /> */}
+
         {/* <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
           selectStyle={{
@@ -71,7 +78,8 @@ function App(props) {
           }}
         /> */}
 
-        <Switch item={{label:'my switch'}} />
+        {/* <Switch item={{ label: 'my switch' }} error /> */}
+        {/* <Button /> */}
 
       </div>
     </div>

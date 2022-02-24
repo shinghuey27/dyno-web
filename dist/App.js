@@ -74,11 +74,7 @@ function App(props) {
     style: {
       display: "flex"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Switch, {
-    item: {
-      label: 'my switch'
-    }
-  })));
+  }, /*#__PURE__*/React.createElement("div", null));
 }
 
 var _default = App;

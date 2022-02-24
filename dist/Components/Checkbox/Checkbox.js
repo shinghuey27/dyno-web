@@ -25,10 +25,7 @@ var Checkbox = function Checkbox(props) {
       checkMarkStyle = props.checkMarkStyle,
       errorStyle = props.errorStyle,
       item = props.item,
-      field = props.field,
-      error = props.error,
-      classNameContainer = props.classNameContainer,
-      classNameCheckmark = props.classNameCheckmark;
+      field = props.field;
 
   var _ref = item || {
     label: ""
