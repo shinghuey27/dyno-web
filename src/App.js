@@ -36,13 +36,13 @@ function App(props) {
         /> */}
 {/* 
         <Textbox
-          item={{label:'Pay Now', description:'pay before 1st March'}}
-          tootltipStyle={{label:'tool'}}
+          item={{ label: 'Pay Now', description: 'pay before 1st March' }}
+          tootltipStyle={{ label: 'tool' }}
           error
           
         /> */}
 
-        {/* <Select
+        <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
           selectStyle={{
             styles: {
@@ -56,7 +56,7 @@ function App(props) {
               })
             }
           }}
-        /> */}
+        />
 
         {/* <DatePicker
           // containerStyle={{ style: {backgroundColor:'yellow'} }}

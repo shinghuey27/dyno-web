@@ -28,11 +28,11 @@ const Select = (props) => {
         labelStyle,
         descriptionStyle,
         errorStyle,
-        field = { onChange: () => { }, value: '' }
+        field = { onChange: () => { }, }
     } = props;
 
     const { label, options, placeholder, description } = item || { label: "" };
-    const { value = '', onChange } = field;
+    const { onChange } = field;
 
     const customOnChange = (e) => {
         onChange(e);
@@ -48,7 +48,8 @@ const Select = (props) => {
             />
             <ReactSelect
                 name={name}
-                key={name}
+                key={name}                
+                selec
                 id={name}
                 placeholder={placeholder}
                 styles={customStyles}
@@ -67,7 +68,7 @@ const Select = (props) => {
                     />
                 )}
             </div>
-            <ErrorMessage                
+            <ErrorMessage
                 {...errorStyle}
                 {...props} />
         </>

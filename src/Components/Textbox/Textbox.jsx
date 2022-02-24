@@ -13,7 +13,7 @@ const Textbox = (props) => {
     field,
     item,
     labelStyle,
-    tootltipStyle,
+    tooltipStyle,
     textboxStyle,
     descriptionStyle,
     errorStyle,
@@ -31,9 +31,9 @@ const Textbox = (props) => {
             {...labelStyle}
           />
         )}
-        {tootltipStyle && (
+        {tooltipStyle && (
           <Tooltips
-            {...tootltipStyle}
+            {...tooltipStyle}
           />
         )}
       </div>
@@ -45,15 +45,15 @@ const Textbox = (props) => {
       />
 
 
-      <div>
+      <>
         {description && (
           <Description
-            label={description}
+            label={description}            
             {...descriptionStyle}
           />
         )}
-      </div>
-      <ErrorMessage        
+      </>
+      <ErrorMessage
         {...errorStyle}
         {...props}
       />
