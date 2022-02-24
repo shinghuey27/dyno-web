@@ -17,6 +17,8 @@ require("./Select.css");
 
 var _ErrorMessage = _interopRequireDefault(require("../Label/ErrorMessage"));
 
+var _Description = _interopRequireDefault(require("../Label/Description"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -79,7 +81,9 @@ var Select = function Select(props) {
     styles: selectStyle,
     options: options,
     onChange: customOnChange
-  }, field)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+  }, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
+    label: description
+  }, props))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
 Select.defaultProps = {

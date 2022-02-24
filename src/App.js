@@ -28,6 +28,18 @@ function App(props) {
       <CustomDesign /> */}
       <div>
 
+
+        <Textbox
+          item={{ label: 'My Account', description: 'desc', }}
+          labelStyle={{style:{color:'black'}}}
+          textboxStyle={{
+            className: "textClass"
+          }}          
+          errorStyle={{ style: { color: 'blue' } }}  
+          descriptionStyle={{style:{color:'yellow'}}}      
+          error  
+        />
+
         {/* <Button style={{ marginTop: 40 }} label='Pay Now' managedCallback={() => { console.log('button click') }} error={error} /> */}
 
 
@@ -39,18 +51,19 @@ function App(props) {
           container={{ style: { color: "green", "&::after": { color: 'yellow' } } }}
         /> */}
 
-        <DatePicker 
+        {/* <DatePicker 
           item={{ label: 'my calendar' }}
           // datePicker={{
           //   showYearDropdown: true
           // }}
           showYearDropdown={true}
-        />
+        /> */}
 
         {/* <Select
-          item={{ options: sampleItem , label:'calendar'}} 
+          item={{ options: sampleItem, label: 'calendar', description:'des' }}
           selectStyle={{}}
-          /> */}
+          descriptionStyle={{style:{color:'green'}}}
+        /> */}
 
         {/* <Textbox
           item={{ label: 'Text' }}

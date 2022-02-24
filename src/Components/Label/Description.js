@@ -4,10 +4,11 @@ import Proptypes from 'prop-types';
 
 const Description = (props) => {
   const {
-    label
+    label,
+    descriptionStyle
   } = props;
-  
-  return <label {...props}>{label}</label>;
+
+  return <label {...descriptionStyle} {...props}>{label}</label>;
 
 };
 
@@ -18,7 +19,7 @@ Description.defaultProps = {
 
 Description.propTypes = {
   label: Proptypes.string,
-  className: Proptypes.string,  
+  className: Proptypes.string,
 };
 
 export default Description;

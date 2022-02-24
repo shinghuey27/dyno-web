@@ -10,18 +10,17 @@ import { isError, renderError } from '../../Utils/isErrorForm';
 const Textbox = (props) => {
 
   const {
-    name,
-    id,
     field,
     item,
-    text,
     labelStyle,
-    error,
-    tooltip,
-    description, } = props;
+    tootltipStyle,
+    textboxStyle,
+    descriptionStyle,
+    errorStyle,
+  } = props;
 
   //Access to all props that introduced in element.
-  const { label, placeholder } = item || { placeholder: "" };
+  const { label, placeholder, description } = item || { placeholder: "", description: '' };
 
   return (
     <div>
@@ -29,40 +28,37 @@ const Textbox = (props) => {
         {label && (
           <Label
             label={label}
-            {...labelStyle}
+            className={labelStyle?.className}
+            style={labelStyle?.className}
           />
         )}
-        {tooltip && (
+        {tootltipStyle && (
           <Tooltips
-            label={tooltip.label}
-            style={tooltip.style}
-            className={tooltip.className}
+            className={tootltipStyle?.className}
+            style={tootltipStyle?.className}
           />
         )}
       </div>
 
       <Text
-        style={text?.style}
-        className={text?.className}
-        name={name}
-        id={id}
+        className={textboxStyle?.className}
+        style={textboxStyle?.style}
         placeholder={placeholder}
-        {...field}
+        {...field}        
       />
 
 
       <div>
         {description && (
           <Description
-            label={description.label}
-            style={description.style}
-            className={description.className}
+            label={description}
+            className={descriptionStyle?.className}
+            style={descriptionStyle?.style}            
           />
         )}
       </div>
       <ErrorMessage
-        style={error?.style}
-        className={error?.className}
+        {...errorStyle}
         {...props}
       />
 

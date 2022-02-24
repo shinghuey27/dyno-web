@@ -4,6 +4,7 @@ import Label from "../Label/Label"
 import PropTypes from "prop-types";
 import "./Select.css"
 import ErrorMessage from '../Label/ErrorMessage';
+import Description from '../Label/Description';
 
 const customStyles = {
     control: (base, state) => ({
@@ -23,7 +24,7 @@ const Select = (props) => {
         error,
         name,
         item,
-        selectStyle,
+        selectStyle,               
         field = { onChange: () => { }, value: '' }
     } = props;
 
@@ -48,9 +49,17 @@ const Select = (props) => {
                 options={options}
                 onChange={customOnChange}
                 {...field}
-            
+
 
             />
+            <div>
+                {description && (
+                    <Description
+                        label={description}
+                        {...props}
+                    />
+                )}
+            </div>
             <ErrorMessage {...props} />
         </>
     );
