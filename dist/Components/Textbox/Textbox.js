@@ -42,11 +42,11 @@ var Textbox = function Textbox(props) {
       placeholder = _ref.placeholder,
       description = _ref.description;
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     label: label,
     className: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className,
     style: labelStyle === null || labelStyle === void 0 ? void 0 : labelStyle.className
-  }), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
+  }, props)), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, {
     className: tootltipStyle === null || tootltipStyle === void 0 ? void 0 : tootltipStyle.className,
     style: tootltipStyle === null || tootltipStyle === void 0 ? void 0 : tootltipStyle.className
   })), /*#__PURE__*/_react.default.createElement(_Text.default, _extends({

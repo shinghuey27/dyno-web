@@ -30,6 +30,7 @@ const Textbox = (props) => {
             label={label}
             className={labelStyle?.className}
             style={labelStyle?.className}
+            {...props} //<-- check to see if overwrite , and styling change in
           />
         )}
         {tootltipStyle && (

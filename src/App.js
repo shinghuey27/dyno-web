@@ -29,27 +29,28 @@ function App(props) {
       <div>
 
 
-        {/* <Textbox
+        <Textbox
           item={{ label: 'My Account', description: 'desc', }}
           labelStyle={{style:{color:'black'}}}
           textboxStyle={{
-            className: "textClass"
+            // className: "textClass"
+            style:{backgroundColor:'green'}
           }}          
           errorStyle={{ style: { color: 'blue' } }}  
           descriptionStyle={{style:{color:'yellow'}}}      
           error  
-        /> */}
+        />
 
         {/* <Button style={{ marginTop: 40 }} label='Pay Now' managedCallback={() => { console.log('button click') }} error={error} /> */}
 
 
-        <Checkbox
+        {/* <Checkbox
           name='checkbox2'
           // error={error}
           item={{ label: 'my label' }}
           checkMark={{ style: { backgroundColor: "red" } }}
           container={{ style: { color: "green", "&::after": { color: 'yellow' } } }}
-        />
+        /> */}
 
         {/* <DatePicker 
           // item={{ label: 'my calendar' }}
@@ -80,6 +81,7 @@ function App(props) {
           description
 
         /> */}
+        <Button style={{backgroundColor:'blue'}}/>
       </div>
     </div>
   );
