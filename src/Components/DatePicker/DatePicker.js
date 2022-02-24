@@ -7,7 +7,6 @@ import Calendar from "./Calendar";
 import ErrorMessage from "../Label/ErrorMessage";
 
 
-
 const DatePicker = (props) => {
 
   const {

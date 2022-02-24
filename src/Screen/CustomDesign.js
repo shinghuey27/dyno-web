@@ -1,13 +1,11 @@
 import "../App.css";
 
 import Textbox from "../Components/Textbox/Textbox";
-import Searchbar from "../Components/Searchbar/Searchbar";
 import DatePicker from "../Components/DatePicker/DatePicker";
 import Stepper from "../Components/ProgressBar/Stepper";
 import { CalendarContainer } from "react-datepicker";
 import Checkbox from "../Components/Checkbox/Checkbox";
 import RadioButton from "../Components/RadioButton/RadioButton";
-import { sampleItem } from "../SampleData/List";
 import Switch from "../Components/Switch/Switch";
 import { error } from "../SampleData/SampleErrorForm";
 import { Select } from "../Components";
@@ -22,6 +20,7 @@ const renderCalendar = ({ className, children }) => {
     </div>
   );
 };
+
 
 const CustomDesign = () => {
   return (
@@ -80,6 +79,7 @@ const CustomDesign = () => {
         }}
       />
       <br />
+      
       {/* 2. Textbox */}
       <Textbox
         name="account"
@@ -97,6 +97,8 @@ const CustomDesign = () => {
       />
 
       <br />
+      <br />
+
       <Textbox
         name="amount"
         item={{
@@ -116,16 +118,32 @@ const CustomDesign = () => {
 
       <br />
       <br />
+      <br />
+      <br />
+
 
       {/* ------------------------------------------------- */}
       {/* 3. Searchbar */}
+
       <Select
-        label={{ label: "Select Recipent Bank" }}
-        description={{
-          label: "this is search bar"
+        name="select"
+        item={{
+          label: "Select Recipent bank",
+          placeholder: "Please select recipent bank ",
+          description: "Recipent Bank",
+          options: [
+            {
+              label: "IBFT",
+              value: "IBFT"
+            },
+            {
+              label: "GIRO",
+              value: "GIRO"
+            }
+          ]
         }}
-        data={sampleItem}
-        text={{
+        error={error}
+        textboxStyle={{
           style: {
             border: "1px solid #ddd",
             borderRadius: "4px",
@@ -138,76 +156,52 @@ const CustomDesign = () => {
             boxSizing: "border-box"
           }
         }}
-        listBox={{
-          style: {
-            backgroundColor: "#44444F",
-            margin: 0,
-            position: "absolute",
-            border: "1px solid rgba(0, 0, 0, 0.05)",
-            borderRadius: 8,
-            boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
-            padding: 10,
-            width: 260,
-            top: -40,
-            overflow: "scroll",
-            height: 50,
-            overflowX: "hidden"
-          },
-          className: "listBox"
-        }}
-        item={{
-          style: {
-            backgroundColor: "#44444F",
-            marginBottom: ".5rem",
-            cursor: "pointer"
-          },
-          className: "itemList"
-        }}
       />
+      
       {/* ------------------------------------------------- */}
 
-      <div style={{ marginTop: "6rem" }}></div>
+      <div style={{ marginTop: "2.5rem" }}></div>
 
       {/* ------------------------------------------------- */}
       {/* 4. Datepicker */}
       <DatePicker
-        // container={{ style: {backgroundColor:'yellow'} }}
-        label={"Effective Date"}
-        datePicker={{
+        name="calendar"
+        item={{ label: "Effective Date" }}
+        calendarStyle={{
           showYearDropdown: true,
-          // style: {},
-          // calendarClassName: 'datepick2',
           calendarContainer: ({ className, children }) =>
             renderCalendar({ className, children })
         }}
+        error={error}
       />
       <br />
+
 
       {/* ------------------------------------------------- */}
       {/* 5. Radiobutton */}
       <RadioButton
-        label="Instant Tranfer"
+        item={{ label: "Instant Tranfer" }}
         checkMark={{ style: { backgroundColor: "green" } }}
       />
       <RadioButton
-        label="IBG Transfer"
+        item={{ label: "IBG Tranfer" }}
         checkMark={{ style: { backgroundColor: "green" } }}
-      />
+      /> 
       <br />
       {/* ------------------------------------------------- */}
 
       {/* 6. Switch */}
       <Switch
-        label="Set Recurring"
-        slider={{ style: { backgroundColor: "green" } }}
+        item={{ label: "Set Recurring" }}
+        sliderStyle={{ style: { backgroundColor: "green" } }}
       />
       <br />
 
       {/* ------------------------------------------------- */}
       {/* 7. Checkbox */}
       <Checkbox
-        label="Add to favorite"
-        checkMark={{ style: { backgroundColor: "green" } }}
+        item={{ label: "Add to favorite" }}
+        checkMarkStyle={{ style: { backgroundColor: "green" } }}
       />
       <br />
     </fieldset>
