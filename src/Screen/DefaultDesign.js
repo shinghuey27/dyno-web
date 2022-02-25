@@ -1,13 +1,11 @@
 import "../App.css";
 
 import Textbox from "../Components/Textbox/Textbox";
-import Searchbar from "../Components/Searchbar/Searchbar";
 import DatePicker from "../Components/DatePicker/DatePicker";
 import Stepper from "../Components/ProgressBar/Stepper";
 import Checkbox from "../Components/Checkbox/Checkbox";
 import RadioButton from "../Components/RadioButton/RadioButton";
 import Switch from "../Components/Switch/Switch";
-import { sampleItem } from "../SampleData/List";
 import { Select } from "../Components";
 import { error } from "../SampleData/SampleErrorForm";
 const DefaultDesign = () => {

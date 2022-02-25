@@ -189,3 +189,7 @@ html {
   font-family: "Rubik", sans-serif;
   margin-right: 0.5rem;
 }
+
+.react-select__value-container{
+  background-color: red;
+}
