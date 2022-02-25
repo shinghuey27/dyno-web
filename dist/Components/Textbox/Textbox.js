@@ -29,7 +29,7 @@ var Textbox = function Textbox(props) {
   var field = props.field,
       item = props.item,
       labelStyle = props.labelStyle,
-      tootltipStyle = props.tootltipStyle,
+      tooltipStyle = props.tooltipStyle,
       textboxStyle = props.textboxStyle,
       descriptionStyle = props.descriptionStyle,
       errorStyle = props.errorStyle; //Access to all props that introduced in element.
@@ -44,9 +44,9 @@ var Textbox = function Textbox(props) {
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, label && /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
     label: label
-  }, labelStyle)), tootltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, tootltipStyle)), /*#__PURE__*/_react.default.createElement(_Text.default, _extends({
+  }, labelStyle)), tooltipStyle && /*#__PURE__*/_react.default.createElement(_Tooltips.default, tooltipStyle)), /*#__PURE__*/_react.default.createElement(_Text.default, _extends({
     placeholder: placeholder
-  }, textboxStyle, field)), /*#__PURE__*/_react.default.createElement("div", null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
+  }, textboxStyle, field)), /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, description && /*#__PURE__*/_react.default.createElement(_Description.default, _extends({
     label: description
   }, descriptionStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
 };

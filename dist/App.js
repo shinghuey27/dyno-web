@@ -72,9 +72,31 @@ var customStyles = {
 function App(props) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      display: "flex"
+      display: "flex",
+      flexWrap: "wrap"
     }
-  }, /*#__PURE__*/React.createElement("div", null));
+  }, /*#__PURE__*/React.createElement(_DefaultDesign.default, null), /*#__PURE__*/React.createElement(_CustomDesign.default, null), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Select.default, {
+    item: {
+      placeholder: 'Select payment now',
+      options: _List.sampleItem
+    },
+    selectStyle: {
+      styles: {
+        control: function control(base, state) {
+          return _objectSpread(_objectSpread({}, base), {}, {
+            marginTop: 10,
+            width: 300,
+            '&:hover': {
+              borderColor: '#74e3e4'
+            },
+            border: '1px solid red',
+            boxShadow: 'none',
+            borderRadius: 20
+          });
+        }
+      }
+    }
+  })));
 }
 
 var _default = App;

@@ -1,51 +1,43 @@
-import Searchbar from "./Components/Searchbar/Searchbar";
 import CustomDesign from "./Screen/CustomDesign";
 import DefaultDesign from "./Screen/DefaultDesign";
-import Button from './Components/Button/Button'
-import { Checkbox, DatePicker, Textbox, Switch } from "./Components";
-import { error } from "./SampleData/SampleErrorForm";
-import { sampleItem_Props_ForSelect } from "./SampleData/SamplePropsIntegration";
-import { CalendarContainer } from "react-datepicker";
-import Select from "./Components/Select/Select";
-import { sampleItem } from "./SampleData/List";
 
-const renderCalendar = ({ className, children }) => {
-  return (
-    <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
-      <CalendarContainer className={className}>
-        <div style={{ background: "#f0f0f0" }}>What is your favorite day?</div>
-        <div style={{ position: "relative" }}>{children}</div>
-      </CalendarContainer>
-    </div>
-  );
-};
+// const renderCalendar = ({ className, children }) => {
+//   return (
+//     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
+//       <CalendarContainer className={className}>
+//         <div style={{ background: "#f0f0f0" }}>What is your favorite day?</div>
+//         <div style={{ position: "relative" }}>{children}</div>
+//       </CalendarContainer>
+//     </div>
+//   );
+// };
 
-const customStyles = {
-  control: (base, state) => ({
-    ...base,
-    marginTop: 10,
-    '&:hover': { borderColor: '#74e3e4' },
-    border: '1px solid red',
-    boxShadow: 'none',
-    borderRadius: 20,
-  })
-}
+// const customStyles = {
+//   control: (base, state) => ({
+//     ...base,
+//     marginTop: 10,
+//     '&:hover': { borderColor: '#74e3e4' },
+//     border: '1px solid red',
+//     boxShadow: 'none',
+//     borderRadius: 20,
+//   })
+// }
 
 
 function App(props) {
   return (
-    <div style={{ display: "flex" }}>
-      {/* <DefaultDesign />     
-      <CustomDesign /> */}
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <DefaultDesign />
+      <CustomDesign />
       <div>
         {/* <Checkbox       
           item={{ label: 'check box 1' }}       
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
-
-        {/* <Textbox
-          item={{label:'Pay Now', description:'pay before 1st March'}}
-          tootltipStyle={{label:'tool'}}
+        {/* 
+        <Textbox
+          item={{ label: 'Pay Now', description: 'pay before 1st March' }}
+          tootltipStyle={{ label: 'tool' }}
           error
           
         /> */}
@@ -56,7 +48,7 @@ function App(props) {
             styles: {
               control: (base, state) => ({
                 ...base,
-                marginTop: 10, width:300,
+                marginTop: 10, width: 300,
                 '&:hover': { borderColor: '#74e3e4' },
                 border: '1px solid red',
                 boxShadow: 'none',
@@ -80,6 +72,7 @@ function App(props) {
 
         {/* <Switch item={{ label: 'my switch' }} error /> */}
         {/* <Button /> */}
+        {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
 
       </div>
     </div>

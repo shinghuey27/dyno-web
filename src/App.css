@@ -9,11 +9,11 @@
   display: none;
 }
 
-.itemList{
+.itemList {
   color: white;
 }
 .itemList:hover {
-  color: rgb(255, 221, 0);  
+  color: rgb(255, 221, 0);
 }
 
 .tooltipContainer {
@@ -22,15 +22,23 @@
   margin-top: 1rem;
 }
 .field {
-  height: 100vh;
+  height: auto;
   background: rgb(255, 255, 255);
   box-shadow: 0px 5px 10px 0px rgba(112, 136, 210, 0.1);
   border-radius: 20px;
   border: none;
   width: 40vw;
   margin: auto;
+  min-height: 890px;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
 }
-
+@media only screen and (max-width: 320px) {
+  .field {
+    min-width: 300px;
+    padding: 0.5rem;
+  }
+}
 html {
   font-family: "Rubik", sans-serif;
 }
@@ -71,7 +79,6 @@ html {
   font-family: "Lato";
 }
 
-
 .react-datepicker__day:hover {
   border-radius: 50%;
   color: #0e1b42;
@@ -102,9 +109,8 @@ html {
 .react-datepicker__month {
   margin: 1rem;
 }
-.react-datepicker__current-month{
+.react-datepicker__current-month {
   font-family: "Rubik", sans-serif;
-
 }
 .react-datepicker__day-name {
   font-size: 12px;
@@ -153,7 +159,7 @@ html {
   font-weight: 400;
 }
 
-.datepick2{
+.datepick2 {
   background-color: #61aa6a;
 }
 
@@ -174,13 +180,16 @@ html {
   color: #c7c7c7;
 }
 
-
-.react-datepicker__day--keyboard-selected{
+.react-datepicker__day--keyboard-selected {
   background-color: transparent;
 }
 
-.react-datepicker__year-read-view--selected-year{
+.react-datepicker__year-read-view--selected-year {
   color: #ffffff;
   font-family: "Rubik", sans-serif;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
+}
+
+.react-select__value-container{
+  background-color: red;
 }

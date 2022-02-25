@@ -25,11 +25,11 @@ var _List = require("../SampleData/List");
 
 var _Switch = _interopRequireDefault(require("../Components/Switch/Switch"));
 
+var _SampleErrorForm = require("../SampleData/SampleErrorForm");
+
 var _Components = require("../Components");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var renderCalendar = function renderCalendar(_ref) {
   var className = _ref.className,
@@ -54,116 +54,153 @@ var renderCalendar = function renderCalendar(_ref) {
 };
 
 var CustomDesign = function CustomDesign() {
-  var _React$createElement, _React$createElement2, _React$createElement3;
-
   return /*#__PURE__*/React.createElement("fieldset", {
-    className: "field",
+    className: "field"
+  }, /*#__PURE__*/React.createElement("h2", {
     style: {
-      padding: "2rem"
+      display: "flex",
+      justifyContent: "center"
     }
-  }, /*#__PURE__*/React.createElement(_Textbox.default, (_React$createElement = {
-    label: true,
-    text: true,
-    description: true,
-    error: true
-  }, _defineProperty(_React$createElement, "label", {
-    label: "ID Number 2",
-    className: "labelClass"
-  }), _defineProperty(_React$createElement, "tooltip", {
-    label: "abc"
-  }), _defineProperty(_React$createElement, "text", {
-    className: "textClass"
-  }), _defineProperty(_React$createElement, "description", {
-    label: "description 2"
-  }), _defineProperty(_React$createElement, "error", {
-    label: "*Please enter valid ID number",
-    className: "errorClass"
-  }), _React$createElement)), /*#__PURE__*/React.createElement(_Searchbar.default, (_React$createElement2 = {
-    label: true,
-    text: true
-  }, _defineProperty(_React$createElement2, "label", {
-    label: "Search"
-  }), _defineProperty(_React$createElement2, "description", {
-    label: "this is search bar"
-  }), _defineProperty(_React$createElement2, "data", _List.optionsSample), _defineProperty(_React$createElement2, "text", {
+  }, "Custom Design"), /*#__PURE__*/React.createElement("div", {
     style: {
-      border: "1px solid #ddd",
-      borderRadius: "4px",
-      height: 40,
-      width: 278,
-      margin: 0,
-      fontSize: "14px",
-      fontWeight: 400,
-      fontFamily: "Lato",
-      boxSizing: "border-box"
+      marginTop: "1.5rem"
     }
-  }), _defineProperty(_React$createElement2, "listBox", {
-    style: {
-      backgroundColor: "#44444F",
-      margin: 0,
-      zIndex: 200,
-      position: "absolute",
-      border: "1px solid rgba(0, 0, 0, 0.05)",
-      borderRadius: 8,
-      boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
-      padding: 10,
-      width: 260,
-      top: -40,
-      overflow: "scroll",
-      height: 50,
-      overflowX: "hidden"
-    },
-    className: "listBox"
-  }), _defineProperty(_React$createElement2, "item", {
-    style: {
-      backgroundColor: "#44444F"
-    },
-    className: "itemList"
-  }), _defineProperty(_React$createElement2, "listboxStyle", {
-    position: "relative",
-    top: 20
-  }), _React$createElement2)), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 60
-    }
-  }), /*#__PURE__*/React.createElement(_Stepper.default, (_React$createElement3 = {
-    stepOne: true,
-    stepTwo: true // stepThree
-    // label
-    ,
+  }), /*#__PURE__*/React.createElement(_Stepper.default, {
     stepper: {
       style: {
         display: "flex",
         flex: 1
       }
-    }
-  }, _defineProperty(_React$createElement3, "stepOne", {
-    style: {
-      backgroundColor: "white",
-      flex: 1,
-      fontSize: 14,
-      height: 20
     },
-    text: "Select your goal"
-  }), _defineProperty(_React$createElement3, "stepTwo", {
-    style: {
-      backgroundColor: "white",
-      flex: 1,
-      fontSize: 14,
-      height: 20,
-      marginLeft: 20
+    stepOne: {
+      style: {
+        backgroundColor: "white",
+        flex: 1,
+        fontSize: 14,
+        textAlign: "center",
+        marginTop: "0rem"
+      },
+      text: "Step 1"
+    } // label={{ label: 'Step 2/3' }}
+    ,
+    hr: {
+      style: {
+        border: "1px solid black",
+        flex: 1,
+        height: 0.1
+      }
     },
-    text: "Define your goal"
-  }), _defineProperty(_React$createElement3, "hr", true), _defineProperty(_React$createElement3, "hr", {
-    style: {
-      border: "1px solid black",
-      flex: 1,
-      height: 0.1,
-      marginTop: 22
+    stepTwo: {
+      style: {
+        backgroundColor: "white",
+        flex: 1,
+        fontSize: 14,
+        height: 20,
+        textAlign: "center",
+        marginTop: "0rem"
+      },
+      text: "Step 2"
+    },
+    stepThree: {
+      style: {
+        backgroundColor: "white",
+        flex: 1,
+        fontSize: 14,
+        height: 20,
+        textAlign: "center",
+        marginTop: "0rem"
+      },
+      text: "Step 3"
     }
-  }), _React$createElement3)), /*#__PURE__*/React.createElement(_DatePicker.default // container={{ style: {backgroundColor:'yellow'} }}
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_Textbox.default, {
+    name: "account",
+    item: {
+      label: "Account Number",
+      description: "Account Number"
+    },
+    error: _SampleErrorForm.error // styling here
+    ,
+    errorStyle: {
+      className: "errorClass"
+    },
+    labelStyle: {
+      className: "labelClass"
+    },
+    textboxStyle: {
+      className: "textClass"
+    }
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_Textbox.default, {
+    name: "amount",
+    item: {
+      label: "Transfer Amount",
+      description: "Amount in MYR"
+    },
+    error: _SampleErrorForm.error,
+    tootltipStyle: {
+      label: "You can adjust your limit via settings"
+    },
+    errorStyle: {
+      className: "errorClass"
+    },
+    labelStyle: {
+      className: "labelClass"
+    },
+    textboxStyle: {
+      className: "textClass"
+    }
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_Components.Select, {
+    label: {
+      label: "Select Recipent Bank"
+    },
+    description: {
+      label: "this is search bar"
+    },
+    data: _List.sampleItem,
+    text: {
+      style: {
+        border: "1px solid #ddd",
+        borderRadius: "4px",
+        height: 40,
+        width: 278,
+        margin: 0,
+        fontSize: "14px",
+        fontWeight: 400,
+        fontFamily: "Lato",
+        boxSizing: "border-box"
+      }
+    },
+    listBox: {
+      style: {
+        backgroundColor: "#44444F",
+        margin: 0,
+        position: "absolute",
+        border: "1px solid rgba(0, 0, 0, 0.05)",
+        borderRadius: 8,
+        boxShadow: "0.5px 1px 1px 1px rgba(0, 0, 0, 0.05)",
+        padding: 10,
+        width: 260,
+        top: -40,
+        overflow: "scroll",
+        height: 50,
+        overflowX: "hidden"
+      },
+      className: "listBox"
+    },
+    item: {
+      style: {
+        backgroundColor: "#44444F",
+        marginBottom: ".5rem",
+        cursor: "pointer"
+      },
+      className: "itemList"
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "6rem"
+    }
+  }), /*#__PURE__*/React.createElement(_DatePicker.default // container={{ style: {backgroundColor:'yellow'} }}
   , {
-    label: "Calendar",
+    label: "Effective Date",
     datePicker: {
       showYearDropdown: true,
       // style: {},
@@ -177,24 +214,35 @@ var CustomDesign = function CustomDesign() {
         });
       }
     }
-  }), /*#__PURE__*/React.createElement(_RadioButton.default, {
-    label: "new label"
-  }), /*#__PURE__*/React.createElement(_Switch.default, {
-    label: "new label"
-  }), /*#__PURE__*/React.createElement(_Checkbox.default, {
-    label: true,
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_RadioButton.default, {
+    label: "Instant Tranfer",
     checkMark: {
       style: {
-        backgroundColor: "red"
-      }
-    },
-    container: {
-      style: {
-        color: "green",
-        "&::after": {}
+        backgroundColor: "green"
       }
     }
-  }));
+  }), /*#__PURE__*/React.createElement(_RadioButton.default, {
+    label: "IBG Transfer",
+    checkMark: {
+      style: {
+        backgroundColor: "green"
+      }
+    }
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_Switch.default, {
+    label: "Set Recurring",
+    slider: {
+      style: {
+        backgroundColor: "green"
+      }
+    }
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_Checkbox.default, {
+    label: "Add to favorite",
+    checkMark: {
+      style: {
+        backgroundColor: "green"
+      }
+    }
+  }), /*#__PURE__*/React.createElement("br", null));
 };
 
 var _default = CustomDesign;
