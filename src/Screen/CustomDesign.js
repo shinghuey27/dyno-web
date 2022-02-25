@@ -9,6 +9,7 @@ import RadioButton from "../Components/RadioButton/RadioButton";
 import Switch from "../Components/Switch/Switch";
 import { error } from "../SampleData/SampleErrorForm";
 import { Select } from "../Components";
+import styles from "../Field.module.scss"
 
 const renderCalendar = ({ className, children }) => {
   return (
@@ -23,7 +24,7 @@ const renderCalendar = ({ className, children }) => {
 
 const CustomDesign = () => {
   return (
-    <fieldset className="field">
+    <fieldset className={styles.field}>
       {/* <Button  /> */}
       <h2 style={{ display: "flex", justifyContent: "center" }}>
         Custom Design

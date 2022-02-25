@@ -8,6 +8,8 @@ import RadioButton from "../Components/RadioButton/RadioButton";
 import Switch from "../Components/Switch/Switch";
 import { Select } from "../Components";
 import { error } from "../SampleData/SampleErrorForm";
+import styles from "../Field.module.scss"
+
 const DefaultDesign = () => {
   const options = [
     {
@@ -21,7 +23,7 @@ const DefaultDesign = () => {
   ];
 
   return (
-    <fieldset className="field">
+    <fieldset className={styles.field}>
       {/* <Button  /> */}
       <h2 style={{ display: "flex", justifyContent: "center" }}>
         Default Design
