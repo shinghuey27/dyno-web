@@ -84,6 +84,18 @@ const DefaultDesign = () => {
           ]
         }}
         error={error}
+        selectStyle={{
+          styles: {
+            control: (base, state) => ({
+              ...base,
+              width:"18rem"
+            }),
+            menu: (provided, state) => ({
+              ...provided,
+              width:"18rem"
+            }),
+          }
+        }}
       />
 
       <div style={{ marginTop: "1rem" }}></div>

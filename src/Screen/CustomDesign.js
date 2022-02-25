@@ -12,9 +12,9 @@ import { Select } from "../Components";
 
 const renderCalendar = ({ className, children }) => {
   return (
-    <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
+    <div style={{ padding: "16px", background: "#fbf1ab", color: "#fff" }}>
       <CalendarContainer className={className}>
-        <div style={{ background: "#f0f0f0" }}>What is your favorite day?</div>
+        <div style={{ background: "#fbf1ab" }}>What is your favorite day?</div>
         <div style={{ position: "relative" }}>{children}</div>
       </CalendarContainer>
     </div>
@@ -141,12 +141,13 @@ const CustomDesign = () => {
           ]
         }}
         error={error}
+        errorStyle={{ className: "errorClass" }}
         selectStyle={{
           styles: {
             control: (base, state) => ({
               ...base,
-              "&:hover": { borderColor: "Green", cursor:"pointer" },
-              border: "solid 0.1rem #D7D7D7",
+              "&:hover": { borderColor: "Green", cursor: "pointer" },
+              border: "solid 0.1rem #D7D7D7"
             }),
             singleValue: (base) => ({
               ...base,
@@ -154,14 +155,14 @@ const CustomDesign = () => {
             }),
             menu: (provided, state) => ({
               ...provided,
-              backgroundColor:"#373737"
-
+              backgroundColor: "#373737"
             }),
             option: (provided, state) => ({
               ...provided,
-              color: state.isFocused ? '#FFC83D' : 'white',
-              backgroundColor: state.isFocused ? 'transparent' : 'transparent',              
-            })          }
+              color: state.isFocused ? "#FFC83D" : "white",
+              backgroundColor: state.isFocused ? "transparent" : "transparent"
+            })
+          }
         }}
         textboxStyle={{
           style: {
@@ -187,12 +188,15 @@ const CustomDesign = () => {
       <DatePicker
         name="calendar"
         item={{ label: "Effective Date" }}
+        containerStyle={{ style: { width: "100%" } }}
         calendarStyle={{
           showYearDropdown: true,
           calendarContainer: ({ className, children }) =>
-            renderCalendar({ className, children })
+            renderCalendar({ className, children }),
+          className: "datepick2"
         }}
         error={error}
+        errorStyle={{ className: "errorClass" }}
       />
       <br />
 
@@ -200,11 +204,11 @@ const CustomDesign = () => {
       {/* 5. Radiobutton */}
       <RadioButton
         item={{ label: "Instant Tranfer" }}
-        checkMarkStyle={{ style: { backgroundColor: "green" } }}
+        checkMarkStyle={{ style: { backgroundColor: "#fbf1ab" } }}
       />
       <RadioButton
         item={{ label: "IBG Tranfer" }}
-        checkMarkStyle={{ style: { backgroundColor: "green" } }}
+        checkMarkStyle={{ style: { backgroundColor: "#fbf1ab" } }}
       />
       <br />
       {/* ------------------------------------------------- */}
@@ -212,7 +216,7 @@ const CustomDesign = () => {
       {/* 6. Switch */}
       <Switch
         item={{ label: "Set Recurring" }}
-        sliderStyle={{ style: { backgroundColor: "green" } }}
+        sliderStyle={{ style: { backgroundColor: "#fbf1ab" } }}
       />
       <br />
 
@@ -220,7 +224,7 @@ const CustomDesign = () => {
       {/* 7. Checkbox */}
       <Checkbox
         item={{ label: "Add to favorite" }}
-        checkMarkStyle={{ style: { backgroundColor: "green" } }}
+        checkMarkStyle={{ style: { backgroundColor: "#fbf1ab" } }}
       />
       <br />
     </fieldset>
