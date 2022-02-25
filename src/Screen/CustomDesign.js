@@ -147,7 +147,6 @@ const CustomDesign = () => {
               ...base,
               "&:hover": { borderColor: "Green", cursor:"pointer" },
               border: "solid 0.1rem #D7D7D7",
-              borderColor: state.isFocused? "#D7D7D7" : "white"
             }),
             singleValue: (base) => ({
               ...base,
@@ -201,11 +200,11 @@ const CustomDesign = () => {
       {/* 5. Radiobutton */}
       <RadioButton
         item={{ label: "Instant Tranfer" }}
-        checkMark={{ style: { backgroundColor: "green" } }}
+        checkMarkStyle={{ style: { backgroundColor: "green" } }}
       />
       <RadioButton
         item={{ label: "IBG Tranfer" }}
-        checkMark={{ style: { backgroundColor: "green" } }}
+        checkMarkStyle={{ style: { backgroundColor: "green" } }}
       />
       <br />
       {/* ------------------------------------------------- */}
