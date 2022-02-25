@@ -29,7 +29,7 @@ function App(props) {
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       <DefaultDesign />
       <CustomDesign />
-      <div>
+      {/* <div> */}
         {/* <Checkbox       
           item={{ label: 'check box 1' }}       
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
@@ -74,7 +74,7 @@ function App(props) {
         {/* <Button /> */}
         {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
 
-      </div>
+      {/* </div> */}
     </div>
   );
 }
