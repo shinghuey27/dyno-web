@@ -26,15 +26,15 @@ import DefaultDesign from "./Screen/DefaultDesign";
 
 function App(props) {
   return (
-    <div style={{display:"flex",flexWrap:"wrap"}}>
-    <DefaultDesign />
-    <CustomDesign />
+    <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <DefaultDesign />
+      <CustomDesign />
       <div>
         {/* <Checkbox       
           item={{ label: 'check box 1' }}       
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
-{/* 
+        {/* 
         <Textbox
           item={{ label: 'Pay Now', description: 'pay before 1st March' }}
           tootltipStyle={{ label: 'tool' }}
@@ -48,7 +48,7 @@ function App(props) {
             styles: {
               control: (base, state) => ({
                 ...base,
-                marginTop: 10, width:300,
+                marginTop: 10, width: 300,
                 '&:hover': { borderColor: '#74e3e4' },
                 border: '1px solid red',
                 boxShadow: 'none',
@@ -72,6 +72,7 @@ function App(props) {
 
         {/* <Switch item={{ label: 'my switch' }} error /> */}
         {/* <Button /> */}
+        {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
 
       </div>
     </div>

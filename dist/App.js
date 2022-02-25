@@ -72,23 +72,10 @@ var customStyles = {
 function App(props) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      display: "flex"
+      display: "flex",
+      flexWrap: "wrap"
     }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Components.Textbox, {
-    item: {
-      label: 'Pay Now',
-      description: 'pay before 1st March'
-    },
-    tootltipStyle: {
-      label: 'tool'
-    },
-    error: true,
-    descriptionStyle: {
-      style: {
-        textAlign: 'right'
-      }
-    }
-  }), /*#__PURE__*/React.createElement(_Select.default, {
+  }, /*#__PURE__*/React.createElement(_DefaultDesign.default, null), /*#__PURE__*/React.createElement(_CustomDesign.default, null), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Select.default, {
     item: {
       placeholder: 'Select payment now',
       options: _List.sampleItem

@@ -21,13 +21,11 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var RadioButton = function RadioButton(props) {
   var name = props.name,
-      container = props.container,
-      checkMark = props.checkMark,
+      containerStyle = props.containerStyle,
+      checkMarkStyle = props.checkMarkStyle,
       item = props.item,
       field = props.field,
-      error = props.error,
-      classNameContainer = props.classNameContainer,
-      classNameCheckMark = props.classNameCheckMark;
+      error = props.error;
 
   var _ref = item || {
     label: ""
@@ -36,22 +34,15 @@ var RadioButton = function RadioButton(props) {
 
   var defaultLabel = typeof label === "string" ? label : "Default";
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
-    className: classNameContainer,
+    className: _RadioButtonModule.default.container,
     label: defaultLabel
-  }, container), /*#__PURE__*/_react.default.createElement("input", _extends({
+  }, containerStyle), /*#__PURE__*/_react.default.createElement("input", _extends({
     type: "radio",
     name: name
   }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
-    className: classNameCheckMark
-  }, checkMark))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+    className: _RadioButtonModule.default.checkmark
+  }, checkMarkStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
 };
 
-RadioButton.defaultProps = {
-  classNameContainer: _RadioButtonModule.default.container,
-  classNameCheckMark: _RadioButtonModule.default.checkmark
-};
-RadioButton.propTypes = {
-  label: _propTypes.default.string
-};
 var _default = RadioButton;
 exports.default = _default;
