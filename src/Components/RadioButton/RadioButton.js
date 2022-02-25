@@ -7,13 +7,12 @@ import ErrorMessage from "../Label/ErrorMessage";
 const RadioButton = (props) => {
   const {
     name,
-    container,
-    checkMark,
+    containerStyle,
+    checkMarkStyle,
     item,
     field,
     error,
-    classNameContainer,
-    classNameCheckMark
+
   } = props;
   const { label } = item || { label: "" };
 
@@ -21,22 +20,13 @@ const RadioButton = (props) => {
 
   return (
     <>
-      <Label className={classNameContainer} label={defaultLabel} {...container}>
+      <Label className={styles.container} label={defaultLabel} {...containerStyle}>
         <input type="radio" name={name} {...field} />
-        <span className={classNameCheckMark} {...checkMark}></span>
+        <span className={styles.checkmark} {...checkMarkStyle}></span>
       </Label>
       <ErrorMessage {...props} />
     </>
   );
-};
-
-RadioButton.defaultProps = {
-  classNameContainer: styles.container,
-  classNameCheckMark: styles.checkmark
-};
-
-RadioButton.propTypes = {
-  label: PropTypes.string,
 };
 
 export default RadioButton;
