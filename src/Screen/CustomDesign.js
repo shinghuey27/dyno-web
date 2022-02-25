@@ -145,17 +145,24 @@ const CustomDesign = () => {
           styles: {
             control: (base, state) => ({
               ...base,
-              "&:hover": { borderColor: "Green" },
-              boxShadow: "none",
-              borderRadius: 20,
-              backgroundColor: "grey"
+              "&:hover": { borderColor: "Green", cursor:"pointer" },
+              border: "solid 0.1rem #D7D7D7",
+              borderColor: state.isFocused? "#D7D7D7" : "white"
             }),
             singleValue: (base) => ({
               ...base,
+              color: "black"
+            }),
+            menu: (provided, state) => ({
+              ...provided,
+              backgroundColor:"#373737"
 
-              color: 'white'
-            })
-          }
+            }),
+            option: (provided, state) => ({
+              ...provided,
+              color: state.isFocused ? '#FFC83D' : 'white',
+              backgroundColor: state.isFocused ? 'transparent' : 'transparent',              
+            })          }
         }}
         textboxStyle={{
           style: {
