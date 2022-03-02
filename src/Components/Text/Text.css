@@ -13,7 +13,10 @@
   letter-spacing: 0.11px;
   margin-top: 0.6rem;
   padding-left: 1rem;
+
+
 }
+
 .text:focus,
 .password:focus {
   border: 1px solid #01ccce !important;

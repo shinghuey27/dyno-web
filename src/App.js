@@ -1,5 +1,11 @@
+import { Textbox } from "./Components";
+import Modals from "./Components/Modal/Modals";
 import CustomDesign from "./Screen/CustomDesign";
 import DefaultDesign from "./Screen/DefaultDesign";
+import PopupAuth from "./Screen/PopupAuth";
+import PopupError from "./Screen/PopupError";
+import PopupInfo from "./Screen/PopupInfo";
+import PopupWarning from "./Screen/PopupWarning";
 // const renderCalendar = ({ className, children }) => {
 //   return (
 //     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
@@ -26,8 +32,20 @@ import DefaultDesign from "./Screen/DefaultDesign";
 function App(props) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <DefaultDesign />
-      <CustomDesign />
+      {/* <DefaultDesign />
+      <CustomDesign /> */}
+      <Modals>
+        {<PopupError/>}
+      </Modals>
+      <Modals>
+        {<PopupWarning/>}
+      </Modals>
+      <Modals>
+        {<PopupInfo/>}
+      </Modals>
+      <Modals>
+        {<PopupAuth/>}
+      </Modals>
       {/* <div> */}
         {/* <Checkbox       
           item={{ label: 'check box 1' }}       
