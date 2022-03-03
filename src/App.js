@@ -39,6 +39,8 @@ function App(props) {
       <fieldset className={styles.field}>
         {/* <DefaultDesign />
       <CustomDesign /> */}
+        <h1 style={{display:"flex",justifyContent:"center"}}>Modal</h1>
+        <div>
         <Modals item={{ label: "Error" }}>{<PopupError />}</Modals>
         <Modals item={{ label: "Warning" }}>{<PopupWarning />}</Modals>
         <Modals item={{ label: "Information" }}>{<PopupInfo />}</Modals>
@@ -46,7 +48,7 @@ function App(props) {
         <Modals item={{ label: "Setting" }}>{<PopupSetting />}</Modals>
         <Modals item={{ label: "List" }}>{<PopupList />}</Modals>
         <Modals item={{ label: "List2" }}>{<PopupList2 />}</Modals>
-
+        </div>
       </fieldset>
       {/* <div> */}
       {/* <Checkbox       

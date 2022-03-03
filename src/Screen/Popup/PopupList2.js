@@ -15,8 +15,8 @@ const theme = createTheme({
   components: {
     MuiTypography: {
       styleOverrides: {
-        root: {
-          fontFamily: "Rubik"
+        primaryTypographyProps: {
+          fontFamily: "rubik"
         }
       }
     }
@@ -58,12 +58,14 @@ const PopupList2 = () => {
                 sx={{ display: "flex", flexDirection: "row" }}
               >
                 <div className={styles.listItem}>
-                  <ListItemText theme={theme}
+                  <ListItemText
+                    disableTypography
                     primary={row?.title}
                     style={row?.style?.title}
                     className={styles.listItemTitle}
                   />
-                  <ListItemText theme={theme}
+                  <ListItemText
+                    disableTypography
                     primary={row?.description}
                     style={row?.style?.description}
                     className={styles.desc}

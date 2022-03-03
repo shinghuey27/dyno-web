@@ -3,11 +3,12 @@ import styles from "./PopupList.module.scss";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import "../../App.css";
 
 function createData(title, description, style) {
-  return { title, description, style };
+  return { title, description };
 }
 
 const rows = [
@@ -44,13 +45,13 @@ const PopupList = () => {
               >
                 <div className={styles.listItem}>
                   <ListItemText
+                    disableTypography
                     primary={row?.title}
-                    style={row?.style?.title}
                     className={styles.listItemTitle}
                   />
                   <ListItemText
+                    disableTypography
                     primary={row?.description}
-                    style={row?.style?.description}
                     className={styles.desc}
                   />
                 </div>

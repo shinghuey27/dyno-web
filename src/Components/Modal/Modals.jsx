@@ -60,7 +60,12 @@ export default function Modals(props) {
 
   return (
     <div>
-      <Button item={{ label: " Open Modal" }} onClick={handleOpen}  style={{marginBottom:"27px"}}{...props} />
+      <Button
+        item={{ label: " Open Modal" }}
+        onClick={handleOpen}
+        style={{ marginBottom: "27px", marginLeft: "20px" }}
+        {...props}
+      />
 
       <Modal
         aria-labelledby="spring-modal-title"
