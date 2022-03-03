@@ -1,6 +1,6 @@
-import { Button } from "../Components";
+import { Button } from "../../Components";
 import styles from "./PopupError.module.scss";
-import Error from "../Asset/Logo/Error.svg";
+import Error from "../../Asset/Logo/Error.svg";
 export default function PopupError() {
   return (
     <div className={styles.container}>

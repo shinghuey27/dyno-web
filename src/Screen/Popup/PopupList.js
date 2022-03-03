@@ -3,11 +3,9 @@ import styles from "./PopupList.module.scss";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-
 import "../../App.css";
 
-function createData(title, description, style) {
+function createData(title, description) {
   return { title, description };
 }
 

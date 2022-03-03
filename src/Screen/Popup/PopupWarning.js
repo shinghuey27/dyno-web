@@ -1,6 +1,6 @@
-import { Button } from "../Components";
+import { Button } from "../../Components";
 import styles from "./PopupWarning.module.scss";
-import Warning from "../Asset/Logo/Warning.svg";
+import Warning from "../../Asset/Logo/Warning.svg";
 const PopupWarning = () => {
   return (
     <div className={styles.container}>

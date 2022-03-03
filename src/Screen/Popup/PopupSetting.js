@@ -1,9 +1,9 @@
-import { Button, Textbox } from "../Components";
+import { Button, Textbox } from "../../Components";
 import styles from "./PopupSetting.module.scss";
-import hill from "../Asset/image/hill.png";
-import Icon from "../Asset/Icon/Icon.svg";
+import hill from "../../Asset/image/hill.png";
+import Icon from "../../Asset/Icon/Icon.svg";
 
-import "../App.css";
+import "../../App.css";
 const PopupSetting = () => {
   return (
     <div className={styles.container}>

@@ -3,7 +3,6 @@ import styles from "./PopupList2.module.scss";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import "../../App.css";
 
@@ -11,17 +10,7 @@ function createData(title, description, style) {
   return { title, description, style };
 }
 
-const theme = createTheme({
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        primaryTypographyProps: {
-          fontFamily: "rubik"
-        }
-      }
-    }
-  }
-});
+
 const rows = [
   createData(
     "Unpaid",
