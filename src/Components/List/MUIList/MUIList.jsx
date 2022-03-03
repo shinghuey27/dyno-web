@@ -42,6 +42,7 @@ export default function MUIList() {
                 maxWidth: 660,
                 bgcolor: 'background.paper'
             }}
+            style={{margin:"auto"}}
         >
             {rows.map((row, index) => (
                 <ListItem key={index}>

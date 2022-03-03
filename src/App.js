@@ -19,7 +19,7 @@ import PopupList2 from "./Screen/Popup/PopupList2";
 
 function App(props) {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
       <fieldset className={styles.field}>
         {/* <DefaultDesign />
       <CustomDesign /> */}
@@ -38,15 +38,23 @@ function App(props) {
           <Modals item={{ label: "Setting" }}>{<PopupSetting />}</Modals>
           <Modals item={{ label: "List" }}>{<PopupList />}</Modals>
           <Modals item={{ label: "List2" }}>{<PopupList2 />}</Modals>
-          
-          
         </div>
+        <>
+          <h1 style={{ display: "flex", justifyContent: "center" }}>List</h1>
+          <MUIList />
+        </>
       </fieldset>
-      {/* <MUIList /> */}
-      {/* <MUITable /> */}
-      {/* <MUITable2 /> */}
-      {/* <MUITable3 /> */}
-      <MUITable4 />
+
+      <fieldset className={styles.field}>
+        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 1</h1>
+        <MUITable />
+        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 2</h1>
+
+        <MUITable2 />
+        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 3</h1>
+
+        <MUITable3 />
+      </fieldset>
     </div>
   );
 }
