@@ -1,5 +1,6 @@
 import MUIList from "./Components/List/MUIList/MUIList";
 import MUITable from "./Components/Table/MUITable/MUITable";
+import MUITable2 from "./Components/Table/MUITable/MUITable2";
 
 
 
@@ -7,7 +8,8 @@ import MUITable from "./Components/Table/MUITable/MUITable";
 function App(props) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <MUIList />
+      {/* <MUIList /> */}
+      <MUITable2 />
 
     </div>
   );
