@@ -6,25 +6,27 @@ import PropTypes from "prop-types";
 
 const Button = (props) => {
 
-  const { name, id, item, error, managedCallback, } = props;
+  const { name, id, item, error, managedCallback, disabled, text } = props;
   const { action, label } = item || { label: 'Default' };
 
   const onClick = () => managedCallback(action?.actionURL)
-  const disabled = error && Object.keys(error).length > 0 || false;
+  const disabled_dynamo = error && Object.keys(error).length > 0 || false;
 
 
-  const className = disabled ? 'button-disabled' : 'button';
+  const className = (disabled || disabled_dynamo) ? 'button-disabled' : 'button';
+
+  const renderText = ()=> text? text : label
 
   return (
     <button
       name={name}
       id={id}
       className={className}
-      disabled={disabled}
+      disabled={(disabled || disabled_dynamo)}
       onClick={onClick}
       {...props}
     >
-      {label}
+      {renderText()}
     </button>);
 
 };

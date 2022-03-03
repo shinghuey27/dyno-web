@@ -41,8 +41,6 @@ const cellTableStyleHeader = {
     padding: 0,
     borderBottom:0,    
     borderTop:'1px solid #C7C7C7'
-
-    
 }
 
 
