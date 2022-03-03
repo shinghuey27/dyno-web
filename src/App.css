@@ -22,7 +22,15 @@
   margin-top: 1rem;
 }
 
-
+.table-checkbox-checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
 
 
 html {

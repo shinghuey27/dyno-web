@@ -10,18 +10,14 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
 import Paper from '@mui/material/Paper';
-import Checkbox from '@mui/material/Checkbox';
+import MUICheckbox from '@mui/material/Checkbox';
 // import IconButton from '@mui/material/IconButton';
-
+import Checkbox from "../../Checkbox/Checkbox";
 import { IconButton, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
 import { visuallyHidden } from '@mui/utils';
-
-import Toolbar from '@mui/material/Toolbar';
-import Tooltip from '@mui/material/Tooltip';
-import DeleteIcon from '@mui/icons-material/Delete';
-import FilterListIcon from '@mui/icons-material/FilterList';
+import './MUITable4.css'
 
 function createData(index, receipient, transType, date, amount) {
     return {
@@ -107,22 +103,15 @@ const headCells = [
 function EnhancedTableHead(props) {
     const { onSelectAllClick, numSelected, rowCount, onRequestSort } =
         props;
-    const createSortHandler = (property) => (event) => {
-        onRequestSort(event, property);
-    };
+
 
     return (
         <TableHead style={{ backgroundColor: '#E2E2ED' }}>
             <TableRow>
-                <TableCell padding="checkbox">
+                <TableCell >
                     <Checkbox
-                        color="primary"
-                        indeterminate={numSelected > 0 && numSelected < rowCount}
-                        checked={rowCount > 0 && numSelected === rowCount}
-                        onChange={onSelectAllClick}
-                        inputProps={{
-                            'aria-label': 'select all desserts',
-                        }}
+                        containerStyle={{ className: 'checkbox-table-container' }}
+                        checkMarkStyle={{ className: 'checkbox-table-checkmark' }}
                     />
                 </TableCell>
                 {headCells.map((headCell) => (
@@ -197,19 +186,6 @@ export default function MUITable4() {
         setSelected(newSelected);
     };
 
-    const handleChangePage = (event, newPage) => {
-        setPage(newPage);
-    };
-
-    const handleChangeRowsPerPage = (event) => {
-        setRowsPerPage(parseInt(event.target.value, 10));
-        setPage(0);
-    };
-
-    const handleChangeDense = (event) => {
-        setDense(event.target.checked);
-    };
-
     const isSelected = (name) => selected.indexOf(name) !== -1;
 
     // Avoid a layout jump when reaching the last page with empty rows.
@@ -250,15 +226,12 @@ export default function MUITable4() {
                                             key={row?.index}
                                             selected={isItemSelected}
                                         >
-                                            <TableCell padding="checkbox">
+                                            <TableCell >
+
                                                 <Checkbox
-                                                    color="primary"
-                                                    checked={isItemSelected}
-                                                    onChange={(event) => handleClick(event, row?.index)}
-                                                    inputProps={{
-                                                        'aria-labelledby': labelId,
-                                                    }}
-                                                />
+                                                    containerStyle={{ className: 'checkbox-table-container' }}
+                                                    checkMarkStyle={{ className: 'checkbox-table-checkmark' }} />
+
                                             </TableCell>
                                             <TableCell
                                                 component="th"
