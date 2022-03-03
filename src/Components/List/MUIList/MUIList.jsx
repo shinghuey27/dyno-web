@@ -24,11 +24,11 @@ function createData(title, description, style) {
 }
 
 const rows = [
-    createData('Password', 'Change your password'),
-    createData('Security Phrase', 'Change your security phrase'),
-    createData('Security Image', 'Change the security image for login verification'),
-    createData('Security Questions', 'Change your personal security questions'),
-    createData('Secure2u', 'A faster way to authorize transactions'),
+    createData('Password', 'Change your password', { title: {}, description: { color: '#B0BAD7', fontSize:10 } }),
+    createData('Security Phrase', 'Change your security phrase', { title: {}, description: { color: '#B0BAD7', fontSize:10 } }),
+    createData('Security Image', 'Change the security image for login verification', { title: {}, description: { color: '#B0BAD7', fontSize:10 } }),
+    createData('Security Questions', 'Change your personal security questions', { title: {}, description: { color: '#B0BAD7', fontSize:10 } }),
+    createData('Secure2u', 'A faster way to authorize transactions', { title: {}, description: { color: '#B0BAD7', fontSize:10 } }),
     createData('Quick Touch', 'On', { title: {}, description: { color: '#01CCCE' } }),
 
 ];
@@ -50,7 +50,7 @@ export default function MUIList() {
                     </ListItemIcon>
                     <div style={{ flex: 1 }}>
                         <ListItemText primary={row?.title} style={row?.style?.title} />
-                        <ListItemText primary={row?.description} style={row?.style?.description} />
+                        <ListItemText primary={row?.description} style={row?.style?.description} primaryTypographyProps={{fontSize: '13px'}} />
                     </div>
                     <Button style={buttonStyle} text={'Change'}></Button>
                 </ListItem>

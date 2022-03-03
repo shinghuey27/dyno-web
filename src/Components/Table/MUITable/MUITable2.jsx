@@ -40,15 +40,14 @@ const cellTableStyle = {
 
 export default function MUITable2() {
     return (
-        <TableContainer component={Paper} style={{ padding: 20 }} >
+        <TableContainer component={Paper} style={{ padding: 20, width:'40%' }} >
             <Typography fontFamily='Rubik' fontSize={'20px'} color={'#171725'} style={{ marginBottom: 32 }}>Users</Typography>
             <Table sx={{}} aria-label="simple table" >
                 <TableHead style={{ backgroundColor: '#FFDD00' }}>
                     <TableRow >
-                        <TableCell style={{ borderBottom: 0, }} width={'7%'}></TableCell>
+                        <TableCell style={{ borderBottom: 0, borderRadius:'10px 0 0 10px' }} width={'7%'}></TableCell>
                         <TableCell style={{ borderBottom: 0, }} width={'70%'}>NAME</TableCell>
-
-                        <TableCell style={{ borderBottom: 0 }} align='center'>ROLE</TableCell>
+                        <TableCell style={{ borderBottom: 0, borderRadius:'0 10px 10px 0px' }} align='center'>ROLE</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody >

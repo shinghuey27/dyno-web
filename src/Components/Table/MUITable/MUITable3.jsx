@@ -46,7 +46,7 @@ const renderAmount =(val)=>{
 
 export default function MUITable3() {
     return (
-        <TableContainer component={Paper} style={{ padding: 20 }} >
+        <TableContainer component={Paper} style={{ padding: 20 , width:'50%'}} >
             <Typography fontFamily='Rubik' fontSize={'20px'} color={'#171725'} style={{ marginBottom: 32 }}>Users</Typography>
             <Table sx={{}} aria-label="simple table" >
                 <TableHead style={{ backgroundColor: '#FFDD00' }}>

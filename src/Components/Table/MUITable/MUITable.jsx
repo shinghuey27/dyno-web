@@ -46,7 +46,7 @@ const cellTableStyleHeader = {
 
 export default function MUITable() {
     return (
-        <TableContainer component={Paper} style={{ padding: 20 , borderRadius:10}} >
+        <TableContainer component={Paper} style={{ padding: 20 , borderRadius:10, width:'40%'}} >
             <Typography fontFamily='Rubik' fontSize={'20px'} color={'#171725'}  style={{marginBottom:32}}>Account Details</Typography>
             <Table sx={{}} aria-label="simple table">
                 <TableHead>
