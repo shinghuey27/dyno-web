@@ -80,13 +80,13 @@ const headCells = [
     },
     {
         id: 'TransactionType',
-        numeric: true,
+        numeric: false,
         disablePadding: false,
         label: 'TRANSACTION TYPE',
     },
     {
         id: 'Date',
-        numeric: true,
+        numeric: false,
         disablePadding: false,
         label: 'EFFECTIVE DATE',
     },
@@ -105,7 +105,7 @@ const headCells = [
 ];
 
 function EnhancedTableHead(props) {
-    const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
+    const { onSelectAllClick, numSelected, rowCount, onRequestSort } =
         props;
     const createSortHandler = (property) => (event) => {
         onRequestSort(event, property);
@@ -130,20 +130,9 @@ function EnhancedTableHead(props) {
                         key={headCell.id}
                         align={'left'}
                         padding={headCell.disablePadding ? 'none' : 'normal'}
-                        sortDirection={orderBy === headCell.id ? order : false}
+
                     >
-                        <TableSortLabel
-                            active={orderBy === headCell.id}
-                            direction={orderBy === headCell.id ? order : 'asc'}
-                            onClick={createSortHandler(headCell.id)}
-                        >
-                            {headCell.label}
-                            {orderBy === headCell.id ? (
-                                <Box component="span" sx={visuallyHidden}>
-                                    {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                                </Box>
-                            ) : null}
-                        </TableSortLabel>
+                        {headCell.label}
                     </TableCell>
                 ))}
             </TableRow>
@@ -239,10 +228,7 @@ export default function MUITable4() {
                     >
                         <EnhancedTableHead
                             numSelected={selected.length}
-                            order={order}
-                            orderBy={orderBy}
                             onSelectAllClick={handleSelectAllClick}
-                            onRequestSort={handleRequestSort}
                             rowCount={rows.length}
                         />
                         <TableBody>
@@ -266,7 +252,7 @@ export default function MUITable4() {
                                         >
                                             <TableCell padding="checkbox">
                                                 <Checkbox
-                                                    color="primary"                                                                                                  
+                                                    color="primary"
                                                     checked={isItemSelected}
                                                     onChange={(event) => handleClick(event, row?.index)}
                                                     inputProps={{
