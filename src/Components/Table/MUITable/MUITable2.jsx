@@ -26,13 +26,9 @@ const rows = [
 
 ];
 
-const cellTableStyle = {
-    // paddingLeft: 0,
-    // paddingTop: 12,
-    // paddingBottom: 12,
+const cellTableStyle = {    
     border: 0,
-    flex: 1,
-    // display: 'flex', flexDirection: 'row',
+    flex: 1,    
     fontFamily: 'Rubik',
     fontSize: '16px',
     fontStyle: 'normal',
