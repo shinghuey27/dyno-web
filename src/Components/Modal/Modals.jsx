@@ -3,12 +3,11 @@ import PropTypes from "prop-types";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 // web.cjs is required for IE11 support
 import { useSpring, animated } from "react-spring";
-import { Textbox } from "..";
-import Label from "../Label/Label";
+import { Button } from "..";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const { in: open, children, onEnter, onExited, ...other } = props;
@@ -61,7 +60,8 @@ export default function Modals(props) {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button item={{ label: " Open Modal" }} onClick={handleOpen}  style={{marginBottom:"27px"}}{...props} />
+
       <Modal
         aria-labelledby="spring-modal-title"
         aria-describedby="spring-modal-description"

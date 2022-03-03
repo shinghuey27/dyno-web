@@ -2,11 +2,15 @@ import { Textbox } from "./Components";
 import Modals from "./Components/Modal/Modals";
 import CustomDesign from "./Screen/CustomDesign";
 import DefaultDesign from "./Screen/DefaultDesign";
-import PopupAuth from "./Screen/PopupAuth";
+import PopupAuth from "./Screen/Popup/PopupAuth";
 import PopupError from "./Screen/PopupError";
 import PopupInfo from "./Screen/PopupInfo";
 import PopupWarning from "./Screen/PopupWarning";
 import PopupSetting from "./Screen/PopupSetting";
+import styles from "./Field.module.scss";
+import PopupList from "./Screen/Popup/PopupList";
+import PopupList2 from "./Screen/Popup/PopupList2";
+
 // const renderCalendar = ({ className, children }) => {
 //   return (
 //     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
@@ -32,14 +36,18 @@ import PopupSetting from "./Screen/PopupSetting";
 function App(props) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      {/* <DefaultDesign />
+      <fieldset className={styles.field}>
+        {/* <DefaultDesign />
       <CustomDesign /> */}
-      <Modals>{<PopupError />}</Modals>
-      <Modals>{<PopupWarning />}</Modals>
-      <Modals>{<PopupInfo />}</Modals>
-      <Modals>{<PopupAuth />}</Modals>
-      <Modals>{<PopupSetting />}</Modals>
+        <Modals item={{ label: "Error" }}>{<PopupError />}</Modals>
+        <Modals item={{ label: "Warning" }}>{<PopupWarning />}</Modals>
+        <Modals item={{ label: "Information" }}>{<PopupInfo />}</Modals>
+        <Modals item={{ label: "Auth" }}>{<PopupAuth />}</Modals>
+        <Modals item={{ label: "Setting" }}>{<PopupSetting />}</Modals>
+        <Modals item={{ label: "List" }}>{<PopupList />}</Modals>
+        <Modals item={{ label: "List2" }}>{<PopupList2 />}</Modals>
 
+      </fieldset>
       {/* <div> */}
       {/* <Checkbox       
           item={{ label: 'check box 1' }}       
