@@ -17,13 +17,14 @@ const Textbox = (props) => {
     textboxStyle,
     descriptionStyle,
     errorStyle,
+    containerStyle,
   } = props;
 
   //Access to all props that introduced in element.
   const { label, placeholder, description } = item || { placeholder: "", description: '' };
 
   return (
-    <div>
+    <div {...containerStyle}>
       <div>
         {label && (
           <Label

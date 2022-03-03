@@ -22,6 +22,7 @@
   margin-top: 1rem;
 }
 
+<<<<<<< HEAD
 .table-checkbox-checkmark{
   position: absolute;
   top: 0;
@@ -33,6 +34,11 @@
 }
 
 
+=======
+.text::-webkit-input-placeholder {
+  color: #6f7faf;
+}
+>>>>>>> V3-dataCollection
 html {
   font-family: "Rubik", sans-serif;
 }
@@ -151,7 +157,6 @@ html {
   letter-spacing: 0.11px;
   color: #0e1b42;
   font-weight: 400;
-  
 }
 
 .datepick2 {
@@ -197,6 +202,11 @@ html {
   margin-right: 0.5rem;
 }
 
-.react-select__value-container{
+.react-select__value-container {
   background-color: red;
+}
+
+
+.text2{
+  position: relative;
 }
