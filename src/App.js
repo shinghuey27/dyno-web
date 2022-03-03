@@ -49,11 +49,11 @@ function App(props) {
         <h1 style={{ display: "flex", justifyContent: "center" }}>Table 1</h1>
         <MUITable />
         <h1 style={{ display: "flex", justifyContent: "center" }}>Table 2</h1>
-
         <MUITable2 />
         <h1 style={{ display: "flex", justifyContent: "center" }}>Table 3</h1>
-
         <MUITable3 />
+        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 4</h1>
+        <MUITable4 />
       </fieldset>
     </div>
   );
