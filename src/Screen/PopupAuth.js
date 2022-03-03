@@ -5,7 +5,7 @@ const PopupAuth = () => {
   return (
     <div className={styles.container}>
       <div style={{marginBottom:"27px"}}>
-        <h3>Authorise Transaction</h3>
+        <h3 className={styles.title}>Authorise Transaction</h3>
         <div className={styles.description}>
           Enter the 6-digit code sent to 013XXXX595.
         </div>

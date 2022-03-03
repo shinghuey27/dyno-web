@@ -191,3 +191,8 @@ html {
 .react-select__value-container {
   background-color: red;
 }
+
+
+.text2{
+  position: relative;
+}

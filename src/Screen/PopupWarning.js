@@ -7,7 +7,7 @@ const PopupWarning = () => {
       <div className={styles.container1}>
         <img src={Warning} alt="React Logo" className={styles.icon} />
         <div>
-          <h3>Are you sure you want to cancel this upliftment?</h3>
+          <h3 className={styles.title}>Are you sure you want to cancel this upliftment?</h3>
         </div>
       </div>
       <div className={styles.button}>

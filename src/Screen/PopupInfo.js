@@ -5,7 +5,7 @@ const PopupInfo = () => {
     <div className={styles.container}>
       <div className={styles.container1}>
         <div>
-          <h3>Home Branch</h3>
+          <h3 className={styles.title}>Home Branch</h3>
           <label className={styles.description}>
           An account’s home branch is the Maybank branch where it was registered and set up.
           </label>

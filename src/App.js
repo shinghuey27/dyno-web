@@ -6,6 +6,7 @@ import PopupAuth from "./Screen/PopupAuth";
 import PopupError from "./Screen/PopupError";
 import PopupInfo from "./Screen/PopupInfo";
 import PopupWarning from "./Screen/PopupWarning";
+import PopupSetting from "./Screen/PopupSetting";
 // const renderCalendar = ({ className, children }) => {
 //   return (
 //     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
@@ -28,30 +29,23 @@ import PopupWarning from "./Screen/PopupWarning";
 //   })
 // }
 
-
 function App(props) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       {/* <DefaultDesign />
       <CustomDesign /> */}
-      <Modals>
-        {<PopupError/>}
-      </Modals>
-      <Modals>
-        {<PopupWarning/>}
-      </Modals>
-      <Modals>
-        {<PopupInfo/>}
-      </Modals>
-      <Modals>
-        {<PopupAuth/>}
-      </Modals>
+      <Modals>{<PopupError />}</Modals>
+      <Modals>{<PopupWarning />}</Modals>
+      <Modals>{<PopupInfo />}</Modals>
+      <Modals>{<PopupAuth />}</Modals>
+      <Modals>{<PopupSetting />}</Modals>
+
       {/* <div> */}
-        {/* <Checkbox       
+      {/* <Checkbox       
           item={{ label: 'check box 1' }}       
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
-        {/* 
+      {/* 
         <Textbox
           item={{ label: 'Pay Now', description: 'pay before 1st March' }}
           tootltipStyle={{ label: 'tool' }}
@@ -59,7 +53,7 @@ function App(props) {
           
         /> */}
 
-        {/* <Select
+      {/* <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
           selectStyle={{
             styles: {
@@ -75,7 +69,7 @@ function App(props) {
           }}
         /> */}
 
-        {/* <DatePicker
+      {/* <DatePicker
           // containerStyle={{ style: {backgroundColor:'yellow'} }}
           label={"Calendar"}
           calendarStyle={{
@@ -87,9 +81,9 @@ function App(props) {
           }}
         /> */}
 
-        {/* <Switch item={{ label: 'my switch' }} error /> */}
-        {/* <Button /> */}
-        {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
+      {/* <Switch item={{ label: 'my switch' }} error /> */}
+      {/* <Button /> */}
+      {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
 
       {/* </div> */}
     </div>

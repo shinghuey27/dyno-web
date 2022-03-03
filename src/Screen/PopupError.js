@@ -7,7 +7,7 @@ export default function PopupError() {
       <div className={styles.container1}>
       <img src={Error} alt="React Logo"  className={styles.icon}/>
         <div>
-          <h3>Service Unavailable</h3>
+          <h3 className={styles.title}>Service Unavailable</h3>
           <label className={styles.description}>
             FD placement and upliftment are only available from 6.00am to
             10.00pm.
