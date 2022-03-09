@@ -23,6 +23,7 @@ import TableRow from "./Components/TableRow/TableRow";
 import TableHead from "./Components/TableHead/TableHead";
 import TableCell from "./Components/TableCell/TableCell";
 import TableBody from "./Components/TableBody/TableBody";
+import './App.css'
 
 function createData(index, name, value) {
   let src = require(`./Asset/Icon/Image${index}.png`);
@@ -56,8 +57,12 @@ function App(props) {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
+      <div style={{ height: 20, margin: 20 }}></div>
 
-      <TableContainer>
+      <TableContainer
+        // style={{ padding: 20, backgroundColor: 'beige', width: 'auto' }}
+        className={'table-container-dyno'}
+      >
         <Table>
 
           <TableHead>
@@ -72,7 +77,6 @@ function App(props) {
             {rows.map((row, index) => (
               <TableRow
                 key={index}
-
               >
                 <TableCell style={cellTableStyle}>
                   <img src={row?.src} style={{ height: 40 }}></img>
@@ -97,6 +101,10 @@ function App(props) {
 
         </Table>
       </TableContainer>
+
+      <div style={{ height: 20, margin: 20, }}></div>
+
+      <MUITable2 />
 
     </div>
   );

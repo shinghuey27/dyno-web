@@ -22,7 +22,6 @@
   margin-top: 1rem;
 }
 
-<<<<<<< HEAD
 .table-checkbox-checkmark{
   position: absolute;
   top: 0;
@@ -34,11 +33,6 @@
 }
 
 
-=======
-.text::-webkit-input-placeholder {
-  color: #6f7faf;
-}
->>>>>>> V3-dataCollection
 html {
   font-family: "Rubik", sans-serif;
 }
@@ -209,4 +203,10 @@ html {
 
 .text2{
   position: relative;
+}
+
+.table-container-dyno{
+  background-color: rgb(88, 130, 247);
+  padding: 20px;
+  width: 'auto';
 }
