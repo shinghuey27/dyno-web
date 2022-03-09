@@ -1,9 +1,9 @@
 import Checkbox from "./Components/Checkbox/Checkbox";
 import MUIList from "./Components/List/MUIList/MUIList";
-import MUITable from "./Components/Table/MUITable/MUITable";
-import MUITable2 from "./Components/Table/MUITable/MUITable2";
-import MUITable3 from "./Components/Table/MUITable/MUITable3";
-import MUITable4 from "./Components/Table/MUITable/MUITable4";
+import MUITable from "./Components/TableTest/MUITable/MUITable";
+import MUITable2 from "./Components/TableTest/MUITable/MUITable2";
+import MUITable3 from "./Components/TableTest/MUITable/MUITable3";
+import MUITable4 from "./Components/TableTest/MUITable/MUITable4";
 import { Textbox } from "./Components";
 import Modals from "./Components/Modal/Modals";
 import CustomDesign from "./Screen/CustomDesign";
@@ -17,46 +17,92 @@ import styles from "./Field.module.scss";
 import PopupList from "./Screen/Popup/PopupList";
 import PopupList2 from "./Screen/Popup/PopupList2";
 
+import TableContainer from "./Components/TableContainer/TableContainer";
+import Table from "./Components/Table/Table";
+import TableRow from "./Components/TableRow/TableRow";
+import TableHead from "./Components/TableHead/TableHead";
+import TableCell from "./Components/TableCell/TableCell";
+import TableBody from "./Components/TableBody/TableBody";
+
+function createData(index, name, value) {
+  let src = require(`./Asset/Icon/Image${index}.png`);
+  return {
+    src,
+    name,
+    value
+  };
+}
+
+const rows = [
+  createData("1", "Yohan Narlis", "Checker"),
+  createData("2", "Rani Veloo", "Checker"),
+  createData("3", "David Yap", "Maker"),
+  createData("4", "hr....my", "Viewer")
+];
+
+const cellTableStyle = {
+  border: 0,
+  flex: 1,
+  fontFamily: "Rubik",
+  fontSize: "16px",
+  fontStyle: "normal",
+  fontWeight: 400,
+  color: "#6F7FAF"
+};
+
+
 function App(props) {
+
+
   return (
     <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
-      <fieldset className={styles.field}>
-        {/* <DefaultDesign />
-      <CustomDesign /> */}
-        <h1 style={{ display: "flex", justifyContent: "center" }}>Modal</h1>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap"
-          }}
-        >
-          <Modals item={{ label: "Error" }}>{<PopupError />}</Modals>
-          <Modals item={{ label: "Warning" }}>{<PopupWarning />}</Modals>
-          <Modals item={{ label: "Information" }}>{<PopupInfo />}</Modals>
-          <Modals item={{ label: "Auth" }}>{<PopupAuth />}</Modals>
-          <Modals item={{ label: "Setting" }}>{<PopupSetting />}</Modals>
-          <Modals item={{ label: "List" }}>{<PopupList />}</Modals>
-          <Modals item={{ label: "List2" }}>{<PopupList2 />}</Modals>
-        </div>
-        <>
-          <h1 style={{ display: "flex", justifyContent: "center" }}>List</h1>
-          <MUIList />
-        </>
-      </fieldset>
 
-      <fieldset className={styles.field}>
-        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 1</h1>
-        <MUITable />
-        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 2</h1>
-        <MUITable2 />
-        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 3</h1>
-        <MUITable3 />
-        <h1 style={{ display: "flex", justifyContent: "center" }}>Table 4</h1>
-        <MUITable4 />
-      </fieldset>
+      <TableContainer>
+        <Table>
+
+          <TableHead>
+            <TableRow>
+              <TableCell></TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Role</TableCell>
+            </TableRow>
+          </TableHead>
+
+          <TableBody>
+            {rows.map((row, index) => (
+              <TableRow
+                key={index}
+
+              >
+                <TableCell style={cellTableStyle}>
+                  <img src={row?.src} style={{ height: 40 }}></img>
+                </TableCell>
+                <TableCell
+                  // component="th"                  
+                  scope="row"
+                >
+                  {row?.name}
+                </TableCell>
+
+                <TableCell
+                  style={cellTableStyle}
+                // align="center" //<-MUI props
+                >
+                  {row?.value}
+                </TableCell>
+              </TableRow>
+            ))}
+
+          </TableBody>
+
+        </Table>
+      </TableContainer>
+
     </div>
   );
 }
+
+
+
 
 export default App;
