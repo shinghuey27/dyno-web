@@ -23,7 +23,11 @@ import TableRow from "./Components/TableRow/TableRow";
 import TableHead from "./Components/TableHead/TableHead";
 import TableCell from "./Components/TableCell/TableCell";
 import TableBody from "./Components/TableBody/TableBody";
-import './App.css'
+import "./App.css";
+import ListMui from "./Components/ListMui/ListMui";
+import ListItem from "./Components/ListItem/ListItem";
+// import ListItemText from "./Components/ListItemText/ListItemText";
+import { ListItemText } from "@mui/material";
 
 function createData(index, name, value) {
   let src = require(`./Asset/Icon/Image${index}.png`);
@@ -51,20 +55,16 @@ const cellTableStyle = {
   color: "#6F7FAF"
 };
 
-
 function App(props) {
-
-
   return (
     <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap" }}>
       <div style={{ height: 20, margin: 20 }}></div>
 
       <TableContainer
         // style={{ padding: 20, backgroundColor: 'beige', width: 'auto' }}
-        className={'table-container-dyno'}
+        className={"table-container-dyno"}
       >
         <Table>
-
           <TableHead>
             <TableRow>
               <TableCell></TableCell>
@@ -75,14 +75,12 @@ function App(props) {
 
           <TableBody>
             {rows.map((row, index) => (
-              <TableRow
-                key={index}
-              >
+              <TableRow key={index}>
                 <TableCell style={cellTableStyle}>
                   <img src={row?.src} style={{ height: 40 }}></img>
                 </TableCell>
                 <TableCell
-                  // component="th"                  
+                  // component="th"
                   scope="row"
                 >
                   {row?.name}
@@ -90,27 +88,29 @@ function App(props) {
 
                 <TableCell
                   style={cellTableStyle}
-                // align="center" //<-MUI props
+                  // align="center" //<-MUI props
                 >
                   {row?.value}
                 </TableCell>
               </TableRow>
             ))}
-
           </TableBody>
-
         </Table>
       </TableContainer>
 
-      <div style={{ height: 20, margin: 20, }}></div>
+      <div style={{ height: 20, margin: 20 }}></div>
 
-      <MUITable2 />
-
+      {/* <MUITable2 /> */}
+      <div style={{ height: 20, margin: 20 }}></div>
+      <ListMui>
+        <ListItem>
+          {rows.map((row, index) => (
+            <ListItemText children={row.name} />
+          ))}
+        </ListItem>
+      </ListMui>
     </div>
   );
 }
-
-
-
 
 export default App;

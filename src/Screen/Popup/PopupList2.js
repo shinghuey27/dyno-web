@@ -10,7 +10,6 @@ function createData(title, description, style) {
   return { title, description, style };
 }
 
-
 const rows = [
   createData(
     "Unpaid",

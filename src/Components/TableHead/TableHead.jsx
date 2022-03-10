@@ -5,6 +5,7 @@ const TableHead = forwardRef((props, ref) => {
 
     return (
         <thead ref={ref} {...props} />)
+        
 });
 
 
