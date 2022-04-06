@@ -1,4 +1,4 @@
-import { Button } from "../../Components";
+import { Button } from "../../UIComponents";
 import styles from "./PopupError.module.scss";
 import Error from "../../Asset/Logo/Error.svg";
 export default function PopupError() {

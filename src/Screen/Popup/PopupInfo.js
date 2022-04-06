@@ -1,4 +1,4 @@
-import { Button } from "../../Components";
+import { Button } from "../../UIComponents";
 import styles from "./PopupInfo.module.scss";
 const PopupInfo = () => {
   return (

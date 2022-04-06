@@ -1,4 +1,4 @@
-import { Button, Textbox } from "../../Components";
+import { Button, Textbox } from "../../UIComponents";
 import styles from "./PopupAuth.module.scss";
 import "../../App.css";
 const PopupAuth = () => {

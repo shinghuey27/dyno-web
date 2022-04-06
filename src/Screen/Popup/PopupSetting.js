@@ -1,4 +1,4 @@
-import { Button, Textbox } from "../../Components";
+import { Button, Textbox } from "../../UIComponents";
 import styles from "./PopupSetting.module.scss";
 import hill from "../../Asset/image/hill.png";
 import Icon from "../../Asset/Icon/Icon.svg";

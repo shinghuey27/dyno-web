@@ -1,4 +1,4 @@
-import { Button } from "../../Components";
+import { Button } from "../../UIComponents";
 import styles from "./PopupList.module.scss";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";

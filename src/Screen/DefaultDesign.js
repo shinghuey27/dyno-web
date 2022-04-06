@@ -1,12 +1,12 @@
 import "../App.css";
 
-import Textbox from "../Components/Textbox/Textbox";
-import DatePicker from "../Components/DatePicker/DatePicker";
-import Stepper from "../Components/ProgressBar/Stepper";
-import Checkbox from "../Components/Checkbox/Checkbox";
-import RadioButton from "../Components/RadioButton/RadioButton";
-import Switch from "../Components/Switch/Switch";
-import { Select } from "../Components";
+import Textbox from "../UIComponents/Textbox/Textbox";
+import DatePicker from "../UIComponents/DatePicker/DatePicker";
+import Stepper from "../UIComponents/ProgressBar/Stepper";
+import Checkbox from "../UIComponents/Checkbox/Checkbox";
+import RadioButton from "../UIComponents/RadioButton/RadioButton";
+import Switch from "../UIComponents/Switch/Switch";
+import { Select } from "../UIComponents";
 import { error } from "../SampleData/SampleErrorForm";
 import styles from "../Field.module.scss"
 

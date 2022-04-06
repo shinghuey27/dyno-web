@@ -1,4 +1,4 @@
-import { Button } from "../../Components";
+import { Button } from "../../UIComponents";
 import styles from "./PopupWarning.module.scss";
 import Warning from "../../Asset/Logo/Warning.svg";
 const PopupWarning = () => {
