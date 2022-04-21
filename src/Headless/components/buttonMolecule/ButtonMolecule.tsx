@@ -1,221 +1,229 @@
 import React, { createContext, createRef, Dispatch, Fragment, MutableRefObject, Ref, useCallback, useContext, useMemo, useReducer } from 'react'
-import { useDisposables } from '../../hooks/use-disposables';
 import { useId } from '../../hooks/use-id';
 import { useIsoMorphicEffect } from '../../hooks/use-iso-morphic-effect';
-import { useResolveButtonType } from '../../hooks/use-resolve-button-type';
 import { useSyncRefs } from '../../hooks/use-sync-refs';
-import { VisuallyHidden } from '../../internal/visually-hidden';
-import { objectToFormEntries } from '../../utils/form';
 import { match } from '../../utils/match';
-import { compact, forwardRefWithAs, render } from '../../utils/render'
-
-enum ButtonMoleculeStates {
-    OnHover,
-    OffHover, 
-    isLoading    
-  }
+import { forwardRefWithAs, render } from '../../utils/render'
+import LoadingSpin from "react-loading-spin";
 
 enum ActionTypes {
-    MouseOnHoverToggle,    
-    SetDisabled,    
+
+    SetDisabled,
+    SetIsLoading,
+
+    //newly addded
+    SetToggle,
+
 }
 
-type Actions =
-    | { type: ActionTypes.SetDisabled; disabled: boolean }
+type Action =
+    | { type: ActionTypes.SetDisabled, }
+    | { type: ActionTypes.SetIsLoading, }
+    | { type: ActionTypes.SetToggle, }
 
-let reducers = {
-    [ActionTypes.SetDisabled](state: any, action: any) {
-        if (state.disabled === action.disabled) return state
-        return { ...state, disabled: action.disabled }
-    },
+
+type State = {
+    isLoading: boolean,
+    disable: boolean,
+    toggle: boolean,
+    labelRef: React.MutableRefObject<HTMLLabelElement | null>
+    // buttonRef: React.MutableRefObject<HTMLButtonElement | null>
+    iconRef: React.MutableRefObject<HTMLLIElement | null>
 }
 
-interface StateDefinition {
-    propsRef: MutableRefObject<{ value: unknown; onChange(value: unknown): void; }>
-    labelRef: MutableRefObject<HTMLLabelElement | null>
-    iconRef: MutableRefObject<HTMLLabelElement | null>
-    buttonRef: MutableRefObject<HTMLButtonElement | null>
-    
-    disabled: boolean,    
-    buttonMoleculeState:ButtonMoleculeStates,
-    orientation: 'horizontal' | 'vertical'
-}
-
-
-let ButtonMoleculeContext = createContext<[StateDefinition, Dispatch<Actions>] | null>(null)
-ButtonMoleculeContext.displayName = 'ButtonMoleculeContext';
-
-function useButtonMoleculeContext(component: string) {
-    let context = useContext(ButtonMoleculeContext)
-    if (context == null) {
-        let err = new Error(`<${component} /> is missing a parent <ButtonMolecule /> component.`)
-        if (Error.captureStackTrace) Error.captureStackTrace(err, useButtonMoleculeContext)
-        throw err
-    }
-    return context;
-}
-
-function stateReducer(state: any, action: any) {
+let reducer = (state: State, action: Action): any => {
     return match(action.type, reducers, state, action)
 }
 
-// --------------- ButtonMoleculeRoot ------------------
-
-let DEFAULT_BUTTON_MOLECULE_TAG = 'button' as const
-
-interface ButtonMoleculeRenderPropArg {
-    disabled: boolean
+let reducers: {
+    [P in ActionTypes]: (
+        state: State,
+        action: Extract<Action, { type: P }>
+    ) => State
+} = {
+    [ActionTypes.SetDisabled](state) {
+        return { ...state, disable: !state.disable }
+    },
+    [ActionTypes.SetIsLoading](state) {
+        return { ...state, isLoading: !state.isLoading }
+    },
+    [ActionTypes.SetToggle](state) {
+        return { ...state, toggle: !state.toggle }
+    }
 }
 
-let ButtonMoleculeRoot = forwardRefWithAs(function ButtonMolecule(props: any, ref: any) {
+// const ButtonContext = React.createContext<[State, React.Dispatch<Action>] | null | any>(null);
 
-    let { value, name, onChange, disabled = false, horizontal = false, ...theirProps } = props;
+let ButtonContext = React.createContext<[State, React.Dispatch<Action>] | null>(null)
+ButtonContext.displayName = 'ButtonContext'
+
+function useButtonContext(component: string) {
+    let context = React.useContext(ButtonContext)
+    if (context === null) {
+        let err = new Error(`<${component} /> is missing a parent <Listbox /> component.`)
+        if (Error.captureStackTrace) Error.captureStackTrace(err, useButtonContext)
+        throw err
+    }
+    return context
+}
+
+let DEFAULT_BUTTON_TAG = 'button' as const
+interface ButtonRenderPropArg {
+    // disabled: boolean
+    toggle?: boolean,
+    action?: any,
+    open?: boolean
+}
+
+
+// let ButtonRoot = forwardRefWithAs(function ButtonRoot(props: {
+//     disable?: boolean,
+//     onClick?: React.MouseEventHandler<HTMLButtonElement>,
+//     isLoading?: boolean,
+//     name?: string,
+//     value?:any,
+//     children?:React.ReactNode // <-- strict API
+//     // style?:React.ReactNode
+// }, ref: React.Ref<any>
+// ) {
+
+let ButtonRoot = forwardRefWithAs(function ButtonRoot(props: any, ref: React.Ref<any>
+) {
+    let { value, name, isLoading = false, disable = false, toggle, ...theirProps } = props;
 
     let buttonMoleculeRef = useSyncRefs(ref)
 
-    let reducerBag = useReducer(stateReducer, {
+    let reducerBag = React.useReducer(reducer, {
+        isLoading,
+        disable,
+        toggle: false,
+        // buttonRef: React.createRef(),
+        labelRef: React.createRef(),
+        iconRef: React.createRef(),
         propsRef: {
-            current: { value, onChange },
+            current: {},
         },
-        labelRef: createRef(),
-        buttonRef: createRef(),
-        iconRef: createRef(),
-        disabled,
 
-    } as StateDefinition)
+    } as State)
 
-    let [{ propsRef, buttonRef, labelRef }, dispatch] = reducerBag
+    let [state, dispatch] = reducerBag;
 
-    propsRef.current.value = value;
+    useIsoMorphicEffect(() => {
+        // skip initial render
+        return () => {
 
-    useIsoMorphicEffect(() => dispatch({ type: ActionTypes.SetDisabled, disabled }), [disabled])
+            // do something with dependency    
+            dispatch({ type: ActionTypes.SetDisabled })
+            dispatch({ type: ActionTypes.SetIsLoading })
 
-    let slot = useMemo<ButtonMoleculeRenderPropArg>(
-        () => ({ disabled }),
-        [disabled]
-    )
+        }
+    }, [isLoading])
 
-    let ourProps = { ref: buttonMoleculeRef }
+    useIsoMorphicEffect(() => {
+        dispatch({ type: ActionTypes.SetToggle })
+    }, [toggle])
 
+    let ourProps = {
+        ref: buttonMoleculeRef,
+        disabled: props.disabled ? props.disabled : state.disable,
+        style: state.disable ? { ...props.style, opacity: 0.6 } : props.style
+    }
+
+    let slot = null;
     let renderConfiguration = {
         ourProps,
         theirProps,
         slot,
-        defaultTag: DEFAULT_BUTTON_MOLECULE_TAG,
-        name: 'ButtonMolecule',
+        defaultTag: DEFAULT_BUTTON_TAG,
+        name: 'Button',
     }
 
     return (
-        <ButtonMoleculeContext.Provider value={reducerBag}>
-            {name != null && value != null ? (
-                <>
-                    {objectToFormEntries({ [name]: value }).map(([name, value]) => (
-                        <VisuallyHidden
-                            {...compact({
-                                key: name,
-                                as: 'input',
-                                type: 'hidden',
-                                hidden: true,
-                                readOnly: true,
-                                name,
-                                value,
-                            })}
-                        />
-                    ))}
-                    {render(renderConfiguration)}
-                </>
-            ) : (
+        <ButtonContext.Provider value={reducerBag}>
+            {
                 render(renderConfiguration)
-            )}
-        </ButtonMoleculeContext.Provider>
+            }
+        </ButtonContext.Provider>
     )
+
+
 })
 
-// --------------- ButtonMoleculeRoot end ------------------
-
-// --------------- Label ------------------
-
 let DEFAULT_LABEL_TAG = 'label' as const
-
 interface LabelRenderPropArg {
-    // disabled: boolean
+    disabled: boolean
 }
 
-let Label = forwardRefWithAs(function Label(props: any, ref: any) {
 
-    let [state, dispatch] = useButtonMoleculeContext('ButtonMolecule.Label')
+let Label = forwardRefWithAs(function Label<
+    TTag extends React.ElementType = typeof DEFAULT_LABEL_TAG
+
+>(props: any, ref: React.Ref<HTMLLabelElement>,
+) {
+    let id = `headlessdyno-button-label-${useId()}`
+
+    let { disable = false, } = props;
+    let [state] = useButtonContext('Button.Label')
 
     let labelRef = useSyncRefs(state.labelRef, ref)
 
-    let id = `headless-label-button-${useId()}`
 
-    let handleClick = useCallback(
-        () => state.buttonRef.current?.focus({ preventScroll: true }),
-        [state.buttonRef]
-    )
-
-    let slot = useMemo<LabelRenderPropArg>(
-        () => ({ disabled: state.disabled }),
-        [state]
-    )
     let theirProps = props
 
-    let ourProps = { ref: labelRef, id, onClick: handleClick }
+    let ourProps = {
+        ref: labelRef,
+        id,
+        children: state?.disable ? 'Loading' : props.children
+        // onClick: handleClick 
+    };
+
+    let slot = null
 
     return render({
         ourProps,
         theirProps,
         slot,
         defaultTag: DEFAULT_LABEL_TAG,
-        name: 'ButtonMolecule.Label',
+        name: 'Button.Label',
     })
 
 })
 
-// --------------- Label end ------------------
-
-// --------------- Icon ------------------
-
 let DEFAULT_ICON_TAG = 'i' as const
-
 interface IconRenderPropArg {
-    // disabled: boolean
+    disabled: boolean
 }
 
-let Icon = forwardRefWithAs(function Icon(props: any, ref: any) {
+let Icon = forwardRefWithAs(function Icon<
+    TTag extends React.ElementType = typeof DEFAULT_ICON_TAG
 
-    let [state, dispatch] = useButtonMoleculeContext('ButtonMolecule.Label')
+>(props: any, ref: React.Ref<HTMLLIElement>
+) {
+
+    let id = `headlessdyno-button-i-${useId()}`
+    let [state] = useButtonContext('Button.Icon')
 
     let iconRef = useSyncRefs(state.iconRef, ref)
 
-    let id = `headless-icon-button-${useId()}`
-
-    let handleClick = useCallback(
-        () => state.buttonRef.current?.focus({ preventScroll: true }),
-        [state.buttonRef]
-    )
-
-    let slot = useMemo<IconRenderPropArg>(
-        () => ({ disabled: state.disabled }),
-        [state]
-    )
     let theirProps = props
+    let ourProps = {
+        ref: iconRef,
+        id,
+        children: state?.disable ? <LoadingSpin size={'medium'} /> : props.children
 
-    let ourProps = { ref: iconRef, id, onClick: handleClick }
+        // onClick: handleClick 
+    };
+
+    let slot = null
 
     return render({
         ourProps,
         theirProps,
         slot,
         defaultTag: DEFAULT_ICON_TAG,
-        name: 'ButtonMolecule.Icon',
+        name: 'Button.Icon',
     })
 
 })
 
-// --------------- Icon end ------------------
-
-export let ButtonMolecule = Object.assign(ButtonMoleculeRoot, {    
-    Label,
-    Icon
-})
+export default Object.assign(ButtonRoot, { Label, Icon })

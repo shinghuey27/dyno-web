@@ -1,50 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css'
-import { ButtonMolecule } from '../src/Headless/components/buttonMolecule/ButtonMolecule'
-import { Button } from '../src/Headless/components/button/button'
+import Button from '../src/Headless/components/buttonMolecule/ButtonMolecule'
+// import { Button } from '../src/Headless/components/button/button'
 import { BeakerIcon, AcademicCapIcon } from '@heroicons/react/solid'
+import { GiClick } from 'react-icons/gi'
+
+let buttonStyle = {
+  backgroundColor: '#ffdd00', padding: 5, borderRadius: 10, width: 100, display: 'inline-flex', justifyContent: 'space-around'
+}
 
 function App(props) {
 
+  const [loading, setLoading] = useState(false)
+
+
   return (
     <div style={{ height: '100%', width: '100%' }}>
-      <div style={{ margin: 100 }}></div>
-      <ButtonMolecule >
-        <ButtonMolecule.Label >Click Here</ButtonMolecule.Label>
-        <ButtonMolecule.Icon ><AcademicCapIcon /></ButtonMolecule.Icon>
-      </ButtonMolecule>
-      <div style={{ margin: 100 }}></div>
-      <ButtonMolecule style={{ display: 'inline-flex', flexDirection: 'row-reverse' }} >
-        <ButtonMolecule.Label style={{ flex: 1 }}>Click Here</ButtonMolecule.Label>
-        <ButtonMolecule.Icon style={{ flex: 1 }}><AcademicCapIcon /></ButtonMolecule.Icon>
-      </ButtonMolecule>
 
-      <div style={{ margin: 100 }}></div>
+      <div style={{ margin: 20, }}>
 
-      <ButtonMolecule style={{ display: 'inline-flex' }} >
-        <ButtonMolecule.Label style={{ flex: 1 }}>Click Here</ButtonMolecule.Label>
-        <ButtonMolecule.Icon style={{ flex: 1 }}><AcademicCapIcon /></ButtonMolecule.Icon>
-      </ButtonMolecule>
-
-      <div style={{ margin: 100 }}></div>
-
-      <ButtonMolecule >
-        Click Here
-        <AcademicCapIcon />
-      </ButtonMolecule>
+        <button
+          style={{ ...buttonStyle, backgroundColor: 'grey', width: 'auto', marginTop: 50 }}
+          onClick={() => setLoading(prev => !prev)}>Click to toggle</button>
+      </div>
 
 
+      <div style={{ margin: 20 }}>
 
 
-      <div style={{ margin: 100 }}></div>
+        <Button
+          style={{ ...buttonStyle }}
+          onClick={() => { console.log('click yellow') }}
+          isLoading={loading}
+        >
+          <Button.Label style={{}}>Click</Button.Label>
+          <Button.Icon style={{ alignSelf: 'center', backgroundColor: 'transparent' }}><GiClick /></Button.Icon>
+          
+        </Button>
+      </div>
 
-      <Button
-        style={{ display: 'inline-flex' }}
-      >
-        this is button {<BeakerIcon />}
-      </Button>
 
-      {/* <div style={{ margin: 100 , height:400, width:100, backgroundColor:'black'}}></div> */}
     </div>
   );
 }
