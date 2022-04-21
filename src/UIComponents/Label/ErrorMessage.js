@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Label.css";
 import PropTypes from "prop-types";
-import { renderError } from '../../Utils/isErrorForm';
+import { renderError } from '../../Utilities/isErrorForm';
 
 const ErrorMessage = (props) => {
 

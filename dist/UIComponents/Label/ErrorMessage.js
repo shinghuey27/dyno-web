@@ -11,7 +11,7 @@ require("./Label.css");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _isErrorForm = require("../../Utils/isErrorForm");
+var _isErrorForm = require("../../Utilities/isErrorForm");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
