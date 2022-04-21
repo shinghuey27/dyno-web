@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import './App.css'
-// import Button from '../src/Headless/components/buttonMolecule/ButtonMolecule'
-// import { Button } from '../src/Headless/components/button/button'
-// import { BeakerIcon, AcademicCapIcon } from '@heroicons/react/solid'
-// import { GiClick } from 'react-icons/gi'
-// import { Button, Checkbox } from '../src/UIComponents/index'
 
 
 let buttonStyle = {
@@ -19,7 +14,6 @@ function App(props) {
   return (
     <div style={{ height: '100%', width: '100%' }}>
 
-      
 
 
     </div>

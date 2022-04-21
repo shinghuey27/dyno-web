@@ -27,11 +27,6 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-// import Button from '../src/Headless/components/buttonMolecule/ButtonMolecule'
-// import { Button } from '../src/Headless/components/button/button'
-// import { BeakerIcon, AcademicCapIcon } from '@heroicons/react/solid'
-// import { GiClick } from 'react-icons/gi'
-// import { Button, Checkbox } from '../src/UIComponents/index'
 var buttonStyle = {
   backgroundColor: '#ffdd00',
   padding: 5,

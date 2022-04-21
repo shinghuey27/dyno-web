@@ -64,6 +64,8 @@ Object.defineProperty(exports, "Textbox", {
   }
 });
 
+var _ButtonMolecule = _interopRequireDefault(require("../Headless/components/buttonMolecule/ButtonMolecule"));
+
 var _Button = _interopRequireDefault(require("./Button/Button"));
 
 var _Checkbox = _interopRequireDefault(require("./Checkbox/Checkbox"));
@@ -81,7 +83,5 @@ var _RadioButton = _interopRequireDefault(require("./RadioButton/RadioButton"));
 var _Switch = _interopRequireDefault(require("./Switch/Switch"));
 
 var _Select = _interopRequireDefault(require("./Select/Select"));
-
-var _ButtonMolecule = _interopRequireDefault(require("../Headless/components/buttonMolecule/ButtonMolecule"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
