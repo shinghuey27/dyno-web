@@ -21,24 +21,18 @@
   align-items: flex-end;
   margin-top: 1rem;
 }
-.field {
-  height: auto;
-  background: rgb(255, 255, 255);
-  box-shadow: 0px 5px 10px 0px rgba(112, 136, 210, 0.1);
-  border-radius: 20px;
-  border: none;
-  width: 40vw;
-  margin: auto;
-  min-height: 890px;
-  margin-bottom: 1rem;
-  padding: 1.5rem;
+
+.table-checkbox-checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border-radius: 2px;
 }
-@media only screen and (max-width: 320px) {
-  .field {
-    min-width: 300px;
-    padding: 0.5rem;
-  }
-}
+
+
 html {
   font-family: "Rubik", sans-serif;
 }
@@ -160,7 +154,19 @@ html {
 }
 
 .datepick2 {
-  background-color: #61aa6a;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 15px;
+  height: 38px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(199, 199, 199);
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.11px;
+  color: #0e1b42;
+  font-weight: 400;
+  box-sizing: border-box;
 }
 
 .datepick:focus {
@@ -188,4 +194,19 @@ html {
   color: #ffffff;
   font-family: "Rubik", sans-serif;
   margin-right: 0.5rem;
+}
+
+.react-select__value-container {
+  background-color: red;
+}
+
+
+.text2{
+  position: relative;
+}
+
+.table-container-dyno{
+  background-color: rgb(88, 130, 247);
+  padding: 20px;
+  width: 'auto';
 }

@@ -1,31 +1,27 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 
-var _Searchbar = _interopRequireDefault(require("./Components/Searchbar/Searchbar"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _CustomDesign = _interopRequireDefault(require("./Screen/CustomDesign"));
+require("./App.css");
 
-var _DefaultDesign = _interopRequireDefault(require("./Screen/DefaultDesign"));
+var _ButtonMolecule = _interopRequireDefault(require("../src/Headless/components/buttonMolecule/ButtonMolecule"));
 
-var _Button = _interopRequireDefault(require("./Components/Button/Button"));
+var _solid = require("@heroicons/react/solid");
 
-var _Components = require("./Components");
-
-var _SampleErrorForm = require("./SampleData/SampleErrorForm");
-
-var _SamplePropsIntegration = require("./SampleData/SamplePropsIntegration");
-
-var _reactDatepicker = require("react-datepicker");
-
-var _Select = _interopRequireDefault(require("./Components/Select/Select"));
-
-var _List = require("./SampleData/List");
+var _gi = require("react-icons/gi");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -33,70 +29,71 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var renderCalendar = function renderCalendar(_ref) {
-  var className = _ref.className,
-      children = _ref.children;
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "16px",
-      background: "#216ba5",
-      color: "#fff"
-    }
-  }, /*#__PURE__*/React.createElement(_reactDatepicker.CalendarContainer, {
-    className: className
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      background: "#f0f0f0"
-    }
-  }, "What is your favorite day?"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: "relative"
-    }
-  }, children)));
-};
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-var customStyles = {
-  control: function control(base, state) {
-    return _objectSpread(_objectSpread({}, base), {}, {
-      marginTop: 10,
-      '&:hover': {
-        borderColor: '#74e3e4'
-      },
-      border: '1px solid red',
-      boxShadow: 'none',
-      borderRadius: 20
-    });
-  }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var buttonStyle = {
+  backgroundColor: '#ffdd00',
+  padding: 5,
+  borderRadius: 10,
+  width: 100,
+  display: 'inline-flex',
+  justifyContent: 'space-around'
 };
 
 function App(props) {
-  return /*#__PURE__*/React.createElement("div", {
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      loading = _useState2[0],
+      setLoading = _useState2[1];
+
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      display: "flex",
-      flexWrap: "wrap"
+      height: '100%',
+      width: '100%'
     }
-  }, /*#__PURE__*/React.createElement(_DefaultDesign.default, null), /*#__PURE__*/React.createElement(_CustomDesign.default, null), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_Select.default, {
-    item: {
-      placeholder: 'Select payment now',
-      options: _List.sampleItem
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      margin: 20
+    }
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    style: _objectSpread(_objectSpread({}, buttonStyle), {}, {
+      backgroundColor: 'grey',
+      width: 'auto',
+      marginTop: 50
+    }),
+    onClick: function onClick() {
+      return setLoading(function (prev) {
+        return !prev;
+      });
+    }
+  }, "Click to toggle")), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      margin: 20
+    }
+  }, /*#__PURE__*/_react.default.createElement(_ButtonMolecule.default, {
+    style: _objectSpread({}, buttonStyle),
+    onClick: function onClick() {
+      console.log('click yellow');
     },
-    selectStyle: {
-      styles: {
-        control: function control(base, state) {
-          return _objectSpread(_objectSpread({}, base), {}, {
-            marginTop: 10,
-            width: 300,
-            '&:hover': {
-              borderColor: '#74e3e4'
-            },
-            border: '1px solid red',
-            boxShadow: 'none',
-            borderRadius: 20
-          });
-        }
-      }
+    isLoading: loading
+  }, /*#__PURE__*/_react.default.createElement(_ButtonMolecule.default.Label, {
+    style: {}
+  }, "Click"), /*#__PURE__*/_react.default.createElement(_ButtonMolecule.default.Icon, {
+    style: {
+      alignSelf: 'center',
+      backgroundColor: 'transparent'
     }
-  })));
+  }, /*#__PURE__*/_react.default.createElement(_gi.GiClick, null)))));
 }
 
 var _default = App;

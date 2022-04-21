@@ -7,27 +7,31 @@ exports.default = void 0;
 
 require("../App.css");
 
-var _Textbox = _interopRequireDefault(require("../Components/Textbox/Textbox"));
+var _Textbox = _interopRequireDefault(require("../UIComponents/Textbox/Textbox"));
 
-var _Searchbar = _interopRequireDefault(require("../Components/Searchbar/Searchbar"));
+var _DatePicker = _interopRequireDefault(require("../UIComponents/DatePicker/DatePicker"));
 
-var _DatePicker = _interopRequireDefault(require("../Components/DatePicker/DatePicker"));
+var _Stepper = _interopRequireDefault(require("../UIComponents/ProgressBar/Stepper"));
 
-var _Stepper = _interopRequireDefault(require("../Components/ProgressBar/Stepper"));
+var _Checkbox = _interopRequireDefault(require("../UIComponents/Checkbox/Checkbox"));
 
-var _Checkbox = _interopRequireDefault(require("../Components/Checkbox/Checkbox"));
+var _RadioButton = _interopRequireDefault(require("../UIComponents/RadioButton/RadioButton"));
 
-var _RadioButton = _interopRequireDefault(require("../Components/RadioButton/RadioButton"));
+var _Switch = _interopRequireDefault(require("../UIComponents/Switch/Switch"));
 
-var _Switch = _interopRequireDefault(require("../Components/Switch/Switch"));
-
-var _List = require("../SampleData/List");
-
-var _Components = require("../Components");
+var _UIComponents = require("../UIComponents");
 
 var _SampleErrorForm = require("../SampleData/SampleErrorForm");
 
+var _FieldModule = _interopRequireDefault(require("../Field.module.scss"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var DefaultDesign = function DefaultDesign() {
   var options = [{
@@ -38,7 +42,7 @@ var DefaultDesign = function DefaultDesign() {
     value: "GIRO"
   }];
   return /*#__PURE__*/React.createElement("fieldset", {
-    className: "field"
+    className: _FieldModule.default.field
   }, /*#__PURE__*/React.createElement("h2", {
     style: {
       display: "flex",
@@ -74,7 +78,7 @@ var DefaultDesign = function DefaultDesign() {
     tootltipStyle: {
       label: "You can adjust your limit via settings"
     }
-  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_Components.Select, {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_UIComponents.Select, {
     name: "select",
     item: {
       label: "Select Recipent bank",
@@ -88,7 +92,21 @@ var DefaultDesign = function DefaultDesign() {
         value: "GIRO"
       }]
     },
-    error: _SampleErrorForm.error
+    error: _SampleErrorForm.error,
+    selectStyle: {
+      styles: {
+        control: function control(base, state) {
+          return _objectSpread(_objectSpread({}, base), {}, {
+            width: "18rem"
+          });
+        },
+        menu: function menu(provided, state) {
+          return _objectSpread(_objectSpread({}, provided), {}, {
+            width: "18rem"
+          });
+        }
+      }
+    }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: "1rem"

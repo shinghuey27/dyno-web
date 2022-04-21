@@ -1,0 +1,75 @@
+.checkbox-table-container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: "rubik",sans-serif;
+    line-height: 18px;
+    color:#6f7faf;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-table-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkbox-table-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: solid 1px #6f7faf;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  /* .checkbox-table-container:hover input ~ .checkbox-table-checkmark {
+    background-color: #b0bad7;
+  } */
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-table-container input:checked ~ .checkbox-table-checkmark {
+    background-color: #01ccce;
+    
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkbox-table-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-table-container input:checked ~ .checkbox-table-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-table-container .checkbox-table-checkmark:after {
+    left: 3px;
+    top: 4px;
+    width: 7px;
+    height: 3px;
+    border: solid white;
+    border-width: 3px 3px 0 0;
+    border-radius: 1px;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
