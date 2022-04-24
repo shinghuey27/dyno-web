@@ -27,7 +27,7 @@ import DefaultDesign from "./Screen/DefaultDesign";
 function App(props) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <HButton />
+      <HButton item={{label:'button'}}></HButton>
       {/* <DefaultDesign />
       <CustomDesign /> */}
       {/* <div> */}

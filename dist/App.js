@@ -39,7 +39,11 @@ function App(props) {
       display: "flex",
       flexWrap: "wrap"
     }
-  }, /*#__PURE__*/React.createElement(_HButton.default, null));
+  }, /*#__PURE__*/React.createElement(_HButton.default, {
+    item: {
+      label: 'button'
+    }
+  }));
 }
 
 var _default = App;

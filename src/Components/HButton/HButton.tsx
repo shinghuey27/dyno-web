@@ -3,7 +3,7 @@ import './Button.css';
 
 const HButton = (props: any) => {
 
-  const [state, setState] = React.useState('');
+  // const [state, setState] = React.useState('');
 
   const { name, id, item, error, managedCallback, } = props;
   const { action, label } = item || { label: 'Default' };
