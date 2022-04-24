@@ -1,6 +1,18 @@
-import HButton from "./Components/HButton/HButton";
-import CustomDesign from "./Screen/CustomDesign";
-import DefaultDesign from "./Screen/DefaultDesign";
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _HButton = _interopRequireDefault(require("./Components/HButton/HButton"));
+
+var _CustomDesign = _interopRequireDefault(require("./Screen/CustomDesign"));
+
+var _DefaultDesign = _interopRequireDefault(require("./Screen/DefaultDesign"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 // const renderCalendar = ({ className, children }) => {
 //   return (
 //     <div style={{ padding: "16px", background: "#216ba5", color: "#fff" }}>
@@ -11,7 +23,6 @@ import DefaultDesign from "./Screen/DefaultDesign";
 //     </div>
 //   );
 // };
-
 // const customStyles = {
 //   control: (base, state) => ({
 //     ...base,
@@ -22,62 +33,14 @@ import DefaultDesign from "./Screen/DefaultDesign";
 //     borderRadius: 20,
 //   })
 // }
-
-
 function App(props) {
-  return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <HButton />
-      {/* <DefaultDesign />
-      <CustomDesign /> */}
-      {/* <div> */}
-      {/* <Checkbox       
-          item={{ label: 'check box 1' }}       
-          // containerStyle={{ style: { color: "red", "&::after": {} } }}
-        /> */}
-      {/* 
-        <Textbox
-          item={{ label: 'Pay Now', description: 'pay before 1st March' }}
-          tootltipStyle={{ label: 'tool' }}
-          error
-          
-        /> */}
-
-      {/* <Select
-          item={{ placeholder: 'Select payment now', options: sampleItem }}
-          selectStyle={{
-            styles: {
-              control: (base, state) => ({
-                ...base,
-                marginTop: 10, width: 300,
-                '&:hover': { borderColor: '#74e3e4' },
-                border: '1px solid red',
-                boxShadow: 'none',
-                borderRadius: 20,
-              })
-            }
-          }}
-        /> */}
-
-      {/* <DatePicker
-          // containerStyle={{ style: {backgroundColor:'yellow'} }}
-          label={"Calendar"}
-          calendarStyle={{
-            showYearDropdown: true,
-            // style: {},
-            // calendarClassName: 'datepick2',
-            // calendarContainer: ({ className, children }) =>
-            // renderCalendar({ className, children })
-          }}
-        /> */}
-
-      {/* <Switch item={{ label: 'my switch' }} error /> */}
-      {/* <Button /> */}
-      {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
-
-      {/* </div> */}
-    </div>
-  );
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap"
+    }
+  }, /*#__PURE__*/React.createElement(_HButton.default, null));
 }
 
-export default App;
+var _default = App;
+exports.default = _default;

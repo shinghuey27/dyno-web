@@ -1,32 +1,49 @@
+"use strict";
 
-import React from 'react';
-import './Button.css';
-import '../../index.css';
-import PropTypes from "prop-types";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
-const Button = (props) => {
+var _react = _interopRequireDefault(require("react"));
 
-  const { name, id, item, error, managedCallback, } = props;
-  const { action, label } = item || { label: 'Default' };
+require("./Button.css");
 
-  const onClick = () => managedCallback(action?.actionURL)
-  const disabled = error && Object.keys(error).length > 0 || false;
+require("../../index.css");
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-  const className = disabled ? 'button-disabled' : 'button';
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  return (
-    <button
-      name={name}
-      id={id}
-      className={className}
-      disabled={disabled}
-      onClick={onClick}
-      {...props}
-    >
-      {label}
-    </button>);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+var Button = function Button(props) {
+  var name = props.name,
+      id = props.id,
+      item = props.item,
+      error = props.error,
+      managedCallback = props.managedCallback;
+
+  var _ref = item || {
+    label: 'Default'
+  },
+      action = _ref.action,
+      label = _ref.label;
+
+  var onClick = function onClick() {
+    return managedCallback(action === null || action === void 0 ? void 0 : action.actionURL);
+  };
+
+  var disabled = error && Object.keys(error).length > 0 || false;
+  var className = disabled ? 'button-disabled' : 'button';
+  return /*#__PURE__*/_react.default.createElement("button", _extends({
+    name: name,
+    id: id,
+    className: className,
+    disabled: disabled,
+    onClick: onClick
+  }, props), label);
 };
 
-export default Button;
+var _default = Button;
+exports.default = _default;

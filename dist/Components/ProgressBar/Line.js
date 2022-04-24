@@ -7,15 +7,19 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./Fieldset.css");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Fieldset = function Fieldset() {
-  return /*#__PURE__*/_react.default.createElement("fieldset", {
-    className: "field"
-  });
+var Line = function Line(props) {
+  return /*#__PURE__*/_react.default.createElement("hr", props);
 };
 
-var _default = Fieldset;
+Line.defaultProps = {
+  style: {
+    marginTop: 22,
+    border: "1px dashed black",
+    height: 0.1,
+    flex: 1
+  }
+};
+var _default = Line;
 exports.default = _default;

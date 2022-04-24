@@ -1,7 +1,7 @@
 {
   "main": "dist/Components",
   "name": "dyno-web",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -40,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "create:library": "npm run clean && npx babel src -d dist --ignore '**/*.spec.js,**/*.stories.js,**/docs/*.js' --extensions '.ts,.tsx' --copy-files "
+    "create:library": "npm run clean && npx babel src -d dist --ignore '**/*.spec.js,**/*.stories.js,**/docs/*.js' --extensions '.ts,.tsx,.js,.jsx' --copy-files "
   },
   "eslintConfig": {
     "extends": [

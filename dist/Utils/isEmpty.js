@@ -1,20 +1,30 @@
+"use strict";
 
-const isEmptyObject = (obj) => {
-    for (var i in obj) return false;
-    return true
-    
-}
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isUndefined = exports.isEmptyObject = exports.isEmpty = void 0;
 
-const isUndefined = (error) => {
-    if (error === undefined) return true
-    return false
-}
+var isEmptyObject = function isEmptyObject(obj) {
+  for (var i in obj) {
+    return false;
+  }
 
-const isEmpty = (error) => {
-    if (isUndefined(error)) return true
-    else if(isEmptyObject(error)) return true
-    return false
+  return true;
+};
 
-}
+exports.isEmptyObject = isEmptyObject;
 
-export { isEmpty, isEmptyObject, isUndefined };
+var isUndefined = function isUndefined(error) {
+  if (error === undefined) return true;
+  return false;
+};
+
+exports.isUndefined = isUndefined;
+
+var isEmpty = function isEmpty(error) {
+  if (isUndefined(error)) return true;else if (isEmptyObject(error)) return true;
+  return false;
+};
+
+exports.isEmpty = isEmpty;

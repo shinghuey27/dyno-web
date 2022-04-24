@@ -1,13 +1,25 @@
-import React from 'react';
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import "./Icon.css";
+"use strict";
 
-const HelpOutline = () => {
-  return (
-    <i className="tooltipIcon">
-      <HelpOutlineIcon fontSize="13px"/>
-    </i>
-  );
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _HelpOutline = _interopRequireDefault(require("@mui/icons-material/HelpOutline"));
+
+require("./Icon.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HelpOutline = function HelpOutline() {
+  return /*#__PURE__*/_react.default.createElement("i", {
+    className: "tooltipIcon"
+  }, /*#__PURE__*/_react.default.createElement(_HelpOutline.default, {
+    fontSize: "13px"
+  }));
 };
 
-export default HelpOutline;
+var _default = HelpOutline;
+exports.default = _default;
