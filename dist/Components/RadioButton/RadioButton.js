@@ -1,48 +1,32 @@
-"use strict";
+import React from 'react';
+import Label from "../Label/Label";
+import styles from "./RadioButton.module.scss";
+import PropTypes from "prop-types";
+import ErrorMessage from "../Label/ErrorMessage";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+const RadioButton = (props) => {
+  const {
+    name,
+    containerStyle,
+    checkMarkStyle,
+    item,
+    field,
+    error,
 
-var _react = _interopRequireDefault(require("react"));
+  } = props;
+  const { label } = item || { label: "" };
 
-var _Label = _interopRequireDefault(require("../Label/Label"));
+  const defaultLabel = typeof label === "string" ? label : "Default";
 
-var _RadioButtonModule = _interopRequireDefault(require("./RadioButton.module.scss"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _ErrorMessage = _interopRequireDefault(require("../Label/ErrorMessage"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-var RadioButton = function RadioButton(props) {
-  var name = props.name,
-      containerStyle = props.containerStyle,
-      checkMarkStyle = props.checkMarkStyle,
-      item = props.item,
-      field = props.field,
-      error = props.error;
-
-  var _ref = item || {
-    label: ""
-  },
-      label = _ref.label;
-
-  var defaultLabel = typeof label === "string" ? label : "Default";
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
-    className: _RadioButtonModule.default.container,
-    label: defaultLabel
-  }, containerStyle), /*#__PURE__*/_react.default.createElement("input", _extends({
-    type: "radio",
-    name: name
-  }, field)), /*#__PURE__*/_react.default.createElement("span", _extends({
-    className: _RadioButtonModule.default.checkmark
-  }, checkMarkStyle))), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, props));
+  return (
+    <>
+      <Label className={styles.container} label={defaultLabel} {...containerStyle}>
+        <input type="radio" name={name} {...field} />
+        <span className={styles.checkmark} {...checkMarkStyle}></span>
+      </Label>
+      <ErrorMessage {...props} />
+    </>
+  );
 };
 
-var _default = RadioButton;
-exports.default = _default;
+export default RadioButton;

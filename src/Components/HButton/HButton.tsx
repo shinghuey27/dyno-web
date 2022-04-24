@@ -1,16 +1,15 @@
-
-import React from 'react';
+import React from "react";
 import './Button.css';
-import '../../index.css';
-import PropTypes from "prop-types";
 
-const Button = (props) => {
+const HButton = (props: any) => {
+
+  const [state, setState] = React.useState('');
 
   const { name, id, item, error, managedCallback, } = props;
   const { action, label } = item || { label: 'Default' };
 
   const onClick = () => managedCallback(action?.actionURL)
-  const disabled = error && Object.keys(error).length > 0 || false;
+  const disabled = error && Object.keys(error).length > 0 || props?.disabled;
 
 
   const className = disabled ? 'button-disabled' : 'button';
@@ -29,4 +28,4 @@ const Button = (props) => {
 
 };
 
-export default Button;
+export default HButton;

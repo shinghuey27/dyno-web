@@ -1,60 +1,62 @@
-"use strict";
+import React from "react";
+import "react-datepicker/dist/react-datepicker.css";
+import "./Date.css";
+import EventIcon from "@mui/icons-material/Event";
+import Label from "../Label/Label";
+import Calendar from "./Calendar";
+import ErrorMessage from "../Label/ErrorMessage";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+const DatePicker = (props) => {
 
-require("react-datepicker/dist/react-datepicker.css");
+  const {
 
-require("./Date.css");
+    name,
+    item,
+    error,
+    field = { value: undefined },
+    endIconStyle,
+    containerStyle,
+    labelStyle,
+    errorStyle,
+    calendarStyle
 
-var _Event = _interopRequireDefault(require("@mui/icons-material/Event"));
+  } = props;
 
-var _Label = _interopRequireDefault(require("../Label/Label"));
 
-var _Calendar = _interopRequireDefault(require("./Calendar"));
 
-var _ErrorMessage = _interopRequireDefault(require("../Label/ErrorMessage"));
+  const { label, placeholder } = item || { label: "default error" };
+  const { value } = field;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  return (
+    <div
+      className={'input-icons'}
+      {...containerStyle}
+    >
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+      <Label
+        label={label}
+        {...labelStyle}
+        {...props}></Label>
 
-var DatePicker = function DatePicker(props) {
-  var name = props.name,
-      item = props.item,
-      error = props.error,
-      _props$field = props.field,
-      field = _props$field === void 0 ? {
-    value: undefined
-  } : _props$field,
-      endIconStyle = props.endIconStyle,
-      containerStyle = props.containerStyle,
-      labelStyle = props.labelStyle,
-      errorStyle = props.errorStyle,
-      calendarStyle = props.calendarStyle;
-
-  var _ref = item || {
-    label: "default error"
-  },
-      label = _ref.label,
-      placeholder = _ref.placeholder;
-
-  var value = field.value;
-  return /*#__PURE__*/_react.default.createElement("div", _extends({
-    className: 'input-icons'
-  }, containerStyle), /*#__PURE__*/_react.default.createElement(_Label.default, _extends({
-    label: label
-  }, labelStyle, props)), /*#__PURE__*/_react.default.createElement("div", _extends({
-    className: 'icon'
-  }, endIconStyle), /*#__PURE__*/_react.default.createElement(_Event.default, null)), /*#__PURE__*/_react.default.createElement(_Calendar.default, _extends({
-    name: name,
-    selected: value
-  }, field, calendarStyle)), /*#__PURE__*/_react.default.createElement(_ErrorMessage.default, _extends({}, errorStyle, props)));
+      <div
+        className={'icon'}        
+        {...endIconStyle}
+      >
+        <EventIcon />
+      </div>
+      <Calendar
+        name={name}
+        selected={value}
+        {...field}
+        {...calendarStyle}
+        // {...props} // <--expose all props without destructuring in specific {...field}
+      />
+      <ErrorMessage        
+        {...errorStyle}
+        {...props} />
+    </div>
+  );
 };
 
-var _default = DatePicker;
-exports.default = _default;
+export default DatePicker;

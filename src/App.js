@@ -1,3 +1,4 @@
+import HButton from "./Components/HButton/HButton";
 import CustomDesign from "./Screen/CustomDesign";
 import DefaultDesign from "./Screen/DefaultDesign";
 // const renderCalendar = ({ className, children }) => {
@@ -26,14 +27,15 @@ import DefaultDesign from "./Screen/DefaultDesign";
 function App(props) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <DefaultDesign />
-      <CustomDesign />
+      <HButton />
+      {/* <DefaultDesign />
+      <CustomDesign /> */}
       {/* <div> */}
-        {/* <Checkbox       
+      {/* <Checkbox       
           item={{ label: 'check box 1' }}       
           // containerStyle={{ style: { color: "red", "&::after": {} } }}
         /> */}
-        {/* 
+      {/* 
         <Textbox
           item={{ label: 'Pay Now', description: 'pay before 1st March' }}
           tootltipStyle={{ label: 'tool' }}
@@ -41,7 +43,7 @@ function App(props) {
           
         /> */}
 
-        {/* <Select
+      {/* <Select
           item={{ placeholder: 'Select payment now', options: sampleItem }}
           selectStyle={{
             styles: {
@@ -57,7 +59,7 @@ function App(props) {
           }}
         /> */}
 
-        {/* <DatePicker
+      {/* <DatePicker
           // containerStyle={{ style: {backgroundColor:'yellow'} }}
           label={"Calendar"}
           calendarStyle={{
@@ -69,9 +71,9 @@ function App(props) {
           }}
         /> */}
 
-        {/* <Switch item={{ label: 'my switch' }} error /> */}
-        {/* <Button /> */}
-        {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
+      {/* <Switch item={{ label: 'my switch' }} error /> */}
+      {/* <Button /> */}
+      {/* <RadioButton item={{ label: 'my radio' }} checkMarkStyle={{ style: { backgroundColor: 'red' } }} /> */}
 
       {/* </div> */}
     </div>

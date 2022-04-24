@@ -1,41 +1,36 @@
-"use strict";
+import React from 'react';
+import "./Label.css";
+import PropTypes from "prop-types";
+import { renderError } from '../../Utils/isErrorForm';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+const ErrorMessage = (props) => {
 
-var _react = _interopRequireDefault(require("react"));
+  const {
+    name,
+    item,
+    error,
+    errorClassName,
+    errorStyle } = props;
 
-require("./Label.css");
+  if (error === undefined) return null
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+  const errorMsg = error && error[name] && error[name].message || "default error"
 
-var _isErrorForm = require("../../Utils/isErrorForm");
+  return (
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+    <div className={errorClassName} style={errorStyle} {...props}>
+      {renderError(name, error) && errorMsg}
+    </div>
+    );
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-var ErrorMessage = function ErrorMessage(props) {
-  var name = props.name,
-      item = props.item,
-      error = props.error,
-      errorClassName = props.errorClassName,
-      errorStyle = props.errorStyle;
-  if (error === undefined) return null;
-  var errorMsg = error && error[name] && error[name].message || "default error";
-  return /*#__PURE__*/_react.default.createElement("div", _extends({
-    className: errorClassName,
-    style: errorStyle
-  }, props), (0, _isErrorForm.renderError)(name, error) && errorMsg);
 };
 
 ErrorMessage.defaultProps = {
   className: "errorMessage"
 };
+
 ErrorMessage.propTypes = {
-  className: _propTypes.default.string
+  className: PropTypes.string
 };
-var _default = ErrorMessage;
-exports.default = _default;
+
+export default ErrorMessage;
